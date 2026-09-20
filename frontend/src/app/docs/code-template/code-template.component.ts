@@ -164,7 +164,7 @@ init();`;
         return codeText;
       }
 
-      let importText = `<script src="https://mempool.space/mempool.js"></script>`;
+      let importText = `<script src="${document.location.origin}/mempool.js"></script>`;
       if (this.env.BASE_MODULE === 'liquid') {
         importText = `<script src="https://liquid.network/liquid.js"></script>`;
       }
@@ -260,7 +260,8 @@ yarn add @mempool/liquid.js`;
   }
 
   wrapPythonTemplate(code: any) {
-    return ( ( this.network === 'testnet' || this.network === 'testnet4' || this.network === 'signet' ) ? ( code.codeTemplate.python.replace( 'wss://mempool.space/api/v1/ws', 'wss://mempool.space/' + this.network + '/api/v1/ws' ) ) : code.codeTemplate.python );
+    const networkPath = (this.network === 'testnet' || this.network === 'testnet4' || this.network === 'signet') ? `/${this.network}` : '';
+    return code.codeTemplate.python.replace('wss://mempool.space/api/v1/ws', `wss://${document.location.host}${networkPath}/api/v1/ws`);
   }
 
   replaceJSPlaceholder(text: string, code: any) {

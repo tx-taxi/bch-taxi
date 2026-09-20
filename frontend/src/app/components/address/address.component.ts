@@ -2,13 +2,13 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ElectrsApiService } from '@app/services/electrs-api.service';
-import { switchMap, filter, catchError, map, tap } from 'rxjs/operators';
+import { switchMap, filter, catchError, ignoreElements, map, tap } from 'rxjs/operators';
 import { Address, ChainStats, Transaction, Utxo, Vin } from '@interfaces/electrs.interface';
 import { WebsocketService } from '@app/services/websocket.service';
 import { StateService } from '@app/services/state.service';
 import { AudioService } from '@app/services/audio.service';
 import { ApiService } from '@app/services/api.service';
-import { of, merge, Subscription, Observable, forkJoin } from 'rxjs';
+import { of, merge, Subscription, Observable } from 'rxjs';
 import { SeoService } from '@app/services/seo.service';
 import { seoDescriptionNetwork } from '@app/shared/common.utils';
 import { AddressInformation } from '@interfaces/node-api.interface';
@@ -248,22 +248,26 @@ export class AddressComponent implements OnInit, OnDestroy {
           this.isLoadingAddress = false;
           this.isLoadingTransactions = true;
           const utxoCount = this.chainStats.utxos + this.mempoolStats.utxos;
-          return forkJoin([
+          const transactions$ =
             address.is_pubkey
               ? this.electrsApiService.getScriptHashTransactions$((address.address.length === 66 ? '21' : '41') + address.address + 'ac')
-              : this.electrsApiService.getAddressTransactions$(address.address),
-            (utxoCount > 2 && utxoCount <= 500 ? (address.is_pubkey
+              : this.electrsApiService.getAddressTransactions$(address.address);
+          const utxos$: Observable<Utxo[] | null> = utxoCount > 2 && utxoCount <= 500 ? (address.is_pubkey
               ? this.electrsApiService.getScriptHashUtxos$((address.address.length === 66 ? '21' : '41') + address.address + 'ac')
-              : this.electrsApiService.getAddressUtxos$(address.address)) : of(null)).pipe(
-                catchError(() => {
+              : this.electrsApiService.getAddressUtxos$(address.address)) : of(null);
+          const backgroundUtxos$ = utxos$.pipe(
+                catchError((): Observable<Utxo[] | null> => {
                   return of(null);
-                })
-              )
-          ]);
-        }),
-        switchMap(([transactions, utxos]) => {
-          this.utxos = utxos;
+                }),
+                tap((utxos: Utxo[] | null) => this.utxos = utxos),
+                ignoreElements()
+              );
 
+          // UTXO enumeration can be expensive for busy addresses. Keep it from
+          // blocking the address summary and transaction history.
+          return merge(transactions$, backgroundUtxos$);
+        }),
+        switchMap((transactions) => {
           this.tempTransactions = transactions;
           if (transactions.length) {
             this.lastTransactionTxId = transactions[transactions.length - 1].txid;

@@ -12,7 +12,7 @@
         <div id="disclaimer">
           <table *ngIf="!mobileViewport"><tr><td><app-svg-images name="warning" class="disclaimer-warning" viewBox="0 0 304 304" fill="#ffc107" width="50" height="50"></app-svg-images></td><td> <ng-container *ngTemplateOutlet="faqDisclaimer"></ng-container></td></tr></table>
           <div *ngIf="mobileViewport"><app-svg-images name="warning" class="disclaimer-warning" viewBox="0 0 304 304" fill="#ffc107" width="50" height="50"></app-svg-images><ng-container *ngTemplateOutlet="faqDisclaimer"></ng-container></div>
-          <ng-template #faqDisclaimer i18n="faq.big-disclaimer"><p><b>mempool.space merely provides data about the Bitcoin network.</b> It cannot help you with retrieving funds, wallet issues, etc.</p><p>For any such requests, you need to get in touch with the entity that helped make the transaction (wallet software, exchange company, etc).</p></ng-template>
+          <ng-template #faqDisclaimer i18n="faq.big-disclaimer"><p><b>btc.tx.taxi only displays public data about the Bitcoin network.</b> It cannot retrieve funds, resolve wallet issues, reverse transactions, or change confirmation priority.</p><p>For those requests, contact the wallet, exchange, or payment service that created the transaction.</p></ng-template>
         </div>
 
         <div class="doc-item-container" *ngFor="let item of faq">
@@ -314,14 +314,14 @@
 </ng-template>
 
 <ng-template type="how-big-is-mempool-used-by-mempool-space">
-  <p>mempool.space uses multiple Bitcoin nodes to obtain data: some with the default 300MB mempool memory limit (call these Small Nodes) and others with a much larger mempool memory limit (call these Big Nodes).</p>
-  <p>Many nodes on the Bitcoin network are configured to run with the default 300MB mempool memory setting. When all 300MB of memory are used up, such nodes will reject transactions below a certain threshold feerate. Running Small Nodes allows mempool.space to tell you what this threshold feerate is—this is the "Purging" feerate that shows on the front page when mempools are full, which you can use to be reasonably sure that your transaction will be widely propagated.</p>
-    <p>Big Node mempools are so big that they don't need to reject (or purge) transactions. Such nodes allow for mempool.space to provide you with information on any pending transaction it has received—no matter how congested the mempool is, and no matter how low-feerate or low-priority the transaction is.</p>
+  <p>Bitcoin explorers can use nodes with different mempool limits. A node using Bitcoin Core's default 300MB limit can reject low-feerate transactions sooner than a node configured with a larger mempool.</p>
+  <p>Many Bitcoin nodes use the default 300MB mempool setting. When that memory is exhausted, nodes reject transactions below a changing threshold feerate. The "Purging" feerate shown by the explorer indicates that threshold when the configured data source reports it.</p>
+    <p>Nodes configured with larger mempools can retain lower-feerate transactions for longer. Your wallet, this explorer, and a miner can therefore have different views of which transactions are currently pending.</p>
 </ng-template>
 
 <ng-template type="what-is-memory-usage">
   <p>Memory usage on the front page refers to the real-time amount of system memory used by a Bitcoin node's mempool. This memory usage number is always higher than the total size of all pending transactions in the mempool due to indexes, pointers, and other overhead used by Bitcoin Core for storage and processing.</p>
-  <p>mempool.space shows the memory usage of a Bitcoin node that has a very high mempool memory limit. As a result, when mempools fill up, you may notice memory usage on mempool.space go beyond 300MB. This is not a mistake—this memory usage figure is high because it's for a Bitcoin node that isn't rejecting (or evicting) transactions. Consider it to be another data point to give you an idea of how congested the mempool is relative to the default memory limit of 300MB.</p>
+  <p>The memory usage shown by btc.tx.taxi reflects its configured backend and may exceed Bitcoin Core's default 300MB limit. Treat it as one node's view of current congestion, not a network-wide total.</p>
   <p>A Bitcoin node running the default 300MB mempool memory limit, like most Raspberry Pi nodes, will never go past 300MB of memory usage.</p>
 </ng-template>
 
@@ -489,7 +489,7 @@
 </ng-template>
 
 <ng-template type="who-runs-this-website">
-  The official mempool.space website is operated by The Mempool Open Source Project. See more information on our <a [routerLink]="['/about']">About page</a>. There are also many unofficial instances of this website operated by individual members of the Bitcoin community.
+  btc.tx.taxi is an independently operated fork of The Mempool Open Source Project. See the <a [routerLink]="['/about']">About page</a> for source, license, infrastructure, and contact details.
 </ng-template>
 
 <ng-template type="host-my-own-instance-raspberry-pi">
