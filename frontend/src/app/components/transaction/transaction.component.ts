@@ -684,7 +684,11 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
       ))
       .subscribe((tx: Transaction) => {
           if (!tx) {
-            this.fetchCachedTx$.next(this.txId);
+            // Only valid transaction IDs can have a cached RBF copy. Sending malformed
+            // input through that fallback leaves the page showing loading skeletons.
+            if (/^[a-fA-F0-9]{64}$/.test(this.txId)) {
+              this.fetchCachedTx$.next(this.txId);
+            }
             this.seoService.logSoft404();
             return;
           }
