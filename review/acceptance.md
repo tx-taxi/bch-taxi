@@ -6,7 +6,7 @@ Open http://127.0.0.1:4310. Worktree `/home/lukee/dev/ltc-taxi`, branch `codex/l
 
 ## Sources and reconciliation
 
-Kit `6f9b34e`, original kit `3497634889f3303634c192e66749641831107d5e`. BTC ancestor `fc701ad10391b08c67fb63ea490b192aa57a1562`; deployed visual reference `6d67eec8da026056bf8fd980c438eef63d296167`. Authorized shared search `5a8b8009170b919719d26d0949e2a97e604640be`, router prerequisite `f9b5fe3`; local router registration commit `584c29b`. Search HTML, SCSS and registry service reused together; LTC parsing and local routes retained. All eight intervening BTC commits reconciled, including accelerator removal. See `source-reconciliation.md`. Owner's production rollout remains reported/in-progress, not independently certified. Dirty LTC work was preserved in `.local/checkpoints`, with no rebase and no changes to deployment-owner worktrees.
+Implementation checkpoint `dd12539fa`. Kit `6f9b34e`, original kit `3497634889f3303634c192e66749641831107d5e`. BTC ancestor `fc701ad10391b08c67fb63ea490b192aa57a1562`; deployed visual reference `6d67eec8da026056bf8fd980c438eef63d296167`. Authorized shared search `5a8b8009170b919719d26d0949e2a97e604640be`, router prerequisite `f9b5fe3`; local router registration commit `584c29b`. Search HTML, SCSS and registry service reused together; LTC parsing and local routes retained. All eight intervening BTC commits reconciled, including accelerator removal. See `source-reconciliation.md`. Owner's production rollout remains reported/in-progress, not independently certified. Dirty LTC work was preserved in `.local/checkpoints`, with no rebase and no changes to deployment-owner worktrees.
 
 ## Evidence and findings
 
