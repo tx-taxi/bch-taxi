@@ -138,7 +138,8 @@ $dropdown-link-active-bg: $active-bg;
   --liquid: #116761;
   --liquidtestnet: #494a4a;
 
-  --mainnet-alt: #9339f4;
+  --mainnet-alt: #345d9d;
+  --fiat-color: #9fbcf0;
   --testnet-alt: #183550;
   --signet-alt: #471850;
   --regtest-alt: #4a4a4a;
@@ -1673,3 +1674,5 @@ form label:not(.form-check-label):not(.btn) {
 
 /* Muted explanatory copy must remain legible on both dark themes. */
 .text-secondary { color: var(--transparent-fg) !important; }
+
+.fiat-color { color: var(--fiat-color); }

@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-24T23:42:09.774Z",
+  "origin": "http://127.0.0.1:4310",
+  "results": [
+    {
+      "viewport": "desktop",
+      "opened": "ltc",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchBackground": true
+    },
+    {
+      "viewport": "mobile",
+      "opened": "ltc",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchBackground": true
+    }
+  ]
+}

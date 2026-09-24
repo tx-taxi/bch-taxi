@@ -1,4 +1,6 @@
 :root {
+  --mainnet-alt: #9339f4;
+  --fiat-color: #83fd00;
   --bg: #11131f;
   --active-bg: #000000;
   --hover-bg: #12131e;

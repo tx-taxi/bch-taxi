@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-24T23:52:35.285Z",
+  "origin": "http://127.0.0.1:4310",
+  "reports": [
+    {
+      "size": "desktop",
+      "blueFlow": "rgb(52, 93, 157)",
+      "defaultAndOriginal": true,
+      "defaultPersistsOnReload": true,
+      "errors": []
+    },
+    {
+      "size": "mobile",
+      "blueFlow": "rgb(52, 93, 157)",
+      "defaultAndOriginal": true,
+      "defaultPersistsOnReload": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+import {chromium} from '/home/lukee/.local/share/pnpm/global/5/.pnpm/playwright@1.59.1/node_modules/playwright/index.mjs';import fs from 'node:fs';import assert from 'node:assert/strict';
+const chain=process.argv[2]||'ltc',origin=process.argv[3]||'http://127.0.0.1:4310';const dir='/home/lukee/dev/ltc-taxi/review/deployment/explorer-actions';
+const b=await chromium.launch({executablePath:'/home/lukee/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome',headless:true});const results=[];
+try{for(const [name,viewport] of [['desktop',{width:1440,height:900}],['mobile',{width:390,height:844}]]){
+ const p=await b.newPage({viewport});await p.goto(origin);const toggle=p.locator('.search-chain-trigger:visible');await toggle.click();const rows=p.locator('.search-chain-explorer:visible');await rows.first().waitFor();const current=rows.filter({has:p.locator('.search-chain-host',{hasText:chain+'.tx.taxi'})});await current.locator('.search-chain-opened').waitFor();assert.equal(await current.locator('a').count(),0);assert.equal(await p.locator('.search-chain-opened:visible').count(),1);
+ const other=rows.filter({has:p.locator('.search-chain-switch')}).first();const dest=await other.locator('.search-chain-switch').getAttribute('href');assert.equal(await other.locator('.search-chain-new-tab').getAttribute('href'),dest);
+ const colors=await other.evaluate(row=>({icon:getComputedStyle(row.querySelector('.search-chain-new-tab')).color,button:getComputedStyle(row.querySelector('.search-chain-switch')).backgroundColor}));assert.equal(colors.icon,colors.button);
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await p.screenshot({path:dir+'/'+chain+'-'+name+'.png'});
+ const pop=p.waitForEvent('popup');await other.locator('.search-chain-new-tab').click();const popup=await pop;await popup.waitForURL(u=>u.origin===new URL(dest).origin);assert.equal(new URL(p.url()).origin,new URL(origin).origin);await popup.close();
+ await other.locator('.search-chain-select').click();await toggle.click();await current.locator('.search-chain-opened').waitFor();assert.equal(await other.locator('.search-chain-switch').count(),1);
+ results.push({viewport:name,opened:chain,destination:dest,newTab:true,openedPersistsAfterSelection:true,iconColorMatchesSwitchBackground:true});await p.close();
+}fs.writeFileSync(dir+'/'+chain+(origin.startsWith('https')?'-public':'-local')+'.json',JSON.stringify({at:new Date().toISOString(),origin,results},null,2));console.log(chain,results);}finally{await b.close();}

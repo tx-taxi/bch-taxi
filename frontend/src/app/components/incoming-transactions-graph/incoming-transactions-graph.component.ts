@@ -6,6 +6,7 @@ import { download, formatterXAxis, formatterXAxisLabel } from '@app/shared/graph
 import { formatNumber } from '@angular/common';
 import { StateService } from '@app/services/state.service';
 import { Subscription } from 'rxjs';
+import { ThemeService } from '@app/services/theme.service';
 
 const OUTLIERS_MEDIAN_MULTIPLIER = 4;
 
@@ -44,15 +45,20 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
   MA: number[][] = [];
   weightMode: boolean = false;
   rateUnitSub: Subscription;
+  themeSub: Subscription;
   medianVbytesPerSecond: number | undefined;
 
   constructor(
     @Inject(LOCALE_ID) private locale: string,
     private storageService: StorageService,
+    private themeService: ThemeService,
     public stateService: StateService,
   ) { }
 
   ngOnInit() {
+    this.themeSub = this.themeService.themeState$.subscribe(state => {
+      if (!state.loading && this.data) this.mountChart();
+    });
     this.rateUnitSub = this.stateService.rateUnits$.subscribe(rateUnits => {
       this.weightMode = rateUnits === 'wu';
       if (this.data) {
@@ -289,7 +295,7 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
         pieces: [{
           gt: 0,
           lte: 6667,
-          color: '#7CB342'
+          color: this.themeService.theme === 'default' ? '#789de0' : '#7CB342'
         },
         {
           gt: 6667,
@@ -350,5 +356,6 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
 
   ngOnDestroy(): void {
     this.rateUnitSub.unsubscribe();
+    this.themeSub.unsubscribe();
   }
 }
