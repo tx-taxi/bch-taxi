@@ -26,3 +26,9 @@ Implementation checkpoint `dd12539fa`. Kit `6f9b34e`, original kit `3497634889f3
 Recheck the four failed mining surfaces and busy-address live scrolling when Litecoin Space recovers; recheck fresh data after a real tab resume. Controlled pending/complex entity cases and historical route stability have passed. Existing provider failure evidence must not be promoted to a verified full baseline. No missing credentials are known; provider availability is the immediate external constraint. Earlier raw screenshots may show pre-fix labels; corrected screenshots and the source describe current implementation.
 
 No DNS, production registry, node deployment, production service or remote publishing was changed. Continue on this worktree for fast iteration.
+
+## Provider warning correction
+
+The user observed a persistent “connection interrupted” banner while `/healthz` reported a live WebSocket and recent successful data. Cause: failed paths from prior pages remained in the global set indefinitely. Failure timestamps now age out after 90 seconds unless the endpoint fails again; successful retries clear their entry. Aggregate data freshness and recent partial API failures have distinct messages, with no unsupported claim that an active stream is reconnecting. The frontend polls every 15 seconds.
+
+Two focused behavioral tests cover this demonstrated gap and pass (`node --test adapter/provider-health.test.cjs`); incremental Angular compilation passes. Browser check verifies a partial-failure warning disappears on the next healthy poll without reloading. The broader provider script was rerun, but its real BlockCypher fallback request returned 503 rather than the expected 200 during this run; that external fallback is not newly certified. Original earlier passing evidence is preserved.

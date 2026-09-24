@@ -19,9 +19,16 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   @Input() headerVisible = true;
   @Input() footerVisibleOverride: boolean | null = null;
 
-  providerStale = false;
+  providerWarning = '';
   providerTimer: any;
-  checkProvider(): void { this.http.get<any>('/healthz').subscribe({next: h => this.providerStale = h.stale, error: () => this.providerStale = true}); }
+  checkProvider(): void {
+    this.http.get<any>('/healthz').subscribe({
+      next: h => this.providerWarning = h.stale
+        ? 'Provider data has not updated recently. Displayed data may be stale.'
+        : h.degraded ? 'Some provider requests recently failed. Affected data may be unavailable or stale.' : '',
+      error: () => this.providerWarning = 'The local data service is unavailable. Retrying.'
+    });
+  }
   env: Env;
   network$: Observable<string>;
   connectionState$: Observable<number>;

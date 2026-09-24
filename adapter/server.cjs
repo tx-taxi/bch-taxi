@@ -4,8 +4,9 @@ const http = require('node:http');
 const fs = require('node:fs');
 const {WebSocket, WebSocketServer} = require('ws');
 const sharp = require('sharp');
+const {providerStatus} = require('./provider-health.cjs');
 const PRIMARY = process.env.LTC_PROVIDER || 'https://litecoinspace.org';
-const cache = new Map(), inflight = new Map(), failedPaths = new Set();
+const cache = new Map(), inflight = new Map(), failedPaths = new Map();
 const health = {primary: PRIMARY, lastSuccess: null, lastFailure: null, websocket: 'connecting'};
 const MAX_CACHE = 500;
 function result(data, source='litecoinspace', status=200) {return {data,source,status,at:Date.now()};}
@@ -49,7 +50,7 @@ async function api(path) {
   } catch(e) {
    // 404 is entity absence, never convert a timeout/outage to absence.
    if(e.status===404) {failedPaths.delete(path);return result({error:'Not found'},'litecoinspace',404);}
-   failedPaths.add(path);if(failedPaths.size>500)failedPaths.delete(failedPaths.values().next().value);
+   failedPaths.set(path,Date.now());if(failedPaths.size>500)failedPaths.delete(failedPaths.keys().next().value);
    health.lastFailure={at:Date.now(),message:e.message};
    try{return await fallback(path);}catch{}
    if(saved && Date.now()-saved.at<3600000)return {...saved,stale:true};
@@ -94,7 +95,7 @@ const server=http.createServer(async(req,res)=>{
    if(r.status>=300&&r.status<400) { const dest=r.headers.get('location');res.writeHead(r.status,{location:dest});return res.end(); }
    return send(res,r.status,Buffer.from(await r.arrayBuffer()),r.headers.get('content-type')||'application/json');
   }
-  if(u.pathname==='/healthz')return send(res,200,{...health,degraded:failedPaths.size>0,stale:failedPaths.size>0||!health.lastSuccess||Date.now()-health.lastSuccess>90000,cacheEntries:cache.size});
+  if(u.pathname==='/healthz')return send(res,200,{...providerStatus(health,failedPaths),cacheEntries:cache.size});
   if(u.pathname==='/api/local-resolve') {
    try {return send(res,200,await fetchData('http://127.0.0.1:4312/api/v1/resolve?value='+encodeURIComponent(u.searchParams.get('value')||''),12000));} catch {return send(res,503,{unavailable:true});}
   }
