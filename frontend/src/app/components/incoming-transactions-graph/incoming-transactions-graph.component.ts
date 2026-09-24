@@ -1,4 +1,4 @@
-import { Component, Input, Inject, LOCALE_ID, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Inject, LOCALE_ID, ChangeDetectionStrategy, ChangeDetectorRef, OnInit, OnDestroy } from '@angular/core';
 import { EChartsOption } from '@app/graphs/echarts';
 import { OnChanges } from '@angular/core';
 import { StorageService } from '@app/services/storage.service';
@@ -52,12 +52,16 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
     @Inject(LOCALE_ID) private locale: string,
     private storageService: StorageService,
     private themeService: ThemeService,
+    private cd: ChangeDetectorRef,
     public stateService: StateService,
   ) { }
 
   ngOnInit() {
     this.themeSub = this.themeService.themeState$.subscribe(state => {
-      if (!state.loading && this.data) this.mountChart();
+      if (!state.loading && this.data) {
+        this.mountChart();
+        this.cd.markForCheck();
+      }
     });
     this.rateUnitSub = this.stateService.rateUnits$.subscribe(rateUnits => {
       this.weightMode = rateUnits === 'wu';
