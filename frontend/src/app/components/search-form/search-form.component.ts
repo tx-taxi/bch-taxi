@@ -261,7 +261,7 @@ export class SearchFormComponent implements OnInit {
           // Do not show date and timestamp results for liquid
           const isNetworkBitcoin = this.network === '' || this.network === 'testnet' || this.network === 'testnet4' || this.network === 'signet';
 
-          const matchesBlockHeight = this.regexBlockheight.test(searchText) && parseInt(searchText) <= this.stateService.latestBlockHeight;
+          const matchesBlockHeight = this.regexBlockheight.test(searchText);
           const matchesDateTime = this.regexDate.test(searchText) && new Date(searchText).toString() !== 'Invalid Date' && new Date(searchText).getTime() <= Date.now() && isNetworkBitcoin;
           const matchesUnixTimestamp = this.regexUnixTimestamp.test(searchText) && parseInt(searchText) <= Math.floor(Date.now() / 1000) && isNetworkBitcoin;
           const matchesTxId = this.regexTransaction.test(searchText) && !this.regexBlockhash.test(searchText);
@@ -364,7 +364,7 @@ export class SearchFormComponent implements OnInit {
 
     if (typeof result === 'string') {
       this.search(result);
-    } else if (typeof result === 'number' && result <= this.stateService.latestBlockHeight) {
+    } else if (typeof result === 'number' && Number.isInteger(result) && result >= 0) {
       this.navigate('/block/', result.toString());
     } else if (result.alias) {
       this.navigate('/lightning/node/', result.public_key);
@@ -455,7 +455,8 @@ export class SearchFormComponent implements OnInit {
     } else if (this.regexBlockhash.test(searchText)) {
       this.navigate('/block/', searchText);
     } else if (this.regexBlockheight.test(searchText)) {
-      parseInt(searchText) <= this.stateService.latestBlockHeight ? this.navigate('/block/', searchText) : this.isSearching = false;
+      // The block endpoint validates existence; search must work before the live tip arrives.
+      this.navigate('/block/', searchText);
     } else if (this.regexTransaction.test(searchText)) {
       const matches = this.regexTransaction.exec(searchText);
       if (this.network === 'liquid' || this.network === 'liquidtestnet') {
