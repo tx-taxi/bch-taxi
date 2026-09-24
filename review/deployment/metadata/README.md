@@ -11,3 +11,5 @@ Kit findings committed separately at 3786616 (version 0.1.1): visual metadata pa
 Production verification follows rollout; local evidence is not a deployment claim.
 
 Production verification: deployment bp53qhkj4kbc4tjvfw9tzk8u finished at d0396fd0c. Public initial HTML and browser entity-to-root navigation passed at 2026-09-24T23:32:34Z (`public.json`). Public root and transaction PNGs fetched at 1200×630 and inspected; aligned composition is live. `comparison.png` records the equal-size BTC/LTC comparison.
+
+Final font correction: c34e92e97 explicitly selects DejaVu Sans Mono in the runtime. Deployment rhutxxqtfi1lgoil8x4sfieu finished successfully. Final v=3 public root and transaction PNGs were fetched and opened; their monospace rendering now matches the shared composition. Public metadata/navigation assertions passed again at 2026-09-24T23:37:37Z. Earlier generic-font production observations above are superseded by this verified result.

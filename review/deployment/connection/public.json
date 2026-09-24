@@ -1,0 +1,51 @@
+{
+  "at": "2026-09-24T23:38:01.604Z",
+  "results": [
+    {
+      "chain": "btc",
+      "size": "desktop",
+      "checks": [
+        "Offline after clean backend restart",
+        "Reconnecting during new handshake",
+        "recovered after fresh data"
+      ],
+      "connections": 2
+    },
+    {
+      "chain": "btc",
+      "size": "mobile",
+      "checks": [
+        "Offline after clean backend restart",
+        "Reconnecting during new handshake",
+        "recovered after fresh data"
+      ],
+      "connections": 2
+    },
+    {
+      "chain": "ltc",
+      "size": "desktop",
+      "checks": [
+        "Offline after clean backend restart",
+        "Reconnecting during new handshake",
+        "recovered after fresh data"
+      ],
+      "connections": 2
+    },
+    {
+      "chain": "ltc",
+      "size": "mobile",
+      "checks": [
+        "Offline after clean backend restart",
+        "Reconnecting during new handshake",
+        "recovered after fresh data"
+      ],
+      "connections": 2
+    },
+    {
+      "chain": "ltc",
+      "checks": [
+        "silent initial connection times out to Offline"
+      ]
+    }
+  ]
+}
