@@ -265,6 +265,10 @@
               "disableHostCheck": true,
               "host": "0.0.0.0",
               "verbose": false
+            },
+            "ltc": {
+              "proxyConfig": "proxy.conf.ltc.js",
+              "buildTarget": "mempool:build"
             }
           }
         },

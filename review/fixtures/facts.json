@@ -1,0 +1,12 @@
+{
+  "capturedAt": 1790287932.647178,
+  "provider": "https://litecoinspace.org",
+  "txid": "b066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849",
+  "block": "4570be978b76861fef442a05a624e6145e06aa5f88fb00efd4e27e1d9fb19333",
+  "historicalBlock": "e11049dfa5858be3809f285685e12a5d6f84b936b0f8e8272b5363bf3946ce60",
+  "address": "LaDAdDQUuCxeLxGiPazAY879sJxs1TVwYQ",
+  "pending": "d1c2d0410b550029fdcf1c25ad023f258c5869de39690e047079b09c6859a314",
+  "feeLitoshis": 53719,
+  "inputLitoshis": 2115571651,
+  "outputLitoshis": 2115517932
+}

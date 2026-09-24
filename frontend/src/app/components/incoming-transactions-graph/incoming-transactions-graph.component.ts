@@ -142,7 +142,7 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
           width: 2,
         },
         data: [{
-          yAxis: 1667,
+          yAxis: 6667,
           label: {
             show: false,
             color: 'var(--fg)',
@@ -288,11 +288,11 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
         right: 10,
         pieces: [{
           gt: 0,
-          lte: 1667,
+          lte: 6667,
           color: '#7CB342'
         },
         {
-          gt: 1667,
+          gt: 6667,
           lte: 2000,
           color: '#FDD835'
         },

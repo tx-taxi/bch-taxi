@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-24T22:24:05.608Z",
+  "pass": [
+    "zero",
+    "empty",
+    "404 absence",
+    "503 outage",
+    "stale retained with timestamp",
+    "independent tip fallback",
+    "recovery"
+  ],
+  "fallbackTip": "3183786"
+}

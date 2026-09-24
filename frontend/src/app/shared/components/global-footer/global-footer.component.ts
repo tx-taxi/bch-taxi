@@ -18,6 +18,8 @@ import { EnterpriseService } from '@app/services/enterprise.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GlobalFooterComponent implements OnInit, OnDestroy, OnChanges {
+  resetLeavingPreference(): void { localStorage.removeItem('ltc-confirm-leaving'); }
+
   @Input() user: any = undefined;
 
   private destroy$: Subject<any> = new Subject<any>();

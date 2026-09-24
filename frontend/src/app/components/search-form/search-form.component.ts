@@ -3,13 +3,26 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 import { EventType, NavigationStart, Router } from '@angular/router';
 import { AssetsService } from '@app/services/assets.service';
 import { Env, StateService } from '@app/services/state.service';
+import { TxTaxiExplorer, TxTaxiExplorerRegistryService, TxTaxiSearchCandidate, TxTaxiSearchOptions } from '@app/services/tx-taxi-explorer-registry.service';
 import { Observable, of, Subject, zip, BehaviorSubject, combineLatest } from 'rxjs';
-import { debounceTime, distinctUntilChanged, switchMap, catchError, map, startWith,  tap } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, switchMap, catchError, map, shareReplay, startWith, tap } from 'rxjs/operators';
 import { ElectrsApiService } from '@app/services/electrs-api.service';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 import { ApiService } from '@app/services/api.service';
 import { SearchResultsComponent } from '@components/search-form/search-results/search-results.component';
 import { Network, findOtherNetworks, getRegex, getTargetUrl, needBaseModuleChange } from '@app/shared/regex.utils';
+
+interface SearchTarget {
+  kind: 'explorer' | 'candidate' | 'router';
+  chainId?: string;
+  name: string;
+  accentColor: string;
+  iconUrl: string;
+  iconAlt: string;
+  searchPlaceholder: string;
+  confirmed?: boolean;
+  directUrl?: string;
+}
 
 @Component({
   selector: 'app-search-form',
@@ -20,6 +33,11 @@ import { Network, findOtherNetworks, getRegex, getTargetUrl, needBaseModuleChang
 })
 export class SearchFormComponent implements OnInit {
   @Input() hamburgerOpen = false;
+  readonly sourceChainId = 'litecoin';
+  readonly defaultChainIconUrl = '/resources/chains/litecoin.png';
+  readonly defaultChainIconAlt = 'Litecoin explorer';
+  readonly defaultChainAccent = '#345d9d';
+  readonly defaultSearchPlaceholder = 'Wave a taxi, paste anything here.';
   env: Env;
   network = '';
   assets: object = {};
@@ -27,12 +45,29 @@ export class SearchFormComponent implements OnInit {
   isSearching = false;
   isTypeaheading$ = new BehaviorSubject<boolean>(false);
   typeAhead$: Observable<any>;
+  explorers$: Observable<TxTaxiExplorer[]>;
+  selectedChainId$ = new BehaviorSubject<string | undefined>(this.sourceChainId);
+  activeTarget$ = new BehaviorSubject<SearchTarget>({
+    kind: 'explorer',
+    chainId: this.sourceChainId,
+    name: 'Litecoin',
+    accentColor: this.defaultChainAccent,
+    iconUrl: this.defaultChainIconUrl,
+    iconAlt: this.defaultChainIconAlt,
+    searchPlaceholder: this.defaultSearchPlaceholder,
+  });
+  searchOptions$ = new BehaviorSubject<TxTaxiSearchOptions | undefined>(undefined);
   searchForm: UntypedFormGroup;
   dropdownHidden = false;
+  private explorers: TxTaxiExplorer[] = [];
+  private manualChainId = this.sourceChainId;
+  private manualOverrideSearchText: string | undefined;
+  private manualOverrideTarget: SearchTarget | undefined;
+  private searchOptions: TxTaxiSearchOptions | undefined;
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event) {
-    if (this.elementRef.nativeElement.contains(event.target)) {
+    if (this.elementRef.nativeElement.contains(event.target) && this.isSourceChainSelected()) {
       this.dropdownHidden = false;
     } else {
       this.dropdownHidden = true;
@@ -65,8 +100,10 @@ export class SearchFormComponent implements OnInit {
     private electrsApiService: ElectrsApiService,
     private apiService: ApiService,
     private relativeUrlPipe: RelativeUrlPipe,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private explorerRegistry: TxTaxiExplorerRegistryService,
   ) {
+    this.explorers$ = this.explorerRegistry.explorers$;
   }
 
   ngOnInit(): void {
@@ -96,6 +133,11 @@ export class SearchFormComponent implements OnInit {
       searchText: ['', Validators.required],
     });
 
+    this.explorers$.subscribe((explorers) => {
+      this.explorers = explorers;
+      this.updateActiveTarget();
+    });
+
     if (this.network === 'liquid' || this.network === 'liquidtestnet') {
       this.assetsService.getAssetsMinimalJson$
         .subscribe((assets) => {
@@ -112,9 +154,38 @@ export class SearchFormComponent implements OnInit {
         this.stateService.searchText$.next(text);
       }),
       distinctUntilChanged(),
+      tap((text) => this.clearManualOverrideOnInputChange(text)),
+      shareReplay(1),
     );
 
-    const searchResults$ = searchText$.pipe(
+    searchText$.pipe(
+      debounceTime(120),
+      switchMap((searchText) => this.explorerRegistry.searchOptions$(searchText).pipe(
+        map((options) => ({ searchText, options })),
+      )),
+    ).subscribe(({ searchText, options }) => {
+      if (options && this.currentSearchText() === searchText) {
+        this.setSearchOptions(options);
+      }
+    });
+
+    searchText$.pipe(
+      debounceTime(420),
+      switchMap((searchText) => this.explorerRegistry.searchOptions$(searchText, true).pipe(
+        map((options) => ({ searchText, options })),
+      )),
+    ).subscribe(({ searchText, options }) => {
+      if (options && this.currentSearchText() === searchText) {
+        this.setSearchOptions(options);
+      }
+    });
+
+    const sourceSearchText$ = combineLatest([searchText$, this.selectedChainId$]).pipe(
+      map(([searchText, chainId]) => chainId === this.sourceChainId ? searchText : ''),
+      distinctUntilChanged(),
+    );
+
+    const searchResults$ = sourceSearchText$.pipe(
       debounceTime(200),
       switchMap((text) => {
         if (!text.length) {
@@ -151,7 +222,7 @@ export class SearchFormComponent implements OnInit {
 
     this.typeAhead$ = combineLatest(
       [
-        searchText$,
+        sourceSearchText$,
         searchResults$.pipe(
         startWith([
           [],
@@ -231,7 +302,52 @@ export class SearchFormComponent implements OnInit {
   }
 
   handleKeyDown($event): void {
-    this.searchResults.handleKeyDown($event);
+    if (this.isSourceChainSelected()) {
+      this.searchResults.handleKeyDown($event);
+    }
+  }
+
+  trackExplorer(_index: number, explorer: TxTaxiExplorer): string {
+    return explorer.chainId;
+  }
+
+  trackCandidate(_index: number, candidate: TxTaxiSearchCandidate): string {
+    return candidate.chainId;
+  }
+
+  isSelectedExplorer(explorer: TxTaxiExplorer): boolean {
+    return explorer.chainId === this.manualChainId
+      && (!this.searchOptions?.candidates.length || this.currentManualTarget()?.kind === 'explorer');
+  }
+
+  isSelectedCandidate(candidate: TxTaxiSearchCandidate): boolean {
+    const target = this.activeTarget$.value;
+    return target.kind === 'candidate' && target.chainId === candidate.chainId;
+  }
+
+  isSourceChainSelected(): boolean {
+    return this.selectedChainId$.value === this.sourceChainId;
+  }
+
+  selectExplorer(explorer: TxTaxiExplorer): void {
+    this.manualChainId = explorer.chainId;
+    this.manualOverrideSearchText = this.currentSearchText();
+    this.manualOverrideTarget = this.targetForExplorer(explorer);
+    this.updateActiveTarget();
+    this.dropdownHidden = true;
+    setTimeout(() => this.dropdownHidden = true);
+  }
+
+  selectCandidate(candidate: TxTaxiSearchCandidate): void {
+    this.manualOverrideSearchText = this.currentSearchText();
+    this.manualOverrideTarget = this.targetForCandidate(candidate);
+    this.updateActiveTarget();
+    this.dropdownHidden = true;
+    setTimeout(() => this.dropdownHidden = true);
+  }
+
+  showSourceSuggestions(): void {
+    this.dropdownHidden = !this.isSourceChainSelected();
   }
 
   itemSelected(): void {
@@ -239,6 +355,13 @@ export class SearchFormComponent implements OnInit {
   }
 
   selectedResult(result: any): void {
+    if (!this.isSourceChainSelected()) {
+      if (typeof result === 'string') {
+        this.search(result);
+      }
+      return;
+    }
+
     if (typeof result === 'string') {
       this.search(result);
     } else if (typeof result === 'number' && result <= this.stateService.latestBlockHeight) {
@@ -263,51 +386,260 @@ export class SearchFormComponent implements OnInit {
 
   search(result?: string): void {
     const searchText = result || this.searchForm.value.searchText.trim();
-    if (searchText) {
-      this.isSearching = true;
+    if (!searchText) {
+      return;
+    }
 
-      if (!this.regexTransaction.test(searchText) && this.regexAddress.test(searchText)) {
-        this.navigate('/address/', searchText);
-      } else if (this.regexBlockhash.test(searchText)) {
-        this.navigate('/block/', searchText);
-      } else if (this.regexBlockheight.test(searchText)) {
-        parseInt(searchText) <= this.stateService.latestBlockHeight ? this.navigate('/block/', searchText) : this.isSearching = false;
-      } else if (this.regexTransaction.test(searchText)) {
-        const matches = this.regexTransaction.exec(searchText);
-        if (this.network === 'liquid' || this.network === 'liquidtestnet') {
-          if (this.assets[matches[0]]) {
-            this.navigate('/assets/asset/', matches[0]);
-          }
-          this.electrsApiService.getAsset$(matches[0])
-            .subscribe(
-              () => { this.navigate('/assets/asset/', matches[0]); },
-              () => {
-                this.electrsApiService.getBlock$(matches[0])
-                  .subscribe(
-                    (block) => { this.navigate('/block/', matches[0], { state: { data: { block } } }); },
-                    () => { this.navigate('/tx/', matches[0]); });
-              }
-            );
-        } else {
-          this.navigate('/tx/', matches[0]);
-        }
-      } else if (this.regexDate.test(searchText) || this.regexUnixTimestamp.test(searchText)) {
-        let timestamp: number;
-        this.regexDate.test(searchText) ? timestamp = Math.floor(new Date(searchText).getTime() / 1000) : timestamp = searchText;
-        // Check if timestamp is too far in the future or before the genesis block
-        if (timestamp > Math.floor(Date.now() / 1000)) {
-          this.isSearching = false;
-          return;
-        }
-        this.apiService.getBlockDataFromTimestamp$(timestamp).subscribe(
-          (data) => { this.navigate('/block/', data.hash); },
-          (error) => { console.log(error); this.isSearching = false; }
-        );
-      } else {
+    if (this.regexBlockheight.test(searchText) && (!this.currentManualTarget(searchText) || this.currentManualTarget(searchText)?.chainId === this.sourceChainId)) {
+      this.searchSourceChain(searchText);
+      return;
+    }
+
+    const manualTarget = this.currentManualTarget(searchText);
+    if (manualTarget) {
+      this.searchTarget(manualTarget, searchText);
+      return;
+    }
+
+    const resolvedCandidate = this.resolvedCandidate();
+    if (resolvedCandidate) {
+      this.searchTarget(this.targetForCandidate(resolvedCandidate), searchText);
+      return;
+    }
+
+    if (this.searchOptions?.input === searchText && this.searchOptions.candidates.length) {
+      this.searchRouter(searchText);
+      return;
+    }
+
+    this.isSearching = true;
+    this.explorerRegistry.searchOptions$(searchText).subscribe((options) => {
+      if (this.currentSearchText() !== searchText) {
         this.isSearching = false;
+        return;
       }
+
+      if (options) {
+        this.setSearchOptions(options);
+      }
+
+      const currentManualTarget = this.currentManualTarget(searchText);
+      if (currentManualTarget) {
+        this.searchTarget(currentManualTarget, searchText);
+      } else if (this.resolvedCandidate()) {
+        this.searchTarget(this.targetForCandidate(this.resolvedCandidate()!), searchText);
+      } else if (options?.candidates.length) {
+        this.searchRouter(searchText);
+      } else {
+        this.searchSourceChain(searchText);
+      }
+    });
+  }
+
+  private searchSourceChain(searchText: string): void {
+    this.isSearching = true;
+    // Litecoin block hashes have no Bitcoin proof-of-work prefix pattern.
+    if (/^[a-fA-F0-9]{64}$/.test(searchText)) {
+      this.electrsApiService.getBlock$(searchText).subscribe({
+        next: block => this.navigate('/block/', searchText, {state: {data: {block}}}),
+        error: error => {
+          if (error.status === 404) this.navigate('/tx/', searchText);
+          else { this.isSearching = false; this.searchRouter(searchText); }
+        },
+      });
+      return;
+    }
+
+    if (!this.regexTransaction.test(searchText) && this.regexAddress.test(searchText)) {
+      this.navigate('/address/', searchText);
+    } else if (this.regexBlockhash.test(searchText)) {
+      this.navigate('/block/', searchText);
+    } else if (this.regexBlockheight.test(searchText)) {
+      parseInt(searchText) <= this.stateService.latestBlockHeight ? this.navigate('/block/', searchText) : this.isSearching = false;
+    } else if (this.regexTransaction.test(searchText)) {
+      const matches = this.regexTransaction.exec(searchText);
+      if (this.network === 'liquid' || this.network === 'liquidtestnet') {
+        if (this.assets[matches[0]]) {
+          this.navigate('/assets/asset/', matches[0]);
+        }
+        this.electrsApiService.getAsset$(matches[0])
+          .subscribe(
+            () => { this.navigate('/assets/asset/', matches[0]); },
+            () => {
+              this.electrsApiService.getBlock$(matches[0])
+                .subscribe(
+                  (block) => { this.navigate('/block/', matches[0], { state: { data: { block } } }); },
+                  () => { this.navigate('/tx/', matches[0]); });
+            }
+          );
+      } else {
+        this.navigate('/tx/', matches[0]);
+      }
+    } else if (this.regexDate.test(searchText) || this.regexUnixTimestamp.test(searchText)) {
+      let timestamp: number;
+      this.regexDate.test(searchText) ? timestamp = Math.floor(new Date(searchText).getTime() / 1000) : timestamp = Number(searchText);
+      // Check if timestamp is too far in the future or before the genesis block
+      if (timestamp > Math.floor(Date.now() / 1000)) {
+        this.isSearching = false;
+        return;
+      }
+      this.apiService.getBlockDataFromTimestamp$(timestamp).subscribe(
+        (data) => { this.navigate('/block/', data.hash); },
+        (error) => { console.log(error); this.isSearching = false; }
+      );
+    } else {
+      this.isSearching = false;
     }
   }
+
+  private searchTarget(target: SearchTarget, searchText: string): void {
+    if (target.kind === 'explorer' && target.chainId === this.sourceChainId) {
+      this.searchSourceChain(searchText);
+      return;
+    }
+
+    this.isSearching = true;
+    this.searchTriggered.emit();
+    if (target.kind === 'candidate' && target.confirmed && target.directUrl) {
+      const destination = new URL(target.directUrl, window.location.origin);
+      const entity = destination.pathname.match(/^\/(tx|block|address)\/([a-zA-Z0-9]+)$/);
+      if (target.chainId === this.sourceChainId && entity) {
+        this.navigate('/' + entity[1] + '/', entity[2]);
+      } else if (entity && ['bitcoin', 'ethereum', 'monero'].includes(target.chainId || '') && destination.protocol === 'https:' && ['btc.tx.taxi', 'eth.tx.taxi', 'xmr.tx.taxi'].includes(destination.hostname)) {
+        this.router.navigate(['/cab', target.chainId, entity[1], entity[2]]);
+        this.isSearching = false;
+      } else {
+        this.searchRouter(searchText);
+      }
+      return;
+    }
+
+    if (target.chainId) {
+      window.location.assign(this.explorerRegistry.chainSearchUrl(target.chainId, searchText));
+      return;
+    }
+
+    this.searchRouter(searchText);
+  }
+
+  private searchRouter(searchText: string): void {
+    this.isSearching = true;
+    this.searchTriggered.emit();
+    window.location.assign(this.explorerRegistry.routerSearchUrl(searchText));
+  }
+
+  private clearManualOverrideOnInputChange(searchText: string): void {
+    if (this.manualOverrideSearchText !== undefined && this.manualOverrideSearchText !== searchText) {
+      this.manualOverrideSearchText = undefined;
+      this.manualOverrideTarget = undefined;
+    }
+    this.setSearchOptions(undefined);
+  }
+
+  private currentSearchText(): string {
+    return this.searchForm?.value?.searchText?.trim() || '';
+  }
+
+  private currentManualTarget(searchText = this.currentSearchText()): SearchTarget | undefined {
+    return this.manualOverrideSearchText === searchText ? this.manualOverrideTarget : undefined;
+  }
+
+  private resolvedCandidate(): TxTaxiSearchCandidate | undefined {
+    if (!this.searchOptions?.resolvedChainId) {
+      return undefined;
+    }
+
+    return this.searchOptions.candidates.find(
+      (candidate) => candidate.chainId === this.searchOptions?.resolvedChainId && candidate.confirmed && candidate.confidence === 'strong' && Boolean(candidate.directUrl),
+    );
+  }
+
+  private setSearchOptions(options: TxTaxiSearchOptions | undefined): void {
+    if (
+      options
+      && this.searchOptions?.input === options.input
+      && this.searchOptions.phase === 'resolved'
+      && options.phase === 'classified'
+    ) {
+      return;
+    }
+
+    this.searchOptions = options;
+    this.searchOptions$.next(options);
+    this.updateActiveTarget();
+  }
+
+  private updateActiveTarget(): void {
+    const manualTarget = this.currentManualTarget();
+    const resolvedCandidate = manualTarget ? undefined : this.resolvedCandidate();
+    const hasCandidates = !manualTarget && Boolean(this.searchOptions?.candidates.length);
+    const target = manualTarget
+      ?? (resolvedCandidate ? this.targetForCandidate(resolvedCandidate) : undefined)
+      ?? (hasCandidates ? this.routerSearchTarget : this.defaultSearchTarget());
+    const selectedChainId = manualTarget ? target.chainId : hasCandidates ? undefined : target.chainId;
+
+    if (this.selectedChainId$.value !== selectedChainId) {
+      this.selectedChainId$.next(selectedChainId);
+    }
+
+    const activeTarget = this.activeTarget$.value;
+    if (
+      activeTarget.kind !== target.kind
+      || activeTarget.chainId !== target.chainId
+      || activeTarget.accentColor !== target.accentColor
+      || activeTarget.directUrl !== target.directUrl
+    ) {
+      this.activeTarget$.next(target);
+    }
+  }
+
+  private defaultSearchTarget(): SearchTarget {
+    const explorer = this.explorers.find((candidate) => candidate.chainId === this.manualChainId);
+    return explorer ? this.targetForExplorer(explorer) : {
+      kind: 'explorer',
+      chainId: this.sourceChainId,
+      name: 'Litecoin',
+      accentColor: this.defaultChainAccent,
+      iconUrl: this.defaultChainIconUrl,
+      iconAlt: this.defaultChainIconAlt,
+      searchPlaceholder: this.defaultSearchPlaceholder,
+    };
+  }
+
+  private targetForExplorer(explorer: TxTaxiExplorer): SearchTarget {
+    return {
+      kind: 'explorer',
+      chainId: explorer.chainId,
+      name: explorer.name,
+      accentColor: explorer.accentColor,
+      iconUrl: explorer.iconUrl,
+      iconAlt: explorer.iconAlt,
+      searchPlaceholder: explorer.searchPlaceholder,
+    };
+  }
+
+  private targetForCandidate(candidate: TxTaxiSearchCandidate): SearchTarget {
+    return {
+      kind: 'candidate',
+      chainId: candidate.chainId,
+      name: candidate.name,
+      accentColor: candidate.accentColor,
+      iconUrl: candidate.iconUrl,
+      iconAlt: candidate.iconAlt,
+      searchPlaceholder: `Search ${candidate.name}`,
+      confirmed: candidate.confirmed,
+      directUrl: candidate.directUrl,
+    };
+  }
+
+  private readonly routerSearchTarget: SearchTarget = {
+    kind: 'router',
+    name: 'tx.taxi',
+    accentColor: '#ffd21f',
+    iconUrl: 'https://tx.taxi/assets/brand/taxi-logo.svg',
+    iconAlt: 'tx.taxi',
+    searchPlaceholder: 'Search any supported chain',
+  };
 
 
   navigate(url: string, searchText: string, extras?: any, swapNetwork?: string) {

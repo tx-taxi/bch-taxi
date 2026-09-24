@@ -1,0 +1,12 @@
+
+ RUN  v3.2.4 /home/lukee/dev/ltc-router-review
+
+ ✓ tests/classifier.test.ts (21 tests) 5ms
+ ✓ tests/resolver.test.ts (28 tests) 171ms
+ ✓ tests/resolution-reliability.test.ts (78 tests) 397ms
+
+ Test Files  3 passed (3)
+      Tests  127 passed (127)
+   Start at  15:26:31
+   Duration  819ms (transform 259ms, setup 0ms, collect 438ms, tests 573ms, environment 0ms, prepare 186ms)
+

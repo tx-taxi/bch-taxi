@@ -1,0 +1,158 @@
+[
+  {
+    "chain": "btc",
+    "size": "desktop",
+    "state": "closed",
+    "accent": "#f7931a",
+    "inputBg": "color(srgb 0.287373 0.202118 0.0985882)",
+    "buttonBg": "rgb(247, 147, 26)",
+    "selected": [
+      "Bitcoinbtc.tx.taxiChecking"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "btc",
+    "size": "desktop",
+    "state": "open",
+    "accent": "#f7931a",
+    "inputBg": "color(srgb 0.287373 0.202118 0.0985882)",
+    "buttonBg": "rgb(247, 147, 26)",
+    "selected": [
+      "Bitcoinbtc.tx.taxiChecking"
+    ],
+    "width": 270,
+    "overflow": false
+  },
+  {
+    "chain": "btc",
+    "size": "desktop",
+    "state": "ethereum",
+    "accent": "#627eea",
+    "inputBg": "color(srgb 0.195176 0.172941 0.171804)",
+    "buttonBg": "rgb(98, 126, 234)",
+    "selected": [
+      "Ethereumeth.tx.taxiChecking"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "desktop",
+    "state": "closed",
+    "accent": "#345d9d",
+    "inputBg": "color(srgb 0.156706 0.216314 0.325647)",
+    "buttonBg": "rgb(52, 93, 157)",
+    "selected": [
+      "Litecoinltc.tx.taxiSwitch"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "desktop",
+    "state": "open",
+    "accent": "#345d9d",
+    "inputBg": "color(srgb 0.156706 0.216314 0.325647)",
+    "buttonBg": "rgb(52, 93, 157)",
+    "selected": [
+      "Litecoinltc.tx.taxiSwitch"
+    ],
+    "width": 270,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "desktop",
+    "state": "ethereum",
+    "accent": "#627eea",
+    "inputBg": "color(srgb 0.170196 0.219333 0.335961)",
+    "buttonBg": "rgb(98, 126, 234)",
+    "selected": [
+      "Ethereumeth.tx.taxiSwitch"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "btc",
+    "size": "mobile",
+    "state": "closed",
+    "accent": "#f7931a",
+    "inputBg": "color(srgb 0.287373 0.202118 0.0985882)",
+    "buttonBg": "rgb(247, 147, 26)",
+    "selected": [
+      "Bitcoinbtc.tx.taxiChecking"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "btc",
+    "size": "mobile",
+    "state": "open",
+    "accent": "#f7931a",
+    "inputBg": "color(srgb 0.287373 0.202118 0.0985882)",
+    "buttonBg": "rgb(247, 147, 26)",
+    "selected": [
+      "Bitcoinbtc.tx.taxiChecking"
+    ],
+    "width": 270,
+    "overflow": false
+  },
+  {
+    "chain": "btc",
+    "size": "mobile",
+    "state": "ethereum",
+    "accent": "#627eea",
+    "inputBg": "color(srgb 0.195176 0.172941 0.171804)",
+    "buttonBg": "rgb(98, 126, 234)",
+    "selected": [
+      "Ethereumeth.tx.taxiChecking"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "mobile",
+    "state": "closed",
+    "accent": "#345d9d",
+    "inputBg": "color(srgb 0.156706 0.216314 0.325647)",
+    "buttonBg": "rgb(52, 93, 157)",
+    "selected": [
+      "Litecoinltc.tx.taxiSwitch"
+    ],
+    "width": 0,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "mobile",
+    "state": "open",
+    "accent": "#345d9d",
+    "inputBg": "color(srgb 0.156706 0.216314 0.325647)",
+    "buttonBg": "rgb(52, 93, 157)",
+    "selected": [
+      "Litecoinltc.tx.taxiSwitch"
+    ],
+    "width": 270,
+    "overflow": false
+  },
+  {
+    "chain": "ltc",
+    "size": "mobile",
+    "state": "ethereum",
+    "accent": "#627eea",
+    "inputBg": "color(srgb 0.170196 0.219333 0.335961)",
+    "buttonBg": "rgb(98, 126, 234)",
+    "selected": [
+      "Ethereumeth.tx.taxiSwitch"
+    ],
+    "width": 0,
+    "overflow": false
+  }
+]

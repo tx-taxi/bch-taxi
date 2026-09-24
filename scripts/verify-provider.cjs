@@ -1,0 +1,10 @@
+// Reproduces real provider-outage distinctions; does not assert implementation text.
+const http=require('http'),{spawn}=require('child_process'),fs=require('fs'),assert=require('assert/strict');
+let mode='ok';const fake=http.createServer((req,res)=>{if(mode==='down'){res.writeHead(503);return res.end('down');}if(req.url==='/api/missing'){res.writeHead(404);return res.end('missing');}res.setHeader('content-type','application/json');res.end(req.url==='/api/zero'?'0':req.url==='/api/empty'?'[]':'{"value":42}');});
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+(async()=>{await new Promise(r=>fake.listen(9335,'127.0.0.1',r));const child=spawn(process.execPath,['adapter/server.cjs'],{env:{...process.env,PORT:'9334',LTC_PROVIDER:'http://127.0.0.1:9335'},stdio:'ignore'});try{await wait(700);let r=await fetch('http://127.0.0.1:9334/api/sample');assert.equal(r.status,200);assert.deepEqual(await r.json(),{value:42});
+assert.equal((await fetch('http://127.0.0.1:9334/api/missing')).status,404);assert.equal(await (await fetch('http://127.0.0.1:9334/api/zero')).json(),0);assert.deepEqual(await (await fetch('http://127.0.0.1:9334/api/empty')).json(),[]);
+mode='down';await wait(5100);r=await fetch('http://127.0.0.1:9334/api/sample');assert.equal(r.status,200);assert.equal(r.headers.get('x-ltc-stale'),'true');assert.deepEqual(await r.json(),{value:42});
+assert.equal((await fetch('http://127.0.0.1:9334/api/new')).status,503);r=await fetch('http://127.0.0.1:9334/api/blocks/tip/height');assert.equal(r.status,200);assert.equal(r.headers.get('x-ltc-source'),'blockcypher');const tip=await r.text();assert.match(tip,/^\d+$/);
+mode='ok';await wait(200);r=await fetch('http://127.0.0.1:9334/api/sample');assert.equal(r.headers.get('x-ltc-stale'),'false');fs.writeFileSync('review/provider-verification.json',JSON.stringify({at:new Date().toISOString(),pass:['zero','empty','404 absence','503 outage','stale retained with timestamp','independent tip fallback','recovery'],fallbackTip:tip},null,2));console.log('Provider verification passed');
+}finally{child.kill();fake.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -139,11 +139,9 @@ export class ElectrsApiService {
   }
 
   getAddressTransactions$(address: string,  txid?: string): Observable<Transaction[]> {
-    let params = new HttpParams();
-    if (txid) {
-      params = params.append('after_txid', txid);
-    }
-    return this.httpClient.get<Transaction[]>(this.apiBaseUrl + this.apiBasePath + '/api/address/' + address + '/txs', { params });
+    // Esplora's confirmed history cursor is a path segment, not after_txid.
+    const cursor = txid ? '/chain/' + encodeURIComponent(txid) : '';
+    return this.httpClient.get<Transaction[]>(this.apiBaseUrl + this.apiBasePath + '/api/address/' + address + '/txs' + cursor);
   }
 
   getAddressesTransactions$(addresses: string[], txid?: string): Observable<Transaction[]> {

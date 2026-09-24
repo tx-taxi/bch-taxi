@@ -28,7 +28,7 @@ export class FooterComponent implements OnInit {
 
   mempoolBlocksData$: Observable<MempoolBlocksData>;
   mempoolInfoData$: Observable<MempoolInfoData>;
-  vBytesPerSecondLimit = 1667;
+  vBytesPerSecondLimit = 6667;
   isLoadingWebSocket$: Observable<boolean>;
   mempoolLoadingStatus$: Observable<number>;
 
@@ -52,7 +52,7 @@ export class FooterComponent implements OnInit {
           const percent = Math.round((Math.min(vbytesPerSecond, this.vBytesPerSecondLimit) / this.vBytesPerSecondLimit) * 100);
 
           let progressColor = '#7CB342';
-          if (vbytesPerSecond > 1667) {
+          if (vbytesPerSecond > 6667) {
             progressColor = '#FDD835';
           }
           if (vbytesPerSecond > 2000) {

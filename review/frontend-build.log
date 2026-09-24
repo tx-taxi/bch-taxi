@@ -1,0 +1,65 @@
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files           | Names                                               |  Raw size | Estimated transfer size
+main.9021dde645eccab6.js      | main                                                |   1.53 MB |               363.08 kB
+styles.aef5b6f3beb31966.css   | styles                                              | 267.49 kB |                29.41 kB
+polyfills.961f38f6c6725dff.js | polyfills                                           |  35.42 kB |                11.60 kB
+runtime.aa3227cfd80f14be.js   | runtime                                             |   3.42 kB |                 1.65 kB
+
+                              | Initial total                                       |   1.83 MB |               405.75 kB
+
+Lazy chunk files              | Names                                               |  Raw size | Estimated transfer size
+400.e0163c2156ab3e25.js       | components-tracker-tracker-module                   | 776.17 kB |               215.80 kB
+428.a9e3d4329e114160.js       | components-tracker-tracker-module                   | 662.26 kB |               102.99 kB
+164.39fe18f8bfdd7678.js       | components-tracker-tracker-module                   | 278.41 kB |                58.22 kB
+854.5eb1c447c517de8a.js       | app-lightning-lightning-module                      | 183.85 kB |                32.01 kB
+985.e1521ae5b5f0506a.js       | components-block-block-module                       |  78.81 kB |                16.70 kB
+187.67793ebf1a0addb7.js       | app-bitcoin-graphs-module                           |  72.44 kB |                15.88 kB
+289.d0c9c66b016ab37a.js       | app-lightning-lightning-module                      |  71.41 kB |                13.45 kB
+882.d388f64110ea5df7.js       | app-master-page-module                              |  56.33 kB |                14.31 kB
+454.3cd4fe52566585ea.js       | app-previews-module                                 |  55.26 kB |                12.89 kB
+39.c52d68dec1423bd6.js        | components-tracker-tracker-module                   |  55.03 kB |                11.34 kB
+858.76d5c6a730b55f13.js       | app-liquid-liquid-master-page-module                |  53.95 kB |                12.78 kB
+660.46e1904f794ae133.js       | components-tracker-tracker-module                   |  44.51 kB |                10.90 kB
+51.359cb225ef86c4d6.js        | components-tracker-tracker-module                   |  43.45 kB |                10.02 kB
+987.ebd9f121a451cca4.js       | app-master-page-module                              |  39.98 kB |                 9.53 kB
+765.8417af16c18567c7.js       | app-bitcoin-graphs-module                           |  37.49 kB |                 7.91 kB
+77.58e9828c0928bad3.js        | app-lightning-lightning-previews-module             |  29.29 kB |                 6.80 kB
+507.3c8bea32992cab10.js       | app-master-page-module                              |  28.77 kB |                 7.06 kB
+110.87f49604a3a8e605.js       | app-master-page-module                              |  28.54 kB |                 7.38 kB
+119.0875ac0ee1a79769.js       | app-liquid-liquid-graphs-module                     |  17.76 kB |                 3.99 kB
+979.a428308ffab399de.js       | app-master-page-module                              |  15.23 kB |                 4.21 kB
+338.c44110bf8e70190a.js       | app-graphs-lightning-graphs-module                  |  10.71 kB |                 3.83 kB
+98.b948f3080ce6e734.js        | app-docs-docs-module                                |   6.25 kB |                 2.15 kB
+602.90562a27b36c6433.js       | components-about-about-module                       |   4.71 kB |                 1.59 kB
+501.2a1a4fafc22ac7dc.js       | components-block-block-module                       |   4.58 kB |                 1.71 kB
+745.6efdbf0d8faeeea5.js       | components-trademark-policy-trademark-policy-module |   4.35 kB |                 1.36 kB
+515.cf3807387400d116.js       | components-terms-of-service-terms-of-service-module |   3.70 kB |                 1.31 kB
+762.1d7c267c60f6fb48.js       | components-privacy-policy-privacy-policy-module     |   3.50 kB |                 1.28 kB
+347.83623ab5410e6001.js       | app-bitcoin-graphs-module                           |   1.82 kB |               766 bytes
+414.c9a2eae1654424f9.js       | components-transaction-libwally-js                  |   1.68 kB |               731 bytes
+65.0678206bd35619c8.js        | app-liquid-liquid-graphs-module                     | 711 bytes |               352 bytes
+
+Build at: 2026-09-24T22:29:24.063Z - Hash: 0a337bfe5cd8d85d - Time: 16409ms
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/components/acceleration-timeline/acceleration-timeline.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 832 bytes with a total of 6.83 kB.
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/components/custom-dashboard/custom-dashboard.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 1.59 kB with a total of 7.59 kB.
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/components/search-form/search-form.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 276 bytes with a total of 6.28 kB.
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/components/transactions-list/transactions-list.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 1.07 kB with a total of 7.07 kB.
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/dashboard/dashboard.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 138 bytes with a total of 6.14 kB.
+
+Warning: /home/lukee/dev/ltc-taxi/frontend/src/app/docs/api-docs/api-docs.component.scss exceeded maximum budget. Budget 6.00 kB was not met by 1.22 kB with a total of 7.21 kB.
+
+

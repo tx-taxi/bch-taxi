@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "recent block paging fetched offset 25",
+    "historical block populated deferred rows",
+    "address scroll fetched canonical indexed cursor page (recorded real history; primary timed out during UI pass)",
+    "theme persists across refresh, deep route and back",
+    "cross-chain confirmation, remember, automatic next visit and reset",
+    "pool hashrates retain Litecoin precision",
+    "affected mobile calculator, mining and tracker captured"
+  ],
+  "errors": []
+}

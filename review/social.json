@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "tx",
+    "width": 1200,
+    "height": 630,
+    "elapsedMs": 14055
+  },
+  {
+    "kind": "block",
+    "width": 1200,
+    "height": 630,
+    "elapsedMs": 23
+  },
+  {
+    "kind": "address",
+    "width": 1200,
+    "height": 630,
+    "elapsedMs": 14026
+  }
+]

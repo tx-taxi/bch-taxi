@@ -12,7 +12,6 @@ import { HashrateChartComponent } from '@components/hashrate-chart/hashrate-char
 import { HashrateChartPoolsComponent } from '@components/hashrates-chart-pools/hashrate-chart-pools.component';
 import { MempoolBlockComponent } from '@components/mempool-block/mempool-block.component';
 import { MiningDashboardComponent } from '@components/mining-dashboard/mining-dashboard.component';
-import { AcceleratorDashboardComponent } from '@components/acceleration/accelerator-dashboard/accelerator-dashboard.component';
 import { PoolRankingComponent } from '@components/pool-ranking/pool-ranking.component';
 import { PoolComponent } from '@components/pool/pool.component';
 import { StartComponent } from '@components/start/start.component';
@@ -20,8 +19,6 @@ import { StatisticsComponent } from '@components/statistics/statistics.component
 import { DashboardComponent } from '@app/dashboard/dashboard.component';
 import { CustomDashboardComponent } from '@components/custom-dashboard/custom-dashboard.component';
 import { TreasuriesComponent } from '@components/treasuries/treasuries.component';
-import { AccelerationFeesGraphComponent } from '@components/acceleration/acceleration-fees-graph/acceleration-fees-graph.component';
-import { AccelerationsListComponent } from '@components/acceleration/accelerations-list/accelerations-list.component';
 import { AddressComponent } from '@components/address/address.component';
 import { WalletComponent } from '@components/wallet/wallet.component';
 import { CalculatorComponent } from '@components/calculator/calculator.component';
@@ -54,26 +51,6 @@ const routes: Routes = [
             component: MiningDashboardComponent,
           },
         ]
-      },
-      {
-        path: 'acceleration',
-        data: { networks: ['bitcoin'], networkSpecific: true, onlySubnet: [''] },
-        component: StartComponent,
-        children: [
-          {
-            path: '',
-            component: AcceleratorDashboardComponent,
-          }
-        ]
-      },
-      {
-        path: 'acceleration/list/:page',
-        data: { networks: ['bitcoin'], networkSpecific: true, onlySubnet: [''] },
-        component: AccelerationsListComponent,
-      },
-      {
-        path: 'acceleration/list',
-        redirectTo: 'acceleration/list/1',
       },
       {
         path: 'mempool-block/:id',
@@ -155,11 +132,6 @@ const routes: Routes = [
             component: BlockSizesWeightsGraphComponent,
           },
           {
-            path: 'acceleration/fees',
-            data: { networks: ['bitcoin'], networkSpecific: true, onlySubnet: [''] },
-            component: AccelerationFeesGraphComponent,
-          },
-          {
             path: 'lightning',
             data: { preload: true, networks: ['bitcoin'] },
             loadChildren: () => import ('@app/graphs/lightning-graphs.module').then(m => m.LightningGraphsModule),
@@ -207,6 +179,15 @@ if (window['__env']?.OFFICIAL_MEMPOOL_SPACE) {
     }]
   });
 }
+
+// LTC local route contract: upstream write tools/services lack a Litecoin provider contract.
+function retainLitecoinRoutes(items: any[]): void {
+  for (let i = items.length - 1; i >= 0; i--) {
+    if (/^(tx\/(push|test)|pushtx|stratum|lightning|acceleration|monitoring|nodes|faucet|sp\/|wallet|widget\/wallet|status|treasuries)/.test(items[i].path || '') || items[i].path === 'mining/block-health') items.splice(i, 1);
+    else if (items[i].children) retainLitecoinRoutes(items[i].children);
+  }
+}
+retainLitecoinRoutes(routes);
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

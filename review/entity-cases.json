@@ -1,0 +1,42 @@
+[
+  {
+    "name": "complex",
+    "theme": "default",
+    "txid": "8f0a0e13ccfa16dfbc1e4637d21205b9299af9b4a91d486571a782f7741d07aa",
+    "inputs": 3,
+    "outputs": 2,
+    "provenance": "recorded real provider tx"
+  },
+  {
+    "name": "pending",
+    "theme": "default",
+    "txid": "b066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849",
+    "inputs": 1,
+    "outputs": 2,
+    "provenance": "controlled unconfirmed status over real transparent tx"
+  },
+  {
+    "name": "historical focus stable after resume events",
+    "theme": "default"
+  },
+  {
+    "name": "complex",
+    "theme": "original",
+    "txid": "8f0a0e13ccfa16dfbc1e4637d21205b9299af9b4a91d486571a782f7741d07aa",
+    "inputs": 3,
+    "outputs": 2,
+    "provenance": "recorded real provider tx"
+  },
+  {
+    "name": "pending",
+    "theme": "original",
+    "txid": "b066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849",
+    "inputs": 1,
+    "outputs": 2,
+    "provenance": "controlled unconfirmed status over real transparent tx"
+  },
+  {
+    "name": "historical focus stable after resume events",
+    "theme": "original"
+  }
+]

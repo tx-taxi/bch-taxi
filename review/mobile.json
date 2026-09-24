@@ -1,0 +1,142 @@
+[
+  {
+    "name": "root",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n1.00 - 711 lit/vB\n‎0.015 LTC\n423 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "tx",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "Bitcoin\nTransaction\nb066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d\n2b32531b6849\nb066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849\n \n \n \n \n \n \n \n \n \nSent\nPendin"
+  },
+  {
+    "name": "block",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 711 lit/vB\n‎0.016 LTC\n448 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "address",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "Address\nLaDAdDQUuCxeLxGiPazAY879sJ\nxs1TVwYQ\nLaDAdDQUuCxeLxGiPazAY879sJxs1TVwYQ\nConfirmed balance\t‎0.74024000 LTC\n$53.30\n\nPending\t‎+0.00000000 LTC\n$0.00\n\nConfirmed UTXOs\t1\nPending U"
+  },
+  {
+    "name": "pending",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 711 lit/vB\n‎0.016 LTC\n464 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "mining",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 711 lit/vB\n‎0.016 LTC\n479 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "graphs",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "Mempool\nMining\nMore\nMempool by vBytes (lit/vByte)\n2H (LIVE)\n24H\n1W\n1M\n3M\n6M\n1Y\n2Y\n3Y\n4Y\nAll\nSep 24, 2026\n0 MvB\n0.03 MvB\n0.06 MvB\n0.09 MvB\n0.12 MvB\n0.15 MvB\n0.18 MvB\n13:30\n14:30\n14:"
+  },
+  {
+    "name": "docs",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "Litecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Litecoin address, or supported explorer URL. A 64"
+  },
+  {
+    "name": "legal",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "\n\n\n\nPrivacy Policy\nUpdated: September 20, 2026\n\n\n\nUse Your Own Node When Privacy Matters\n\nltc.tx.taxi displays public Litecoin chain and mempool data through the backend configured"
+  },
+  {
+    "name": "calculator",
+    "theme": "default",
+    "errors": [],
+    "overflow": false,
+    "text": "Calculator\nUSD\nLTC\nlits\n\n\n₿ 1.00 000 000lits\n$72.00\nFiat price last updated 20 minutes ago: $72.00\n\nLitecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD"
+  },
+  {
+    "name": "root",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 711 lit/vB\n‎0.017 LTC\n515 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "tx",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "Bitcoin\nTransaction\nb066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d\n2b32531b6849\nb066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849\n \n \n \n \n \n \n \n \n \nSent\nPendin"
+  },
+  {
+    "name": "block",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 988 lit/vB\n‎0.022 LTC\n527 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n4 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "address",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "Address\nLaDAdDQUuCxeLxGiPazAY879sJ\nxs1TVwYQ\nLaDAdDQUuCxeLxGiPazAY879sJxs1TVwYQ\nConfirmed balance\t‎0.74024000 LTC\n$53.30\n\nPending\t‎+0.00000000 LTC\n$0.00\n\nConfirmed UTXOs\t1\nPending U"
+  },
+  {
+    "name": "pending",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n0.00 - 988 lit/vB\n‎0.022 LTC\n542 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n5 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "mining",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": " \n~0 lit/vB\n1.00 - 988 lit/vB\n‎0.022 LTC\n541 transactions\nIn ~2 minutes\n \n3183786\n~0 lit/vB\n0.00 - 1.01 lit/vB\n‎0.00001382 LTC\n4 transactions\n5 minutes ago\nAntPool\n \n3183785\n~0 lit"
+  },
+  {
+    "name": "graphs",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "Mempool\nMining\nMore\nMempool by vBytes (lit/vByte)\n2H (LIVE)\n24H\n1W\n1M\n3M\n6M\n1Y\n2Y\n3Y\n4Y\nAll\nSep 24, 2026\n0 MvB\n0.03 MvB\n0.06 MvB\n0.09 MvB\n0.12 MvB\n0.15 MvB\n0.18 MvB\n13:30\n14:30\n14:"
+  },
+  {
+    "name": "docs",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "Litecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Litecoin address, or supported explorer URL. A 64"
+  },
+  {
+    "name": "legal",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "\n\n\n\nPrivacy Policy\nUpdated: September 20, 2026\n\n\n\nUse Your Own Node When Privacy Matters\n\nltc.tx.taxi displays public Litecoin chain and mempool data through the backend configured"
+  },
+  {
+    "name": "calculator",
+    "theme": "original",
+    "errors": [],
+    "overflow": false,
+    "text": "Calculator\nUSD\nLTC\nlits\n\n\n₿ 1.00 000 000lits\n$72.00\nFiat price last updated 20 minutes ago: $72.00\n\nLitecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD"
+  }
+]

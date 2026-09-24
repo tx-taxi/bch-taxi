@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
-import { distinctUntilChanged, map, shareReplay, switchMap } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
+import { distinctUntilChanged, map, shareReplay, startWith, catchError, switchMap } from 'rxjs/operators';
 import { StateService } from '@app/services/state.service';
 import { ApiService } from '@app/services/api.service';
 import { Price } from '@app/services/price.service';
 import { WebsocketService } from '@app/services/websocket.service';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
-const MAX_BTC_SUPPLY = 21000000;
+const MAX_BTC_SUPPLY = 84000000;
 const MAX_SATOSHI_SUPPLY = MAX_BTC_SUPPLY * 100_000_000;
 
 @Component({
@@ -50,7 +50,7 @@ export class CalculatorComponent implements OnInit {
     this.form = this.formBuilder.group({
       fiat: [0],
       bitcoin: [0],
-      satoshis: [0],
+      satoshis: [100_000_000],
     });
 
     this.lastFiatPrice$ = this.stateService.conversions$.asObservable()
@@ -81,6 +81,8 @@ export class CalculatorComponent implements OnInit {
       map((conversions) => {
         return conversions[this.currentCurrency];
       }),
+      catchError(() => of(0)),
+      startWith(0),
       // Share one latest price stream across all form subscriptions to avoid duplicate API calls.
       shareReplay({ bufferSize: 1, refCount: true })
     );
@@ -90,6 +92,7 @@ export class CalculatorComponent implements OnInit {
       this.form.get('fiat').valueChanges
     ]).subscribe(([price, value]) => {
       this.currentPrice = price;
+      if (!(price > 0)) return;
       const maxFiat = price * MAX_BTC_SUPPLY;
       const isMaxSupply = value >= maxFiat;
       this.isMaxSupply = isMaxSupply;
@@ -120,7 +123,7 @@ export class CalculatorComponent implements OnInit {
       if (isNaN(value)) {
         return;
       }
-      this.form.get('fiat').setValue(this.formatFiat(rate), { emitEvent: false } );
+      this.form.get('fiat').setValue(price > 0 ? this.formatFiat(rate) : '', { emitEvent: false } );
       this.form.get('satoshis').setValue(Math.min(Math.round(value * 100_000_000), MAX_SATOSHI_SUPPLY), { emitEvent: false } );
     });
 
@@ -142,11 +145,11 @@ export class CalculatorComponent implements OnInit {
       if (isNaN(value)) {
         return;
       }
-      this.form.get('fiat').setValue(this.formatFiat(rate), { emitEvent: false } );
+      this.form.get('fiat').setValue(price > 0 ? this.formatFiat(rate) : '', { emitEvent: false } );
       this.form.get('bitcoin').setValue(bitcoinRate, { emitEvent: false });
     });
 
-    // Default form with 1 BTC
+    // Default form with 1 LTC
     this.form.get('bitcoin').setValue(1, { emitEvent: true });
   }
 

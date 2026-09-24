@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'preview',
-    component: TransactionRawComponent,
+    redirectTo: '/docs/faq',
   },
   {
     path: ':id',

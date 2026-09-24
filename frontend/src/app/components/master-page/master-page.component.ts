@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Env, StateService } from '@app/services/state.service';
@@ -18,6 +19,9 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   @Input() headerVisible = true;
   @Input() footerVisibleOverride: boolean | null = null;
 
+  providerStale = false;
+  providerTimer: any;
+  checkProvider(): void { this.http.get<any>('/healthz').subscribe({next: h => this.providerStale = h.stale, error: () => this.providerStale = true}); }
   env: Env;
   network$: Observable<string>;
   connectionState$: Observable<number>;
@@ -42,6 +46,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   public menuComponent!: MenuComponent;
 
   constructor(
+    private http: HttpClient,
     public stateService: StateService,
     private languageService: LanguageService,
     private enterpriseService: EnterpriseService,
@@ -51,6 +56,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.checkProvider(); this.providerTimer = setInterval(() => this.checkProvider(), 15000);
     this.env = this.stateService.env;
     this.connectionState$ = this.stateService.connectionState$;
     this.network$ = merge(of(''), this.stateService.networkChanged$);
@@ -135,6 +141,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    clearInterval(this.providerTimer);
     if (this.enterpriseInfo$) {
       this.enterpriseInfo$.unsubscribe();
     }

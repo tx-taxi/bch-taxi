@@ -18,7 +18,7 @@
   </ng-container>
 
   <!-- Large screen -->
-  <a class="navbar-brand d-none d-md-flex" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="btc.tx.taxi dashboard" title="btc.tx.taxi dashboard">
+  <a class="navbar-brand d-none d-md-flex" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="ltc.tx.taxi dashboard" title="ltc.tx.taxi dashboard">
     <ng-container *ngIf="{ val: connectionState$ | async } as connectionState">
       @if (enterpriseInfo) {
         <div class="subdomain_container">
@@ -29,7 +29,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/btc-dark-navbar.svg" alt="btc.tx.taxi Bitcoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
@@ -39,7 +39,7 @@
     </ng-container>
   </a>
   <!-- Mobile -->
-  <a class="navbar-brand d-flex d-md-none justify-content-center" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo, 'me-0': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="btc.tx.taxi dashboard" title="btc.tx.taxi dashboard">
+  <a class="navbar-brand d-flex d-md-none justify-content-center" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo, 'me-0': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="ltc.tx.taxi dashboard" title="ltc.tx.taxi dashboard">
     <ng-container *ngIf="{ val: connectionState$ | async } as connectionState">
       @if (enterpriseInfo) {
         <div class="subdomain_container">
@@ -50,7 +50,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/btc-dark-navbar.svg" alt="btc.tx.taxi Bitcoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
@@ -83,11 +83,6 @@
           <div class="svg-wrapper"><app-svg-images name="nav-tachometer" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
-      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="btn-home" *ngIf="network.val === '' && stateService.env.ACCELERATOR">
-        <a class="nav-link" [routerLink]="['/acceleration' | relativeUrl]" (click)="collapse()">
-          <div class="svg-wrapper"><app-svg-images name="nav-rocket" width="21.59" height="100%"></app-svg-images></div>
-        </a>
-      </li>
       <li class="nav-item mining" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="btn-pools" *ngIf="stateService.env.MINING_DASHBOARD">
         <a class="nav-link" [routerLink]="['/mining' | relativeUrl]" (click)="collapse()" aria-label="Mining dashboard" title="Mining dashboard">
           <div class="svg-wrapper"><app-svg-images name="nav-pickaxe" width="21.59" height="100%"></app-svg-images></div>
@@ -104,7 +99,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-graphs">
-        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Bitcoin graphs" title="Bitcoin graphs">
+        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Litecoin graphs" title="Litecoin graphs">
           <div class="svg-wrapper"><app-svg-images name="nav-chart-area" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -124,7 +119,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-about">
-        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About btc.tx.taxi" title="About btc.tx.taxi">
+        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About ltc.tx.taxi" title="About ltc.tx.taxi">
           <div class="svg-wrapper"><app-svg-images name="nav-info-circle" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -141,7 +136,7 @@
   <div class="flex-grow-1 d-flex flex-column">
     <app-testnet-alert *ngIf="network.val === 'testnet' || network.val === 'testnet4' || network.val === 'signet'"></app-testnet-alert>
 
-    <main style="min-width: 375px; max-width: 100vw">
+    <div *ngIf="providerStale" role="status" class="alert alert-warning m-3">Live provider connection interrupted. Displayed data may be stale; reconnecting.</div><main style="min-width: 375px; max-width: 100vw">
       <router-outlet></router-outlet>
     </main>
 

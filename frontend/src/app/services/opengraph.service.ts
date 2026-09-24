@@ -24,7 +24,7 @@ export class OpenGraphService {
   ) {
     // save og:image tag from original template
     const initialOgImageTag = metaService.getTag('property=\'og:image\'');
-    this.defaultImageUrl = initialOgImageTag?.content || 'https://tx.taxi/assets/og/explorers/bitcoin.png';
+    this.defaultImageUrl = initialOgImageTag?.content || window.location.origin + '/og.png';
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute),
@@ -55,20 +55,15 @@ export class OpenGraphService {
   }
 
   clearOgImage() {
-    this.metaService.updateTag({ property: 'og:image', content: this.defaultImageUrl });
-    this.metaService.updateTag({ name: 'twitter:image', content: this.defaultImageUrl });
+    this.metaService.updateTag({ property: 'og:image', content: window.location.origin + '/og.png?path=' + encodeURIComponent(this.router.url.split('?')[0]) });
+    this.metaService.updateTag({ name: 'twitter:image', content: window.location.origin + '/og.png?path=' + encodeURIComponent(this.router.url.split('?')[0]) });
     this.metaService.updateTag({ property: 'og:image:type', content: 'image/png' });
     this.metaService.updateTag({ property: 'og:image:width', content: '1200' });
     this.metaService.updateTag({ property: 'og:image:height', content: '630' });
   }
 
   setManualOgImage(imageFilename) {
-    const ogImage = `${window.location.protocol}//${window.location.host}/resources/previews/${imageFilename}`;
-    this.metaService.updateTag({ property: 'og:image', content: ogImage });
-    this.metaService.updateTag({ property: 'og:image:type', content: imageFilename.endsWith('.png') ? 'image/png' : 'image/jpeg' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '2000' });
-    this.metaService.updateTag({ property: 'og:image:height', content: '1000' });
-    this.metaService.updateTag({ name: 'twitter:image', content: ogImage });
+    this.clearOgImage();
   }
 
   /// register an event that needs to resolve before we can take a screenshot

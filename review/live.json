@@ -1,0 +1,202 @@
+{
+  "started": "2026-09-24T22:14:10.722Z",
+  "messages": [
+    {
+      "at": 1790288051711,
+      "keys": [
+        "backend",
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "blocks",
+        "conversions",
+        "mempool-blocks",
+        "transactions",
+        "backendInfo",
+        "loadingIndicators",
+        "fees",
+        "da",
+        "rbfSummary"
+      ],
+      "height": 3183776,
+      "count": 175
+    },
+    {
+      "at": 1790288051711,
+      "keys": [
+        "blocks",
+        "mempool-blocks",
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "fees",
+        "da"
+      ],
+      "height": 3183776,
+      "count": 175
+    },
+    {
+      "at": 1790288053043,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 182
+    },
+    {
+      "at": 1790288055047,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 183
+    },
+    {
+      "at": 1790288057044,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 187
+    },
+    {
+      "at": 1790288061044,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 201
+    },
+    {
+      "at": 1790288063046,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 202
+    },
+    {
+      "at": 1790288065050,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 204
+    },
+    {
+      "at": 1790288067048,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 211
+    },
+    {
+      "at": 1790288069065,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 214
+    },
+    {
+      "at": 1790288071633,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 220
+    },
+    {
+      "at": 1790288073717,
+      "keys": [
+        "backend",
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "blocks",
+        "conversions",
+        "mempool-blocks",
+        "transactions",
+        "backendInfo",
+        "loadingIndicators",
+        "fees",
+        "da",
+        "rbfSummary"
+      ],
+      "height": 3183776,
+      "count": 220
+    },
+    {
+      "at": 1790288073719,
+      "keys": [
+        "blocks",
+        "mempool-blocks",
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "fees",
+        "da"
+      ],
+      "height": 3183776,
+      "count": 220
+    },
+    {
+      "at": 1790288075059,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 228
+    },
+    {
+      "at": 1790288077042,
+      "keys": [
+        "mempoolInfo",
+        "vBytesPerSecond",
+        "transactions",
+        "da",
+        "fees",
+        "mempool-blocks"
+      ],
+      "count": 228
+    }
+  ],
+  "connections": 2
+}

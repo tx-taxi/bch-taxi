@@ -362,11 +362,11 @@ export class HashrateChartComponent implements OnInit {
             }
             const selectedPowerOfTen: any = selectPowerOfTen(firstYAxisMin);
             const newMin = Math.floor(firstYAxisMin / selectedPowerOfTen.divider / 10);
-            return 600 / 2 ** 32 * newMin * selectedPowerOfTen.divider * 10;
+            return 150 / 2 ** 32 * newMin * selectedPowerOfTen.divider * 10;
           },
           max: (value) => {
             const firstYAxisMax = this.chartInstance.getModel().getComponent('yAxis', 0).axis.scale.getExtent()[1];
-            const scaledMax = 600 / 2 ** 32 * firstYAxisMax;
+            const scaledMax = 150 / 2 ** 32 * firstYAxisMax;
             return Math.max(scaledMax, value.max);
           },
           axisLabel: {

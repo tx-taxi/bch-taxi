@@ -1,0 +1,10 @@
+[
+  "LTC hash resolved; exactly one selected state",
+  "same-chain native transaction route",
+  "EVM shape retains multiple candidates",
+  "early height submit",
+  "fast typing preserves current query",
+  "manual Ethereum selection and destination color",
+  "foreign source confirmation available",
+  "resolver outage preserves manual explorers"
+]

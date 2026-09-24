@@ -63,7 +63,7 @@
         placement="top"
         (mouseenter)="onChunkEnter(outline.chunkIndex)"
         (mouseleave)="onChunkLeave()">
-        {{ outline.feerate | feeRounding }} sat/vB
+        {{ outline.feerate | feeRounding }} lit/vB
       </text>
     </ng-container>
 
@@ -132,7 +132,7 @@
       <table class="stats">
         <tr>
           <th i18n="transaction.fee|Transaction fee">Fee</th>
-          <td>{{ hoverNode.tx.fee | number }} <span class="unit" i18n="shared.sats">sats</span></td>
+          <td>{{ hoverNode.tx.fee | number }} <span class="unit" i18n="shared.sats">lits</span></td>
         </tr>
         <tr>
           <th i18n="transaction.vsize|Virtual size">Size</th>
@@ -140,7 +140,7 @@
         </tr>
         <tr>
           <th i18n="transaction.fee-rate|Transaction fee rate">Fee rate</th>
-          <td>{{ hoverNode.feerate | feeRounding }} <span class="unit">sat/vB</span></td>
+          <td>{{ hoverNode.feerate | feeRounding }} <span class="unit">lit/vB</span></td>
         </tr>
       </table>
       <div class="legend">

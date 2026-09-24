@@ -103,8 +103,8 @@ export class DifficultyComponent implements OnInit {
           colorPreviousAdjustments = 'var(--transparent-fg)';
         }
 
-        const blocksUntilHalving = 210000 - (maxHeight % 210000);
-        const timeUntilHalving = new Date().getTime() + (blocksUntilHalving * 600000);
+        const blocksUntilHalving = 840000 - (maxHeight % 840000);
+        const timeUntilHalving = new Date().getTime() + (blocksUntilHalving * 150000);
         const newEpochStart = Math.floor(this.stateService.latestBlockHeight / EPOCH_BLOCK_LENGTH) * EPOCH_BLOCK_LENGTH;
         const newExpectedHeight = Math.floor(newEpochStart + da.expectedBlocks);
         this.now = new Date().getTime();
@@ -238,7 +238,7 @@ export class DifficultyComponent implements OnInit {
 }
 
 function getNextBlockSubsidy(height: number): number {
-  const halvings = Math.floor(height / 210_000) + 1;
+  const halvings = Math.floor(height / 840_000) + 1;
   // Force block reward to zero when right shift is undefined.
   if (halvings >= 64) {
     return 0;

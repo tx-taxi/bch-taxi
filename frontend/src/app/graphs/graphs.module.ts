@@ -3,7 +3,6 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { GraphsRoutingModule } from '@app/graphs/graphs.routing.module';
 import { SharedModule } from '@app/shared/shared.module';
 
-import { AccelerationFeesGraphComponent } from '@components/acceleration/acceleration-fees-graph/acceleration-fees-graph.component';
 import { BlockFeesGraphComponent } from '@components/block-fees-graph/block-fees-graph.component';
 import { BlockFeesSubsidyGraphComponent } from '@components/block-fees-subsidy-graph/block-fees-subsidy-graph.component';
 import { PriceChartComponent } from '@components/price-chart/price-chart.component';
@@ -29,7 +28,6 @@ import { PoolComponent } from '@components/pool/pool.component';
 import { DashboardComponent } from '@app/dashboard/dashboard.component';
 import { CustomDashboardComponent } from '@components/custom-dashboard/custom-dashboard.component';
 import { MiningDashboardComponent } from '@components/mining-dashboard/mining-dashboard.component';
-import { AcceleratorDashboardComponent } from '@components/acceleration/accelerator-dashboard/accelerator-dashboard.component';
 import { TreasuriesComponent } from '@components/treasuries/treasuries.component';
 import { HashrateChartComponent } from '@components/hashrate-chart/hashrate-chart.component';
 import { HashrateChartPoolsComponent } from '@components/hashrates-chart-pools/hashrate-chart-pools.component';
@@ -59,13 +57,11 @@ import { AsmStylerPipe } from '@app/shared/pipes/asm-styler/asm-styler.pipe';
     WalletPreviewComponent,
 
     MiningDashboardComponent,
-    AcceleratorDashboardComponent,
     PoolComponent,
     PoolRankingComponent,
     TreasuriesComponent,
     StatisticsComponent,
     GraphsComponent,
-    AccelerationFeesGraphComponent,
     BlockFeesGraphComponent,
     BlockFeesSubsidyGraphComponent,
     PriceChartComponent,
