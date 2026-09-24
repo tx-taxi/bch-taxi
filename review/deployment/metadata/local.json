@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-24T23:29:53.715Z",
+  "origin": "http://127.0.0.1:4310",
+  "checks": [
+    "initial HTML identity and alt text",
+    "entity hydration",
+    "in-app root title/description reset",
+    "versioned root image",
+    "canonical DOM hook",
+    "no JavaScript errors"
+  ]
+}

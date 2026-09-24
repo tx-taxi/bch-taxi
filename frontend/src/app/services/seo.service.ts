@@ -10,7 +10,7 @@ import { StateService } from '@app/services/state.service';
 export class SeoService {
   network = '';
   baseTitle = 'ltc.tx.taxi';
-  baseDescription = 'Explore Litecoin blocks, transactions, fees, and mempool activity with ltc.tx.taxi.';
+  baseDescription = 'Explore Litecoin blocks, transactions, addresses, fees and mining activity.';
   baseDomain = 'ltc.tx.taxi';
 
   canonicalLink: HTMLLinkElement = document.getElementById('canonical') as HTMLLinkElement;
@@ -23,8 +23,7 @@ export class SeoService {
     private activatedRoute: ActivatedRoute,
   ) {
     // save original meta tags
-    this.baseDescription = metaService.getTag('name=\'description\'')?.content || this.baseDescription;
-    this.baseTitle = titleService.getTitle()?.split(' - ')?.[0] || this.baseTitle;
+    // A deep link's entity metadata must not become the site's reset defaults.
     try {
       const canonicalUrl = new URL(this.canonicalLink?.href || '');
       this.baseDomain = canonicalUrl?.host;
@@ -53,6 +52,8 @@ export class SeoService {
     this.titleService.setTitle(fullTitle);
     this.metaService.updateTag({ property: 'og:title', content: fullTitle});
     this.metaService.updateTag({ name: 'twitter:title', content: fullTitle});
+    this.metaService.updateTag({ property: 'og:image:alt', content: fullTitle});
+    this.metaService.updateTag({ name: 'twitter:image:alt', content: fullTitle});
     this.metaService.updateTag({ property: 'og:meta:ready', content: 'ready'});
   }
 
@@ -60,6 +61,8 @@ export class SeoService {
     this.titleService.setTitle(this.getTitle());
     this.metaService.updateTag({ property: 'og:title', content: this.getTitle()});
     this.metaService.updateTag({ name: 'twitter:title', content: this.getTitle()});
+    this.metaService.updateTag({ property: 'og:image:alt', content: this.getTitle()});
+    this.metaService.updateTag({ name: 'twitter:image:alt', content: this.getTitle()});
     this.metaService.updateTag({ property: 'og:meta:ready', content: 'ready'});
   }
 

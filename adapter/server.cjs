@@ -68,9 +68,10 @@ function send(res,status,data,type='application/json',headers={}) {
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function metadata(path) {
  const m=path.match(/^\/(tx|block|address)\/([A-Za-z0-9]+)$/);
- let title='ltc.tx.taxi · Litecoin explorer', description='Explore Litecoin blocks, transparent transactions, indexed addresses and the live provider mempool.';
+ let cardDescription='Entity data temporarily unavailable. Please retry.';
+ let title='ltc.tx.taxi - Litecoin Explorer', description='Explore Litecoin blocks, transactions, addresses, fees and mining activity.';
  if(m) {
-  const kind=m[1],id=m[2];title=`Litecoin ${kind} ${id} · ltc.tx.taxi`;
+  const kind=m[1],id=m[2];title=`Litecoin ${kind} ${id} - ltc.tx.taxi`;
   let p=kind==='block'?'/api/v1/block/'+id:'/api/'+kind+'/'+id;
   if(kind==='block' && /^\d+$/.test(id)) {const h=await api('/api/block-height/'+id);if(h.status===200)p='/api/v1/block/'+h.data;}
   const r=await api(p);
@@ -78,14 +79,23 @@ async function metadata(path) {
    if(kind==='tx')description=`${r.data.status?.confirmed?'Confirmed':'Pending'} Litecoin transaction. Fee: ${(r.data.fee/1e8).toFixed(8)} LTC. Transparent outputs; MWEB amounts remain private.`;
    if(kind==='block')description=`Litecoin block ${r.data.height}. ${r.data.tx_count} transactions. Mined ${new Date(r.data.timestamp*1000).toISOString()}.`;
    if(kind==='address')description=`Litecoin address with ${r.data.chain_stats?.tx_count ?? 'indexed'} confirmed transactions. Transparent-chain history.`;
+   if(kind==='tx')cardDescription=`${r.data.status?.confirmed?'Confirmed':'Pending'} transaction · Fee: ${(r.data.fee/1e8).toFixed(8)} LTC`;
+   if(kind==='block')cardDescription=`Block ${r.data.height} · ${r.data.tx_count} transaction${r.data.tx_count===1?'':'s'} · ${new Date(r.data.timestamp*1000).toISOString().slice(0,10)}`;
+   if(kind==='address')cardDescription=`${r.data.chain_stats?.tx_count ?? 'Indexed'} confirmed transaction${r.data.chain_stats?.tx_count===1?'':'s'}`;
   } else description='Litecoin entity data is temporarily unavailable. Retry to retrieve current details.';
  }
- return {title,description,path:m?path:'/'};
+ return {title,description,cardDescription,path:m?path:'/'};
 }
+const cardTemplate=fs.readFileSync(__dirname+'/assets/social-card.svg','utf8');
+const cardLogo='data:image/svg+xml;base64,'+fs.readFileSync(__dirname+'/../frontend/src/resources/branding/ltc-dark-navbar.svg').toString('base64');
 async function card(path) {
- const m=await metadata(path),lines=[m.title.length>66?m.title.slice(0,61)+'…':m.title,...m.description.match(/.{1,75}(?:\s|$)/g)||[]];
- const logo=fs.readFileSync(__dirname+'/../frontend/src/resources/branding/ltc-dark-navbar.svg').toString('base64');
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="#111827"/><rect x="0" y="0" width="1200" height="12" fill="#789de0"/><image href="data:image/svg+xml;base64,${logo}" x="65" y="60" width="360" height="80"/><text x="65" y="205" font-family="DejaVu Sans" font-size="24" fill="#789de0">LITECOIN · TRANSPARENT CHAIN</text>${lines.map((l,i)=>`<text x="65" y="${285+i*52}" font-family="DejaVu Sans" font-size="${i?24:27}" fill="#e4e7ec">${escape(l.trim())}</text>`).join('')}<text x="65" y="570" font-family="DejaVu Sans" font-size="22" fill="#9ca3af">ltc.tx.taxi</text></svg>`;
+ const m=await metadata(path), entity=m.path.match(/^\/(tx|block|address)\/([A-Za-z0-9]+)$/);
+ const headline=entity?({tx:'transaction',block:'block',address:'address'}[entity[1]]):'explorer';
+ const subtitle=entity?m.cardDescription:'Live Litecoin blocks, transactions, fees and mining.';
+ const bounded=subtitle.length>61?subtitle.slice(0,60).trimEnd()+'…':subtitle;
+ const identifier=entity?`<text x="80" y="548" fill="#747474" font-family="DejaVu Sans Mono, monospace" font-size="18">${escape(entity[2])}</text>`:'';
+ const values={headline:escape(headline),subtitle:escape(bounded),logo:cardLogo,identifier};
+ const svg=cardTemplate.replace(/\{\{(headline|subtitle|logo|identifier)\}\}/g,(_,key)=>values[key]);
  return sharp(Buffer.from(svg)).png().toBuffer();
 }
 const server=http.createServer(async(req,res)=>{
@@ -132,7 +142,7 @@ const server=http.createServer(async(req,res)=>{
   if(type.includes('text/html')) {
    let html=await r.text();const m=await metadata(u.pathname),origin=SITE_ORIGIN;
    html=html.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<meta[^>]+(?:name|property)=["'](?:description|og:[^"']+|twitter:[^"']+)["'][^>]*>/g,'').replace(/<link[^>]+rel=["']canonical["'][^>]*>/g,'');
-   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:image" content="${origin}/og.png?path=${encodeURIComponent(m.path)}"><meta property="og:url" content="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${origin}/og.png?path=${encodeURIComponent(m.path)}"></head>`);
+   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="ltc.tx.taxi"><meta property="og:locale" content="en_US"><meta property="og:image" content="${origin}/og.png?v=2&amp;path=${encodeURIComponent(m.path)}"><meta property="og:url" content="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="${escape(m.title)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:domain" content="ltc.tx.taxi"><meta name="twitter:image:alt" content="${escape(m.title)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${origin}/og.png?v=2&amp;path=${encodeURIComponent(m.path)}"></head>`);
    return send(res,r.status,html,type);
   }
   return send(res,r.status,Buffer.from(await r.arrayBuffer()),type);
