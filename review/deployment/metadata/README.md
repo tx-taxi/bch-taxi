@@ -9,3 +9,5 @@ Initial HTML now agrees with the router's LTC identity, includes site/locale/ima
 Kit findings committed separately at 3786616 (version 0.1.1): visual metadata parity, deep-link reset checks, idle-vs-outage distinction, separate container liveness, bounded evidence, LTC-only copy exceptions and observed main-branch auto-deploy settings.
 
 Production verification follows rollout; local evidence is not a deployment claim.
+
+Production verification: deployment bp53qhkj4kbc4tjvfw9tzk8u finished at d0396fd0c. Public initial HTML and browser entity-to-root navigation passed at 2026-09-24T23:32:34Z (`public.json`). Public root and transaction PNGs fetched at 1200×630 and inspected; aligned composition is live. `comparison.png` records the equal-size BTC/LTC comparison.

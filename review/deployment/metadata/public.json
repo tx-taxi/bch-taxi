@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-24T23:35:17.184Z",
-  "origin": "http://127.0.0.1:4310",
+  "at": "2026-09-24T23:32:34.687Z",
+  "origin": "https://ltc.tx.taxi",
   "checks": [
     "initial HTML identity and alt text",
     "entity hydration",

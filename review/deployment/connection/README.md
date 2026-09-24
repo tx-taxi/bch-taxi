@@ -1,0 +1,9 @@
+# Connection and replacements review — 2026-09-24
+
+Current deployed BTC reference: 7e5198447480fd77bfc10fd8db6b8b5899dcf0dc. The sole change since previously reconciled 5580c48e6 is its simplified Pending Transactions heading, now applied to LTC's standard and custom dashboards. The connection service/badges otherwise matched BTC before this pass. Retained shared badge positioning, dimmed logo, loading skeletons, retry timing and successful-data recovery.
+
+Controlled browser checks on deployed BTC and local LTC at 1440×900 and 390×844 simulate a clean backend restart (WebSocket 1012), hold the new connection silent, then deliver fresh initialization. Both display Offline → Reconnecting → healthy. Screenshots were opened and compared at matching sizes. The additional silent-first-connection gap is corrected by starting the existing ping watchdog on subscription, not only after a first response; obsolete watchdog timers are cleared on disconnect. Its controlled timeout case passed. Global provider warning is suppressed while the shared connection badge represents an offline/reconnecting stream; partial endpoint errors still show while connected.
+
+Live LTC evidence: `/api/v1/replacements/` returned HTTP 200 `[]`; the upstream WebSocket sent `rbfSummary: []` and subscribed `rbfLatestSummary: []`. This is an observed empty feed, not proof that no Litecoin replacement ever occurred. Empty copy now says “No replacements in the current feed.” On disconnect, it changes to “Replacement updates unavailable. Reconnecting...” instead of claiming absence. Browser checks verify empty text is removed during disconnect.
+
+Metadata follow-up: public production card rendering exposed a generic sans fallback despite local monospace rendering. The template now explicitly names installed DejaVu Sans Mono, and image URLs advance to v=3. Final production verification follows rollout.

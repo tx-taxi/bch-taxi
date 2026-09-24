@@ -12,11 +12,11 @@
     <path d="M 32 570 L 32 598 L 60 598" stroke="#345d9d" stroke-width="3" fill="none" />
     <path d="M 1140 598 L 1168 598 L 1168 570" stroke="#345d9d" stroke-width="3" fill="none" />
   
-  <text x="80" y="120" fill="#747474" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="26" letter-spacing="6" font-weight="600">LTC.TX.TAXI</text>
+  <text x="80" y="120" fill="#747474" font-family="DejaVu Sans Mono" font-size="26" letter-spacing="6" font-weight="600">LTC.TX.TAXI</text>
        <line x1="80" y1="140" x2="200" y2="140" stroke="#345d9d" stroke-width="3" />
-  <text text-anchor="end" x="1120" y="120" fill="#747474" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" letter-spacing="4" font-weight="600">LTC</text>
-  <text x="80" y="295.22" fill="#345d9d" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="86" font-weight="800" letter-spacing="-2">Litecoin</text><text x="80" y="388.1" fill="#345d9d" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="86" font-weight="800" letter-spacing="-2">{{headline}}</text>
-  <text x="80" y="496.98" fill="#efefef" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="28" font-weight="400">{{subtitle}}</text>
+  <text text-anchor="end" x="1120" y="120" fill="#747474" font-family="DejaVu Sans Mono" font-size="22" letter-spacing="4" font-weight="600">LTC</text>
+  <text x="80" y="295.22" fill="#345d9d" font-family="DejaVu Sans Mono" font-size="86" font-weight="800" letter-spacing="-2">Litecoin</text><text x="80" y="388.1" fill="#345d9d" font-family="DejaVu Sans Mono" font-size="86" font-weight="800" letter-spacing="-2">{{headline}}</text>
+  <text x="80" y="496.98" fill="#efefef" font-family="DejaVu Sans Mono" font-size="28" font-weight="400">{{subtitle}}</text>
   <image href="{{logo}}" x="80" y="44" width="190" height="63" preserveAspectRatio="xMinYMid meet"/>
 {{identifier}}
 </svg>

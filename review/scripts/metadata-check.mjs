@@ -9,6 +9,6 @@ try{
  assert.match(await p.title(),/ltc\.tx\.taxi/);assert.doesNotMatch(await p.title(),/Litecoin block 100000 - ltc\.tx\.taxi -/);
  await p.locator('a[href="/"]').first().click();await p.waitForURL(origin+'/');await p.waitForTimeout(1200);
  assert.equal(await p.title(),'ltc.tx.taxi - Litecoin Explorer');assert.equal(await p.locator('meta[name="description"]').getAttribute('content'),'Explore Litecoin blocks, transactions, addresses, fees and mining activity.');
- assert.match(await p.locator('meta[property="og:image"]').getAttribute('content'),/og\.png\?v=2&path=%2F$/);assert.equal(new URL(await p.locator('#canonical').getAttribute('href')).href,'https://ltc.tx.taxi/');assert.deepEqual(errors,[]);
+ assert.match(await p.locator('meta[property="og:image"]').getAttribute('content'),/og\.png\?v=3&path=%2F$/);assert.equal(new URL(await p.locator('#canonical').getAttribute('href')).href,'https://ltc.tx.taxi/');assert.deepEqual(errors,[]);
  const report={at:new Date().toISOString(),origin,checks:['initial HTML identity and alt text','entity hydration','in-app root title/description reset','versioned root image','canonical DOM hook','no JavaScript errors']};console.log(report);fs.writeFileSync('/home/lukee/dev/ltc-taxi/review/deployment/metadata/'+(origin.startsWith('https')?'public':'local')+'.json',JSON.stringify(report,null,2));
 }finally{await browser.close();}

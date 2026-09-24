@@ -26,7 +26,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
       next: h => this.providerWarning = h.stale
         ? 'Provider data has not updated recently. Displayed data may be stale.'
         : h.degraded ? 'Some provider requests recently failed. Affected data may be unavailable or stale.' : '',
-      error: () => this.providerWarning = 'The local data service is unavailable. Retrying.'
+      error: () => this.providerWarning = 'The data service is unavailable. Retrying.'
     });
   }
   env: Env;

@@ -169,6 +169,8 @@ export class WebsocketService {
       () => {
         this.goOffline();
       });
+    // Also bound a newly opened connection that never delivers its first message.
+    this.startOnlineCheck();
   }
 
   startTrackTransaction(txId: string) {
@@ -329,6 +331,8 @@ export class WebsocketService {
   }
 
   goOffline() {
+    clearTimeout(this.onlineCheckTimeout);
+    clearTimeout(this.onlineCheckTimeoutTwo);
     if (this.reconnectTimeout !== undefined) {
       return;
     }

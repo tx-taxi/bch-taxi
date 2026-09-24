@@ -136,7 +136,7 @@
   <div class="flex-grow-1 d-flex flex-column">
     <app-testnet-alert *ngIf="network.val === 'testnet' || network.val === 'testnet4' || network.val === 'signet'"></app-testnet-alert>
 
-    <div *ngIf="providerWarning" role="status" class="alert alert-warning m-3">{{ providerWarning }}</div><main style="min-width: 375px; max-width: 100vw">
+    <div *ngIf="providerWarning && (connectionState$ | async) === 2" role="status" class="alert alert-warning m-3">{{ providerWarning }}</div><main style="min-width: 375px; max-width: 100vw">
       <router-outlet></router-outlet>
     </main>
 
