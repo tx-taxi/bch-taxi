@@ -22,3 +22,9 @@ Existing BTC deployed revision 5580c48e6 (five commits newer than the prior appr
 Current provider limitation: three historical mining-chart endpoints (`blocks/fees/1w`, `blocks/fee-rates/1w`, `blocks/sizes-weights/1w`) still exceed the bounded request deadline. Busy-address history and pool details now respond from the deployment server. These chart failures are upstream availability limitations, not certified passes. Cached data is bounded and failures remain explicit.
 
 Reference documentation checked: [Coolify automatic deployments](https://coolify.io/docs/applications/deployments/automatic-deployments), [Cloudflare DNS record management](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/). Actual app settings, deployment results, and public checks are the evidence for this setup.
+
+## Deployment follow-up
+
+The GitHub push of 65961f597 triggered deployment `wasvgfktfyneutwjgcen3chb` automatically, and it finished successfully. Router push 476f9db likewise deployed through its existing GitHub integration; the public registry and search-options response now identify LTC as first-party at ltc.tx.taxi. Public address history returned two disjoint pages of 25 transactions.
+
+Mobile in-app block-height navigation exposed a missing canonical-link ID in server-rendered HTML. The direct-route checks had not exercised that path, and Angular logged its caught error to the console rather than a pageerror event. Restored `id="canonical"` on the generated tag. The behavior check now asserts populated block details, matching canonical URL, no error panel, and both console/page errors. It passes locally before publishing the adapter correction. Final public recheck follows rollout.
