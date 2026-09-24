@@ -519,19 +519,9 @@
       </div>
       <div class="float-start mt-2-5 grey-info-text" *ngIf="tx.fee === -1" i18n="transactions-list.load-to-reveal-fee-info">Show more inputs to reveal fee data</div>
 
-      <div class="float-end" [class.has-accelerate]="!tx.status?.confirmed && acceleratedTxids">
-        @if (!tx.status?.confirmed && acceleratedTxids) {
-          <button type="button" class="btn btn-sm accelerate mt-2 me-2 btn-purple" [class.blink]="acceleratedTxids.has(tx.txid)" [routerLink]="['/tx/' | relativeUrl, tx.txid]" [fragment]="'accelerate'">
-            <img src="/resources/mempool-accelerator-sparkles-light.svg" height="15" class="me-2" />
-            @if (acceleratedTxids.has(tx.txid)) {
-              <span i18n="transaction.audit.accelerated">Accelerated</span>
-            } @else {
-              <span i18n="transaction.accelerate|Accelerate button label">Accelerate</span>
-            }
-          </button>
-        }
+      <div class="float-end">
         <ng-container *ngIf="showConfirmations && latestBlock$ | async as latestBlock">
-          <app-confirmations [chainTip]="latestBlock?.height" [height]="tx?.status?.block_height" [buttonClass]="(!tx.status?.confirmed && acceleratedTxids) ? 'mt-2 confirmation-compact' : 'mt-2'"></app-confirmations>
+          <app-confirmations [chainTip]="latestBlock?.height" [height]="tx?.status?.block_height" buttonClass="mt-2"></app-confirmations>
         </ng-container>
         <button *ngIf="addresses.length === 0; else viewingAddress" type="button" class="btn btn-sm btn-primary mt-2 ms-2" (click)="switchCurrency()">
           <ng-template [ngIf]="(network === 'liquid' || network === 'liquidtestnet') && haveBlindedOutputValues(tx)" [ngIfElse]="defaultAmount" i18n="shared.confidential">Confidential</ng-template>

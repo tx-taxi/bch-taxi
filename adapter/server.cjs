@@ -1,10 +1,14 @@
 'use strict';
-// Local review gateway. No node, production registry or deployment is modified.
+// Litecoin API gateway and native explorer runtime; local mode proxies Angular.
 const http = require('node:http');
 const fs = require('node:fs');
+const path = require('node:path');
 const {WebSocket, WebSocketServer} = require('ws');
 const sharp = require('sharp');
 const {providerStatus} = require('./provider-health.cjs');
+const STATIC_ROOT = process.env.LTC_STATIC_ROOT && path.resolve(process.env.LTC_STATIC_ROOT);
+const ROUTER_ORIGIN = process.env.LTC_ROUTER_ORIGIN || 'http://127.0.0.1:4312';
+const SITE_ORIGIN = process.env.LTC_SITE_ORIGIN || 'http://127.0.0.1:4310';
 const PRIMARY = process.env.LTC_PROVIDER || 'https://litecoinspace.org';
 const cache = new Map(), inflight = new Map(), failedPaths = new Map();
 const health = {primary: PRIMARY, lastSuccess: null, lastFailure: null, websocket: 'connecting'};
@@ -90,14 +94,14 @@ const server=http.createServer(async(req,res)=>{
   if(req.method!=='GET' && req.method!=='HEAD')return send(res,405,{error:'Read-only local explorer'});
   if(u.pathname.startsWith('/local-router/')) {
    const path=u.pathname.slice('/local-router'.length)+u.search;
-   if(!/^\/(api|assets)\//.test(path)) {res.writeHead(302,{location:'http://127.0.0.1:4312'+path});return res.end();}
-   const r=await fetch('http://127.0.0.1:4312'+path,{signal:AbortSignal.timeout(12000),redirect:'manual'});
+   if(!/^\/(api|assets)\//.test(path)) {res.writeHead(302,{location:ROUTER_ORIGIN+path});return res.end();}
+   const r=await fetch(ROUTER_ORIGIN+path,{signal:AbortSignal.timeout(12000),redirect:'manual'});
    if(r.status>=300&&r.status<400) { const dest=r.headers.get('location');res.writeHead(r.status,{location:dest});return res.end(); }
    return send(res,r.status,Buffer.from(await r.arrayBuffer()),r.headers.get('content-type')||'application/json');
   }
   if(u.pathname==='/healthz')return send(res,200,{...providerStatus(health,failedPaths),cacheEntries:cache.size});
   if(u.pathname==='/api/local-resolve') {
-   try {return send(res,200,await fetchData('http://127.0.0.1:4312/api/v1/resolve?value='+encodeURIComponent(u.searchParams.get('value')||''),12000));} catch {return send(res,503,{unavailable:true});}
+   try {return send(res,200,await fetchData(ROUTER_ORIGIN+'/api/v1/resolve?value='+encodeURIComponent(u.searchParams.get('value')||''),12000));} catch {return send(res,503,{unavailable:true});}
   }
   if(u.pathname.startsWith('/api/')) {
    const r=await api(u.pathname+u.search);
@@ -108,10 +112,19 @@ const server=http.createServer(async(req,res)=>{
   }
   if(u.pathname==='/og.png') return send(res,200,await card(u.searchParams.get('path')||'/'),'image/png');
   if(u.pathname.startsWith('/source/')||u.pathname.endsWith('.map'))return send(res,404,{error:'Not found'});
-  const r=await fetch('http://127.0.0.1:4311'+req.url,{headers:{accept:req.headers.accept||'*/*'},signal:AbortSignal.timeout(15000)});
+  let r;
+  if(STATIC_ROOT) {
+   const relative=decodeURIComponent(u.pathname).replace(/^\/+/, '');
+   let file=path.resolve(STATIC_ROOT,relative);
+   if(file!==STATIC_ROOT&&!file.startsWith(STATIC_ROOT+path.sep))return send(res,404,{error:'Not found'});
+   if(!path.extname(relative))file=path.join(STATIC_ROOT,'index.html');
+   let bytes;try{bytes=await fs.promises.readFile(file);}catch{return send(res,404,{error:'Not found'});}
+   const types={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.webmanifest':'application/manifest+json','.txt':'text/plain','.wasm':'application/wasm'};
+   r=new Response(bytes,{headers:{'content-type':types[path.extname(file)]||'application/octet-stream'}});
+  } else r=await fetch('http://127.0.0.1:4311'+req.url,{headers:{accept:req.headers.accept||'*/*'},signal:AbortSignal.timeout(15000)});
   const type=r.headers.get('content-type')||'text/plain';
   if(type.includes('text/html')) {
-   let html=await r.text();const m=await metadata(u.pathname),origin='http://127.0.0.1:4310';
+   let html=await r.text();const m=await metadata(u.pathname),origin=SITE_ORIGIN;
    html=html.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<meta[^>]+(?:name|property)=["'](?:description|og:[^"']+|twitter:[^"']+)["'][^>]*>/g,'').replace(/<link[^>]+rel=["']canonical["'][^>]*>/g,'');
    html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link rel="canonical" href="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:image" content="${origin}/og.png?path=${encodeURIComponent(m.path)}"><meta property="og:url" content="https://ltc.tx.taxi${escape(m.path)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${origin}/og.png?path=${encodeURIComponent(m.path)}"></head>`);
    return send(res,r.status,html,type);
@@ -123,6 +136,7 @@ const wss=new WebSocketServer({noServer:true});
 server.on('upgrade',(req,socket,head)=>{
  if(req.url==='/api/v1/ws')wss.handleUpgrade(req,socket,head,client=>wss.emit('connection',client));
  else {
+  if(STATIC_ROOT){socket.destroy();return;}
   // Preserve Angular incremental rebuild notifications.
   const upstream=http.request({host:'127.0.0.1',port:4311,path:req.url,headers:req.headers});
   upstream.on('upgrade',(r,s,h)=>{socket.write('HTTP/1.1 101 Switching Protocols\r\n'+Object.entries(r.headers).map(([k,v])=>`${k}: ${v}`).join('\r\n')+'\r\n\r\n');if(h.length)socket.write(h);if(head.length)s.write(head);s.pipe(socket).pipe(s);});upstream.on('error',()=>socket.destroy());upstream.end();
@@ -137,6 +151,6 @@ wss.on('connection',client=>{
  upstream.on('close',()=>{health.websocket='disconnected';if(client.readyState===1)client.close(1012,'Reconnect provider');});
  client.on('close',()=>upstream.close());client.on('error',()=>upstream.close());
 });
-server.listen(Number(process.env.PORT||9332),'127.0.0.1',()=>console.log('LTC adapter on 127.0.0.1:'+ (process.env.PORT||9332)));
+server.listen(Number(process.env.PORT||9332),process.env.LTC_HOST||'127.0.0.1',()=>console.log('LTC adapter on 127.0.0.1:'+ (process.env.PORT||9332)));
 // Separate public local review port; same handler includes initial metadata.
 if(!process.env.PORT)http.createServer(server.listeners('request')[0]).on('upgrade',server.listeners('upgrade')[0]).listen(4310,'127.0.0.1');

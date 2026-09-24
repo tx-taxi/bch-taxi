@@ -20,3 +20,5 @@ LTC now uses 5a8b80091 search TS/HTML/SCSS and registry service together. HTML/S
 Router dependency found in /home/lukee/dev/tx-taxi, separate clone from older /home/lukee/dev/router. Local-only checkout /home/lukee/dev/ltc-router-review at f9b5fe3 registers LTC at 127.0.0.1:4310. Production registry, DNS and deployments unchanged.
 
 Kit correction committed as 6f9b34e: mandatory deployed-revision comparison and explicit difference reconciliation; matching-size/state visual comparison; provenance preserved.
+
+Production preparation: current BTC deployment observed at 5580c48e6094bf10296ca20256970cd2110b8f01. Reviewed five commits after 5a8b80091: cbf99def3 entity metadata/OG (LTC already has its native implementation); 1d27353c9 removes public upstream explorer links (LTC own docs/footer reviewed); eecadb210 universal search placeholder and accelerator removal (ported); c8a05f16d remaining accelerator overlays, fees and state flags (ported preserving litoshis); 5580c48e6 runtime health-probe dependency (curl included alongside Node health check). No worktree rebase. Latest router native LTC profile absent; production registration prepared separately.

@@ -243,6 +243,9 @@ export class StateService {
     }
 
     this.env = Object.assign(defaultEnv, browserWindowEnv);
+    this.env.ACCELERATOR = false;
+    this.env.ACCELERATOR_BUTTON = false;
+    this.env.PUBLIC_ACCELERATIONS = false;
 
     if (defaultEnv.BASE_MODULE !== 'mempool') {
       this.env.MINING_DASHBOARD = false;

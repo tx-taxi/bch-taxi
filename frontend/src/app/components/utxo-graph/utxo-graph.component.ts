@@ -10,7 +10,6 @@ import { colorToHex, hexToColor, mix } from '@components/block-overview-graph/ut
 import { TimeService } from '@app/services/time.service';
 import { WebsocketService } from '@app/services/websocket.service';
 import { Acceleration } from '@interfaces/node-api.interface';
-import { defaultAuditColors } from '@components/block-overview-graph/utils';
 
 const newColorHex = '1BF4AF';
 const oldColorHex = '3C39F4';
@@ -342,9 +341,7 @@ export class UtxoGraphComponent implements OnChanges, OnDestroy {
           <br>
           ${utxo.status.confirmed
             ? 'Confirmed ' + this.timeService.calculate(utxo.status.block_time, 'since', true, 1, 'minute').text
-            : utxo.status['accelerated']
-              ? 'Accelerated'
-              : 'Pending'
+            : 'Pending'
           }
           `;
         },
@@ -356,9 +353,7 @@ export class UtxoGraphComponent implements OnChanges, OnDestroy {
   }
 
   getColor(utxo: Utxo): string {
-    if (utxo.status['accelerated']) {
-      return colorToHex(defaultAuditColors.accelerated);
-    } else if (utxo.status.confirmed) {
+    if (utxo.status.confirmed) {
       const age = Date.now() / 1000 - utxo.status.block_time;
       const oneHour = 60 * 60;
       const fourYears = 4 * 365 * 24 * 60 * 60;

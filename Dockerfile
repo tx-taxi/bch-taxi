@@ -1,18 +1,27 @@
 FROM node:24-bookworm-slim AS frontend-builder
-
+ENV CYPRESS_INSTALL_BINARY=0
 WORKDIR /app/frontend
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends rsync \
-    && rm -rf /var/lib/apt/lists/*
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
 COPY frontend ./
-RUN SKIP_SYNC=1 npm run build
+COPY adapter/frontend-production-config.json ./mempool-frontend-config.json
+RUN npm run generate-themes && npm run generate-config && node node_modules/@angular/cli/bin/ng.js build --configuration production --localize=false
 
-FROM nginx:1.29-alpine
-
-COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=frontend-builder /app/frontend/dist/mempool/browser /usr/share/nginx/html
-
+FROM node:24-bookworm-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends fonts-dejavu-core ca-certificates curl && rm -rf /var/lib/apt/lists/*
+COPY adapter/package.json adapter/package-lock.json ./adapter/
+RUN cd adapter && npm ci --omit=dev
+COPY adapter ./adapter
+COPY frontend/src/resources/branding/ltc-dark-navbar.svg ./frontend/src/resources/branding/ltc-dark-navbar.svg
+COPY --from=frontend-builder /app/frontend/dist/mempool/browser ./public
+COPY --from=frontend-builder /app/frontend/src/resources ./public/resources
+ENV LTC_HOST=0.0.0.0
+ENV LTC_STATIC_ROOT=/app/public
+ENV LTC_SITE_ORIGIN=https://ltc.tx.taxi
+ENV LTC_ROUTER_ORIGIN=https://tx.taxi
+ENV PORT=8080
+USER node
 EXPOSE 8080
-HEALTHCHECK --interval=15s --timeout=5s --start-period=10s --retries=3 CMD wget -q -O /dev/null http://127.0.0.1:8080/healthz || exit 1
+HEALTHCHECK --interval=15s --timeout=5s --start-period=15s --retries=3 CMD node -e "fetch('http://127.0.0.1:8080/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "adapter/server.cjs"]
