@@ -3,7 +3,7 @@
   "kitVersion": "0.1.0",
   "kitCommit": "6f9b34e",
   "chain": "litecoin",
-  "repository": "local codex/ltc-local worktree of tx-taxi/btc-taxi",
+  "repository": "tx-taxi/ltc-taxi",
   "ancestor": {
     "repository": "tx-taxi/btc-taxi",
     "commit": "fc701ad10391b08c67fb63ea490b192aa57a1562"
@@ -12,7 +12,7 @@
     "repository": "tx-taxi/xmr-taxi",
     "commit": "ea7e0189b3cbc9dc40aa442d779c369e47c7bca5"
   },
-  "status": "local-review-verification-incomplete",
+  "status": "deployed-core-verified-provider-chart-limitations",
   "local": {
     "url": "http://127.0.0.1:4310",
     "ports": [
@@ -364,12 +364,11 @@
     }
   ],
   "unresolved": [
-    "Live provider timeouts: busy-address history and four secondary mining surfaces; see review/acceptance.md",
-    "Fresh live data after real tab resume remains unverified during provider outage; controlled entity/focus cases passed",
-    "No independent full indexed fallback; retained cache/explicit outage only",
+    "Three historical mining chart endpoints exceed bounded provider deadlines",
+    "No independent full indexed fallback; retained cache and explicit outage only",
     "MWEB private amounts and recipient histories are inherently not public"
   ],
-  "productionRequested": false,
+  "productionRequested": true,
   "latencyBudgets": {
     "warmApiMs": 1000,
     "primaryDeadlineMs": 7000,
@@ -385,5 +384,13 @@
     "routerSource": "f9b5fe3",
     "report": "review/source-reconciliation.md",
     "localRouterCommit": "584c29b"
+  },
+  "production": {
+    "url": "https://ltc.tx.taxi",
+    "branch": "main",
+    "coolifyApplication": "azyfbztrruy9eoxscgum54ux",
+    "server": "game-1",
+    "autoDeploy": true,
+    "report": "review/deployment/README.md"
   }
 }

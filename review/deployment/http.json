@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/api/blocks/tip/height",
+    "status": 200,
+    "elapsed": 0.309,
+    "type": "application/json",
+    "bytes": 7
+  },
+  {
+    "path": "/api/v1/blocks",
+    "status": 200,
+    "elapsed": 0.431,
+    "type": "application/json",
+    "bytes": 30056
+  },
+  {
+    "path": "/local-router/api/v1/chains",
+    "status": 200,
+    "elapsed": 0.277,
+    "type": "application/json; charset=utf-8",
+    "bytes": 75693
+  },
+  {
+    "path": "/resources/config.js",
+    "status": 200,
+    "elapsed": 0.152,
+    "type": "application/javascript",
+    "bytes": 1030
+  },
+  {
+    "path": "/og.png",
+    "status": 200,
+    "elapsed": 0.465,
+    "type": "image/png",
+    "bytes": 52158
+  }
+]
