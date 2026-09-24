@@ -12,7 +12,7 @@
         }
         @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
           <a [routerLink]="['/' | relativeUrl]">
-            <app-svg-images *ngIf="!officialMempoolSpace" name="btcTaxi" style="width: 144px; height: 36px" viewBox="0 0 500 126" width="500" height="126" class="mempool-logo"></app-svg-images>
+            <img *ngIf="!officialMempoolSpace" src="/resources/branding/btc-dark-navbar.svg" alt="btc.tx.taxi Bitcoin explorer" class="btc-brand-navbar">
             <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" style="width: 144px; height: 36px" width="500" height="126" viewBox="0 0 500 126"></app-svg-images>
           </a>
         }

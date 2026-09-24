@@ -6,7 +6,7 @@
           @if (enterpriseInfo?.footer_img) {
             <img [src]="enterpriseInfo?.footer_img" [alt]="enterpriseInfo.title" height="60px" class="enterprise-logo">
           } @else {
-            <app-svg-images name="btcTaxi" viewBox="0 0 500 126"></app-svg-images>
+            <img src="/resources/branding/btc-dark-navbar.svg" alt="btc.tx.taxi Bitcoin explorer" class="btc-brand-navbar">
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
