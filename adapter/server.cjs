@@ -99,6 +99,12 @@ const server=http.createServer(async(req,res)=>{
    if(r.status>=300&&r.status<400) { const dest=r.headers.get('location');res.writeHead(r.status,{location:dest});return res.end(); }
    return send(res,r.status,Buffer.from(await r.arrayBuffer()),r.headers.get('content-type')||'application/json');
   }
+  if(u.pathname==='/api/provider-health') {
+   // An idle gateway has no observations, not evidence of an upstream outage.
+   // Probe current mempool data before reporting stale health to a visitor.
+   if(!health.lastSuccess || Date.now()-health.lastSuccess>30000)await api('/api/mempool');
+   return send(res,200,{...providerStatus(health,failedPaths),cacheEntries:cache.size});
+  }
   if(u.pathname==='/healthz')return send(res,200,{...providerStatus(health,failedPaths),cacheEntries:cache.size});
   if(u.pathname==='/api/local-resolve') {
    try {return send(res,200,await fetchData(ROUTER_ORIGIN+'/api/v1/resolve?value='+encodeURIComponent(u.searchParams.get('value')||''),12000));} catch {return send(res,503,{unavailable:true});}
