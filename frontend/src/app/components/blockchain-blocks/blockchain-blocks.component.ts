@@ -84,6 +84,11 @@ export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   ) {
   }
 
+  payoutLabel(address: string): string {
+    const body = address.replace(/^bitcoincash:/, '');
+    return `${body.slice(0, 8)}…${body.slice(-6)}`;
+  }
+
   hasAttributedPool(block: any): boolean {
     const name = block?.extras?.pool?.name?.trim();
     return !!name && !/^(unknown|unattributed)$/i.test(name);

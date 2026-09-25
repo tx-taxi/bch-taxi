@@ -78,7 +78,7 @@
         </div>
         <ng-template #payoutAddress>
           <div class="animated" *ngIf="showPools && block.extras?.pool?.address">
-            <a class="badge" [routerLink]="['/address' | relativeUrl, block.extras.pool.address]" [title]="block.extras.pool.address">{{ block.extras.pool.address | slice:0:8 }}…{{ block.extras.pool.address | slice:-6 }}</a>
+            <a class="badge" [routerLink]="['/address' | relativeUrl, block.extras.pool.address]" [title]="block.extras.pool.address">{{ payoutLabel(block.extras.pool.address) }}</a>
           </div>
         </ng-template>
         <div class="animated" *ngIf="showPools && hasAttributedPool(block); else payoutAddress">
