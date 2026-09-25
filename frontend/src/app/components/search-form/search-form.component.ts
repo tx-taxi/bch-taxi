@@ -1,11 +1,12 @@
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { Component, OnInit, ChangeDetectionStrategy, EventEmitter, Output, ViewChild, HostListener, ElementRef, Input } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { EventType, NavigationStart, Router } from '@angular/router';
 import { AssetsService } from '@app/services/assets.service';
 import { Env, StateService } from '@app/services/state.service';
 import { TxTaxiExplorer, TxTaxiExplorerRegistryService, TxTaxiSearchCandidate, TxTaxiSearchOptions } from '@app/services/tx-taxi-explorer-registry.service';
-import { Observable, of, Subject, zip, BehaviorSubject, combineLatest } from 'rxjs';
-import { debounceTime, distinctUntilChanged, switchMap, catchError, map, shareReplay, startWith, tap } from 'rxjs/operators';
+import { Observable, defer, of, Subject, zip, BehaviorSubject, combineLatest } from 'rxjs';
+import { debounceTime, finalize, distinctUntilChanged, switchMap, catchError, map, shareReplay, startWith, tap } from 'rxjs/operators';
 import { ElectrsApiService } from '@app/services/electrs-api.service';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 import { ApiService } from '@app/services/api.service';
@@ -42,6 +43,8 @@ export class SearchFormComponent implements OnInit {
   network = '';
   assets: object = {};
   pools: object[] = [];
+  @ViewChild('chainMenu') chainMenu: NgbDropdown;
+  pendingSearchRequests = 0;
   isSearching = false;
   isTypeaheading$ = new BehaviorSubject<boolean>(false);
   typeAhead$: Observable<any>;
@@ -67,11 +70,29 @@ export class SearchFormComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event) {
+    if (!this.elementRef.nativeElement.contains(event.target)
+      && !this.isSearching && !this.pendingSearchRequests && !this.isTypeaheading$.value) {
+      this.chainMenu?.close();
+    }
     if (this.elementRef.nativeElement.contains(event.target) && this.isSourceChainSelected()) {
       this.dropdownHidden = false;
     } else {
       this.dropdownHidden = true;
     }
+  }
+
+  @HostListener('document:keydown.escape')
+  closeChainMenu(): void {
+    this.chainMenu?.close();
+  }
+
+  private querySearchOptions(searchText: string, probe = false): Observable<TxTaxiSearchOptions | undefined> {
+    return defer(() => {
+      this.pendingSearchRequests++;
+      return this.explorerRegistry.searchOptions$(searchText, probe).pipe(
+        finalize(() => this.pendingSearchRequests--),
+      );
+    });
   }
 
   regexAddress = getRegex('address', 'mainnet'); // Default to mainnet
@@ -117,6 +138,7 @@ export class SearchFormComponent implements OnInit {
 
     this.router.events.subscribe((e: NavigationStart) => { // Reset search focus when changing page
       if (this.searchInput && e.type === EventType.NavigationStart) {
+        this.chainMenu?.close();
         this.searchInput.nativeElement.blur();
       }
     });
@@ -160,7 +182,7 @@ export class SearchFormComponent implements OnInit {
 
     searchText$.pipe(
       debounceTime(120),
-      switchMap((searchText) => this.explorerRegistry.searchOptions$(searchText).pipe(
+      switchMap((searchText) => this.querySearchOptions(searchText).pipe(
         map((options) => ({ searchText, options })),
       )),
     ).subscribe(({ searchText, options }) => {
@@ -171,7 +193,7 @@ export class SearchFormComponent implements OnInit {
 
     searchText$.pipe(
       debounceTime(420),
-      switchMap((searchText) => this.explorerRegistry.searchOptions$(searchText, true).pipe(
+      switchMap((searchText) => this.querySearchOptions(searchText, true).pipe(
         map((options) => ({ searchText, options })),
       )),
     ).subscribe(({ searchText, options }) => {
@@ -413,7 +435,7 @@ export class SearchFormComponent implements OnInit {
     }
 
     this.isSearching = true;
-    this.explorerRegistry.searchOptions$(searchText).subscribe((options) => {
+    this.querySearchOptions(searchText).subscribe((options) => {
       if (this.currentSearchText() !== searchText) {
         this.isSearching = false;
         return;
