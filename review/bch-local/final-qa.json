@@ -1,0 +1,39 @@
+{
+  "token": {
+    "amount3211": true,
+    "amount2": true,
+    "category": true
+  },
+  "graph": {
+    "transactions": 150,
+    "limit": 81577
+  },
+  "routes": [
+    {
+      "path": "/docs/faq",
+      "title": "FAQ - bch.tx.taxi - Bitcoin Cash Explorer",
+      "notFound": false
+    },
+    {
+      "path": "/docs/api",
+      "title": "REST API - bch.tx.taxi - Bitcoin Cash Explorer",
+      "notFound": false
+    },
+    {
+      "path": "/calculator",
+      "title": "bch.tx.taxi - Bitcoin Cash Explorer",
+      "notFound": false
+    },
+    {
+      "path": "/graphs/mining/block-fees",
+      "title": "Block Fees - bch.tx.taxi - Bitcoin Cash Explorer",
+      "notFound": false
+    },
+    {
+      "path": "/graphs/mining/hashrate-difficulty",
+      "title": "Hashrate & Difficulty - bch.tx.taxi - Bitcoin Cash Explorer",
+      "notFound": false
+    }
+  ],
+  "errors": []
+}

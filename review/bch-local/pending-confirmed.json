@@ -1,0 +1,13 @@
+{
+  "controlledFixture": true,
+  "before": {
+    "confirmed": false
+  },
+  "after": {
+    "confirmed": true,
+    "block_height": 970090,
+    "block_hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "block_time": 1790301516
+  },
+  "pass": true
+}

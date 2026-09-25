@@ -1,0 +1,10 @@
+[
+  {
+    "input": "500000",
+    "url": "http://127.0.0.1:4361/block/500000"
+  },
+  {
+    "emptyPicker": "EXPLORERS\nBitcoin\nbtc.tx.taxi\nSwitch\nEthereum\neth.tx.taxi\nSwitch\nMonero\nxmr.tx.taxi\nSwitch\nLitecoin\nltc.tx.taxi\nSwitch\nBitcoin Cash\nbch.tx.taxi\nOpened\nDash\ndash.tx.taxi\nSwitch\nDogecoin\ndoge.tx.taxi\nSwitch",
+    "dogeLink": "http://127.0.0.1:4351"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "scope": "Controlled router responses, hash ambiguity, manual override, delayed obsolete search result cancellation",
+  "results": [
+    {
+      "scenario": "ambiguous-hash",
+      "url": "http://127.0.0.1:4340/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pass": true,
+      "httpFailures": []
+    },
+    {
+      "scenario": "manual",
+      "url": "http://127.0.0.1:4340/dogecoin/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pass": true,
+      "httpFailures": []
+    },
+    {
+      "scenario": "fast-typing",
+      "url": "https://btc.tx.taxi/tx/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pass": true,
+      "httpFailures": []
+    }
+  ]
+}

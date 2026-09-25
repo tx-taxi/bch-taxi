@@ -1,0 +1,28 @@
+{
+  "fixture": true,
+  "before": {
+    "url": "http://127.0.0.1:4361/tx/bcf7ae875b585e00a61055372c1e99046b20f5fbfcd8659959afb6f428326bfa?mode=details",
+    "text": " \n500004\navg36 sat/B\nRange unavailable\n‎0.078 BCH\n331 transactions\n9 years ago\nUnattributed\n \n500003\navg52 sat/B\nRange unavailable\n‎0.044 BCH\n133 transactions\n9 years ago\nUnattributed\n \n500002\navg60 sat/B\nRange unavailable\n‎0.004 BCH\n17 transactions\n9 years ago\nUnattributed\n \n500001\navg27 sat/B\nRange unavailable\n‎0.043 BCH\n196 transactions\n9 years ago\nUnattributed\n \n500000\navg37 sat/B\nRange unavailable\n‎0.03 BCH\n150 transactions\n9 years ago\nUnattributed\n \n499999\navg42 sat/B\nRange unavailable\n‎0.062 BCH\n253 transactions\n9 years ago\nUnattributed\n \n499998\navg23 sat/B\nRange unavailable\n‎0.007 BCH\n32 transactions\n9 years ago\nUnattributed\n \n499997\navg60 sat/B\nRange unavailable\n‎0.127 BCH\n370 transactions\n9 years ago\nUnattributed\n \n499996\navg0 sat/B\nRange unavailable\n‎0.00 BCH\n1 transaction\n9 years ago\nUnattributed"
+  },
+  "after": {
+    "url": "http://127.0.0.1:4361/tx/bcf7ae875b585e00a61055372c1e99046b20f5fbfcd8659959afb6f428326bfa?mode=details",
+    "text": " \n500005\navg41 sat/B\nRange unavailable\n‎0.033 BCH\n135 transactions\n9 years ago\nUnattributed\n \n500004\navg36 sat/B\nRange unavailable\n‎0.078 BCH\n331 transactions\n9 years ago\nUnattributed\n \n500003\navg52 sat/B\nRange unavailable\n‎0.044 BCH\n133 transactions\n9 years ago\nUnattributed\n \n500002\navg60 sat/B\nRange unavailable\n‎0.004 BCH\n17 transactions\n9 years ago\nUnattributed\n \n500001\navg27 sat/B\nRange unavailable\n‎0.043 BCH\n196 transactions\n9 years ago\nUnattributed\n \n500000\navg37 sat/B\nRange unavailable\n‎0.03 BCH\n150 transactions\n9 years ago\nUnattributed\n \n499999\navg42 sat/B\nRange unavailable\n‎0.062 BCH\n253 transactions\n9 years ago\nUnattributed\n \n499998\navg23 sat/B\nRange unavailable\n‎0.007 BCH\n32 transactions\n9 years ago\nUnattributed\n \n499997\navg60 sat/B\nRange unavailable\n‎0.127 BCH\n370 transactions\n9 years ago\nUnattributed"
+  },
+  "historicalFocus": true,
+  "offline": true,
+  "recovered": true,
+  "themePersisted": "original",
+  "rootMetadata": {
+    "title": "bch.tx.taxi - Bitcoin Cash Explorer",
+    "description": "Explore Bitcoin Cash blocks, transactions, addresses, fees and mining activity."
+  },
+  "silentLogs": [
+    "[webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
+    "Angular is running in development mode.",
+    "Piece 1is illegal: 6667,2000 lower bound should not greater then uppper bound.",
+    "WebSocket response timeout, force closing",
+    "trying to reconnect websocket in 3082.164696114267 seconds",
+    "reconnecting websocket"
+  ],
+  "silentInitial": true
+}

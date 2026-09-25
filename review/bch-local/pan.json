@@ -1,0 +1,58 @@
+{
+  "pageIndex": 0,
+  "dynamicBlocks": 15,
+  "visible": [
+    {
+      "height": "970083",
+      "x": -110,
+      "visible": true
+    },
+    {
+      "height": "970082",
+      "x": 45,
+      "visible": true
+    },
+    {
+      "height": "970081",
+      "x": 200,
+      "visible": true
+    },
+    {
+      "height": "970080",
+      "x": 355,
+      "visible": true
+    },
+    {
+      "height": "970079",
+      "x": 510,
+      "visible": true
+    },
+    {
+      "height": "970078",
+      "x": 665,
+      "visible": true
+    },
+    {
+      "height": "970077",
+      "x": 820,
+      "visible": true
+    },
+    {
+      "height": "970076",
+      "x": 975,
+      "visible": true
+    },
+    {
+      "height": "970075",
+      "x": 1130,
+      "visible": true
+    },
+    {
+      "height": "970074",
+      "x": 1285,
+      "visible": true
+    }
+  ],
+  "allVisible": true,
+  "noOverlap": true
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Controlled router responses and captured destinations, not live cross-chain provider availability",
+  "results": [
+    {
+      "scenario": "confirmed-foreign",
+      "url": "https://btc.tx.taxi/tx/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pass": true,
+      "httpFailures": []
+    },
+    {
+      "scenario": "ambiguous",
+      "url": "http://127.0.0.1:4340/0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pass": true,
+      "httpFailures": []
+    },
+    {
+      "scenario": "failed-probe",
+      "url": "http://127.0.0.1:4340/0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pass": true,
+      "httpFailures": []
+    }
+  ]
+}
