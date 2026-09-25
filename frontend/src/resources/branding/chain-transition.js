@@ -41,7 +41,7 @@
   if(source && /^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?$/.test(location.pathname)){
     const profile=profiles.find(p=>p.chain===source && (!p.localOnly||local));
     if(profile){
-      document.documentElement.style.background=profile.background;
+      document.documentElement.style.background='var(--active-bg, '+profile.background+')';
       layer=surface(profile);document.documentElement.append(layer);
       cookie('');
       let done=false;

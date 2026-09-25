@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style data-native-first-paint>html,body{margin:0;background:rgb(7, 21, 16)}</style>
+  <style data-native-first-paint>html,body{margin:0;background:var(--active-bg,rgb(7, 21, 16))}</style>
   <script data-chain="bch" data-local-review="true">/* Shared navigation handoff. No entrance animation; only explicit chain switches. */
 (() => {
   const script = document.currentScript;
@@ -48,7 +48,7 @@
   if(source && /^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?$/.test(location.pathname)){
     const profile=profiles.find(p=>p.chain===source && (!p.localOnly||local));
     if(profile){
-      document.documentElement.style.background=profile.background;
+      document.documentElement.style.background='var(--active-bg, '+profile.background+')';
       layer=surface(profile);document.documentElement.append(layer);
       cookie('');
       let done=false;
