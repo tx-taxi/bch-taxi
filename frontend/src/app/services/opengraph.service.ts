@@ -55,8 +55,8 @@ export class OpenGraphService {
   }
 
   clearOgImage() {
-    this.metaService.updateTag({ property: 'og:image', content: window.location.origin + '/og.png?v=3&path=' + encodeURIComponent(this.router.url.split('?')[0]) });
-    this.metaService.updateTag({ name: 'twitter:image', content: window.location.origin + '/og.png?v=3&path=' + encodeURIComponent(this.router.url.split('?')[0]) });
+    this.metaService.updateTag({ property: 'og:image', content: window.location.origin + '/og.png?v=4&path=' + encodeURIComponent(this.router.url.split('?')[0]) });
+    this.metaService.updateTag({ name: 'twitter:image', content: window.location.origin + '/og.png?v=4&path=' + encodeURIComponent(this.router.url.split('?')[0]) });
     this.metaService.updateTag({ property: 'og:image:type', content: 'image/png' });
     this.metaService.updateTag({ property: 'og:image:width', content: '1200' });
     this.metaService.updateTag({ property: 'og:image:height', content: '630' });
