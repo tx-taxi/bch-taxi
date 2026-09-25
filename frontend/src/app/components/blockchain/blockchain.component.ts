@@ -139,7 +139,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
       if (this.stateService.isLiquid()) {
         this.dividerOffset = width * 0.5;
       } else {
-        this.dividerOffset = width * 0.95;
+        this.dividerOffset = width * 0.5;
       }
     }
     this.updateStyle();
