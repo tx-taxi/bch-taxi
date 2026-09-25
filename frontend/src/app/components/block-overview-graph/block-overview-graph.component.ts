@@ -142,6 +142,13 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
   }
 
   ngOnChanges(changes): void {
+    if (changes.blockLimit && this.scene) {
+      const transactions = Object.values(this.scene.txs);
+      this.scene.vbytesPerUnit = this.blockLimit / Math.pow(this.resolution / 1.02, 2);
+      this.scene.setup(transactions, false);
+      this.start();
+    }
+
     if (changes.orientation || changes.flip) {
       if (this.scene) {
         this.scene.setOrientation(this.orientation, this.flip);

@@ -58,10 +58,7 @@
                 <td i18n="block.size">Size</td>
                 <td [innerHTML]="'&lrm;' + (block.size | bytes: 2)"></td>
               </tr>
-              <tr>
-                <td i18n="block.weight">Weight</td>
-                <td [innerHTML]="'&lrm;' + (block.weight | wuBytes: 2)"></td>
-              </tr>
+
               <tr *ngIf="auditAvailable">
                 <td><ng-container i18n="latest-blocks.health">Health</ng-container><a class="info-link" [routerLink]="['/docs/faq' | relativeUrl ]" fragment="what-is-block-health"><fa-icon [icon]="['fas', 'info-circle']" [fixedWidth]="true"></fa-icon></a></td>
                 <td>
@@ -110,12 +107,13 @@
             <ng-container *ngTemplateOutlet="restOfTable"></ng-container>
           </tbody>
         </table>
-        <div class="col-sm chart-container" *ngIf="webGlEnabled && !showComparison">
+        <div class="col-sm chart-container" *ngIf="block && webGlEnabled && !showComparison">
+          <p class="small text-secondary">Transactions by serialized size</p>
           <app-block-overview-graph
             #blockGraphActual
             [isLoading]="!stateService.isBrowser || isLoadingOverview"
             [resolution]="86"
-            [blockLimit]="stateService.blockVSize"
+            [blockLimit]="block?.size || stateService.blockVSize"
             [orientation]="'top'"
             [flip]="false"
             [blockConversion]="blockConversion"
@@ -134,7 +132,7 @@
 
   <ng-template #restOfTable>
     <ng-container *ngIf="block && !isLoadingBlock; else loadingRest">
-      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet'">
+      <tr *ngIf="block.extras?.feeRange?.length">
         <td i18n="mempool-block.fee-span">Fee span</td>
         <td><app-fee-rate [fee]="block.extras?.minFee" [showUnit]="false"></app-fee-rate> - <app-fee-rate [fee]="block.extras?.maxFee"></app-fee-rate></td>
       </tr>
@@ -143,7 +141,7 @@
         <td>~<app-fee-rate [fee]="block.extras?.medianFee" rounding="1.0-0"></app-fee-rate>
           <span class="fiat">
             <app-fiat [blockConversion]="blockConversion" [value]="block.extras?.medianFee * 140" digitsInfo="1.2-2"
-              i18n-ngbTooltip="Transaction fee tooltip" ngbTooltip="Based on average native segwit transaction of 140 vBytes"
+              i18n-ngbTooltip="Transaction fee tooltip" ngbTooltip="Fee comparison for a 140-byte serialized BCH transaction"
               placement="bottom"></app-fiat>
           </span>
         </td>
@@ -261,7 +259,7 @@
         }
         <div class="block-graph-wrapper">
           <app-block-overview-graph #blockGraphProjected [isLoading]="!stateService.isBrowser || isLoadingOverview" [resolution]="86"
-            [blockLimit]="stateService.blockVSize" [orientation]="'top'" [flip]="false" [mirrorTxid]="hoverTx" [auditHighlighting]="showComparison"
+            [blockLimit]="block?.size || stateService.blockVSize" [orientation]="'top'" [flip]="false" [mirrorTxid]="hoverTx" [auditHighlighting]="showComparison"
             (txClickEvent)="onTxClick($event)" (txHoverEvent)="onTxHover($event)" [unavailable]="!isMobile && !showAudit && !block?.stale"
             [showFilters]="true" [excludeFilters]="['replacement']" [relativeTime]="block?.timestamp"></app-block-overview-graph>
             @if (isMobile && mode === 'actual' || block?.stale) {
@@ -296,7 +294,7 @@
         </h3>
         <div class="block-graph-wrapper">
           <app-block-overview-graph #blockGraphActual [isLoading]="!stateService.isBrowser || isLoadingOverview" [resolution]="86"
-            [blockLimit]="stateService.blockVSize" [orientation]="'top'" [flip]="false" [mirrorTxid]="hoverTx" mode="mined"  [auditHighlighting]="showComparison"
+            [blockLimit]="block?.size || stateService.blockVSize" [orientation]="'top'" [flip]="false" [mirrorTxid]="hoverTx" mode="mined"  [auditHighlighting]="showComparison"
             (txClickEvent)="onTxClick($event)" (txHoverEvent)="onTxHover($event)" [unavailable]="isMobile && !showAudit && !block?.stale"
             [showFilters]="true" [excludeFilters]="['replacement']" [relativeTime]="block?.timestamp"></app-block-overview-graph>
             <ng-container *ngTemplateOutlet="emptyBlockInfo; context: { $implicit: block?.stale ? canonicalBlock : block }"></ng-container>

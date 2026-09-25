@@ -40,11 +40,11 @@ export const defaultMempoolFeeColors = [
   'ae005b',
 ];
 
-// Keep fee-level ordering while giving the Litecoin theme its blue data palette.
-export const litecoinMempoolFeeColors = defaultMempoolFeeColors.map((_, index, colors) => {
+// Keep fee-level ordering while giving the Bitcoin Cash theme its green data palette.
+export const bitcoincashMempoolFeeColors = defaultMempoolFeeColors.map((_, index, colors) => {
   const fraction = index / (colors.length - 1);
-  return [0x34, 0x5d, 0x9d].map((channel, i) =>
-    Math.round(channel + ([0x78, 0x9d, 0xe0][i] - channel) * fraction).toString(16).padStart(2, '0')
+  return [0x08, 0x8a, 0x65].map((channel, i) =>
+    Math.round(channel + ([0x62, 0xdf, 0xbb][i] - channel) * fraction).toString(16).padStart(2, '0')
   ).join('');
 });
 

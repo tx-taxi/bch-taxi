@@ -85,7 +85,7 @@ export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnInit() {
-    this.dynamicBlocksAmount = Math.min(8, this.stateService.env.KEEP_BLOCKS_AMOUNT);
+    this.dynamicBlocksAmount = this.stateService.env.KEEP_BLOCKS_AMOUNT;
 
     this.blockDisplayMode = this.stateService.blockDisplayMode$.value as 'size' | 'fees';
     this.blockDisplayModeSubscription = this.stateService.blockDisplayMode$
@@ -424,14 +424,14 @@ export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
         return block.extras.feeRange[0];
       }
     }
-    return 0;
+    return undefined;
   }
 
   getMaxBlockFee(block: BlockExtended): number {
     if (block?.extras?.feeRange) {
       return block.extras.feeRange[block.extras.feeRange.length - 1];
     }
-    return 0;
+    return undefined;
   }
 
   showIsEarlierThanParent(index: number): boolean {

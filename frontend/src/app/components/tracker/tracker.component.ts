@@ -166,7 +166,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
 
     this.acceleratorAvailable = this.stateService.env.OFFICIAL_MEMPOOL_SPACE && this.stateService.env.ACCELERATOR && this.stateService.network === '';
 
-    this.miningService.getMiningStats('1w').subscribe(stats => {
+    if (this.stateService.env.ACCELERATOR) this.miningService.getMiningStats('1w').subscribe(stats => {
       this.miningStats = stats;
     });
 
@@ -194,44 +194,17 @@ export class TrackerComponent implements OnInit, OnDestroy {
       this.latestBlock = blocks[0];
     });
 
-    this.fetchCpfpSubscription = this.fetchCpfp$
-      .pipe(
-        switchMap((txId) =>
-          this.apiService
-            .getCpfpinfo$(txId)
-            .pipe(retryWhen((errors) => errors.pipe(
-              mergeMap((error) => {
-                if (!this.tx?.status || this.tx.status.confirmed) {
-                  return throwError(error);
-                } else {
-                  return of(null);
-                }
-              }),
-              delay(2000)
-            )),
-            catchError(() => {
-              return of(null);
-            })
-          )
-        ),
-        catchError(() => {
-          return of(null);
-        })
-      )
-      .subscribe((cpfpInfo) => {
-        this.setCpfpInfo(cpfpInfo);
-      });
+    this.fetchCpfpSubscription = this.fetchCpfp$.subscribe(() => this.setCpfpInfo(null));
 
     this.fetchRbfSubscription = this.fetchRbfHistory$
     .pipe(
       switchMap((txId) =>
-        this.apiService
-          .getRbfHistory$(txId)
+        of<any>(null)
       ),
       catchError(() => {
         return of(null);
       })
-    ).subscribe((rbfResponse) => {
+    ).subscribe((rbfResponse: any) => {
       this.rbfInfo = rbfResponse?.replacements;
       this.rbfReplaces = rbfResponse?.replaces || null;
       if (this.rbfInfo) {
@@ -445,7 +418,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
           this.seoService.setTitle(
             $localize`:@@bisq.transaction.browser-title:Transaction: ${this.txId}:INTERPOLATION:`
           );
-          const network = this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ? 'Liquid' : 'Litecoin';
+          const network = this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ? 'Liquid' : 'Bitcoin Cash';
           const seoDescription = seoDescriptionNetwork(this.stateService.network);
           this.seoService.setDescription($localize`:@@meta.description.bitcoin.transaction:Get real-time status, addresses, fees, script info, and more for ${network}${seoDescription} transaction with txid ${this.txId}.`);
           this.resetTransaction();
@@ -760,7 +733,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
     this.isAcceleration = (this.tx.acceleration || (this.accelerationInfo && this.pool && this.accelerationInfo.pools.some(pool => (pool === this.pool.id))));
     if (this.isAcceleration) {
       // this immediately returns cached stats if we fetched them recently
-      this.miningService.getMiningStats('1w').subscribe(stats => {
+      if (this.stateService.env.ACCELERATOR) this.miningService.getMiningStats('1w').subscribe(stats => {
         this.miningStats = stats;
         this.isAccelerated$.next(this.isAcceleration); // hack to trigger recalculation of ETA without adding another source observable
       });

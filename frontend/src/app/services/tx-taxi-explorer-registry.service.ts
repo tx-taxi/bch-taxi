@@ -12,6 +12,7 @@ interface RouterBrandAsset {
 }
 
 interface RouterExplorerSite {
+  localReviewOrigin?: string;
   origin: string;
   host: string;
   searchPlaceholder?: string;
@@ -128,6 +129,14 @@ export class TxTaxiExplorerRegistryService {
     );
   }
 
+  reviewDestination(destination: URL, chainId?: string): string {
+    const ports = {doge: 4351, bch: 4361, dash: 4370};
+    if (this.routerOrigin === 'http://127.0.0.1:4340' && destination.origin === `https://${chainId}.tx.taxi` && ports[chainId]) {
+      return `http://127.0.0.1:${ports[chainId]}${destination.pathname}${destination.search}${destination.hash}`;
+    }
+    return destination.href;
+  }
+
   chainSearchUrl(chainId: string, searchText: string): string {
     return `${this.routerOrigin}/${encodeURIComponent(chainId)}/${encodeURIComponent(searchText)}`;
   }
@@ -187,7 +196,7 @@ export class TxTaxiExplorerRegistryService {
           chainId: chain.id,
           name: chain.name,
           symbol: chain.nativeSymbol,
-          origin: site.origin,
+          origin: this.routerOrigin === 'http://127.0.0.1:4340' && ['http://127.0.0.1:4351','http://127.0.0.1:4361','http://127.0.0.1:4370'].includes(site.localReviewOrigin || '') ? site.localReviewOrigin! : site.origin,
           host: site.host,
           accentColor: chain.brand.accentColor,
           searchPlaceholder: site.searchPlaceholder || `Search ${chain.name}`,

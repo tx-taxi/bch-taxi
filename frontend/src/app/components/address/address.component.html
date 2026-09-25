@@ -103,7 +103,7 @@
     <ng-container *ngIf="(stateService.backend$ | async) === 'esplora' && address && transactions && transactions.length > 2">
       <br>
       <div class="title-tx">
-        <h2 class="text-start" i18n="address.balance-history">Balance History</h2>
+        <h2 class="text-start" i18n="address.balance-history">Balance History · latest 100 transactions</h2>
       </div>
       <div class="box">
         <div class="widget-toggler" *ngIf="showBalancePeriod()">
@@ -291,13 +291,13 @@
 </ng-template>
 
 <ng-template #utxoRow>
-  <td i18n="address.confirmed-utxos">Confirmed UTXOs</td>
-  <td class="wrap-cell">{{ chainStats.utxos }}</td>
+  <td i18n="address.confirmed-utxos">Total UTXOs</td>
+  <td class="wrap-cell">{{ address['utxo_count'] ?? 'Unavailable' }}</td>
 </ng-template>
 
 <ng-template #pendingUtxoRow>
   <td i18n="address.pending-utxos" class="fst-italic">Pending UTXOs</td>
-  <td class="fst-italic wrap-cell">{{ mempoolStats.utxos > 0 ? '+' : ''}}{{ mempoolStats.utxos }}</td>
+  <td class="fst-italic wrap-cell">Unavailable</td>
 </ng-template>
 
 <ng-template #volumeRow>
@@ -309,7 +309,7 @@
   <td i18n="address.type">Type</td>
   <td class="wrap-cell">
     <span placement="bottom" class="badge bg-primary">
-      <app-address-type [address]="addressTypeInfo"></app-address-type>
+      {{ addressString.toLowerCase().startsWith('bitcoincash:') || addressString.startsWith('q') || addressString.startsWith('p') ? 'CashAddr' : 'Legacy' }}
     </span>
     <button *ngIf="showTaprootPsbtButton()" type="button" class="btn btn-sm taproot-psbt-btn" (click)="taprootPsbtExpanded = !taprootPsbtExpanded" i18n-ngbTooltip="address.taproot-psbt-add-unpublished-spend-paths" ngbTooltip="Add unpublished spending paths">
       <fa-icon [icon]="['fas', 'code-fork']" [fixedWidth]="true"></fa-icon>

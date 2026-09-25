@@ -299,7 +299,7 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
         pieces: [{
           gt: 0,
           lte: 6667,
-          color: this.themeService.theme === 'default' ? '#789de0' : '#7CB342'
+          color: this.themeService.theme === 'default' ? '#62dfbb' : '#7CB342'
         },
         {
           gt: 6667,

@@ -4,6 +4,7 @@ import { Transaction } from '@interfaces/electrs.interface';
 import { Acceleration, BlockExtended, DifficultyAdjustment, RbfTree, TransactionStripped } from '@interfaces/node-api.interface';
 
 export interface WebsocketResponse {
+ maxBlockBytes?: number;
   backend?: 'esplora' | 'electrum' | 'none';
   block?: BlockExtended;
   blocks?: BlockExtended[];

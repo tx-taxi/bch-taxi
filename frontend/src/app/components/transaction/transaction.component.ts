@@ -244,7 +244,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.hideAccelerationSummary = this.stateService.isMempoolSpaceBuild ? this.storageService.getValue('hide-accelerator-pref') == 'true' : true;
 
-    if (!this.stateService.isLiquid()) {
+    if (this.stateService.env.ACCELERATOR && !this.stateService.isLiquid()) {
       this.miningService.getMiningStats('1m').subscribe(stats => {
         this.miningStats = stats;
       });
@@ -299,43 +299,9 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
 
-    this.fetchCpfpSubscription = this.fetchCpfp$
-      .pipe(
-        switchMap((txId) =>
-          this.apiService
-            .getCpfpinfo$(txId)
-            .pipe(retryWhen((errors) => errors.pipe(
-              mergeMap((error) => {
-                if (!this.tx?.status || this.tx.status.confirmed) {
-                  return throwError(error);
-                } else {
-                  return of(null);
-                }
-              }),
-              delay(2000)
-            )),
-            catchError(() => {
-              return of(null);
-            })
-          )
-        ),
-        catchError(() => {
-          return of(null);
-        })
-      )
-      .subscribe((cpfpInfo) => {
-        this.setCpfpInfo(cpfpInfo);
-      });
-
-    this.fetchRbfSubscription = this.fetchRbfHistory$
-    .pipe(
-      switchMap((txId) =>
-        this.apiService
-          .getRbfHistory$(txId)
-      ),
-      catchError(() => {
-        return of(null);
-      })
+    // BCH has no Bitcoin replacement policy; unsupported package estimates stay absent.
+    this.fetchCpfpSubscription = this.fetchCpfp$.subscribe(() => this.setCpfpInfo(null));
+    this.fetchRbfSubscription = this.fetchRbfHistory$.pipe(map(() => null)
     ).subscribe((rbfResponse) => {
       this.rbfInfo = rbfResponse?.replacements;
       this.rbfReplaces = rbfResponse?.replaces || null;
@@ -638,7 +604,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
           this.seoService.setTitle(
             $localize`:@@bisq.transaction.browser-title:Transaction: ${this.txId}:INTERPOLATION:`
           );
-          const network = this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ? 'Liquid' : 'Litecoin';
+          const network = this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ? 'Liquid' : 'Bitcoin Cash';
           const seoDescription = seoDescriptionNetwork(this.stateService.network);
           this.seoService.setDescription($localize`:@@meta.description.bitcoin.transaction:Get real-time status, addresses, fees, script info, and more for ${network}${seoDescription} transaction with txid ${this.txId}.`);
           this.resetTransaction();
@@ -1001,20 +967,8 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setFeatures(): void {
-    if (this.tx) {
-      this.segwitEnabled = !this.tx.status.confirmed || isFeatureActive(this.stateService.network, this.tx.status.block_height, 'segwit');
-      this.taprootEnabled = !this.tx.status.confirmed || isFeatureActive(this.stateService.network, this.tx.status.block_height, 'taproot');
-      this.rbfEnabled = !this.tx.status.confirmed || isFeatureActive(this.stateService.network, this.tx.status.block_height, 'rbf');
-      const txHeight = this.tx.status?.block_height || (this.stateService.latestBlockHeight >= 0 ? this.stateService.latestBlockHeight + 1 : null);
-      this.tx.flags = getTransactionFlags(this.tx, null, null, txHeight, this.stateService.network);
-      this.filters = this.tx.flags ? toFilters(this.tx.flags).filter(f => f.txPage) : [];
-      this.checkAccelerationEligibility();
-    } else {
-      this.segwitEnabled = false;
-      this.taprootEnabled = false;
-      this.rbfEnabled = false;
-    }
-    this.featuresEnabled = this.segwitEnabled || this.taprootEnabled || this.rbfEnabled;
+    this.segwitEnabled = false; this.taprootEnabled = false; this.rbfEnabled = false; this.featuresEnabled = false;
+    this.filters = [];
   }
 
   checkAccelerationEligibility() {

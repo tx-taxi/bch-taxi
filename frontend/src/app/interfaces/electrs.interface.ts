@@ -3,6 +3,8 @@ import { IChannel } from '@interfaces/node-api.interface';
 import { ParsedTaproot } from '../shared/transaction.utils';
 
 export interface Transaction {
+  tokenMetadataUnavailable?: boolean;
+  tokenInputDetailsUnavailable?: boolean;
   txid: string;
   version: number;
   locktime: number;
@@ -98,6 +100,7 @@ interface Issuance {
 }
 
 export interface Vout {
+ tokenData?: { category: string; amount: string; nft?: { capability: string; commitment: string } };
   scriptpubkey: string;
   scriptpubkey_asm: string;
   scriptpubkey_type: string;
@@ -143,6 +146,7 @@ export interface Block {
 }
 
 export interface Address {
+ utxo_count?: number;
   electrum?: boolean;
   address: string;
   chain_stats: ChainStats;

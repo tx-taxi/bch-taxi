@@ -1,13 +1,13 @@
 @use "sass:color";
 
-/* Litecoin explorer theme. Keep the Mempool layout vocabulary, but carry the
- * Litecoin blue through every inherited interactive and data surface. */
+/* Bitcoin Cash explorer theme. Keep the Mempool layout vocabulary, but carry the
+ * Bitcoin Cash blue through every inherited interactive and data surface. */
 $bg: #141824;
 $active-bg: #0d1018;
 $hover-bg: #20283a;
 $fg: #fff;
 $nav-bg: $bg;
-$title-fg: #789de0;
+$title-fg: #62dfbb;
 
 $taproot: #eba814;
 $taproot-light: #d5a90a;
@@ -21,11 +21,11 @@ $gray-700: $fg;
 
 $nav-tabs-link-active-bg: $active-bg;
 
-$primary: #789de0;
+$primary: #62dfbb;
 $secondary: #263147;
-$tertiary: #345d9d;
+$tertiary: #0ac18e;
 $success: #0aab2f;
-$info: #9fbcf0;
+$info: #80dcb8;
 
 $h5-font-size: 1.15rem !default;
 
@@ -110,20 +110,20 @@ $dropdown-link-active-bg: $active-bg;
   --link-color: #{$link-color};
   --link-hover-color: #{$link-hover-color};
   --icon: #f1f1f1;
-  --skeleton-bg: #27334c;
-  --skeleton-bg-light: #3c5074;
+  --skeleton-bg: #263d35;
+  --skeleton-bg-light: #3c6956;
 
-  --box-bg: #182032;
-  --stat-box-bg: #141b29;
+  --box-bg: #192721;
+  --stat-box-bg: #14221c;
   --border-subtle: rgba(255, 255, 255, 0.11);
-  --block-top: #28354c;
-  --block-side: #1b2538;
-  --block-goggles-overlay: #1820327f;
-  --mempool-block-top: #345681;
-  --mempool-block-side: #223957;
-  --mempool-block-loading: #46648c;
+  --block-top: #245546;
+  --block-side: #173c30;
+  --block-goggles-overlay: #1927217f;
+  --mempool-block-top: #247658;
+  --mempool-block-side: #174c39;
+  --mempool-block-loading: #428a6f;
   --alert-bg: #263c61;
-  --navbar-bg: #141b2b;
+  --navbar-bg: #151e1a;
   --transparent-fg: #ffffffbb;
   --footer-fg: rgba(255, 255, 255, 0.4);
   --fade-out-box-bg-start: rgba(24, 32, 50, 0);
@@ -138,8 +138,8 @@ $dropdown-link-active-bg: $active-bg;
   --liquid: #116761;
   --liquidtestnet: #494a4a;
 
-  --mainnet-alt: #345d9d;
-  --fiat-color: #9fbcf0;
+  --mainnet-alt: #0ac18e;
+  --fiat-color: #80dcb8;
   --testnet-alt: #183550;
   --signet-alt: #471850;
   --regtest-alt: #4a4a4a;
@@ -154,18 +154,18 @@ $dropdown-link-active-bg: $active-bg;
   --yellow: #fff000;
   --grey: #7e7e7e;
   --tooltip-grey: #b1b1b1;
-  --orange: #789de0;
+  --orange: #62dfbb;
   --pink: #e83e8c;
 
   --fee-tier-slow: #283d5e;
   --fee-tier-normal: #426599;
-  --fee-tier-fast: #789de0;
+  --fee-tier-fast: #62dfbb;
   --fee-tier-fastest: #b8cef5;
 
-  --search-button: #345d9d;
+  --search-button: #0ac18e;
   --search-button-border: #2c4f85;
   --search-button-focus: #456ead;
-  --search-button-shadow: #789de080;
+  --search-button-shadow: #62dfbb80;
   
   --bs-body-color: var(--fg);
   --bs-body-bg: var(--active-bg);

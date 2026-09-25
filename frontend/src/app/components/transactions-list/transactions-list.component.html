@@ -15,6 +15,8 @@
 
   <div class="header-bg box" [attr.data-cy]="'tx-' + i">
 
+    <p *ngIf="tx.tokenInputDetailsUnavailable" class="small text-secondary">CashToken quantities below describe outputs. Input token quantities are unavailable.</p>
+    <p *ngIf="tx.tokenMetadataUnavailable" class="small text-secondary">BCH amounts shown. CashToken details are unavailable in this view.</p>
     <div *ngIf="errorUnblinded" class="error-unblinded">{{ errorUnblinded }}</div>
     @if (similarityMatches.get(tx.txid)?.size) {
       <div class="alert alert-mempool" role="alert">
@@ -393,6 +395,9 @@
                   </ng-template>
                   <ng-template #defaultOutput>
                     <app-amount [blockConversion]="tx.price" [satoshis]="vout.value"></app-amount>
+                    <div *ngIf="vout.tokenData as token" class="small text-secondary" style="white-space:normal;overflow-wrap:anywhere">
+                      CashToken {{ token.category }}<br>{{ token.amount }} base units <span *ngIf="token.nft">· NFT {{ token.nft.capability }} · {{ token.nft.commitment }}</span>
+                    </div>
                   </ng-template>
                 </td>
                 <td class="arrow-td">
@@ -515,7 +520,7 @@
       <div class="float-start mt-2-5" *ngIf="!transactionPage && !tx.vin[0].is_coinbase && tx.fee !== -1">
         <app-fee-rate [fee]="tx.fee" [weight]="tx.weight"></app-fee-rate>
         <span class="d-none d-sm-inline-block">&nbsp;&ndash; {{ tx.fee | number }} <span class="symbol"
-            i18n="shared.sats">lits</span> <span class="fiat"><app-fiat [blockConversion]="tx.price" [value]="tx.fee"></app-fiat></span></span>
+            i18n="shared.sats">sats</span> <span class="fiat"><app-fiat [blockConversion]="tx.price" [value]="tx.fee"></app-fiat></span></span>
       </div>
       <div class="float-start mt-2-5 grey-info-text" *ngIf="tx.fee === -1" i18n="transactions-list.load-to-reveal-fee-info">Show more inputs to reveal fee data</div>
 

@@ -38,7 +38,7 @@ export class FiatSelectorComponent implements OnInit {
     });
     if (!this.stateService.env.ADDITIONAL_CURRENCIES) {
       this.currencies = this.currencies.filter((currency: any) => {
-        return ['AUD', 'CAD', 'EUR', 'JPY', 'GBP', 'CHF', 'USD'].includes(currency[0]);
+        return ['USD'].includes(currency[0]);
       });
     }
   }

@@ -2,13 +2,6 @@
 <div *ngIf="showTitle && mode === 'halving'" class="main-title" i18n="dashboard.halving-countdown">Halving Countdown</div>
 <div class="card-wrapper">
   <div class="card">
-    <div class="widget-toggler">
-      <a href="" (click)="setMode('difficulty')" class="toggler-option"
-        [ngClass]="{'inactive': mode === 'difficulty'}"><small i18n="statistics.average-small">difficulty</small></a>
-      <span style="color: var(--transparent-fg); font-size: 8px"> | </span>
-      <a href="" (click)="setMode('halving')" class="toggler-option"
-        [ngClass]="{'inactive': mode === 'halving'}"><small i18n="statistics.median-small">halving</small></a>
-    </div>
     <div *ngIf="mode === 'difficulty'; else halving" class="card-body more-padding">
       <div class="difficulty-adjustment-container" *ngIf="(isLoadingWebSocket$ | async) === false && (difficultyEpoch$ | async) as epochData; else loadingDifficulty">
         <div class="epoch-progress">
@@ -89,9 +82,9 @@
     <div class="difficulty-adjustment-container halving" *ngIf="(isLoadingWebSocket$ | async) === false && (difficultyEpoch$ | async) as epochData; else loadingDifficulty">
       <div class="halving-progress">
         <div class="background"></div>
-        <div class="remaining" [style]="{ left: ((840000 - epochData.blocksUntilHalving) / 8400).toFixed(2) + '%' }"></div>
+        <div class="remaining" [style]="{ left: ((210000 - epochData.blocksUntilHalving) / 2100).toFixed(2) + '%' }"></div>
         <div class="label">
-          {{ ((840000 - epochData.blocksUntilHalving) / 8400).toFixed(2) }}%
+          {{ ((210000 - epochData.blocksUntilHalving) / 2100).toFixed(2) }}%
         </div>
       </div>
       <div class="difficulty-stats">

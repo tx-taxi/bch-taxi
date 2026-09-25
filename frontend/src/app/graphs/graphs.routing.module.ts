@@ -139,7 +139,7 @@ const routes: Routes = [
           {
             path: '',
             pathMatch: 'full',
-            redirectTo: 'mempool',
+            redirectTo: 'mining/block-fees',
           },
           {
             path: 'mining/block-health',
@@ -180,14 +180,14 @@ if (window['__env']?.OFFICIAL_MEMPOOL_SPACE) {
   });
 }
 
-// LTC local route contract: upstream write tools/services lack a Litecoin provider contract.
-function retainLitecoinRoutes(items: any[]): void {
+// BCH local route contract: upstream write tools/services lack a Bitcoin Cash provider contract.
+function retainBitcoinCashRoutes(items: any[]): void {
   for (let i = items.length - 1; i >= 0; i--) {
     if (/^(tx\/(push|test)|pushtx|stratum|lightning|acceleration|monitoring|nodes|faucet|sp\/|wallet|widget\/wallet|status|treasuries)/.test(items[i].path || '') || items[i].path === 'mining/block-health') items.splice(i, 1);
-    else if (items[i].children) retainLitecoinRoutes(items[i].children);
+    else if (items[i].children) retainBitcoinCashRoutes(items[i].children);
   }
 }
-retainLitecoinRoutes(routes);
+retainBitcoinCashRoutes(routes);
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

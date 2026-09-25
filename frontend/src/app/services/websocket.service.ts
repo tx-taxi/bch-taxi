@@ -364,6 +364,7 @@ export class WebsocketService {
   }
 
   handleResponse(response: WebsocketResponse) {
+    if (Number.isSafeInteger(response.maxBlockBytes) && response.maxBlockBytes >= 32000000) { this.stateService.blockVSize = response.maxBlockBytes; this.stateService.env.BLOCK_WEIGHT_UNITS = response.maxBlockBytes * 4; }
     let reinitBlocks = false;
 
     if (response.backend) {
@@ -389,12 +390,13 @@ export class WebsocketService {
       if (response.block.height === this.stateService.latestBlockHeight + 1) {
         this.stateService.updateChainTip(response.block.height);
         this.stateService.addBlock(response.block);
-        this.stateService.txConfirmed$.next([response.txConfirmed, response.block]);
+
       } else if (response.block.height > this.stateService.latestBlockHeight + 1) {
         reinitBlocks = true;
       }
 
       if (response.txConfirmed) {
+        this.stateService.txConfirmed$.next([response.txConfirmed, response.block]);
         this.isTrackingTx = false;
       }
     }

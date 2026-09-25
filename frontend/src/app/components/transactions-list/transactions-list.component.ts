@@ -419,7 +419,7 @@ export class TransactionsListComponent implements OnInit, OnChanges, OnDestroy {
           ...comparableVouts.filter(v => v.scriptpubkey_type === addressType && v.scriptpubkey_address !== address),
           ...comparableVins.filter(v => v.scriptpubkey_type === addressType && v.scriptpubkey_address !== address)
         ]) {
-          const similarity = checkedCompareAddressStrings(address, compareAddr.scriptpubkey_address, addressType as AddressType, this.stateService.network);
+          const similarity = address.includes(':') ? null : checkedCompareAddressStrings(address, compareAddr.scriptpubkey_address, addressType as AddressType, this.stateService.network);
           if (similarity?.status === 'comparable' && similarity.score > adjustedThreshold) {
             // Get or create group numbers for both addresses
             const group1 = similarityGroups.get(address);

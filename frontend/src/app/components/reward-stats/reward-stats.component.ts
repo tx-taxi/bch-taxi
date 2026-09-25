@@ -45,7 +45,7 @@ export class RewardStatsComponent implements OnInit {
           return {
             totalReward: stats.totalReward,
             feePerTx: stats.totalFee / stats.totalTx,
-            feePerBlock: stats.totalFee / 144,
+            feePerBlock: stats.totalFee / (stats.endBlock-stats.startBlock+1),
           };
         })
       );

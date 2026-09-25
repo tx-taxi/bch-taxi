@@ -79,10 +79,10 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.firstPageWidth = 40 + (this.blockWidth * this.dynamicBlocksAmount);
     this.blockCounterSubscription = this.stateService.blocks$.subscribe((blocks) => {
       this.blockCount = blocks.length;
-      this.dynamicBlocksAmount = Math.min(this.blockCount, this.stateService.env.KEEP_BLOCKS_AMOUNT, 8);
+      this.dynamicBlocksAmount = Math.min(this.blockCount, this.stateService.env.KEEP_BLOCKS_AMOUNT);
       this.firstPageWidth = 40 + (this.blockWidth * this.dynamicBlocksAmount);
       this.minScrollWidth = 40 + (8 * this.blockWidth) + (this.pageWidth * 2);
-      if (this.blockCount <= Math.min(8, this.stateService.env.KEEP_BLOCKS_AMOUNT)) {
+      if (this.blockCount <= this.stateService.env.KEEP_BLOCKS_AMOUNT) {
         this.onResize();
       }
     });

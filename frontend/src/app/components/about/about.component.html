@@ -1,27 +1,26 @@
 <div class="container-xl about-page">
   <div class="intro">
-    <h1 class="visually-hidden">About ltc.tx.taxi</h1>
-    <img src="/resources/branding/ltc-dark-full.svg" alt="ltc.tx.taxi Litecoin explorer" class="mempool-logo">
+    <h1 class="visually-hidden">About bch.tx.taxi</h1>
+    <img src="/resources/branding/bch-dark-full.svg" alt="bch.tx.taxi Bitcoin Cash explorer" class="mempool-logo">
     <div class="version">
-      <span>ltc.tx.taxi - Litecoin block and mempool explorer</span>
+      <span>bch.tx.taxi - Bitcoin Cash block and mempool explorer</span>
       <span class="version-sub">A tx.taxi explorer built from <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">mempool/mempool</a></span>
     </div>
   </div>
 
   <div class="about-text">
-    <h5>About ltc.tx.taxi</h5>
-    <p>ltc.tx.taxi is the Litecoin explorer in the tx.taxi multi-chain family. It preserves Mempool's proven interface for inspecting blocks, transactions, addresses, mining activity, fee estimates, and the live Litecoin mempool while using a Litecoin-specific tx.taxi identity.</p>
+    <h5>About bch.tx.taxi</h5>
+    <p>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. It preserves Mempool's proven interface for inspecting blocks, transactions, addresses, mining activity, fee estimates, and the live Bitcoin Cash mempool while using a Bitcoin Cash-specific tx.taxi identity.</p>
 
-    <h5>Bitcoin-native data</h5>
-    <p>Values are denominated in LTC, litoshis, or the selected fiat currency. Fee rates remain lit/vB, transaction sizes remain vB or weight units, and all block, address, mining, concepts shown by the interface retain their Litecoin meaning.</p>
-
-    <h5>MWEB coverage</h5><p>This explorer shows transparent-chain transactions and indexed addresses. Private MWEB amounts and recipient history are not publicly observable. HogEx transactions connect the extension block to the transparent chain.</p><h5>Infrastructure</h5>
-    <p>The explorer reads public Litecoin network data through its configured backend. Explorer results are informational and can differ from another node's view of the mempool. Always verify payment details in your wallet and use your own node when independent verification matters.</p>
+    <h5>Bitcoin Cash data</h5>
+    <p>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to indexed Bitcoin Cash history. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</p>
+    <h5>Coverage</h5><p>Mining charts show the latest 15 indexed blocks. Hashrate is estimated from observed work and elapsed time. Mempool charts reflect this session’s observations of one node, not a global pool. CashTokens are separate from BCH amounts; their raw category, units and NFT commitments are shown when present.</p><h5>Infrastructure</h5>
+    <p>The explorer reads public Bitcoin Cash network data through its configured backend. Explorer results are informational and can differ from another node's view of the mempool. Always verify payment details in your wallet and use your own node when independent verification matters.</p>
   </div>
 
   <div class="contributors" id="links">
     <h5>Project links</h5>
-    <p><a [routerLink]="['/docs']">ltc.tx.taxi documentation</a></p>
+    <p><a [routerLink]="['/docs']">bch.tx.taxi documentation</a></p>
     <p><a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Upstream project and contributors</a></p>
     <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the tx.taxi maintainer</a></p>
   </div>

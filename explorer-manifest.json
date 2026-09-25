@@ -1,25 +1,23 @@
 {
   "schemaVersion": 1,
-  "kitVersion": "0.1.0",
-  "kitCommit": "6f9b34e",
-  "chain": "litecoin",
-  "repository": "tx-taxi/ltc-taxi",
+  "kitVersion": "0.1.1",
+  "kitCommit": "0086d236ca6533120525c60b23e55d6d5d68d3d6",
+  "chain": "bitcoin-cash",
+  "repository": "local candidate; no production repository created",
   "ancestor": {
-    "repository": "tx-taxi/btc-taxi",
-    "commit": "fc701ad10391b08c67fb63ea490b192aa57a1562"
+    "repository": "tx-taxi/ltc-taxi",
+    "commit": "6ba310edebe7fa33f4643ff4eecdbca3d1041fc7"
   },
   "visualReference": {
-    "repository": "tx-taxi/xmr-taxi",
-    "commit": "ea7e0189b3cbc9dc40aa442d779c369e47c7bca5"
+    "repository": "tx-taxi/ltc-taxi",
+    "commit": "6ba310edebe7fa33f4643ff4eecdbca3d1041fc7"
   },
-  "status": "deployed-core-verified-provider-chart-limitations",
+  "status": "local-review-candidate-bounded-verification",
   "local": {
-    "url": "http://127.0.0.1:4310",
+    "url": "http://127.0.0.1:4361",
     "ports": [
-      4310,
-      4311,
-      4312,
-      9332
+      4360,
+      4361
     ],
     "startCommands": [
       "./scripts/local-start.sh"
@@ -28,369 +26,117 @@
       "./scripts/local-stop.sh"
     ],
     "incrementalCommands": [
-      "Angular watches frontend/src automatically; node --watch watches adapter/server.cjs"
+      "Angular watches frontend/src; node --watch adapter/server.cjs"
     ]
   },
   "capabilities": [
     {
-      "component": "dashboard blocks and pending strip",
-      "route": "/",
-      "meaning": "blocks + fee projection + node mempool",
-      "source": "WebSocket /api/v1/ws",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC, litoshis, lit/vB, weight",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "blocks + strip",
+      "route": "/ /blocks /block/:hash",
+      "meaning": "BCH serialized blocks, reward, native transaction rows",
+      "source": "Haskoin block index; Selene BCHN fallback",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "bytes, BCH, sats",
+      "cadence": "15 seconds live; immutable entities five minutes",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     },
     {
-      "component": "difficulty / halving widget",
-      "route": "/",
-      "meaning": "2016-block epoch, 840000-block halvings, 150-second target",
-      "source": "difficulty-adjustment + blocks",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "percent, blocks, timestamp",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "transaction",
+      "route": "/tx/:txid",
+      "meaning": "BCH inputs, outputs, fee; CashToken raw output data",
+      "source": "Haskoin indexed prevouts + Selene BCHN tokenData",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "1 BCH=1e8 sats; sat/byte; tokens separate base units",
+      "cadence": "15s pending; immutable confirmed",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     },
     {
-      "component": "dashboard charts / graphs",
-      "route": "/graphs/**",
-      "meaning": "provider time series",
-      "source": "statistics and mining endpoints",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "vB, lit/vB, H/s, LTC",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "address",
+      "route": "/address/:cashaddr",
+      "meaning": "Indexed history; 25-tx pages; bounded last100 balance history",
+      "source": "Haskoin indexed CashAddr/legacy address API",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "BCH/sats",
+      "cadence": "20 seconds",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     },
     {
-      "component": "transaction / flow / status",
-      "route": "/tx/:id",
-      "meaning": "transparent UTXO inputs and outputs; MWEB scope notice",
-      "source": "/api/tx/:id + status + outspends",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "integer litoshis, LTC, USD",
-      "cadence": "5 seconds / stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "mining",
+      "route": "/mining",
+      "meaning": "Last15-block reward/fee/difficulty and elapsed-work hashrate estimate",
+      "source": "Real Haskoin headers/block fees/subsidy",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "BCH,H/s,difficulty",
+      "cadence": "30seconds",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     },
     {
-      "component": "block details / list / paging",
-      "route": "/block/:id, /blocks/:page",
-      "meaning": "transparent block and transactions",
-      "source": "v1/block and block/txs/:offset",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "height, WU, bytes, LTC",
-      "cadence": "5 minutes immutable detail",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "pending",
+      "route": "/ /mempool-block/:index",
+      "meaning": "One BCHN node pool, bounded100 tile sample; observed fee percentiles",
+      "source": "Selene BCHN pool + Haskoin indexed transaction detail",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "bytes/s,sat/B,count",
+      "cadence": "15seconds",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     },
     {
-      "component": "address history / paging",
-      "route": "/address/:id",
-      "meaning": "indexed transparent-chain history",
-      "source": "address/:id + txs/chain/:cursor",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "integer litoshis, LTC",
-      "cadence": "5 seconds / stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "pending treemap / RBF",
-      "route": "/mempool-block/:id, /rbf, /txs",
-      "meaning": "provider node pending pool",
-      "source": "WebSocket projected-block-transactions, rbf, recent",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "vB, lit/vB",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "mining / pools",
-      "route": "/mining, /mining/pool/:slug",
-      "meaning": "Scrypt merged mining provider statistics",
-      "source": "mining/pools, hashrate, blocks",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "H/s, LTC, blocks",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "calculator",
-      "route": "/tools/calculator",
-      "meaning": "LTC fiat/atomic conversion; 84M max",
-      "source": "prices",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC, litoshis, fiat",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "docs / about / legal",
-      "route": "/docs/**, /about, /terms-of-service, /privacy-policy, /trademark-policy",
-      "meaning": "chain-specific guidance and retained attribution",
-      "source": "local templates",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "none",
-      "cadence": "static",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "search / cab",
-      "route": "search, /cab/:chain/:kind/:value",
-      "meaning": "query-aware router choices and source confirmation",
-      "source": "local router 4312: f9b5fe3 + local registration 584c29b",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "identifier",
-      "cadence": "debounce 250ms",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "social cards",
-      "route": "/og.png",
-      "meaning": "server-visible entity data and 1200x630 PNG",
-      "source": "same entity API",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC",
-      "cadence": "bounded entity cache",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "component": "price",
+      "route": "all amounts",
+      "meaning": "Current BCH USD only; no historic fiat claim",
+      "source": "FullStack BCH USD endpoint",
+      "availability": "observed and bounded functional verification; see review/bch-local/ACCEPTANCE.md",
+      "units": "USD/BCH",
+      "cadence": "60seconds",
+      "loading": "inherited native skeleton",
+      "failure": "502/503 distinct from 404; stream reconnect",
+      "stale": "90-second freshness gate; no failed response cached as absence"
     }
   ],
   "routes": [
-    {
-      "route": "/",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/tx/b066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/block/e11049dfa5858be3809f285685e12a5d6f84b936b0f8e8272b5363bf3946ce60",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/block/4570be978b76861fef442a05a624e6145e06aa5f88fb00efd4e27e1d9fb19333",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/address/LaDAdDQUuCxeLxGiPazAY879sJxs1TVwYQ",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mempool-block/0",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mining",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/tools/calculator",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/docs/faq",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/about",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/terms-of-service",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/privacy-policy",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/trademark-policy",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/blocks/1",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/rbf",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/txs",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/hashrate-difficulty",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/pools-dominance",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/pools",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/block-fees",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/block-rewards",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs/mining/block-fees-subsidy",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/graphs/mining/block-fee-rates",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/graphs/mining/block-sizes-weights",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/graphs/price",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mining/pool/f2pool",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/blocks/stale",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/clock",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/view/blocks",
-      "evidence": "secondary.json",
-      "result": "observed"
-    }
+    "/",
+    "/blocks",
+    "/block/:height-or-hash",
+    "/tx/:txid",
+    "/address/:address",
+    "/mining",
+    "/graphs/mining/block-fees",
+    "/graphs/mining/hashrate-difficulty",
+    "/mempool-block/0",
+    "/about",
+    "/docs",
+    "/calculator"
   ],
   "providers": [
-    {
-      "name": "Litecoin Space",
-      "critical": [
-        "history",
-        "indexed address pagination",
-        "pending",
-        "mining"
-      ],
-      "deadlineMs": 7000,
-      "limits": "No guaranteed SLA / rate budget published; request coalescing, bounded 500-entry cache, TTL 5s live / 60s graphs / 5m blocks",
-      "CORS": "same-origin server proxy"
-    },
-    {
-      "name": "BlockCypher",
-      "scope": "independent chain-tip fallback only; does not substitute full indexer",
-      "deadlineMs": 4000,
-      "limits": "public unauthenticated rate limits; fallback only"
-    }
+    "https://api.haskoin.com/bch",
+    "https://explorer.selene.cash/api/v1",
+    "https://bch.fullstack.cash/v6"
   ],
   "acceptance": [
     {
-      "report": "review/acceptance.md",
-      "status": "partial",
-      "evidence": [
-        "review/search-checks.json",
-        "review/final-behavior.json",
-        "review/provider-verification.json",
-        "review/comparison.json",
-        "review/social.json",
-        "review/router-tests.log"
-      ]
+      "status": "verified",
+      "evidence": "review/bch-local/ACCEPTANCE.md",
+      "note": "Bounded local verification, not production certification; explicit scope and limitations recorded."
     }
   ],
   "unresolved": [
-    "Three historical mining chart endpoints exceed bounded provider deadlines",
-    "No independent full indexed fallback; retained cache and explicit outage only",
-    "MWEB private amounts and recipient histories are inherently not public"
+    "BCH palette is a user-review candidate, not previously approved branding.",
+    "Address index has no equivalent automatic fallback; Haskoin intermittent503 remains an external availability risk.",
+    "Address pending UTXO delta unavailable; total UTXOs are source-reported.",
+    "CashToken output category/raw units available; input token quantities and verified token branding/decimals unavailable and explicitly stated.",
+    "Only current USD fiat available; historical USD conversion not claimed.",
+    "Mining series are latest15 indexed blocks; no unsupported long-range chart.",
+    "Hub mobile pending tile has measured1px fractional-scroll rounding discrepancy."
   ],
-  "productionRequested": true,
-  "latencyBudgets": {
-    "warmApiMs": 1000,
-    "primaryDeadlineMs": 7000,
-    "fallbackTotalMs": 11000,
-    "routerMs": 12000,
-    "liveStaleMs": 90000
-  },
-  "reconciliation": {
-    "initialKitCommit": "3497634889f3303634c192e66749641831107d5e",
-    "deployedBtcVisualReference": "6d67eec8da026056bf8fd980c438eef63d296167",
-    "searchSource": "5a8b8009170b919719d26d0949e2a97e604640be",
-    "searchStatus": "user relayed owner authorization for local integration; frontend production verification pending",
-    "routerSource": "f9b5fe3",
-    "report": "review/source-reconciliation.md",
-    "localRouterCommit": "584c29b"
-  },
-  "production": {
-    "url": "https://ltc.tx.taxi",
-    "branch": "main",
-    "coolifyApplication": "azyfbztrruy9eoxscgum54ux",
-    "server": "game-1",
-    "autoDeploy": true,
-    "report": "review/deployment/README.md"
-  }
+  "productionRequested": false
 }
