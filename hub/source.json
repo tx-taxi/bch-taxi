@@ -1,6 +1,6 @@
 {
   "chain": "bch",
-  "commit": "8233a27d33a01b2233de00883728c9dad4ae1651",
+  "commit": "ee5437ac7e924259d06d5ed0db7f0f418d355ff3",
   "status": "Audit-cleaned native local source; bounded evidence in review/design-cleanup/README.md; provider limits remain explicit",
   "reconciliation": "Native source ancestor LTC6ba310ede; candidate BCH source commit pinned here. Latest owner native status/mobile-center contract adopted. Not an approved or deployed BCH baseline."
 }
