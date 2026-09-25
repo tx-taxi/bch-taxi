@@ -1,5 +1,7 @@
 <div infiniteScroll [alwaysCallback]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
 
+<p *ngIf="tokenMetadataUnavailable" class="small text-secondary">BCH amounts shown. CashToken details are unavailable for some transactions in this list.</p>
+
 <ng-container *ngFor="let tx of transactions; let i = index; trackBy: trackByFn">
   <div *ngIf="!transactionPage" class="header-bg box tx-page-container">
     <a class="tx-link" [routerLink]="['/tx/' | relativeUrl, tx.txid]">
@@ -16,7 +18,6 @@
   <div class="header-bg box" [attr.data-cy]="'tx-' + i">
 
     <p *ngIf="tx.tokenInputDetailsUnavailable" class="small text-secondary">CashToken quantities below describe outputs. Input token quantities are unavailable.</p>
-    <p *ngIf="tx.tokenMetadataUnavailable" class="small text-secondary">BCH amounts shown. CashToken details are unavailable in this view.</p>
     <div *ngIf="errorUnblinded" class="error-unblinded">{{ errorUnblinded }}</div>
     @if (similarityMatches.get(tx.txid)?.size) {
       <div class="alert alert-mempool" role="alert">

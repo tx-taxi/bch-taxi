@@ -1,7 +1,8 @@
-<app-indexing-progress></app-indexing-progress>
+<ng-container *ngIf="widget && (statsObservable$ | async)"></ng-container>
+<app-indexing-progress *ngIf="!widget"></app-indexing-progress>
 
-<div class="full-container">
-  <div class="card-header mb-0 mb-md-4">
+<div [class.full-container]="!widget">
+  <div *ngIf="!widget" class="card-header mb-0 mb-md-4">
     <div class="d-flex d-md-block align-items-baseline">
       <span i18n="mining.block-fees">Block Fees</span>
       <button class="btn p-0 ps-2" style="margin: 0 0 4px 0px" (click)="onSaveChart()">
@@ -12,7 +13,7 @@
     <small *ngIf="statsObservable$ | async">Latest 15 indexed blocks</small>
   </div>
 
-  <div class="chart" *browserOnly echarts [initOpts]="chartInitOptions" [options]="chartOptions"
+  <div [class]="widget ? 'chart-widget' : 'chart'" [style.height.px]="widget ? height : null" *browserOnly echarts [initOpts]="chartInitOptions" [options]="chartOptions"
     (chartInit)="onChartInit($event)" [style]="{opacity: isLoading ? 0.5 : 1}">
   </div>
   <div class="text-center loadingGraphs" *ngIf="!stateService.isBrowser || isLoading">

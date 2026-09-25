@@ -1,0 +1,27 @@
+{
+  "colors": [
+    {
+      "theme": "default",
+      "stops": [
+        "#62dfbb",
+        "#088a65"
+      ]
+    },
+    {
+      "theme": "original",
+      "stops": [
+        "#FDD835",
+        "#FB8C00"
+      ]
+    },
+    {
+      "theme": "default",
+      "stops": [
+        "#62dfbb",
+        "#088a65"
+      ]
+    }
+  ],
+  "oneSat": "1",
+  "bch": "2.50000000"
+}

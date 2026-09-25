@@ -24,7 +24,10 @@
       <app-difficulty [showTitle]="false"></app-difficulty>
     </div>
 
-    <div class="col" style="margin-bottom:1.47rem"><div class="card"><div class="card-body"><h5 class="card-title">Block fees · latest 15 blocks</h5><app-block-fees-graph></app-block-fees-graph></div></div></div>
+    <div class="col" style="margin-bottom:1.47rem"><div class="card h-100"><div class="card-body ps-lg-3 pe-lg-3 ps-2 pe-2">
+      <div class="fixed-mempool-graph"><h5 class="card-title">Block fees · latest 15 blocks</h5><app-block-fees-graph [widget]="true" [height]="hashrateGraphHeight + 50"></app-block-fees-graph></div>
+      <div class="mt-1"><a [routerLink]="['/graphs/mining/block-fees' | relativeUrl]">View more &raquo;</a></div>
+    </div></div></div>
     <!-- hashrate -->
     <div class="col" style="margin-bottom: 1.47rem">
       <div class="card">

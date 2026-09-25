@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 import { StateService } from '@app/services/state.service';
 import { PriceService } from '@app/services/price.service';
+import { ThemeService } from '@app/services/theme.service';
 import { FiatCurrencyPipe } from '@app/shared/pipes/fiat-currency.pipe';
 
 const periodSeconds = {
@@ -62,6 +63,8 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
   selected = { [$localize`:@@7e69426bd97a606d8ae6026762858e6e7c86a1fd:Balance`]: true, 'Fiat': false };
 
   subscription: Subscription;
+  themeSubscription: Subscription;
+  lastSummary: AddressTxSummary[];
   redraw$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   chartOptions: EChartsOption = {};
@@ -84,7 +87,16 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
     private priceService: PriceService,
     private fiatCurrencyPipe: FiatCurrencyPipe,
     private zone: NgZone,
-  ) {}
+    private themeService: ThemeService,
+  ) {
+    this.themeSubscription = this.themeService.themeState$.subscribe(({loading}) => {
+      if (!loading && this.lastSummary) {
+        this.prepareChartOptions(this.lastSummary);
+        this.chartInstance?.setOption(this.chartOptions);
+        this.cd.markForCheck();
+      }
+    });
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.isLoading = true;
@@ -156,6 +168,8 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
       return;
     }
 
+    this.lastSummary = summary;
+    const native = this.themeService.theme === 'default';
     const total = this.stats ? (this.stats.funded_txo_sum - this.stats.spent_txo_sum) : summary.reduce((acc, tx) => acc + tx.value, 0);
     let runningTotal = total;
     const processData = summary.map(d => {
@@ -194,12 +208,12 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
     this.chartOptions = {
       color: [
         new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-          { offset: 0, color: '#FDD835' },
-          { offset: 1, color: '#FB8C00' },
+          { offset: 0, color: native ? '#62dfbb' : '#FDD835' },
+          { offset: 1, color: native ? '#088a65' : '#FB8C00' },
         ]),
         new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-          { offset: 0, color: '#4CAF50' },
-          { offset: 1, color: '#1B5E20' },
+          { offset: 0, color: native ? '#76D8B8' : '#4CAF50' },
+          { offset: 1, color: native ? '#23806B' : '#1B5E20' },
         ]),
       ],
       animation: false,
@@ -475,6 +489,7 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.themeSubscription.unsubscribe();
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

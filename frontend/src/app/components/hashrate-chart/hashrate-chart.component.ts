@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Inject, Input, LOCALE_ID, OnInit, HostBinding } from '@angular/core';
+import { ThemeService } from '@app/services/theme.service';
+import { Subscription } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Inject, Input, LOCALE_ID, OnInit, OnDestroy, HostBinding } from '@angular/core';
 import { echarts, EChartsOption } from '@app/graphs/echarts';
 import { combineLatest, fromEvent, merge, Observable, of } from 'rxjs';
 import { map, mergeMap, share, startWith, switchMap, tap } from 'rxjs/operators';
@@ -30,7 +32,7 @@ import { AmountShortenerPipe } from '@app/shared/pipes/amount-shortener.pipe';
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HashrateChartComponent implements OnInit {
+export class HashrateChartComponent implements OnInit, OnDestroy {
   @Input() tableOnly = false;
   @Input() widget = false;
   @Input() height: number = 300;
@@ -54,9 +56,14 @@ export class HashrateChartComponent implements OnInit {
   chartInstance: any = undefined;
   network = '';
 
+  private lastData: any;
+  private themeSubscription: Subscription;
+  ngOnDestroy(): void { this.themeSubscription?.unsubscribe(); }
+
   constructor(
     @Inject(LOCALE_ID) public locale: string,
     private seoService: SeoService,
+    private themeService: ThemeService,
     private apiService: ApiService,
     private formBuilder: UntypedFormBuilder,
     private storageService: StorageService,
@@ -68,6 +75,12 @@ export class HashrateChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.themeSubscription = this.themeService.themeState$.subscribe(({loading}) => {
+      if (!loading && this.lastData) {
+        this.prepareChartOptions(this.lastData);
+        this.chartInstance?.setOption(this.chartOptions);
+      }
+    });
     this.stateService.networkChanged$.subscribe((network) => this.network = network);
 
     let firstRun = true;
@@ -195,6 +208,8 @@ export class HashrateChartComponent implements OnInit {
   }
 
   prepareChartOptions(data) {
+    this.lastData = data;
+    const native = this.themeService.theme === 'default';
     let title: object;
     if (data.hashrates.length === 0) {
       title = {
@@ -212,26 +227,27 @@ export class HashrateChartComponent implements OnInit {
       title: title,
       animation: false,
       color: [
+        ...(native ? ['#088a65', '#9cf0d6', '#62dfbb'] : []),
         new echarts.graphic.LinearGradient(0, 0, 0, 0.65, [
-          { offset: 0, color: '#F4511E99' },
-          { offset: 0.25, color: '#FB8C0099' },
-          { offset: 0.5, color: '#FFB30099' },
-          { offset: 0.75, color: '#FDD83599' },
-          { offset: 1, color: '#7CB34299' }
+          { offset: 0, color: native ? '#088a6599' : '#F4511E99' },
+          { offset: 0.25, color: native ? '#088a6599' : '#FB8C0099' },
+          { offset: 0.5, color: native ? '#25bd9399' : '#FFB30099' },
+          { offset: 0.75, color: native ? '#62dfbb99' : '#FDD83599' },
+          { offset: 1, color: native ? '#9cf0d699' : '#7CB34299' }
         ]),
         '#D81B60',
         new echarts.graphic.LinearGradient(0, 0, 0, 0.65, [
-          { offset: 0, color: '#F4511E' },
-          { offset: 0.25, color: '#FB8C00' },
-          { offset: 0.5, color: '#FFB300' },
-          { offset: 0.75, color: '#FDD835' },
-          { offset: 1, color: '#7CB342' }
+          { offset: 0, color: native ? '#088a65' : '#F4511E' },
+          { offset: 0.25, color: native ? '#088a65' : '#FB8C00' },
+          { offset: 0.5, color: native ? '#25bd93' : '#FFB300' },
+          { offset: 0.75, color: native ? '#62dfbb' : '#FDD835' },
+          { offset: 1, color: native ? '#9cf0d6' : '#7CB342' }
         ]),
       ],
       grid: {
-        height: (this.widget && this.height) ? this.height - 30 : undefined,
+        height: undefined,
         top: this.widget ? 20 : 40,
-        bottom: this.widget ? 30 : 70,
+        bottom: this.widget ? 45 : 70,
         right: this.right,
         left: this.left,
       },
@@ -296,7 +312,7 @@ export class HashrateChartComponent implements OnInit {
             },
             icon: 'roundRect',
             itemStyle: {
-              color: '#FFB300',
+              color: native ? '#25bd93' : '#FFB300',
             },
           },
           {
@@ -315,7 +331,7 @@ export class HashrateChartComponent implements OnInit {
             },
             icon: 'roundRect',
             itemStyle: {
-              color: '#FFB300',
+              color: native ? '#25bd93' : '#FFB300',
             },
           },
         ],

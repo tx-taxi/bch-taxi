@@ -1,0 +1,18 @@
+# BCH scoped design cleanup — local candidate
+
+Implemented A07, A08, A10, A13, A14, A17, A18 and BCH part of A19 from explorer-kit review/design-audit. Shared A03/A04 shell work belongs to the integrator and is excluded from this commit.
+
+- Reused native BlockFeesGraph as an explicit widget, retaining full-page chart; equal paired card geometry, one heading, native View more, bounded 15-block labels, no widget zoom-slider collision. Hashrate widget bottom margin keeps mobile axis labels above View more.
+- Calculator uses BCH, 21M cap copy and BCH-era date range; missing source update timestamp is stated instead of an empty age. Integer-denomination checks give 0.00000001 BCH = 1 sat and 250000000 sats = 2.50000000 BCH.
+- Address, fees and hashrate charts use the existing green palette in native theme and retain Original colors. ThemeService repaint preserves chart geometry/data; interactive address SVG changes #62dfbb/#088a65 → #FDD835/#FB8C00 → green without page reload.
+- Current-price fiat conversions have an explicit native title tooltip. Historical-price capability remains disabled consistently in local and future production config; no historical series is claimed.
+- One CashToken coverage notice per transaction list replaces repeated general paragraphs; actual input-token unknown notices and token details remain per affected transaction.
+- Reachable DocsComponent now describes BCH target, ASERT, halving and indexing/token limits, with real BCH examples. Legal EOF artifacts removed and trademark network terms adapted, upstream attribution preserved. About already BCH-specific and retained.
+
+Verification: Angular watch compilation succeeded (2026-09-25 03:04 UTC, hash 9ee21735c0137a33); ngc --noEmit and git diff --check returned success. results.json records 12 actual provider-backed mining/calculator/address observations at1440/390, both themes, zero page errors; each 25-row address list has exactly one general coverage notice. mining-results.json supersedes earlier mining captures after palette/slider corrections. Six actual docs/About/legal routes have no observed MWEB/HogEx/2.5-minute/840000/EOF/legacy LTC example residues. interactions.json records real SVG repaint and calculator checks. details.json checks current-price tooltip presence on the historical BCH transaction.
+
+Screenshots actually inspected: final mining at both widths/themes, calculator at both widths/themes, address both widths/themes plus viewport-sized top captures, actual docs API. Paired mining cards now match heights, chart labels clear View more, calculator fits390px, native green address chart changes to gold Original; transaction cards retain original components with one scoped notice. Fee-widget child text bounds remain inside390px (no offscreen text). Full-page screenshots include viewport-fixed navigation at its normal viewport position; this is not content overlay across the actual scrolled page.
+
+Reference: native mining/chart components from existing BCH fork derived from LTC, compared with audit's approved BTC/LTC captures and source. Semantic sources: https://documentation.cash/protocol/blockchain/proof-of-work/difficulty-adjustment-algorithm.html (600s/ASERT), https://bitcoincash.org/ (21M); unchanged BCH adapter supplies actual current data. No provider/cache/projection denominator changes. Provider completeness and uptime are separate from these bounded visual checks.
+
+Local URL http://127.0.0.1:4361 remains running with Angular watch4360. Start/stop: bash scripts/local-start.sh / bash scripts/local-stop.sh in this worktree. No push or deployment.

@@ -33,6 +33,10 @@ export class TransactionsListComponent implements OnInit, OnChanges, OnDestroy {
   showMoreIncrement = 1000;
 
   @Input() transactions: Transaction[];
+
+  get tokenMetadataUnavailable(): boolean {
+    return this.transactions?.some(tx => tx.tokenMetadataUnavailable) || false;
+  }
   @Input() cached: boolean = false;
   @Input() showConfirmations = false;
   @Input() transactionPage = false;

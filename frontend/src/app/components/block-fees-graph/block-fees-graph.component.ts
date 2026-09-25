@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
+import { ThemeService } from '@app/services/theme.service';
+import { Subscription } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Inject, Input, LOCALE_ID, OnInit, OnDestroy } from '@angular/core';
 import { echarts, EChartsOption } from '@app/graphs/echarts';
 import { Observable } from 'rxjs';
 import { map, share, startWith, switchMap, tap } from 'rxjs/operators';
@@ -29,7 +31,9 @@ import { StateService } from '@app/services/state.service';
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlockFeesGraphComponent implements OnInit {
+export class BlockFeesGraphComponent implements OnInit, OnDestroy {
+  @Input() widget = false;
+  @Input() height = 300;
   @Input() right: number | string = 45;
   @Input() left: number | string = 75;
 
@@ -49,9 +53,14 @@ export class BlockFeesGraphComponent implements OnInit {
 
   currency: string;
 
+  private lastData: any;
+  private themeSubscription: Subscription;
+  ngOnDestroy(): void { this.themeSubscription?.unsubscribe(); }
+
   constructor(
     @Inject(LOCALE_ID) public locale: string,
     private seoService: SeoService,
+    private themeService: ThemeService,
     private apiService: ApiService,
     private formBuilder: UntypedFormBuilder,
     private storageService: StorageService,
@@ -67,8 +76,14 @@ export class BlockFeesGraphComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.seoService.setTitle($localize`:@@6c453b11fd7bd159ae30bc381f367bc736d86909:Block Fees`);
-    this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fees:See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.`);
+    this.themeSubscription = this.themeService.themeState$.subscribe(({loading}) => {
+      if (!loading && this.lastData) {
+        this.prepareChartOptions(this.lastData);
+        this.chartInstance?.setOption(this.chartOptions);
+      }
+    });
+    if (!this.widget) this.seoService.setTitle($localize`:@@6c453b11fd7bd159ae30bc381f367bc736d86909:Block Fees`);
+    if (!this.widget) this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fees:See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.`);
     this.miningWindowPreference = this.miningService.getDefaultTimespan('1m');
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
     this.radioGroupForm.controls.dateSpan.setValue(this.miningWindowPreference);
@@ -110,6 +125,8 @@ export class BlockFeesGraphComponent implements OnInit {
   }
 
   prepareChartOptions(data) {
+    this.lastData = data;
+    const native = this.themeService.theme === 'default';
     const feesBtcLabel = $localize`:@@graphs.blockFees.feesBtc:Fees BCH`;
     const feesFiatLabel = $localize`:@@graphs.blockFees.feesFiat:Fees ${this.currency}:currency:`;
 
@@ -130,20 +147,20 @@ export class BlockFeesGraphComponent implements OnInit {
       title: title,
       color: [
         new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-          { offset: 0, color: '#FDD835' },
-          { offset: 1, color: '#FB8C00' },
+          { offset: 0, color: native ? '#62dfbb' : '#FDD835' },
+          { offset: 1, color: native ? '#088a65' : '#FB8C00' },
         ]),
         new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-          { offset: 0, color: '#C0CA33' },
-          { offset: 1, color: '#1B5E20' },
+          { offset: 0, color: native ? '#9cf0d6' : '#C0CA33' },
+          { offset: 1, color: native ? '#23806B' : '#1B5E20' },
         ]),
       ],
       animation: false,
       grid: {
         top: 30,
-        bottom: 80,
+        bottom: this.widget ? 40 : 80,
         right: this.right,
-        left: this.left,
+        left: this.isMobile() ? 65 : this.left,
       },
       tooltip: {
         show: !this.isMobile(),
@@ -267,7 +284,7 @@ export class BlockFeesGraphComponent implements OnInit {
           }
         },
       ],
-      dataZoom: data.blockFees.length === 0 ? undefined : [{
+      dataZoom: this.widget || data.blockFees.length === 0 ? undefined : [{
         type: 'inside',
         realtime: true,
         zoomLock: true,
