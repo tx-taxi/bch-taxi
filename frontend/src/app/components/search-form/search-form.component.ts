@@ -220,13 +220,13 @@ export class SearchFormComponent implements OnInit {
         this.isTypeaheading$.next(true);
         if (!this.stateService.networkSupportsLightning()) {
           return zip(
-            this.electrsApiService.getAddressesByPrefix$(text).pipe(catchError(() => of([]))),
+            of([]) /* BCH index has no address-prefix search capability. */,
             [{ nodes: [], channels: [] }],
             this.getMiningPools()
           );
         }
         return zip(
-          this.electrsApiService.getAddressesByPrefix$(text).pipe(catchError(() => of([]))),
+          of([]) /* BCH index has no address-prefix search capability. */,
           this.apiService.lightningSearch$(text).pipe(catchError(() => of({
             nodes: [],
             channels: [],
