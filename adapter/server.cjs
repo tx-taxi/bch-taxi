@@ -43,7 +43,7 @@ function ttl(path) {
 const provider=require('./bch-provider.cjs');
 async function api(path) {
  try {const data=await provider.api(path);if(['/api/v1/init-data','/api/mempool'].includes(path))health.lastSuccess=Date.now();failedPaths.delete(path);return result(data,'haskoin-bchn');}
- catch(e){failedPaths.set(path,Date.now());health.lastFailure={at:Date.now(),message:e.message};return result({error:e.message,retryable:e.status!==404},'unavailable',e.status||503);}
+ catch(e){if(e.status!==404){failedPaths.set(path,Date.now());health.lastFailure={at:Date.now(),path,message:e.message};}return result({error:e.message,retryable:e.status!==404},'unavailable',e.status||503);}
 }
 
 function send(res,status,data,type='application/json',headers={}) {

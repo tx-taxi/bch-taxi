@@ -136,7 +136,7 @@
     "CashToken output category/raw units available; input token quantities and verified token branding/decimals unavailable and explicitly stated.",
     "Only current USD fiat available; historical USD conversion not claimed.",
     "Mining series are latest15 indexed blocks; no unsupported long-range chart.",
-    "Hub mobile pending tile has measured1px fractional-scroll rounding discrepancy."
+    "Latest owner wrapper refinement parity is owned by parent integrator; export includes exact native status fragments and approved mobile centering."
   ],
   "productionRequested": false
 }
