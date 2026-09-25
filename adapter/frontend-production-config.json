@@ -17,5 +17,7 @@
   "MEMPOOL_WEBSITE_URL": "https://bch.tx.taxi",
   "HISTORICAL_PRICE": false,
   "TX_TAXI_ROUTER_URL": "/local-router",
-  "ITEMS_PER_PAGE": 25
+  "ITEMS_PER_PAGE": 25,
+  "BLOCK_WEIGHT_UNITS": 128000000,
+  "KEEP_BLOCKS_AMOUNT": 15
 }

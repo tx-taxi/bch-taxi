@@ -13,13 +13,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends fonts-dejavu-co
 COPY adapter/package.json adapter/package-lock.json ./adapter/
 RUN cd adapter && npm ci --omit=dev
 COPY adapter ./adapter
-COPY frontend/src/resources/branding/ltc-dark-navbar.svg ./frontend/src/resources/branding/ltc-dark-navbar.svg
+COPY frontend/src/resources/branding/bch-dark-navbar.svg ./frontend/src/resources/branding/bch-dark-navbar.svg
+COPY frontend/src/resources/mining-pools/default.svg ./frontend/src/resources/mining-pools/default.svg
 COPY --from=frontend-builder /app/frontend/dist/mempool/browser ./public
 COPY --from=frontend-builder /app/frontend/src/resources ./public/resources
-ENV LTC_HOST=0.0.0.0
-ENV LTC_STATIC_ROOT=/app/public
-ENV LTC_SITE_ORIGIN=https://ltc.tx.taxi
-ENV LTC_ROUTER_ORIGIN=https://tx.taxi
+COPY --from=frontend-builder /app/frontend/.theme-build ./public
+ENV BCH_HOST=0.0.0.0
+ENV BCH_STATIC_ROOT=/app/public
+ENV BCH_SITE_ORIGIN=https://bch.tx.taxi
+ENV BCH_ROUTER_ORIGIN=https://tx.taxi
 ENV PORT=8080
 USER node
 EXPOSE 8080

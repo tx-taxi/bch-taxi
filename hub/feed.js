@@ -1,6 +1,6 @@
 /** Chain-owned native explorer transport; snapshot age and stream liveness are distinct. */
 export function startFeed({onSnapshot,onStatus,signal}) {
- const endpoint='ws://127.0.0.1:4361/api/v1/ws';
+ const endpoint=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? 'ws://127.0.0.1:4361/api/v1/ws' : 'wss://bch.tx.taxi/api/v1/ws';
  let socket,retry,watchdog,initial,lastMessage=0,lastData=0,attempt=0,stopped=false,haveData=false;
  const status=(state,error)=>onStatus?.({state,updatedAt:lastData||null,error});
  const block=value=>value && typeof value==='object' && Number.isSafeInteger(value.height) && typeof value.id==='string';
