@@ -287,9 +287,11 @@
 <ng-template #minerRow>
   @if (network === '') {
     @if (!isLoadingTx) {
-      <tr>
+      <tr *ngIf="hasAttributedMiner(pool) || pool?.address">
         <td class="td-width" i18n="block.miner">Miner</td>
-        @if (pool) {
+        @if (pool?.address && !hasAttributedMiner(pool)) {
+          <td class="wrap-cell"><app-truncate [text]="pool.address" [title]="pool.address" [lastChars]="8" [maxWidth]="220" [link]="['/address' | relativeUrl, pool.address]"></app-truncate></td>
+        } @else if (pool) {
           <td class="wrap-cell">
             <a placement="bottom" [routerLink]="['/mining/pool' | relativeUrl, pool.slug]" class="badge" style="color: var(--fg);padding:0;">
               <span class="miner-name" *ngIf="pool.minerNames?.length > 1 && pool.minerNames[1] != ''">

@@ -1,3 +1,4 @@
+import { hasAttributedMiner } from '@app/shared/miner-label.utils';
 import { Component, OnInit, Input, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 import { Transaction } from '@interfaces/electrs.interface';
 import { Acceleration, CpfpInfo } from '@interfaces/node-api.interface';
@@ -15,6 +16,7 @@ import { Filter } from '@app/shared/filters.utils';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TransactionDetailsComponent implements OnInit {
+  readonly hasAttributedMiner = hasAttributedMiner;
   @Input() network: string;
   @Input() tx: Transaction;
   @Input() isLoadingTx: boolean;

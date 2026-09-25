@@ -182,8 +182,11 @@
           <td><span class="skeleton-loader"></span></td>
         </tr>
       </ng-template>
-      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet'">
+      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet' && (hasAttributedMiner(block.extras.pool) || block.extras.pool?.address)">
         <td i18n="block.miner">Miner</td>
+        @if (!hasAttributedMiner(block.extras.pool)) {
+          <td><app-truncate [text]="block.extras.pool.address" [title]="block.extras.pool.address" [lastChars]="8" [maxWidth]="220" [link]="['/address' | relativeUrl, block.extras.pool.address]"></app-truncate></td>
+        } @else {
         <td *ngIf="stateService.env.MINING_DASHBOARD">
           <span placement="bottom" class="badge" style="color: #FFF;padding:0;">
             <span class="miner-name" *ngIf="block.extras.pool.minerNames?.length > 1 && block.extras.pool.minerNames[1] != ''">
@@ -202,6 +205,7 @@
             {{ block.extras.pool.name }}
         </span>
         </td>
+        }
       </tr>
     </ng-container>
     <ng-template #loadingRest>

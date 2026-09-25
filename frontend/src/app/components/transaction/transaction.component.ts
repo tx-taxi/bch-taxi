@@ -42,6 +42,7 @@ import { MiningService, MiningStats } from '@app/services/mining.service';
 import { ETA, EtaService } from '@app/services/eta.service';
 
 export interface Pool {
+  address?: string; // Verified coinbase payout address supplied by the adapter.
   id: number;
   name: string;
   slug: string;

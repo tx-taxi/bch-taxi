@@ -1,3 +1,4 @@
+import { hasAttributedMiner } from '@app/shared/miner-label.utils';
 import { Component, OnInit, OnDestroy, ViewChildren, QueryList, ChangeDetectorRef } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
@@ -44,6 +45,7 @@ interface ComparisonStats {
   `],
 })
 export class BlockComponent implements OnInit, OnDestroy {
+  readonly hasAttributedMiner = hasAttributedMiner;
   network = '';
   block: BlockExtended;
   blockAudit: BlockAudit = undefined;
