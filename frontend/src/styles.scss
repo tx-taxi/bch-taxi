@@ -1676,3 +1676,5 @@ form label:not(.form-check-label):not(.btn) {
 .text-secondary { color: var(--transparent-fg) !important; }
 
 .fiat-color { color: var(--fiat-color); }
+
+:root { --data-hover-start: var(--primary); --data-hover-end: var(--info); }

@@ -32,3 +32,5 @@
   --search-button-focus: #533180;
   --search-button-shadow: #7c58ab80;
 }
+
+:root { --data-hover-start: #2486eb; --data-hover-end: #ae6af7; }
