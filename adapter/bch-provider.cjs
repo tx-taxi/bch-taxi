@@ -8,7 +8,7 @@ const status={lastSuccess:null,lastFailure:null,source:H};
 async function read(url,ttl=15000,body) {
  const key=url+JSON.stringify(body||''), saved=cache.get(key);if(saved&&Date.now()-saved.at<ttl)return saved.data;
  if(pending.has(key))return pending.get(key);
- const req=(async()=>{try{let r=await fetch(url,{signal:AbortSignal.timeout(10000),...(body?{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}:{})});if(r.status===503){await new Promise(resolve=>setTimeout(resolve,350));r=await fetch(url,{signal:AbortSignal.timeout(10000)});}if(!r.ok)throw Object.assign(Error(`Provider HTTP ${r.status}`),{status:r.status});const data=await r.json();if(data.error||data.success===false)throw Error(data.error||'Provider request failed');cache.set(key,{data,at:Date.now()});if(cache.size>800)cache.delete(cache.keys().next().value);status.lastSuccess=Date.now();return data;}catch(e){status.lastFailure={at:Date.now(),message:e.message};throw e;}finally{pending.delete(key);}})();pending.set(key,req);return req;
+ const req=(async()=>{try{let r=await fetch(url,{signal:AbortSignal.timeout(10000),...(body?{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}:{})});if(r.status===503){await new Promise(resolve=>setTimeout(resolve,350));r=await fetch(url,{signal:AbortSignal.timeout(10000)});}if(!r.ok)throw Object.assign(Error(`Provider HTTP ${r.status}`),{status:r.status});const data=await r.json();if(data.error||data.success===false)throw Error(data.error||'Provider request failed');cache.set(key,{data,at:Date.now()});if(url.startsWith(H)&&Array.isArray(data)){for(const t of data){if(t.txid&&Array.isArray(t.outputs))cache.set(H+'/transaction/'+t.txid+JSON.stringify(''),{data:t,at:Date.now()});}}while(cache.size>800)cache.delete(cache.keys().next().value);status.lastSuccess=Date.now();return data;}catch(e){status.lastFailure={at:Date.now(),message:e.message};throw e;}finally{pending.delete(key);}})();pending.set(key,req);return req;
 }
 const h=(p,ttl)=>read(H+p,ttl);
 const sat=n=>Math.round(Number(n)*1e8);
@@ -40,7 +40,7 @@ async function api(path){const u=new URL(path,'http://local'),p=u.pathname;let m
  if(m=p.match(/^\/api\/tx\/([^/]+)\/outspends$/)){const t=await h('/transaction/'+m[1],60000);return t.outputs.map(o=>({spent:o.spent,txid:o.spender?.txid,vin:o.spender?.input,status:undefined}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)$/))return tx(m[1]);
  if(m=p.match(/^\/api\/tx\/([^/]+)\/hex$/))return h('/transaction/'+m[1]+'/raw');
- if(m=p.match(/^\/api\/address\/([^/]+)\/txs\/summary$/)){const a=decodeURIComponent(m[1]),ts=await h('/address/'+encodeURIComponent(a)+'/transactions/full?limit=100',20000);return ts.map(t=>({txid:t.txid,height:t.block?.height||0,time:t.time,tx_position:t.block?.position,value:t.outputs.filter(o=>o.address===a).reduce((v,o)=>v+o.value,0)-t.inputs.filter(o=>o.address===a).reduce((v,o)=>v+o.value,0)}));}
+ if(m=p.match(/^\/api\/address\/([^/]+)\/txs\/summary$/)){const a=decodeURIComponent(m[1]),ts=await h('/address/'+encodeURIComponent(a)+'/transactions/full?limit=1000',20000);return ts.slice(0,100).map(t=>({txid:t.txid,height:t.block?.height||0,time:t.time,tx_position:t.block?.position,value:t.outputs.filter(o=>o.address===a).reduce((v,o)=>v+o.value,0)-t.inputs.filter(o=>o.address===a).reduce((v,o)=>v+o.value,0)}));}
  if(m=p.match(/^\/api\/address\/([^/]+)\/txs(?:\/chain(?:\/([^/]+))?)?$/))return history(decodeURIComponent(m[1]),m[2]);
  if(m=p.match(/^\/api\/address\/([^/]+)$/))return address(decodeURIComponent(m[1]));
  if(m=p.match(/^\/api\/v1\/validate-address\/(.+)$/)){await address(decodeURIComponent(m[1]));return {isvalid:true,address:decodeURIComponent(m[1])};}
@@ -48,7 +48,12 @@ async function api(path){const u=new URL(path,'http://local'),p=u.pathname;let m
  if(p==='/api/v1/fees/mempool-blocks')return (await snapshot())['mempool-blocks'];
  if(p==='/api/v1/fees/recommended')return (await snapshot()).fees;
  if(p==='/api/mempool/recent')return (await snapshot()).transactions;
- if(p==='/api/txs/outspends')return Promise.all((u.searchParams.get('txids')||'').split(',').filter(Boolean).slice(0,25).map(id=>api('/api/tx/'+id+'/outspends')));
+ if(p==='/api/txs/outspends'){
+  const ids=(u.searchParams.get('txids')||'').split(',').filter(Boolean).slice(0,25);
+  const missing=ids.filter(id=>{const saved=cache.get(H+'/transaction/'+id+JSON.stringify(''));return !saved||Date.now()-saved.at>=60000;});
+  if(missing.length)await h('/transactions?txids='+missing.join(','),60000);
+  return Promise.all(ids.map(id=>api('/api/tx/'+id+'/outspends')));
+ }
  if(p==='/api/v1/backend-info')return {version:'BCH local candidate',gitCommit:'6ba310ede'};
 
  if(p.startsWith('/api/v1/mining/reward-stats/')){const bs=await blocks();return {startBlock:bs.at(-1).height,endBlock:bs[0].height,totalReward:bs.reduce((s,b)=>s+b.extras.reward,0),totalFee:bs.reduce((s,b)=>s+b.extras.totalFees,0),totalTx:bs.reduce((s,b)=>s+b.tx_count-1,0)};}

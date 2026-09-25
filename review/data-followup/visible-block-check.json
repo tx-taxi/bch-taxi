@@ -1,0 +1,18 @@
+{
+  "chain": "bch",
+  "checkedAt": "2026-09-25T02:38:42.582Z",
+  "cases": [
+    {
+      "width": 1440,
+      "transactionListRendered": 1,
+      "errorText": null,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "transactionListRendered": 1,
+      "errorText": null,
+      "pageErrors": []
+    }
+  ]
+}
