@@ -98,6 +98,7 @@ async function api(path){const u=new URL(path,'http://local'),p=u.pathname;let m
  if(m=p.match(/^\/api\/block-height\/(\d+)$/))return (await rawBlock(m[1])).hash;
  if(m=p.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/))return blocks(m[1]);
  if(m=p.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)$/))return blockWithFees(await rawBlock(m[1]));
+ if(m=p.match(/^\/api\/block\/([a-f0-9]{64}|\d+)\/txids$/)){const b=await rawBlock(m[1]);if(!Array.isArray(b.tx)||!b.tx.length||b.tx.some(id=>!/^[a-f0-9]{64}$/.test(id))||new Set(b.tx).size!==b.tx.length)throw Error('Incomplete block transaction IDs');return b.tx;}
  if(m=p.match(/^\/api\/block\/([^/]+)\/txs(?:\/(\d+))?$/)){const b=await rawBlock(m[1]);const ids=b.tx.slice(Number(m[2]||0),Number(m[2]||0)+25);return (await h('/transactions?txids='+ids.join(','),300000)).map(t=>transaction(t,b));}
  if(m=p.match(/^\/api\/v1\/block\/([^/]+)\/summary$/)){const b=await rawBlock(m[1]);const ts=await h('/transactions/block/'+b.hash,300000);return ts.map(t=>({txid:t.txid,vsize:t.size,fee:t.fee,value:t.outputs.reduce((s,o)=>s+o.value,0)}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)\/outspends$/)){const t=await h('/transaction/'+m[1],60000);return t.outputs.map(o=>({spent:o.spent,txid:o.spender?.txid,vin:o.spender?.input,status:undefined}));}
