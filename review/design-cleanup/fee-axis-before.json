@@ -1,0 +1,212 @@
+[
+  {
+    "theme": "default",
+    "chart": {
+      "left": 24,
+      "right": 366
+    },
+    "labels": [
+      {
+        "text": "0 BCH",
+        "left": 46.734375,
+        "right": 81,
+        "clipped": false
+      },
+      {
+        "text": "0.0005 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.001 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.0015 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.002 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.0025 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.003 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "18:20",
+        "left": 120.81575012207031,
+        "right": 151.6239013671875,
+        "clipped": false
+      },
+      {
+        "text": "18:40",
+        "left": 157.5633544921875,
+        "right": 188.3715057373047,
+        "clipped": false
+      },
+      {
+        "text": "19:20",
+        "left": 231.0585479736328,
+        "right": 261.86669921875,
+        "clipped": false
+      },
+      {
+        "text": "19:40",
+        "left": 267.80615234375,
+        "right": 298.61431884765625,
+        "clipped": false
+      },
+      {
+        "text": "18:00",
+        "left": 83.98992156982422,
+        "right": 114.9540786743164,
+        "clipped": false
+      },
+      {
+        "text": "19:00",
+        "left": 194.23281860351562,
+        "right": 225.1969757080078,
+        "clipped": false
+      },
+      {
+        "text": "20:00",
+        "left": 304.4757385253906,
+        "right": 335.43988037109375,
+        "clipped": false
+      },
+      {
+        "text": "Fees BCH",
+        "left": 137.1696014404297,
+        "right": 190.0914764404297,
+        "clipped": false
+      },
+      {
+        "text": "Fees USD",
+        "left": 230.0780029296875,
+        "right": 283.0703125,
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "theme": "original",
+    "chart": {
+      "left": 24,
+      "right": 366
+    },
+    "labels": [
+      {
+        "text": "0 BCH",
+        "left": 46.734375,
+        "right": 81,
+        "clipped": false
+      },
+      {
+        "text": "0.0005 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.001 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.0015 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.002 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.0025 BCH",
+        "left": 16.0625,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "0.003 BCH",
+        "left": 22.921875,
+        "right": 81,
+        "clipped": true
+      },
+      {
+        "text": "18:20",
+        "left": 120.81575012207031,
+        "right": 151.6239013671875,
+        "clipped": false
+      },
+      {
+        "text": "18:40",
+        "left": 157.5633544921875,
+        "right": 188.3715057373047,
+        "clipped": false
+      },
+      {
+        "text": "19:20",
+        "left": 231.0585479736328,
+        "right": 261.86669921875,
+        "clipped": false
+      },
+      {
+        "text": "19:40",
+        "left": 267.80615234375,
+        "right": 298.61431884765625,
+        "clipped": false
+      },
+      {
+        "text": "18:00",
+        "left": 83.98992156982422,
+        "right": 114.9540786743164,
+        "clipped": false
+      },
+      {
+        "text": "19:00",
+        "left": 194.23281860351562,
+        "right": 225.1969757080078,
+        "clipped": false
+      },
+      {
+        "text": "20:00",
+        "left": 304.4757385253906,
+        "right": 335.43988037109375,
+        "clipped": false
+      },
+      {
+        "text": "Fees BCH",
+        "left": 137.1696014404297,
+        "right": 190.0914764404297,
+        "clipped": false
+      },
+      {
+        "text": "Fees USD",
+        "left": 230.0780029296875,
+        "right": 283.0703125,
+        "clipped": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "theme": "default",
+    "chart": {
+      "left": 24,
+      "right": 366
+    },
+    "labels": [
+      {
+        "text": "0 BCH",
+        "left": 62.666778564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0005 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.001 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0015 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.002 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0025 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.003 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "18:20",
+        "left": 138.5913543701172,
+        "right": 169.39950561523438,
+        "clipped": false
+      },
+      {
+        "text": "18:40",
+        "left": 176.77525329589844,
+        "right": 207.58340454101562,
+        "clipped": false
+      },
+      {
+        "text": "19:20",
+        "left": 253.1429443359375,
+        "right": 283.95111083984375,
+        "clipped": false
+      },
+      {
+        "text": "19:40",
+        "left": 291.32684326171875,
+        "right": 322.135009765625,
+        "clipped": false
+      },
+      {
+        "text": "18:00",
+        "left": 100.3293228149414,
+        "right": 131.29348754882812,
+        "clipped": false
+      },
+      {
+        "text": "19:00",
+        "left": 214.88092041015625,
+        "right": 245.84507751464844,
+        "clipped": false
+      },
+      {
+        "text": "20:00",
+        "left": 329.4326171875,
+        "right": 360.39678955078125,
+        "clipped": false
+      },
+      {
+        "text": "Fees BCH",
+        "left": 98.49330139160156,
+        "right": 151.41517639160156,
+        "clipped": false
+      },
+      {
+        "text": "Fees USD (current rate)",
+        "left": 191.40170288085938,
+        "right": 321.9066162109375,
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "theme": "original",
+    "chart": {
+      "left": 24,
+      "right": 366
+    },
+    "labels": [
+      {
+        "text": "0 BCH",
+        "left": 62.666778564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0005 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.001 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0015 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.002 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.0025 BCH",
+        "left": 31.994903564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "0.003 BCH",
+        "left": 38.854278564453125,
+        "right": 96.93240356445312,
+        "clipped": false
+      },
+      {
+        "text": "18:20",
+        "left": 138.5913543701172,
+        "right": 169.39950561523438,
+        "clipped": false
+      },
+      {
+        "text": "18:40",
+        "left": 176.77525329589844,
+        "right": 207.58340454101562,
+        "clipped": false
+      },
+      {
+        "text": "19:20",
+        "left": 253.1429443359375,
+        "right": 283.95111083984375,
+        "clipped": false
+      },
+      {
+        "text": "19:40",
+        "left": 291.32684326171875,
+        "right": 322.135009765625,
+        "clipped": false
+      },
+      {
+        "text": "18:00",
+        "left": 100.3293228149414,
+        "right": 131.29348754882812,
+        "clipped": false
+      },
+      {
+        "text": "19:00",
+        "left": 214.88092041015625,
+        "right": 245.84507751464844,
+        "clipped": false
+      },
+      {
+        "text": "20:00",
+        "left": 329.4326171875,
+        "right": 360.39678955078125,
+        "clipped": false
+      },
+      {
+        "text": "Fees BCH",
+        "left": 98.49330139160156,
+        "right": 151.41517639160156,
+        "clipped": false
+      },
+      {
+        "text": "Fees USD (current rate)",
+        "left": 191.40170288085938,
+        "right": 321.9066162109375,
+        "clipped": false
+      }
+    ]
+  }
+]

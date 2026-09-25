@@ -128,7 +128,7 @@ export class BlockFeesGraphComponent implements OnInit, OnDestroy {
     this.lastData = data;
     const native = this.themeService.theme === 'default';
     const feesBtcLabel = $localize`:@@graphs.blockFees.feesBtc:Fees BCH`;
-    const feesFiatLabel = $localize`:@@graphs.blockFees.feesFiat:Fees ${this.currency}:currency:`;
+    const feesFiatLabel = `Fees ${this.currency} (current rate)`;
 
     let title: object;
     if (data.blockFees.length === 0) {
@@ -159,8 +159,9 @@ export class BlockFeesGraphComponent implements OnInit, OnDestroy {
       grid: {
         top: 30,
         bottom: this.widget ? 40 : 80,
-        right: this.right,
-        left: this.isMobile() ? 65 : this.left,
+        right: this.isMobile() ? 20 : this.right,
+        left: this.isMobile() ? 8 : this.left,
+        containLabel: this.isMobile(),
       },
       tooltip: {
         show: !this.isMobile(),

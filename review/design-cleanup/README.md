@@ -16,3 +16,7 @@ Screenshots actually inspected: final mining at both widths/themes, calculator a
 Reference: native mining/chart components from existing BCH fork derived from LTC, compared with audit's approved BTC/LTC captures and source. Semantic sources: https://documentation.cash/protocol/blockchain/proof-of-work/difficulty-adjustment-algorithm.html (600s/ASERT), https://bitcoincash.org/ (21M); unchanged BCH adapter supplies actual current data. No provider/cache/projection denominator changes. Provider completeness and uptime are separate from these bounded visual checks.
 
 Local URL http://127.0.0.1:4361 remains running with Angular watch4360. Start/stop: bash scripts/local-start.sh / bash scripts/local-stop.sh in this worktree. No push or deployment.
+
+## Integrator follow-up: actual SVG clipping
+
+Integrator correctly identified that viewport-only bounds missed clipped fee-widget labels. Before correction, canvas left=24px but six y-axis labels started16.06/22.92px in both themes, clipping their first characters inside the SVG viewport. Native ECharts `containLabel` with compact mobile gutters now keeps every axis/legend label inside the chart (leftmost31.99px; rightmost360.40px; canvas24–366px). `fee-axis-before/after.json` and opened `fee-axis-after-{default,original}.png` record the correction. Both labels and View more remain readable at390px. Fee fiat legend explicitly says “Fees USD (current rate)”. This supersedes the earlier viewport-only claim; original mining screenshots remain pre-follow-up provenance.
