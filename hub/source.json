@@ -1,6 +1,6 @@
 {
   "chain": "bch",
-  "commit": "2fe4f704f9f83c902554061743b066b3298a0dc2",
-  "status": "Independent recheck corrected local candidate; review/recheck-fixes and provider limits apply",
+  "commit": "5fb9eeea7f1dbf4138652b7f59a559ebb4af98dc",
+  "status": "Production release candidate; pending/fee refinements and packaging verified locally; public evidence tracked in router release review",
   "reconciliation": "Native source ancestor LTC6ba310ede; candidate BCH source commit pinned here. Latest owner native status/mobile-center contract adopted. Not an approved or deployed BCH baseline."
 }

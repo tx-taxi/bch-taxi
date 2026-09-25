@@ -26,7 +26,9 @@ function transactionFeeSummary(raw, transactions) {
  if(ordinary.some(t=>!Number.isSafeInteger(t.fee)||t.fee<0||!Number.isSafeInteger(t.size)||t.size<=0))throw Error('Block transaction fee data unavailable');
  const rates=ordinary.map(t=>t.fee/t.size).sort((a,b)=>a-b);
  const middle=Math.floor(rates.length/2);
- return {minFee:rates[0]??0,maxFee:rates.at(-1)??0,feeRange:rates.length?[rates[0],rates.at(-1)]:[0,0],
+ const coinbase=transactions.find(t=>t.inputs.some(input=>input.coinbase));
+ const recipients=[...new Set((coinbase?.outputs||[]).filter(o=>o.value>0&&typeof o.address==='string'&&o.address.length).map(o=>o.address))];
+ return {payoutAddress:recipients.length===1?recipients[0]:undefined,minFee:rates[0]??0,maxFee:rates.at(-1)??0,feeRange:rates.length?[rates[0],rates.at(-1)]:[0,0],
   medianFee:rates.length?(rates.length%2?rates[middle]:(rates[middle-1]+rates[middle])/2):0};
 }
 async function blockWithFees(raw) {
@@ -44,7 +46,9 @@ async function blockWithFees(raw) {
   }
   try{await feeSummaryRequests.get(raw.hash);}catch{return mapped;}
  }
- Object.assign(mapped.extras,feeSummaries.get(raw.hash));
+ const {payoutAddress,...fees}=feeSummaries.get(raw.hash);
+ Object.assign(mapped.extras,fees);
+ if(payoutAddress)mapped.extras.pool.address=payoutAddress;
  return mapped;
 }
 async function rawBlock(id){try {const b=/^\d+$/.test(String(id))?(await h('/block/height/'+id,300000))[0]:await h('/block/'+id,300000);if(!b?.hash)throw Object.assign(Error('Block not found'),{status:404});return b;}catch(e){if(e.status===404)throw e;const b=await read(S+'/block/'+id,300000);const reward=b.tx[0].vout.reduce((s,o)=>s+sat(o.value),0),subsidy=Math.floor(50e8/2**Math.floor(b.height/210000));return {hash:b.hash,height:b.height,time:b.time,size:b.size,version:b.version,bits:parseInt(b.bits,16),nonce:b.nonce,previous:b.previousblockhash,merkle:b.merkleroot,tx:b.tx.map(t=>t.txid),subsidy,fees:reward-subsidy};}}
