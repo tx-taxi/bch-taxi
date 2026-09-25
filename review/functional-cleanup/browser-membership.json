@@ -1,0 +1,25 @@
+{
+  "controlled": true,
+  "before": {
+    "ids": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ],
+    "sampleBytes": 401,
+    "capacity": 32000000
+  },
+  "after": {
+    "ids": [
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    ],
+    "sampleBytes": 403,
+    "capacity": 32000000
+  },
+  "empty": {
+    "ids": [],
+    "sampleBytes": 1,
+    "capacity": 32000000
+  },
+  "errors": []
+}

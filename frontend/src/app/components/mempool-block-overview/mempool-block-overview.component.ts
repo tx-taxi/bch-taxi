@@ -30,6 +30,8 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
 
   @ViewChild('blockGraph') blockGraph: BlockOverviewGraphComponent;
 
+  sampleBytes = 1;
+  private sampleTransactions = new Map<string, TransactionStripped>();
   lastBlockHeight: number;
   blockIndex: number;
   isLoading$ = new BehaviorSubject<boolean>(false);
@@ -59,50 +61,20 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
 
   ngAfterViewInit(): void {
     this.blockSub = this.stateService.mempoolBlockUpdate$.subscribe((update) => {
-      // process update
+      // Fit this transaction sample independently of the actual block-capacity strip.
       if (isMempoolDelta(update)) {
-        // delta
-        this.updateBlock(update);
-      } else {
-        const transactionsStripped = update.transactions;
-        // new transactions
-        if (this.firstLoad) {
-          this.replaceBlock(transactionsStripped);
-        } else {
-          const inOldBlock = {};
-          const inNewBlock = {};
-          const added: TransactionStripped[] = [];
-          const changed: { txid: string, rate: number | undefined, flags: number, acc: boolean | undefined }[] = [];
-          const removed: string[] = [];
-          for (const tx of transactionsStripped) {
-            inNewBlock[tx.txid] = true;
-          }
-          for (const txid of Object.keys(this.blockGraph?.scene?.txs || {})) {
-            inOldBlock[txid] = true;
-            if (!inNewBlock[txid]) {
-              removed.push(txid);
-            }
-          }
-          for (const tx of transactionsStripped) {
-            if (!inOldBlock[tx.txid]) {
-              added.push(tx);
-            } else {
-              changed.push({
-                txid: tx.txid,
-                rate: tx.rate,
-                flags: tx.flags,
-                acc: tx.acc
-              });
-            }
-          }
-          this.updateBlock({
-            block: this.blockIndex,
-            removed,
-            changed,
-            added
-          });
+        for (const id of update.removed) this.sampleTransactions.delete(id);
+        for (const tx of update.added) this.sampleTransactions.set(tx.txid, tx);
+        for (const change of update.changed || []) {
+          const tx = this.sampleTransactions.get(change.txid);
+          if (tx) Object.assign(tx, change);
         }
+      } else {
+        this.sampleTransactions = new Map(update.transactions.map(tx => [tx.txid, tx]));
       }
+      this.sampleBytes = Math.max(1, [...this.sampleTransactions.values()].reduce((sum, tx) => sum + tx.vsize, 0));
+      this.replaceBlock([...this.sampleTransactions.values()]);
+      this.cd.markForCheck();
     });
   }
 
@@ -136,6 +108,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
       this.blockGraph.replace(transactionsStripped, blockMined ? this.chainDirection : this.poolDirection);
     }
 
+    this.firstLoad = false;
     this.lastBlockHeight = this.stateService.latestBlockHeight;
     this.blockIndex = this.index;
     this.isLoading$.next(false);
@@ -162,6 +135,8 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   resumeBlock(transactionsStripped: TransactionStripped[]): void {
     if (this.blockGraph) {
       this.firstLoad = false;
+      this.sampleTransactions = new Map(transactionsStripped.map(tx => [tx.txid, tx]));
+      this.sampleBytes = Math.max(1, transactionsStripped.reduce((sum, tx) => sum + tx.vsize, 0));
       this.blockGraph.setup(transactionsStripped, true);
       this.blockIndex = this.index;
       this.isLoading$.next(false);

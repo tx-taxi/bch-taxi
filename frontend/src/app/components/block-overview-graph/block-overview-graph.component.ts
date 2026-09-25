@@ -145,6 +145,7 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
     if (changes.blockLimit && this.scene) {
       const transactions = Object.values(this.scene.txs);
       this.scene.vbytesPerUnit = this.blockLimit / Math.pow(this.resolution / 1.02, 2);
+      this.fitSample(transactions, false);
       this.scene.setup(transactions, false);
       this.start();
     }
@@ -225,6 +226,7 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
     this.filtersAvailable = filtersAvailable;
     if (this.scene) {
       this.clearUpdateQueue();
+      this.fitSample(transactions, sort);
       this.scene.setup(transactions, sort);
       this.readyNextFrame = true;
       this.start();
@@ -235,6 +237,7 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
   enter(transactions: TransactionStripped[], direction: string): void {
     if (this.scene) {
       this.clearUpdateQueue();
+      this.fitSample(transactions, false);
       this.scene.enter(transactions, direction);
       this.start();
       this.updateSearchHighlight();
@@ -253,10 +256,15 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
   replace(transactions: TransactionStripped[], direction: string, sort: boolean = true, startTime?: number): void {
     if (this.scene) {
       this.clearUpdateQueue();
+      this.fitSample(transactions || [], sort);
       this.scene.replace(transactions || [], direction, sort, startTime);
       this.start();
       this.updateSearchHighlight();
     }
+  }
+
+  private fitSample(transactions: TransactionStripped[], sort: boolean): void {
+    if (this.autofit && this.scene) this.scene.fitTransactions(transactions, sort);
   }
 
   // collates deferred updates into a set of consistent pending changes

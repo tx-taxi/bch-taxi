@@ -43,7 +43,7 @@ function ttl(path) {
 const provider=require('./bch-provider.cjs');
 async function api(path) {
  try {const data=await provider.api(path);if(['/api/v1/init-data','/api/mempool'].includes(path))health.lastSuccess=Date.now();failedPaths.delete(path);return result(data,'haskoin-bchn');}
- catch(e){if(e.status!==404){failedPaths.set(path,Date.now());health.lastFailure={at:Date.now(),path,message:e.message};}return result({error:e.message,retryable:e.status!==404},'unavailable',e.status||503);}
+ catch(e){if(e.status!==404&&e.status!==501){failedPaths.set(path,Date.now());health.lastFailure={at:Date.now(),path,message:e.message};}return result({error:e.message,retryable:e.status!==404&&e.status!==501},'unavailable',e.status||503);}
 }
 
 function send(res,status,data,type='application/json',headers={}) {
@@ -143,8 +143,13 @@ server.on('upgrade',(req,socket,head)=>{
   upstream.on('upgrade',(r,s,h)=>{s.on('error',()=>{s.destroy();socket.destroy();});socket.on('close',()=>s.destroy());socket.write('HTTP/1.1 101 Switching Protocols\r\n'+Object.entries(r.headers).map(([k,v])=>`${k}: ${v}`).join('\r\n')+'\r\n\r\n');if(h.length)socket.write(h);if(head.length)s.write(head);s.pipe(socket).pipe(s);});upstream.on('error',()=>socket.destroy());upstream.end();
  }
 });
-let latestSnapshot;
-async function refresh() {try {
+let latestSnapshot, refreshInFlight;
+function refresh() {
+ if(refreshInFlight)return refreshInFlight;
+ refreshInFlight=collectSnapshot().finally(()=>{refreshInFlight=null;});
+ return refreshInFlight;
+}
+async function collectSnapshot() {try {
  const previous=latestSnapshot?.blocks.at(-1);latestSnapshot=await provider.snapshot();provider.record(latestSnapshot);failedPaths.delete('live-snapshot');health.lastSuccess=Date.now();health.websocket='live';
  const tip=latestSnapshot.blocks.at(-1);
  for(const client of wss.clients)if(client.readyState===1){
@@ -154,7 +159,7 @@ async function refresh() {try {
  }
 }catch(e){failedPaths.set('live-snapshot',Date.now());health.lastFailure={at:Date.now(),message:e.message};health.websocket='unavailable';for(const client of wss.clients)client.close(1013,'Provider unavailable');}}
 wss.on('connection',client=>{client.on('message',raw=>{(async()=>{let m;try{m=JSON.parse(raw)}catch{return;}if(m['track-tx']==='stop')client.trackedTx=null;if(m['track-tx']&&m['track-tx']!=='stop'){client.trackedTx=m['track-tx'];client.trackedConfirmed=false;const t=await api('/api/tx/'+m['track-tx']);if(t.status===200){client.trackedConfirmed=t.data.status.confirmed;client.send(JSON.stringify({tx:t.data}));}}
-if(m['track-mempool-block']===0&&latestSnapshot){const p=latestSnapshot['mempool-blocks'][0];if(p){const tiles=await provider.pendingTiles(p.transactionIds);client.send(JSON.stringify({'projected-block-transactions':{index:0,sequence:Date.now(),blockTransactions:tiles}}));}}
+
 if(m.action==='ping')return client.send(JSON.stringify({pong:true}));if(latestSnapshot)client.send(JSON.stringify(latestSnapshot));else await refresh();})().catch(()=>client.close(1013,'Provider unavailable'));});client.on('error',()=>{});});
 setInterval(refresh,15000);refresh();
 

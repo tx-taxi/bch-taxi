@@ -1,0 +1,30 @@
+{
+  "clients": 8,
+  "collectorCalls": 3,
+  "framesPerClient": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "membership": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "b",
+      "c"
+    ],
+    []
+  ],
+  "maxSample": 100,
+  "maxBatch": 20,
+  "indexerRequests": 6,
+  "unknownPoolStatus": 501,
+  "globalFailures": 0
+}

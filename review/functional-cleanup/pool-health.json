@@ -1,0 +1,15 @@
+{
+  "before": {
+    "stale": false,
+    "degraded": false
+  },
+  "status": 501,
+  "body": {
+    "error": "BCH capability not yet implemented: /api/v1/mining/pool/unknown/blocks",
+    "retryable": false
+  },
+  "after": {
+    "stale": false,
+    "degraded": false
+  }
+}
