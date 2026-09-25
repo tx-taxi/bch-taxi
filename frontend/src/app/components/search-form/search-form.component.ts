@@ -452,6 +452,8 @@ export class SearchFormComponent implements OnInit {
         this.searchTarget(this.targetForCandidate(this.resolvedCandidate()!), searchText);
       } else if (options?.candidates.length) {
         this.searchRouter(searchText);
+      } else if (!options) {
+        this.searchRouter(searchText);
       } else {
         this.searchSourceChain(searchText);
       }
@@ -677,27 +679,7 @@ export class SearchFormComponent implements OnInit {
   }
 
   getMiningPools(): Observable<any> {
-    return this.pools.length ? of(this.pools) : combineLatest([
-      this.apiService.listPools$(undefined),
-      this.apiService.listPools$('1y')
-    ]).pipe(
-      map(([poolsResponse, activePoolsResponse]) => {
-        const activePoolSlugs = new Set(activePoolsResponse.body.pools.map(pool => pool.slug));
-
-        return poolsResponse.body.map(pool => ({
-          name: pool.name,
-          slug: pool.slug,
-          active: activePoolSlugs.has(pool.slug)
-        }))
-          // Sort: active pools first, then alphabetically
-          .sort((a, b) => {
-            if (a.active && !b.active) {return -1;}
-            if (!a.active && b.active) {return 1;}
-            return a.slug < b.slug ? -1 : 1;
-          });
-
-      }),
-      catchError(() => of([]))
-    );
+    // BCH provider coverage has no verified pool attribution/search index.
+    return of([]);
   }
 }
