@@ -92,7 +92,7 @@ export class ThemeService {
 
   private getThemeFile(theme: string): string {
     if (theme === 'original') {
-      return '/resources/mempool-original.css?v=20260925-palette';
+      return '/resources/mempool-original.css?v=20260925-emerald';
     }
     const themeFiles = (window as any).__env?.THEME_FILES;
     if (themeFiles?.[theme]) {

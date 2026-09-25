@@ -1,10 +1,10 @@
 @use "sass:color";
 
 /* Bitcoin Cash explorer theme. Keep the Mempool layout vocabulary, but carry the
- * Bitcoin Cash blue through every inherited interactive and data surface. */
-$bg: #141824;
-$active-bg: #0d1018;
-$hover-bg: #20283a;
+ * Bitcoin Cash emerald through every inherited interactive and data surface. */
+$bg: #10251c;
+$active-bg: #071510;
+$hover-bg: #1b3b2e;
 $fg: #fff;
 $nav-bg: $bg;
 $title-fg: #62dfbb;
@@ -22,7 +22,7 @@ $gray-700: $fg;
 $nav-tabs-link-active-bg: $active-bg;
 
 $primary: #62dfbb;
-$secondary: #263147;
+$secondary: #234b3a;
 $tertiary: #0ac18e;
 $success: #0aab2f;
 $info: #80dcb8;
@@ -88,8 +88,8 @@ $dropdown-link-active-bg: $active-bg;
 );
 
 .input-group-text {
-  background-color: #1c2031 !important;
-  border: 1px solid #20263e !important;
+  background-color: var(--box-bg) !important;
+  border: 1px solid var(--border-subtle) !important;
 }
 
 :root {
@@ -110,26 +110,26 @@ $dropdown-link-active-bg: $active-bg;
   --link-color: #{$link-color};
   --link-hover-color: #{$link-hover-color};
   --icon: #f1f1f1;
-  --skeleton-bg: #263d35;
-  --skeleton-bg-light: #3c6956;
+  --skeleton-bg: #244a3a;
+  --skeleton-bg-light: #39725a;
 
-  --box-bg: #192721;
-  --stat-box-bg: #14221c;
-  --border-subtle: rgba(255, 255, 255, 0.11);
-  --block-top: #245546;
-  --block-side: #173c30;
-  --block-goggles-overlay: #1927217f;
+  --box-bg: #112a20;
+  --stat-box-bg: #0c2118;
+  --border-subtle: rgba(98, 223, 187, 0.18);
+  --block-top: #245b45;
+  --block-side: #143f2d;
+  --block-goggles-overlay: #112a207f;
   --mempool-block-top: #247658;
   --mempool-block-side: #174c39;
   --mempool-block-loading: #428a6f;
-  --alert-bg: #263c61;
-  --navbar-bg: #151e1a;
+  --alert-bg: #1e4938;
+  --navbar-bg: #10251c;
   --transparent-fg: #ffffffbb;
   --footer-fg: rgba(255, 255, 255, 0.4);
-  --fade-out-box-bg-start: rgba(24, 32, 50, 0);
-  --fade-out-box-bg-end: rgba(24, 32, 50, 1);
+  --fade-out-box-bg-start: rgba(17, 42, 32, 0);
+  --fade-out-box-bg-end: rgba(17, 42, 32, 1);
   --opacity: 0.57;
-  --world-map-bg: #24314b;
+  --world-map-bg: #234b3a;
   --world-map-border: #000;
 
   --testnet: #1d486f;
@@ -157,14 +157,14 @@ $dropdown-link-active-bg: $active-bg;
   --orange: #62dfbb;
   --pink: #e83e8c;
 
-  --fee-tier-slow: #283d5e;
-  --fee-tier-normal: #426599;
+  --fee-tier-slow: #24553e;
+  --fee-tier-normal: #348965;
   --fee-tier-fast: #62dfbb;
-  --fee-tier-fastest: #b8cef5;
+  --fee-tier-fastest: #b2f4dc;
 
   --search-button: #0ac18e;
-  --search-button-border: #2c4f85;
-  --search-button-focus: #456ead;
+  --search-button-border: #217153;
+  --search-button-focus: #358c6b;
   --search-button-shadow: #62dfbb80;
   
   --bs-body-color: var(--fg);
@@ -633,7 +633,7 @@ html:lang(ru) .card-title {
     position: relative;
     span {
       display: block;
-      background: #282d47;
+      background: var(--secondary);
       height: 5px;
       border-radius: 2px;
     }
@@ -749,7 +749,7 @@ html:lang(ru) .card-title {
         width: 100%;
         border-radius: 4px;
         display: block;
-        background: #29324c94;
+        background: color-mix(in srgb, var(--secondary) 58%, transparent);
       }
       span {
         height: 4px;
@@ -780,7 +780,7 @@ html:lang(ru) .card-title {
     }
   }
   .total-percentage-bar-background {
-    background-color: #282d47;
+    background-color: var(--secondary);
   }
 }
 
