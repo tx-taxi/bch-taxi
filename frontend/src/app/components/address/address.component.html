@@ -103,7 +103,7 @@
     <ng-container *ngIf="(stateService.backend$ | async) === 'esplora' && address && transactions && transactions.length > 2">
       <br>
       <div class="title-tx">
-        <h2 class="text-start" i18n="address.balance-history">Balance History · latest 100 transactions</h2>
+        <h2 class="text-start" i18n="address.balance-history">Balance History</h2>
       </div>
       <div class="box">
         <div class="widget-toggler" *ngIf="showBalancePeriod()">

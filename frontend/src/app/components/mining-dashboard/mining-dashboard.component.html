@@ -7,7 +7,6 @@
     <div class="col">
       <div class="main-title">
         <span [attr.data-cy]="'reward-stats'" i18n="mining.reward-stats">Reward stats</span>&nbsp;
-        <span style="font-size: xx-small" i18n="mining.144-blocks">(latest 15 blocks)</span>
       </div>
       <div class="card-wrapper">
         <div class="card">
@@ -25,7 +24,7 @@
     </div>
 
     <div class="col" style="margin-bottom:1.47rem"><div class="card h-100"><div class="card-body ps-lg-3 pe-lg-3 ps-2 pe-2">
-      <div class="fixed-mempool-graph"><h5 class="card-title">Block fees · latest 15 blocks</h5><app-block-fees-graph [widget]="true" [height]="hashrateGraphHeight + 50"></app-block-fees-graph></div>
+      <div class="fixed-mempool-graph"><h5 class="card-title">Block Fees</h5><app-block-fees-graph [widget]="true" [height]="hashrateGraphHeight + 50"></app-block-fees-graph></div>
       <div class="mt-1"><a [routerLink]="['/graphs/mining/block-fees' | relativeUrl]">View more &raquo;</a></div>
     </div></div></div>
     <!-- hashrate -->

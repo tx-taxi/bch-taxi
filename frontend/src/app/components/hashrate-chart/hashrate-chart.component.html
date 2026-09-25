@@ -5,7 +5,7 @@
   <div *ngIf="widget">
     <div class="pool-distribution" *ngIf="(hashrateObservable$ | async) as hashrates; else loadingStats">
       <div class="item">
-        <h5 class="card-title" i18n="mining.hashrate">Hashrate estimate · latest 15 blocks</h5>
+        <h5 class="card-title" i18n="mining.hashrate">Hashrate</h5>
         <p class="card-text">
           {{ hashrates.currentHashrate | amountShortener: 3 : 'H/s' : false : true }}
         </p>
@@ -30,7 +30,7 @@
       </button>
     </div>  
 
-    <small *ngIf="hashrateObservable$ | async">Bounded estimate from work and elapsed time across the latest 15 indexed blocks.</small>
+    <ng-container *ngIf="hashrateObservable$ | async"></ng-container>
   </div>
 
   <div [class]="!widget ? 'chart' : 'chart-widget'" *browserOnly [style]="{ height: widget ? ((height + 20) + 'px') : null, opacity: isLoading ? 0.5 : 1 }" echarts [initOpts]="chartInitOptions" [options]="chartOptions"

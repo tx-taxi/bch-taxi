@@ -1,0 +1,50 @@
+[
+  {
+    "name": "dashboard",
+    "width": 1440,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "mining",
+    "width": 1440,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "about",
+    "width": 1440,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "address",
+    "width": 1440,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "dashboard",
+    "width": 390,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "mining",
+    "width": 390,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "errors": [],
+    "notes": []
+  },
+  {
+    "name": "address",
+    "width": 390,
+    "errors": [],
+    "notes": []
+  }
+]

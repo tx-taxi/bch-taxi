@@ -1,36 +1,36 @@
 <div class="fee-estimation-wrapper" *ngIf="(isLoading$ | async) === false && (recommendedFees$ | async) as recommendedFees; else loadingFees">
   <div class="d-flex">
     <div class="fee-progress-bar" [style.background]="noPriority">
-      <span class="fee-label" i18n="fees-box.no-priority" i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="top">Minimum</span>
+      <span class="fee-label" i18n="fees-box.no-priority" placement="top">Minimum</span>
     </div>
     <div class="band-separator fill"></div>
     <div class="fee-progress-bar priority" [style.background]="gradient">
-      <span class="fee-label prority" i18n="fees-box.low-priority" i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="top">Median</span>
-      <span class="fee-label prority" i18n="fees-box.medium-priority" i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="top">75th percentile</span>
-      <span class="fee-label prority" i18n="fees-box.high-priority" i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="top">Maximum</span>
+      <span class="fee-label prority" i18n="fees-box.low-priority" placement="top">Median</span>
+      <span class="fee-label prority" i18n="fees-box.medium-priority" placement="top">75th percentile</span>
+      <span class="fee-label prority" i18n="fees-box.high-priority" placement="top">Maximum</span>
     </div>
   </div>
 
   <div class="fee-estimation-container">
     <div class="item">
       <div class="card-text">
-        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.economyFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="bottom" [value]="recommendedFees.economyFee * 140" ></app-fiat></span>
+        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.economyFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat placement="bottom" [value]="recommendedFees.economyFee * 140" ></app-fiat></span>
       </div>
     </div>
     <div class="band-separator"></div>
     <div class="item">
       <div class="card-text">
-        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.hourFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="bottom" [value]="recommendedFees.hourFee * 140" ></app-fiat></span>
+        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.hourFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat placement="bottom" [value]="recommendedFees.hourFee * 140" ></app-fiat></span>
       </div>
     </div>
     <div class="item">
       <div class="card-text">
-        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.halfHourFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="bottom" [value]="recommendedFees.halfHourFee * 140" ></app-fiat></span>
+        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.halfHourFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat placement="bottom" [value]="recommendedFees.halfHourFee * 140" ></app-fiat></span>
       </div>
     </div>
     <div class="item">
       <div class="card-text">
-        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.fastestFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat i18n-ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" ngbTooltip="Observed fee rates in this node’s current mempool; not a confirmation-time estimate" placement="bottom" [value]="recommendedFees.fastestFee * 140" ></app-fiat></span>
+        <div class="fee-text"><app-fee-rate [fee]="recommendedFees.fastestFee" [dp]="1"></app-fee-rate></div> <span class="fiat"><app-fiat placement="bottom" [value]="recommendedFees.fastestFee * 140" ></app-fiat></span>
       </div>
     </div>
   </div>

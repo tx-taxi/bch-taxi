@@ -33,10 +33,10 @@
               </div>
               <div [attr.data-cy]="'mempool-block-' + i + '-time'" class="time-difference" *ngIf="projectedBlock.blockVSize <= stateService.blockVSize; else mergedBlock">
                 <ng-template [ngIf]="network === 'liquid' || network === 'liquidtestnet'" [ngIfElse]="timeDiffMainnet">
-                  <span>10 min block target</span>
+                  <span aria-hidden="true">&nbsp;</span>
                 </ng-template>
                 <ng-template #timeDiffMainnet>
-                  <span>10 min block target</span>
+                  <span aria-hidden="true">&nbsp;</span>
                 </ng-template>
               </div>
               <ng-template #mergedBlock>

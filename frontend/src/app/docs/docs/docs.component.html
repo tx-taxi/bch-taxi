@@ -1,11 +1,11 @@
 <div class="container-xl py-4">
  <h1>Bitcoin Cash explorer documentation</h1>
- <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, Bitcoin Cash address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Bitcoin Cash targets one block every 10 minutes. ASERT adjusts mining difficulty after each block. The block subsidy halves every 210,000 blocks.</p><p>1 BCH = 100,000,000 satoshis. Fee rates use sat/B. Fiat values use the provider's Bitcoin Cash prices and may lag the market.</p></div>
- <div class="card p-4 my-4"><h2>Privacy and coverage</h2><p>Address history supports CashAddr and legacy Bitcoin Cash addresses. BCH amounts do not describe CashToken balances: token metadata and input quantities may be unavailable, and each affected view identifies that limitation.</p><p>The pending view shows a bounded provider sample, not a complete global mempool. Different nodes may see different transactions. Estimates are not confirmation guarantees.</p></div>
- <div class="card p-4 my-4"><h2>Read-only API</h2><p>Requests use the same local origin. Successful retained responses carry X-BCH-Observed-At and X-BCH-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.</p><pre>GET /api/blocks/tip/height
+ <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, Bitcoin Cash address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Bitcoin Cash targets one block every 10 minutes. ASERT adjusts mining difficulty after each block. The block subsidy halves every 210,000 blocks.</p><p>1 BCH = 100,000,000 satoshis. Fee rates use sat/B. Fiat values use the current exchange rate.</p></div>
+ <div class="card p-4 my-4"><h2>Addresses and CashTokens</h2><p>Search CashAddr or legacy Bitcoin Cash addresses. CashTokens are separate from BCH amounts.</p></div>
+ <div class="card p-4 my-4"><h2>Read-only API</h2><pre>GET /api/blocks/tip/height
 GET /api/block-height/500000
 GET /api/block/:block-hash/txs
 GET /api/tx/bcf7ae875b585e00a61055372c1e99046b20f5fbfcd8659959afb6f428326bfa
 GET /api/address/bitcoincash:qpazjhpjetdf287vyfvslgg868mdqs4p2v0583dq6t/txs
-GET /api/address/:address/txs/chain/:last-confirmed-txid</pre><p>Live updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].</p></div>
+GET /api/address/:address/txs/chain/:last-confirmed-txid</pre><p></p></div>
 </div>

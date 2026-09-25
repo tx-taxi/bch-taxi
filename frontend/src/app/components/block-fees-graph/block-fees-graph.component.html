@@ -10,7 +10,7 @@
       </button>
     </div>  
 
-    <small *ngIf="statsObservable$ | async">Latest 15 indexed blocks</small>
+    <ng-container *ngIf="statsObservable$ | async"></ng-container>
   </div>
 
   <div [class]="widget ? 'chart-widget' : 'chart'" [style.height.px]="widget ? height : null" *browserOnly echarts [initOpts]="chartInitOptions" [options]="chartOptions"
