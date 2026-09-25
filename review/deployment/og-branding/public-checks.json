@@ -1,0 +1,90 @@
+[
+  {
+    "chain": "xmr",
+    "route": "/",
+    "pageStatus": 200,
+    "og": "https://tx.taxi/assets/og/explorers/monero.png?v=20260925-brand",
+    "twitter": "https://tx.taxi/assets/og/explorers/monero.png?v=20260925-brand",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-xmr-root.png"
+  },
+  {
+    "chain": "xmr",
+    "route": "/block/1",
+    "pageStatus": 200,
+    "og": "https://xmr.tx.taxi/og/xmr/block/1.png?v=20260925-brand",
+    "twitter": "https://xmr.tx.taxi/og/xmr/block/1.png?v=20260925-brand",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-xmr-block.png"
+  },
+  {
+    "chain": "ltc",
+    "route": "/",
+    "pageStatus": 200,
+    "og": "https://ltc.tx.taxi/og.png?v=4&path=%2F",
+    "twitter": "https://ltc.tx.taxi/og.png?v=4&path=%2F",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-ltc-root.png"
+  },
+  {
+    "chain": "ltc",
+    "route": "/block/1",
+    "pageStatus": 200,
+    "og": "https://ltc.tx.taxi/og.png?v=4&path=%2Fblock%2F1",
+    "twitter": "https://ltc.tx.taxi/og.png?v=4&path=%2Fblock%2F1",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-ltc-block.png"
+  },
+  {
+    "chain": "btc",
+    "route": "/",
+    "pageStatus": 200,
+    "og": "https://tx.taxi/assets/og/explorers/bitcoin.png?v=20260925-brand",
+    "twitter": "https://tx.taxi/assets/og/explorers/bitcoin.png?v=20260925-brand",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-btc-root.png"
+  },
+  {
+    "chain": "btc",
+    "route": "/block/1",
+    "pageStatus": 200,
+    "og": "https://btc.tx.taxi/og/block/1.png?v=20260925-brand",
+    "twitter": "https://btc.tx.taxi/og/block/1.png?v=20260925-brand",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-btc-block.png"
+  },
+  {
+    "chain": "eth",
+    "route": "/",
+    "pageStatus": 200,
+    "og": "https://tx.taxi/assets/og/explorers/ethereum.png?v=20260925-brand",
+    "twitter": "https://tx.taxi/assets/og/explorers/ethereum.png?v=20260925-brand",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-eth-root.png"
+  },
+  {
+    "chain": "eth",
+    "route": "/block/1",
+    "pageStatus": 200,
+    "og": "https://eth.tx.taxi/og/block/1.png?v=4",
+    "twitter": "https://eth.tx.taxi/og/block/1.png?v=4",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "file": "public-eth-block.png"
+  }
+]

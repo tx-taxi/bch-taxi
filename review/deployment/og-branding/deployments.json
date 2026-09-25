@@ -1,0 +1,27 @@
+{
+  "router": {
+    "deployment_uuid": "agpnssupdytjpi5hojdvxcro",
+    "status": "finished",
+    "commit": "9890959d12be9ad8a8d71289e0b3d945a92624d7"
+  },
+  "btc": {
+    "deployment_uuid": "txnef8qcp2yar6cfwitclwcr",
+    "status": "finished",
+    "commit": "5df733faebba00df407ddee7600cc086d8cff7bf"
+  },
+  "eth": {
+    "deployment_uuid": "v954xxy9a6mibtkau1gypgv2",
+    "status": "finished",
+    "commit": "f5a5d3da2896b929fa1d7db7e1d8badaecad04e7"
+  },
+  "xmr": {
+    "deployment_uuid": "o4iflzpmozao9rkivu14lp37",
+    "status": "finished",
+    "commit": "76f9a6e59ce4b74c4728a94768a4d9282369e5e3"
+  },
+  "ltc": {
+    "deployment_uuid": "1igdvhog7atsh1iaiwhpkxle",
+    "status": "finished",
+    "commit": "c131fadfeab93990038d0bebbd12ce8bb6b80924"
+  }
+}
