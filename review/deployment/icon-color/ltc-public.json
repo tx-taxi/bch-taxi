@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-25T00:13:12.048Z",
+  "origin": "https://ltc.tx.taxi",
+  "results": [
+    {
+      "viewport": "desktop",
+      "opened": "ltc",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchText": true
+    },
+    {
+      "viewport": "mobile",
+      "opened": "ltc",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchText": true
+    }
+  ]
+}

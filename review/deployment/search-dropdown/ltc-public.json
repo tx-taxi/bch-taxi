@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-25T00:13:06.105Z",
+  "origin": "https://ltc.tx.taxi",
+  "results": [
+    {
+      "size": "desktop",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    },
+    {
+      "size": "mobile",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    }
+  ]
+}

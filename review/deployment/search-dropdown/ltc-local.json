@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-25T00:09:21.408Z",
+  "origin": "http://127.0.0.1:4310",
+  "results": [
+    {
+      "size": "desktop",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    },
+    {
+      "size": "mobile",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    }
+  ]
+}

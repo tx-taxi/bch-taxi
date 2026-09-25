@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-25T00:12:30.069Z",
+  "origin": "https://eth.tx.taxi",
+  "results": [
+    {
+      "size": "desktop",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    },
+    {
+      "size": "mobile",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    }
+  ]
+}

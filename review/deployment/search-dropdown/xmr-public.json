@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-25T00:14:05.793Z",
+  "origin": "https://xmr.tx.taxi",
+  "results": [
+    {
+      "size": "desktop",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    },
+    {
+      "size": "mobile",
+      "staysOpenWhileTyping": true,
+      "staysOpenDuringRequests": true,
+      "escapeDismisses": true,
+      "outsideDismissesWhenSettled": true
+    }
+  ]
+}

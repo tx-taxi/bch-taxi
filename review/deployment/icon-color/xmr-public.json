@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-25T00:14:10.390Z",
+  "origin": "https://xmr.tx.taxi",
+  "results": [
+    {
+      "viewport": "desktop",
+      "opened": "xmr",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchText": true
+    },
+    {
+      "viewport": "mobile",
+      "opened": "xmr",
+      "destination": "https://btc.tx.taxi",
+      "newTab": true,
+      "openedPersistsAfterSelection": true,
+      "iconColorMatchesSwitchText": true
+    }
+  ]
+}
