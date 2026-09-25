@@ -1,0 +1,26 @@
+{
+  "btc": {
+    "deployment_uuid": "fu75xpxrualisrlajj0jbeyp",
+    "commit": "20ee052a8f1692bca8ba78da76dbf4cb6e5f9d3d",
+    "status": "finished",
+    "finished_at": "2026-09-25T00:41:01.000000Z"
+  },
+  "eth": {
+    "deployment_uuid": "7q2ppgwnnpbnygwt3ejmrgz3",
+    "commit": "dfe5b38130078db146494dda4fca72741d77bc3c",
+    "status": "finished",
+    "finished_at": "2026-09-25T00:41:31.000000Z"
+  },
+  "xmr": {
+    "deployment_uuid": "kfzznh6lgx0vc9qtjhn2zwkl",
+    "commit": "f6a451f85ca07eaa5918bf3395ebf3168ba3ac37",
+    "status": "finished",
+    "finished_at": "2026-09-25T00:41:44.000000Z"
+  },
+  "ltc": {
+    "deployment_uuid": "grhmoiqhndiyikpdepncgc8v",
+    "commit": "e66ca7ff4fd3f7e3c1de2d077bc16462eb829456",
+    "status": "finished",
+    "finished_at": "2026-09-25T00:41:04.000000Z"
+  }
+}

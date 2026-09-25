@@ -1,0 +1,66 @@
+[
+  {
+    "chain": "btc",
+    "origin": "https://btc.tx.taxi",
+    "promotions": {
+      "text": false,
+      "links": [],
+      "metadata": false
+    },
+    "hover": [
+      "rgb(247, 147, 26)",
+      "rgb(255, 194, 125)"
+    ],
+    "originalTheme": "/resources/mempool-original.css?v=20260925-palette"
+  },
+  {
+    "chain": "eth",
+    "origin": "https://eth.tx.taxi",
+    "promotions": {
+      "text": false,
+      "links": [],
+      "metadata": false
+    },
+    "hover": null,
+    "originalTheme": "/resources/mempool-original.css?v=20260925-palette"
+  },
+  {
+    "chain": "xmr",
+    "origin": "https://xmr.tx.taxi",
+    "promotions": {
+      "text": false,
+      "links": [],
+      "metadata": false
+    },
+    "hover": [
+      "rgb(255, 102, 0)",
+      "rgb(255, 179, 128)"
+    ],
+    "originalTheme": "/resources/mempool-original.css?v=20260925-palette"
+  },
+  {
+    "chain": "ltc",
+    "origin": "https://ltc.tx.taxi",
+    "promotions": {
+      "text": false,
+      "links": [],
+      "metadata": false
+    },
+    "hover": [
+      "rgb(120, 157, 224)",
+      "rgb(159, 188, 240)"
+    ],
+    "originalTheme": "/resources/mempool-original.css?v=20260925-palette"
+  },
+  {
+    "chain": "router",
+    "origin": "https://tx.taxi",
+    "promotions": {
+      "text": false,
+      "links": [],
+      "metadata": false
+    },
+    "hover": null,
+    "originalTheme": null
+  }
+]

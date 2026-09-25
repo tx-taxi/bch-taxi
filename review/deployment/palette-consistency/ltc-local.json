@@ -1,0 +1,41 @@
+{
+  "at": "2026-09-25T00:29:43.480Z",
+  "origin": "http://127.0.0.1:4310",
+  "status": "incomplete: live provider data did not populate; use controlled evidence for palette verification",
+  "reports": [
+    {
+      "size": "desktop",
+      "native": {
+        "primary": "#789de0",
+        "alt": "#345d9d",
+        "panel": "#141b29",
+        "fee": "rgb(39, 51, 76) none repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(255, 255, 255)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgb(45, 50, 78) none repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/d7b7a5465f5e485a24c2f64b386e34d671461fad2a7107171673391451c86087",
+      "flow": null,
+      "errors": []
+    },
+    {
+      "size": "mobile",
+      "native": {
+        "primary": "#789de0",
+        "alt": "#345d9d",
+        "panel": "#141b29",
+        "fee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(39, 51, 76), rgb(39, 51, 76)) repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(255, 255, 255)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(46, 50, 78), rgb(46, 50, 78)) repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/d7b7a5465f5e485a24c2f64b386e34d671461fad2a7107171673391451c86087",
+      "flow": null,
+      "errors": []
+    }
+  ]
+}

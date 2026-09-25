@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-25T00:41:50.180Z",
+  "origin": "https://xmr.tx.taxi",
+  "reports": [
+    {
+      "size": "desktop",
+      "native": {
+        "primary": "#ff6600",
+        "alt": "#c44e00",
+        "panel": "#0b1018",
+        "fee": "rgb(200, 85, 1) none repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)"
+        ],
+        "overflow": false
+      },
+      "originalFee": "rgb(135, 116, 4) none repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/08f9413257997d342fa2d870368448e9ec55f72e93534eef55f37ec0430ba644",
+      "block": "/block/cccd7d4a0851ca0152dfd85ece869c65147381f4d4601f8a1ab0f18f9d5516b6",
+      "flow": null,
+      "errors": []
+    },
+    {
+      "size": "mobile",
+      "native": {
+        "primary": "#ff6600",
+        "alt": "#c44e00",
+        "panel": "#0b1018",
+        "fee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(200, 85, 1), rgb(213, 90, 4)) repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)",
+          "repeating-linear-gradient(to right, rgb(41, 43, 48), rgb(41, 43, 48) 0%, rgb(255, 102, 0) 0%, rgb(196, 78, 0) 100%)"
+        ],
+        "overflow": false
+      },
+      "originalFee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(117, 125, 5), rgb(190, 104, 32)) repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/a8b0d7be34eab794d38f394e3be65385cbe94b3738372bfc4d66cc2f9b34770e",
+      "block": "/block/cccd7d4a0851ca0152dfd85ece869c65147381f4d4601f8a1ab0f18f9d5516b6",
+      "flow": null,
+      "errors": []
+    }
+  ]
+}

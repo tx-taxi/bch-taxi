@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-25T00:29:56.924Z",
+  "origin": "http://127.0.0.1:4321",
+  "reports": [
+    {
+      "size": "desktop",
+      "native": {
+        "primary": "#f7931a",
+        "alt": "#bd6412",
+        "panel": "#111214",
+        "fee": "rgb(182, 90, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgb(39, 117, 48) none repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/ac789cc14e5eb340d61e88bfff256a2711cd6c4ce66edbe8bd0ebf2e0d2addec",
+      "block": "/block/0000000000000000000209d8a5283f5b9e80e27c98d5b217000f3bdc69353e79",
+      "flow": "rgb(189, 100, 18)",
+      "errors": []
+    },
+    {
+      "size": "mobile",
+      "native": {
+        "primary": "#f7931a",
+        "alt": "#bd6412",
+        "panel": "#111214",
+        "fee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(182, 90, 0), rgb(183, 91, 1)) repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(0, 125, 61), rgb(85, 125, 0)) repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/73921893c7b65a70da09549b18b542c48c469c0f9a3de4d1ace71dc08c22aaff",
+      "block": "/block/0000000000000000000209d8a5283f5b9e80e27c98d5b217000f3bdc69353e79",
+      "flow": "rgb(189, 100, 18)",
+      "errors": []
+    }
+  ]
+}

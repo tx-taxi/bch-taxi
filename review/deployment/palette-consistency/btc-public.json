@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-25T00:38:19.946Z",
+  "origin": "https://btc.tx.taxi",
+  "reports": [
+    {
+      "size": "desktop",
+      "native": {
+        "primary": "#f7931a",
+        "alt": "#bd6412",
+        "panel": "#111214",
+        "fee": "rgb(182, 90, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgb(36, 118, 49) none repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/948008896f98919245b5847dcab37cc467375e1ad5417c1084ad9a6778f8fa3f",
+      "block": "/block/0000000000000000000209d8a5283f5b9e80e27c98d5b217000f3bdc69353e79",
+      "flow": "rgb(189, 100, 18)",
+      "errors": []
+    },
+    {
+      "size": "mobile",
+      "native": {
+        "primary": "#f7931a",
+        "alt": "#bd6412",
+        "panel": "#111214",
+        "fee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(182, 90, 0), rgb(183, 91, 1)) repeat scroll 0% 0% / auto padding-box border-box",
+        "feeText": "rgb(8, 9, 11)",
+        "blocks": [],
+        "overflow": false
+      },
+      "originalFee": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(0, 125, 61), rgb(85, 125, 0)) repeat scroll 0% 0% / auto padding-box border-box",
+      "themeRoundTrip": true,
+      "tx": "/tx/948008896f98919245b5847dcab37cc467375e1ad5417c1084ad9a6778f8fa3f",
+      "block": "/block/0000000000000000000209d8a5283f5b9e80e27c98d5b217000f3bdc69353e79",
+      "flow": "rgb(189, 100, 18)",
+      "errors": []
+    }
+  ]
+}
