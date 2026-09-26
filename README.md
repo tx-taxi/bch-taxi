@@ -1,38 +1,62 @@
-# The Mempool Open Source Project® [![mempool](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ry4br7/master&style=flat-square)](https://dashboard.cypress.io/projects/ry4br7/runs)
+<p align="center">
+  <img src="frontend/src/resources/branding/bch-favicon.svg" width="88" height="88" alt="bch.tx.taxi logo">
+</p>
 
-https://user-images.githubusercontent.com/93150691/226236121-375ea64f-b4a1-4cc0-8fad-a6fb33226840.mp4
+<h1 align="center">Bitcoin Cash Explorer · bch.tx.taxi</h1>
 
-<br>
+<p align="center">
+  A public Bitcoin Cash block and mempool explorer.<br>
+  <a href="https://bch.tx.taxi">Open bch.tx.taxi</a>
+</p>
 
-Mempool is the fully-featured mempool visualizer, explorer, and API service running at [mempool.space](https://mempool.space/). 
+## Overview
 
-It is an open-source project developed and operated for the benefit of the Bitcoin community, with a focus on the emerging transaction fee market that is evolving Bitcoin into a multi-layer ecosystem.
+[bch.tx.taxi](https://bch.tx.taxi) is a Bitcoin Cash explorer in the [tx.taxi](https://tx.taxi) network. It combines a BCH-specific, read-only gateway with the Mempool frontend to inspect public Bitcoin Cash network data.
 
-# Installation Methods
+## Features
 
-Mempool can be self-hosted on a wide variety of your own hardware, ranging from a simple one-click installation on a Raspberry Pi full-node distro all the way to a robust production instance on a powerful FreeBSD server. 
+- Search and inspect BCH blocks, transactions, and indexed CashAddr or legacy addresses.
+- View recent blocks, a bounded observed mempool sample, fee data, mining activity, and BCH-denominated values.
+- Display CashToken data present on transaction outputs. Token metadata and input quantities can be unavailable and are identified as such by the gateway.
+- Calculate and display BCH ASERT per-block difficulty information and the 210,000-block subsidy-halving schedule.
+- Serve a read-only local API and WebSocket snapshot feed; it does not broadcast transactions.
 
-Most people should use a <a href="#one-click-installation">one-click install method</a>.
+## Development
 
-Other install methods are meant for developers and others with experience managing servers. If you want support for your own production instance of Mempool, or if you'd like to have your own instance of Mempool run by the mempool.space team on their own global ISP infrastructure—check out <a href="https://mempool.space/enterprise" target="_blank">Mempool Enterprise®</a>.
+The local review stack consists of the Angular frontend on port `4360` and the BCH adapter on port `4361`. The adapter reads public BCH data from its configured indexer, node, and price services; network access to those services is required. The tx.taxi router at `http://127.0.0.1:4340` is also needed for cross-explorer routing.
 
-<a id="one-click-installation"></a>
-## One-Click Installation
+Install the checked Node.js dependencies before starting the stack:
 
-Mempool can be conveniently installed on the following full-node distros: 
-- [Umbrel](https://github.com/getumbrel/umbrel)
-- [RaspiBlitz](https://github.com/rootzoll/raspiblitz)
-- [RoninDojo](https://code.samourai.io/ronindojo/RoninDojo)
-- [myNode](https://github.com/mynodebtc/mynode)
-- [StartOS](https://github.com/Start9Labs/start-os)
-- [nix-bitcoin](https://github.com/fort-nix/nix-bitcoin/blob/a1eacce6768ca4894f365af8f79be5bbd594e1c3/examples/configuration.nix#L129)
+```bash
+cd frontend && npm ci
+cd ../adapter && npm ci
+cd ..
+./scripts/local-start.sh
+```
 
-**We highly recommend you deploy your own Mempool instance this way.** No matter which option you pick, you'll be able to get your own fully-sovereign instance of Mempool up quickly without needing to fiddle with any settings.
+Open [http://127.0.0.1:4361](http://127.0.0.1:4361). The startup script writes local frontend configuration, starts both processes, and records logs and process IDs in `.local/`. Stop the processes it starts when the review is complete.
 
-## Advanced Installation Methods
+To make a production container image locally, Docker is required:
 
-Mempool can be installed in other ways too, but we only recommend doing so if you're a developer, have experience managing servers, or otherwise know what you're doing.
+```bash
+docker build -t bch-tx-taxi .
+docker run --rm -p 8080:8080 bch-tx-taxi
+```
 
-- See the [`docker/`](./docker/) directory for instructions on deploying Mempool with Docker.
-- See the [`backend/`](./backend/) and [`frontend/`](./frontend/) directories for manual install instructions oriented for developers.
-- See the [`production/`](./production/) directory for guidance on setting up a more serious Mempool instance designed for high performance at scale.
+The image serves the built frontend and adapter together. Production hosting, provider configuration, TLS, and secrets require a separate deployment review.
+
+## Attribution and license
+
+This repository adapts the [Mempool Open Source Project](https://github.com/mempool/mempool) for Bitcoin Cash in the tx.taxi network. Its difficulty and halving components adapt code from [BCH Explorer](https://gitlab.melroy.org/bitcoincash/bitcoin-cash-explorer). The inherited root README is retained in [UPSTREAM_README.md](UPSTREAM_README.md) for provenance.
+
+The code is distributed under the terms in [LICENSE](LICENSE) and [COPYING.md](COPYING.md), including the GNU Affero General Public License v3 text and applicable trademark notices.
+
+Mempool names, logos, and trademarks belong to their respective owners. bch.tx.taxi is independently operated and is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.
+
+## Links
+
+- [Live explorer](https://bch.tx.taxi)
+- [tx.taxi hub](https://tx.taxi)
+- [Telegram channel](https://t.me/txtaxi)
+- [Mempool upstream](https://github.com/mempool/mempool)
+- [BCH Explorer source](https://gitlab.melroy.org/bitcoincash/bitcoin-cash-explorer)
