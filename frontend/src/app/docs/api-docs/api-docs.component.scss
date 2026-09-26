@@ -150,8 +150,8 @@ ul.no-bull.block-audit code{
 #doc-nav-desktop.sticky {
   float: left;
   position: sticky;
-  top: 1rem;
-  max-height: calc(100vh - 2rem);
+  top: 80px;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
   scrollbar-color: var(--secondary) var(--active-bg);
   scrollbar-width: thin;
@@ -563,3 +563,16 @@ fa-icon {
     }
   }
 }
+
+@media (min-width: 993px) {
+  .bch-docs { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 10px; align-items: start; }
+  #doc-nav-desktop.sticky { float: none; margin-top: 0; }
+  .doc-content { width: auto; float: none; min-width: 0; }
+}
+
+@media (max-width: 992px) {
+  .endpoint-container.expanded .endpoint-content { position: static; opacity: 1; padding-top: 1.25rem; }
+}
+
+/* Documentation code follows both native and Mempool Original palettes. */
+code, pre, pre code { color: var(--info); }

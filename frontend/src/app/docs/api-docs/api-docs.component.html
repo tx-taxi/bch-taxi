@@ -10,8 +10,8 @@
 
     <div class="doc-item-container" *ngFor="let item of docs">
       <h3 *ngIf="item.type === 'category'">{{ item.title }}</h3>
-      <div *ngIf="item.type === 'endpoint'" class="endpoint-container" [id]="item.fragment">
-        <a [id]="item.fragment + '-tab-header'" class="section-header" (click)="anchorLinkClick({ event: $event, fragment: item.fragment })">
+      <div *ngIf="item.type === 'endpoint'" class="endpoint-container" [class.expanded]="expandedFragments.has(item.fragment)" [id]="item.fragment">
+        <a [id]="item.fragment + '-tab-header'" class="section-header" [href]="'#' + item.fragment" (click)="anchorLinkClick({ event: $event, fragment: item.fragment })">
           {{ item.title }} <span>{{ item.category }}</span>
         </a>
         <div class="endpoint-content">

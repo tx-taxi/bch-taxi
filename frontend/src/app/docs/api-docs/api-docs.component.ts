@@ -11,6 +11,7 @@ import { bchFaqDocs, bchRestDocs, bchWebsocketDocs, BchDocsItem } from '@app/doc
 export class ApiDocsComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
   @Input() whichTab: 'faq' | 'rest' | 'websocket' = 'faq';
   docs: BchDocsItem[] = [];
+  expandedFragments = new Set<string>();
 
   constructor(private route: ActivatedRoute) { }
 
@@ -38,6 +39,11 @@ export class ApiDocsComponent implements OnInit, OnChanges, AfterViewInit, OnDes
     event.event?.preventDefault();
     const element = document.getElementById(event.fragment);
     if (!element) return;
+    if (window.innerWidth <= 992 && this.expandedFragments.has(event.fragment)) {
+      this.expandedFragments.delete(event.fragment);
+      return;
+    }
+    this.expandedFragments.add(event.fragment);
     window.scrollTo({ top: element.offsetTop - (window.innerWidth <= 992 ? 100 : 72), behavior: 'smooth' });
     window.history.pushState({}, '', `${document.location.pathname}#${event.fragment}`);
   }
