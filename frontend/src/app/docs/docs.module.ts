@@ -7,6 +7,8 @@ import { ApiDocsNavComponent } from '@app/docs/api-docs/api-docs-nav.component';
 import { CodeTemplateComponent } from '@app/docs/code-template/code-template.component';
 import { DocsRoutingModule } from '@app/docs/docs.routing.module';
 import { FaqTemplateDirective } from '@app/docs/faq-template/faq-template.component';
+import { TxTaxiDocsIntroComponent } from '@app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     ApiDocsComponent,
@@ -19,6 +21,8 @@ import { FaqTemplateDirective } from '@app/docs/faq-template/faq-template.compon
     CommonModule,
     SharedModule,
     DocsRoutingModule,
+    NgbNavModule,
+    TxTaxiDocsIntroComponent,
   ]
 })
 export class DocsModule { }

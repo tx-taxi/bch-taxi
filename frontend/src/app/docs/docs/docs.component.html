@@ -1,11 +1,10 @@
-<div class="container-xl py-4">
- <h1>Bitcoin Cash explorer documentation</h1>
- <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, Bitcoin Cash address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Bitcoin Cash targets one block every 10 minutes. ASERT adjusts mining difficulty after each block. The block subsidy halves every 210,000 blocks.</p><p>1 BCH = 100,000,000 satoshis. Fee rates use sat/B. Fiat values use the current exchange rate.</p></div>
- <div class="card p-4 my-4"><h2>Addresses and CashTokens</h2><p>Search CashAddr or legacy Bitcoin Cash addresses. CashTokens are separate from BCH amounts.</p></div>
- <div class="card p-4 my-4"><h2>Read-only API</h2><pre>GET /api/blocks/tip/height
-GET /api/block-height/500000
-GET /api/block/:block-hash/txs
-GET /api/tx/bcf7ae875b585e00a61055372c1e99046b20f5fbfcd8659959afb6f428326bfa
-GET /api/address/bitcoincash:qpazjhpjetdf287vyfvslgg868mdqs4p2v0583dq6t/txs
-GET /api/address/:address/txs/chain/:last-confirmed-txid</pre><p></p></div>
+<div class="container-xl py-4 docs-shell">
+ <app-tx-taxi-docs-intro chainName="Bitcoin Cash" chainHost="bch.tx.taxi"></app-tx-taxi-docs-intro>
+ <h1>Bitcoin Cash documentation</h1>
+ <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs docs-tabs" role="tablist">
+  <li [ngbNavItem]="0"><a ngbNavLink routerLink="/docs/faq">Explorer guide</a></li>
+  <li [ngbNavItem]="1"><a ngbNavLink routerLink="/docs/api/rest">REST API</a></li>
+  <li [ngbNavItem]="2"><a ngbNavLink routerLink="/docs/api/websocket">WebSocket API</a></li>
+ </ul>
+ <app-api-docs [whichTab]="activeTab === 0 ? 'faq' : activeTab === 1 ? 'rest' : 'websocket'"></app-api-docs>
 </div>

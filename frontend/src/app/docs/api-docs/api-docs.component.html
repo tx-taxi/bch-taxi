@@ -1,7 +1,29 @@
-<div class="container-xl"><h1>Bitcoin Cash documentation</h1><div class="card"><div class="card-body">
-<h2>Amounts and fees</h2><p>1 BCH = 100,000,000 satoshis. Fee rates are satoshis per serialized byte. Bitcoin Cash does not use SegWit, MWEB, Taproot or Bitcoin’s replacement-by-fee policy.</p>
-<h2>Blocks and mining</h2><p>Bitcoin Cash targets a block every 600 seconds and adjusts difficulty with ASERT after each block. Subsidy halves every 210,000 blocks. The block size limit is adaptive.</p>
-<h2>Addresses and tokens</h2><p>CashAddr addresses may include the bitcoincash: prefix. Legacy 1/3 addresses are shared with other Bitcoin forks and require explicit chain context. CashToken amounts are token base units, separate from the BCH carried by their output. Unverified token names and decimal scales are not guessed.</p>
-<h2>Read-only API</h2><p>GET /api/blocks/tip/height · /api/block-height/:height · /api/v1/block/:hash · /api/block/:hash/txs/:offset · /api/tx/:txid · /api/address/:address · /api/address/:address/txs/chain/:last_txid.</p>
-<h2>References</h2><p><a href="https://documentation.cash/">Bitcoin Cash protocol</a> · <a href="https://docs.bitcoincashnode.org/">Bitcoin Cash Node</a> · <a href="https://api.haskoin.com/">Indexer API</a> · <a href="https://t.me/hiss">Contact</a></p>
-</div></div></div>
+<div class="p-0 text-start bch-docs" *ngIf="docs.length">
+  <div id="doc-nav-desktop" class="hide-on-mobile sticky">
+    <app-api-docs-nav (navLinkClickEvent)="anchorLinkClick($event)" [whichTab]="whichTab"></app-api-docs-nav>
+  </div>
+
+  <div class="doc-content">
+    <p class="doc-welcome-note" *ngIf="whichTab === 'faq'">A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</p>
+    <p class="doc-welcome-note" *ngIf="whichTab === 'rest'">The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</p>
+    <p class="doc-welcome-note" *ngIf="whichTab === 'websocket'">Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</p>
+
+    <div class="doc-item-container" *ngFor="let item of docs">
+      <h3 *ngIf="item.type === 'category'">{{ item.title }}</h3>
+      <div *ngIf="item.type === 'endpoint'" class="endpoint-container" [id]="item.fragment">
+        <a [id]="item.fragment + '-tab-header'" class="section-header" (click)="anchorLinkClick({ event: $event, fragment: item.fragment })">
+          {{ item.title }} <span>{{ item.category }}</span>
+        </a>
+        <div class="endpoint-content">
+          <div class="endpoint" *ngIf="item.path">
+            <div class="subtitle">Endpoint</div>
+            <code *ngIf="item.method">{{ item.method }} </code><code>{{ item.path }}</code>
+          </div>
+          <div class="description"><div class="subtitle">Description</div><p>{{ item.description }}</p></div>
+          <div class="description" *ngIf="item.request"><div class="subtitle">Example</div><pre><code>{{ item.request }}</code></pre></div>
+          <div class="description" *ngIf="item.response"><div class="subtitle">Response shape</div><pre><code>{{ item.response }}</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

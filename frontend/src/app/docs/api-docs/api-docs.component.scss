@@ -147,17 +147,12 @@ ul.no-bull.block-audit code{
   margin-top: -15px;
 }
 
-#doc-nav-desktop.relative {
+#doc-nav-desktop.sticky {
   float: left;
-  overflow: hidden;
-}
-
-#doc-nav-desktop.fixed {
-  float: unset;
-  position: fixed;
-  top: 80px;
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
   overflow-y: auto;
-  height: calc(100vh - 75px);
   scrollbar-color: var(--secondary) var(--active-bg);
   scrollbar-width: thin;
 }
@@ -176,6 +171,17 @@ ul.no-bull.block-audit code{
 .doc-content {
   width: calc(100% - 340px);
   float: right;
+}
+
+.bch-docs::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.endpoint-content pre {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .doc-content.no-sidebar {

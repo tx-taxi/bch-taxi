@@ -15,9 +15,6 @@ export class DocsComponent implements OnInit {
 
   activeTab = 0;
   env: Env;
-  showWebSocketTab = true;
-  showFaqTab = true;
-  showElectrsTab = true;
 
   @HostBinding('attr.dir') dir = 'ltr';
 
@@ -32,9 +29,6 @@ export class DocsComponent implements OnInit {
   ngOnInit(): void {
     this.websocket.want(['blocks']);
     this.env = this.stateService.env;
-    this.showFaqTab = ( this.env.BASE_MODULE === 'mempool' ) ? true : false;
-    this.showElectrsTab = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
-
     document.querySelector<HTMLElement>( 'html' ).style.scrollBehavior = 'smooth';
   }
 
@@ -45,9 +39,9 @@ export class DocsComponent implements OnInit {
     if (url[0].path === 'faq' ) {
       this.activeTab = 0;
       this.seoService.setTitle($localize`:@@meta.title.docs.faq:FAQ`);
-      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Get answers to common Bitcoin Cash questions, including mempool behavior, transaction confirmation, fees, and self-hosted explorers.`);
+      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Read about Bitcoin Cash blocks, transactions, CashAddr addresses, CashTokens, fees, pending data, and mining coverage.`);
       this.ogService.setManualOgImage('faq.jpg');
-    } else if( url[1].path === 'rest' ) {
+    } else if( url[1] && url[1].path === 'rest' ) {
       this.activeTab = 1;
       this.seoService.setTitle($localize`:@@meta.title.docs.rest:REST API`);
       if (this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
@@ -55,18 +49,14 @@ export class DocsComponent implements OnInit {
       } else {
         this.seoService.setDescription($localize`:@@meta.description.docs.rest-bitcoin:Documentation for the bch.tx.taxi REST API: query Bitcoin Cash addresses, transactions, blocks, fees, mining, and network data.`);
       }
-    } else if( url[1].path === 'websocket' ) {
+    } else if( url[1] && url[1].path === 'websocket' ) {
       this.activeTab = 2;
       this.seoService.setTitle($localize`:@@meta.title.docs.websocket:WebSocket API`);
       if( this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
         this.seoService.setDescription($localize`:@@meta.description.docs.websocket-liquid:Documentation for the liquid.network WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.`);
       } else {
-        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the bch.tx.taxi WebSocket API: receive real-time Bitcoin Cash block, mempool, transaction, and address updates.`);
+        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the bch.tx.taxi WebSocket API: receive Bitcoin Cash snapshots and track a transaction.`);
       }
-    } else {
-      this.activeTab = 3;
-      this.seoService.setTitle($localize`:@@meta.title.docs.electrum:Electrum RPC`);
-      this.seoService.setDescription($localize`:@@meta.description.docs.electrumrpc:Documentation for our Electrum RPC interface: get instant, convenient, and reliable access to an Esplora instance.`);
     }
   }
 
