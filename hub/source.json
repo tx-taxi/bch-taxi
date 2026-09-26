@@ -2,5 +2,7 @@
   "chain": "bch",
   "commit": "8dd9dab5c8ba737f34139eae877ddaf5095f6d08",
   "status": "Production release candidate; pending/fee refinements and packaging verified locally; public evidence tracked in router release review",
-  "reconciliation": "Native source ancestor LTC6ba310ede; candidate BCH source commit pinned here. Latest owner native status/mobile-center contract adopted. Not an approved or deployed BCH baseline."
+  "reconciliation": "Native source ancestor LTC6ba310ede; candidate BCH source commit pinned here. Latest owner native status/mobile-center contract adopted. Not an approved or deployed BCH baseline.",
+  "formattingBaseline": "724e79338fdfb7546c99d504dac6c861fa7f3011",
+  "formattingReconciliation": "2026-09-26: preserve deployed native source and approved extraction wrapper; compact display only, exact overlay tooltips, DOGE consistent ETA/count. Generated provenance records actual build commit and source hashes."
 }
