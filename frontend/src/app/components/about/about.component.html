@@ -1,27 +1,26 @@
 <div class="container-xl about-page">
-  <div class="intro">
-    <h1 class="visually-hidden">About bch.tx.taxi</h1>
-    <img src="/resources/branding/bch-dark-full.svg" alt="bch.tx.taxi Bitcoin Cash explorer" class="mempool-logo">
-    <div class="version">
-      <span>bch.tx.taxi - Bitcoin Cash block and mempool explorer</span>
-      <span class="version-sub">A tx.taxi explorer built from <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">mempool/mempool</a></span>
-    </div>
-  </div>
-
-  <div class="about-text">
-    <h5>About bch.tx.taxi</h5>
+  <app-tx-taxi-docs-intro chainName="Bitcoin Cash" chainHost="bch.tx.taxi" context="explorer"></app-tx-taxi-docs-intro>
+  <div class="about-layout">
+    <aside class="about-identity">
+      <img src="/resources/branding/bch-dark-full.svg" alt="bch.tx.taxi" class="about-logo">
+      <h1>About bch.tx.taxi</h1>
+      <p>The Bitcoin Cash explorer in the tx.taxi family.</p>
+      <nav class="about-links" aria-label="Project links">
+        <a routerLink="/docs">Bitcoin Cash documentation</a>
+        <a href="https://github.com/tx-taxi/bch-taxi" target="_blank" rel="noopener noreferrer">Explorer source</a>
+        <a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the maintainer</a>
+      </nav>
+    </aside>
+    <main class="about-text">
+      <h2>About bch.tx.taxi</h2>
     <p>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</p>
 
-    <h5>Bitcoin Cash data</h5>
+    <h2>Bitcoin Cash data</h2>
     <p>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</p>
-
-
-  </div>
-
-  <div class="contributors" id="links">
-    <h5>Project links</h5>
-    <p><a [routerLink]="['/docs']">bch.tx.taxi documentation</a></p>
-    <p><a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Upstream project and contributors</a></p>
-    <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the tx.taxi maintainer</a></p>
+      <div class="about-attribution">
+        <h2>Built on open source</h2>
+        <p>This explorer builds on the <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Mempool Open Source Project</a>. See the explorer source for its license and <a href="/3rdpartylicenses.txt">third-party attribution</a>.</p>
+      </div>
+    </main>
   </div>
 </div>
