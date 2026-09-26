@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { NgbCollapseModule, NgbTypeaheadModule, NgbNavModule, NgbTooltipModule, NgbPaginationModule, NgbDropdownModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFilter, faAngleDown, faAngleUp, faAngleRight, faAngleLeft, faBolt, faCogs, faDatabase, faExchangeAlt, faInfoCircle,
@@ -68,6 +69,7 @@ import { ServerHealthComponent } from '@components/server-health/server-health.c
 import { ServerStatusComponent } from '@components/server-health/server-status.component';
 import { FeesBoxComponent } from '@components/fees-box/fees-box.component';
 import { DifficultyComponent } from '@components/difficulty/difficulty.component';
+import { AsertDeviationGraphComponent } from '@components/asert-deviation-graph/asert-deviation-graph.component';
 import { DifficultyTooltipComponent } from '@components/difficulty/difficulty-tooltip.component';
 import { DifficultyMiningComponent } from '@components/difficulty-mining/difficulty-mining.component';
 import { BalanceWidgetComponent } from '@components/balance-widget/balance-widget.component';
@@ -194,6 +196,7 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     ServerStatusComponent,
     FeesBoxComponent,
     DifficultyComponent,
+    AsertDeviationGraphComponent,
     DifficultyMiningComponent,
     DifficultyTooltipComponent,
     BalanceWidgetComponent,
@@ -275,6 +278,9 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     NgbDatepickerModule,
     InfiniteScrollModule,
     FontAwesomeModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('@app/graphs/echarts').then((m) => m.echarts),
+    }),
   ],
   providers: [
     BytesPipe,
@@ -350,6 +356,7 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     ServerStatusComponent,
     FeesBoxComponent,
     DifficultyComponent,
+    AsertDeviationGraphComponent,
     DifficultyMiningComponent,
     DifficultyTooltipComponent,
     BalanceWidgetComponent,

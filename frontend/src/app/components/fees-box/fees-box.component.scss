@@ -74,10 +74,11 @@
 
 .fee-progress-bar {
   width: 25%;
-  height: 22px;
+  height: 42px;
   margin-bottom: 12px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   transition: background-color 1s;
   color: var(--fg);
   &.priority {
@@ -100,7 +101,7 @@
     display: none
   }
   &.fill {
-    height: 22px;
+    height: 42px;
     background: repeating-linear-gradient(
       90deg,
       var(--secondary),
@@ -112,7 +113,7 @@
 }
 
 .fee-label {
-  padding-top: 2px;
+  padding-top: 0;
   font-size: 12px;
   width: 100%;
   overflow: hidden;
