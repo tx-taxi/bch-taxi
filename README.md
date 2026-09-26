@@ -54,6 +54,8 @@ This repository adapts the [Mempool Open Source Project](https://github.com/memp
 
 The code is distributed under the terms in [LICENSE](LICENSE) and [COPYING.md](COPYING.md), including the GNU Affero General Public License v3 text and applicable trademark notices.
 
+Original tx.taxi modifications and documentation are credited to tx.taxi contributors (2026). Upstream copyright and license notices are preserved in [`LICENSE`](LICENSE) and [`COPYING.md`](COPYING.md).
+
 The software license does not grant trademark rights to the tx.taxi name or logos. Independent deployments should use their own branding and must not imply they are operated or endorsed by tx.taxi.
 
 Mempool names, logos, and trademarks belong to their respective owners. bch.tx.taxi is independently operated and is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.
