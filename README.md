@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="frontend/src/resources/branding/bch-favicon.svg" width="88" height="88" alt="bch.tx.taxi logo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="frontend/src/resources/branding/bch-dark-full.svg">
+    <img src="frontend/src/resources/branding/bch-light-full.svg" width="360" alt="bch.tx.taxi banner logo">
+  </picture>
 </p>
 
 <h1 align="center">Bitcoin Cash Explorer · bch.tx.taxi</h1>
