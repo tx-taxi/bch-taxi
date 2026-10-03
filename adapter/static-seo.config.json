@@ -1,0 +1,194 @@
+{
+  "host": "bch.tx.taxi",
+  "chain": "Bitcoin Cash",
+  "symbol": "BCH",
+  "description": "Explore Bitcoin Cash blocks, transactions, addresses, fees and mining activity.",
+  "coverage": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+  "poolPages": false,
+  "aliases": {
+    "/docs": "/docs/faq",
+    "/docs/api": "/docs/api/rest",
+    "/api": "/docs/api/rest",
+    "/api/api/rest": "/docs/api/rest",
+    "/api/api/websocket": "/docs/api/websocket",
+    "/api/faq": "/docs/faq",
+    "/blocks": "/blocks/1",
+    "/mining/blocks": "/blocks/1",
+    "/graphs": "/graphs/mining/block-fees",
+    "/llm.txt": "/llms.txt",
+    "/index.html": "/",
+    "/tx": "/",
+    "/tx/preview": "/docs/faq"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "kind": "home",
+      "label": "Bitcoin Cash explorer",
+      "description": "Explore Bitcoin Cash blocks, transactions, addresses, fees and mining activity.",
+      "source": "src/app/components/about/about.component.html"
+    },
+    {
+      "path": "/about",
+      "kind": "document",
+      "label": "About bch.tx.taxi",
+      "description": "Learn about bch.tx.taxi, the Bitcoin Cash explorer in the tx.taxi family.",
+      "source": "src/app/components/about/about.component.html"
+    },
+    {
+      "path": "/privacy-policy",
+      "kind": "document",
+      "label": "Privacy policy",
+      "description": "Privacy notes for bch.tx.taxi, including public Bitcoin Cash data, browser preferences, server logs, and independent verification.",
+      "source": "src/app/components/privacy-policy/privacy-policy.component.html"
+    },
+    {
+      "path": "/terms-of-service",
+      "kind": "document",
+      "label": "Terms of service",
+      "description": "Terms for using bch.tx.taxi as an informational Bitcoin Cash block and mempool explorer.",
+      "source": "src/app/components/terms-of-service/terms-of-service.component.html"
+    },
+    {
+      "path": "/trademark-policy",
+      "kind": "document",
+      "label": "Trademark and attribution",
+      "description": "Trademark and attribution notes for bch.tx.taxi, including upstream mempool/mempool attribution and project independence.",
+      "source": "src/app/components/trademark-policy/trademark-policy.component.html"
+    },
+    {
+      "path": "/docs/faq",
+      "kind": "docs-faq",
+      "label": "Bitcoin Cash explorer guide",
+      "description": "Bitcoin Cash explorer coverage, amounts, fees, confirmations and data limits."
+    },
+    {
+      "path": "/docs/api/rest",
+      "kind": "docs-rest",
+      "label": "Bitcoin Cash REST API",
+      "description": "Read-only REST API documentation for bch.tx.taxi: blocks, transactions, addresses and supported observations."
+    },
+    {
+      "path": "/docs/api/websocket",
+      "kind": "docs-ws",
+      "label": "Bitcoin Cash WebSocket API",
+      "description": "WebSocket documentation for observed Bitcoin Cash explorer updates and supported subscriptions."
+    },
+    {
+      "path": "/blocks/1",
+      "kind": "live",
+      "label": "Bitcoin Cash blocks",
+      "description": "See the most recent Bitcoin Cash blocks along with basic stats such as block height, block reward, block size, and more.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/blocks-list/blocks-list.component.ts"
+    },
+    {
+      "path": "/txs",
+      "kind": "live",
+      "label": "Bitcoin Cash recent transactions",
+      "description": "Recent pending Bitcoin Cash transaction observations shown by the explorer.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/recent-transactions-list/recent-transactions-list.component.ts"
+    },
+    {
+      "path": "/mining",
+      "kind": "live",
+      "label": "Bitcoin Cash mining dashboard",
+      "description": "Bitcoin Cash mining observations: recent blocks, rewards, available fee data and supported difficulty or hashrate measurements.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/mining-dashboard/mining-dashboard.component.ts"
+    },
+    {
+      "path": "/tools/calculator",
+      "kind": "live",
+      "label": "Bitcoin Cash calculator",
+      "description": "Convert BCH and its smallest units, with fiat conversion when the current price observation is available.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/calculator/calculator.component.ts"
+    },
+    {
+      "path": "/mempool-block/0",
+      "kind": "live",
+      "label": "Bitcoin Cash pending transaction sample",
+      "description": "Inspect the explorer\u2019s observed Bitcoin Cash pending transaction sample and available fee-rate data.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/mempool-block/mempool-block.component.ts"
+    },
+    {
+      "path": "/graphs/mempool",
+      "kind": "live",
+      "label": "Bitcoin Cash mempool observations",
+      "description": "See the explorer\u2019s locally observed Bitcoin Cash pending-data measurements over the available observation window.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/statistics/statistics.component.ts"
+    },
+    {
+      "path": "/graphs/mining/hashrate-difficulty",
+      "kind": "live",
+      "label": "Bitcoin Cash hashrate and difficulty",
+      "description": "See Bitcoin Cash hashrate and difficulty estimates from the available observed block history.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/hashrate-chart/hashrate-chart.component.ts"
+    },
+    {
+      "path": "/graphs/mining/block-fees",
+      "kind": "live",
+      "label": "Bitcoin Cash block fees",
+      "description": "See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/block-fees-graph/block-fees-graph.component.ts"
+    },
+    {
+      "path": "/graphs/mining/block-fees-subsidy",
+      "kind": "live",
+      "label": "Bitcoin Cash block fees and subsidy",
+      "description": "See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts"
+    },
+    {
+      "path": "/graphs/mining/block-rewards",
+      "kind": "live",
+      "label": "Bitcoin Cash block rewards",
+      "description": "See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/block-rewards-graph/block-rewards-graph.component.ts"
+    },
+    {
+      "path": "/graphs/mining/block-sizes-weights",
+      "kind": "live",
+      "label": "Bitcoin Cash block sizes and weights",
+      "description": "See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.",
+      "context": "Bitcoin Cash blocks, transactions, CashAddr and legacy addresses, and source-provided CashToken output data are supported. Mining charts cover recently indexed blocks rather than complete archives. Pending data is one source observation. Fiat observations are current only; unverified token metadata is not inferred.",
+      "source": "src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts"
+    }
+  ],
+  "docsData": "src/app/docs/api-docs/bch-api-docs-data.ts",
+  "docsExports": {
+    "faq": "bchFaqDocs",
+    "rest": "bchRestDocs",
+    "ws": "bchWebsocketDocs"
+  },
+  "socialScreenshot": {
+    "url": "https://tx.taxi/assets/screenshots/hub-c0f1a521a7ad.jpg",
+    "width": 1440,
+    "height": 2611,
+    "alt": "The tx.taxi hub showing its native blockchain explorer strips and external explorer blocks.",
+    "source": "https://tx.taxi/",
+    "capturedFrom": "https://tx.taxi/",
+    "capturedAt": "2026-09-27T22:31:45.077Z",
+    "fullPage": true,
+    "sha256": "c0f1a521a7adcba14748a0a3d0fb3bf67e3e9008b365422a15fe57322fe361ba",
+    "bytes": 405004,
+    "mime": "image/jpeg",
+    "key": "hub"
+  },
+  "noindexRoutes": [
+    "/blocks/stale",
+    "/rbf",
+    "/graphs/mining/pools-dominance",
+    "/graphs/mining/pools",
+    "/graphs/mining/block-fee-rates",
+    "/graphs/price"
+  ]
+}

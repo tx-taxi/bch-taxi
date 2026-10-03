@@ -1,0 +1,195 @@
+{
+  "chain": "bch",
+  "routeCount": 19,
+  "priorBehavior": {
+    "docsRestCanonical": "https://bch.tx.taxi/",
+    "docsRootEmpty": true
+  },
+  "crawled": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/",
+      "title": "bch.tx.taxi - Bitcoin Cash Explorer",
+      "description": "Explore Bitcoin Cash blocks, transactions, addresses, fees and mining activity.",
+      "semanticBytes": 1653,
+      "markdownBytes": 382
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/about",
+      "title": "About bch.tx.taxi - bch.tx.taxi",
+      "description": "Learn about bch.tx.taxi, the Bitcoin Cash explorer in the tx.taxi family.",
+      "semanticBytes": 3499,
+      "markdownBytes": 1345
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/privacy-policy",
+      "title": "Privacy policy - bch.tx.taxi",
+      "description": "Privacy notes for bch.tx.taxi, including public Bitcoin Cash data, browser preferences, server logs, and independent verification.",
+      "semanticBytes": 3194,
+      "markdownBytes": 1508
+    },
+    {
+      "path": "/terms-of-service",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/terms-of-service",
+      "title": "Terms of service - bch.tx.taxi",
+      "description": "Terms for using bch.tx.taxi as an informational Bitcoin Cash block and mempool explorer.",
+      "semanticBytes": 3393,
+      "markdownBytes": 1603
+    },
+    {
+      "path": "/trademark-policy",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/trademark-policy",
+      "title": "Trademark and attribution - bch.tx.taxi",
+      "description": "Trademark and attribution notes for bch.tx.taxi, including upstream mempool/mempool attribution and project independence.",
+      "semanticBytes": 3122,
+      "markdownBytes": 1378
+    },
+    {
+      "path": "/docs/faq",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/docs/faq",
+      "title": "Bitcoin Cash explorer guide - bch.tx.taxi",
+      "description": "Bitcoin Cash explorer coverage, amounts, fees, confirmations and data limits.",
+      "semanticBytes": 3473,
+      "markdownBytes": 1985
+    },
+    {
+      "path": "/docs/api/rest",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/docs/api/rest",
+      "title": "Bitcoin Cash REST API - bch.tx.taxi",
+      "description": "Read-only REST API documentation for bch.tx.taxi: blocks, transactions, addresses and supported observations.",
+      "semanticBytes": 7233,
+      "markdownBytes": 4293
+    },
+    {
+      "path": "/docs/api/websocket",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/docs/api/websocket",
+      "title": "Bitcoin Cash WebSocket API - bch.tx.taxi",
+      "description": "WebSocket documentation for observed Bitcoin Cash explorer updates and supported subscriptions.",
+      "semanticBytes": 2972,
+      "markdownBytes": 1234
+    },
+    {
+      "path": "/blocks/1",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/blocks/1",
+      "title": "Bitcoin Cash blocks - bch.tx.taxi",
+      "description": "See the most recent Bitcoin Cash blocks along with basic stats such as block height, block reward, block size, and more.",
+      "semanticBytes": 1696,
+      "markdownBytes": 503
+    },
+    {
+      "path": "/txs",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/txs",
+      "title": "Bitcoin Cash recent transactions - bch.tx.taxi",
+      "description": "Recent pending Bitcoin Cash transaction observations shown by the explorer.",
+      "semanticBytes": 1664,
+      "markdownBytes": 466
+    },
+    {
+      "path": "/mining",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/mining",
+      "title": "Bitcoin Cash mining dashboard - bch.tx.taxi",
+      "description": "Bitcoin Cash mining observations: recent blocks, rewards, available fee data and supported difficulty or hashrate measurements.",
+      "semanticBytes": 1713,
+      "markdownBytes": 518
+    },
+    {
+      "path": "/tools/calculator",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/tools/calculator",
+      "title": "Bitcoin Cash calculator - bch.tx.taxi",
+      "description": "Convert BCH and its smallest units, with fiat conversion when the current price observation is available.",
+      "semanticBytes": 1685,
+      "markdownBytes": 500
+    },
+    {
+      "path": "/mempool-block/0",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/mempool-block/0",
+      "title": "Bitcoin Cash pending transaction sample - bch.tx.taxi",
+      "description": "Inspect the explorer’s observed Bitcoin Cash pending transaction sample and available fee-rate data.",
+      "semanticBytes": 1698,
+      "markdownBytes": 512
+    },
+    {
+      "path": "/graphs/mempool",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mempool",
+      "title": "Bitcoin Cash mempool observations - bch.tx.taxi",
+      "description": "See the explorer’s locally observed Bitcoin Cash pending-data measurements over the available observation window.",
+      "semanticBytes": 1705,
+      "markdownBytes": 518
+    },
+    {
+      "path": "/graphs/mining/hashrate-difficulty",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mining/hashrate-difficulty",
+      "title": "Bitcoin Cash hashrate and difficulty - bch.tx.taxi",
+      "description": "See Bitcoin Cash hashrate and difficulty estimates from the available observed block history.",
+      "semanticBytes": 1686,
+      "markdownBytes": 518
+    },
+    {
+      "path": "/graphs/mining/block-fees",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mining/block-fees",
+      "title": "Bitcoin Cash block fees - bch.tx.taxi",
+      "description": "See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.",
+      "semanticBytes": 1674,
+      "markdownBytes": 497
+    },
+    {
+      "path": "/graphs/mining/block-fees-subsidy",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mining/block-fees-subsidy",
+      "title": "Bitcoin Cash block fees and subsidy - bch.tx.taxi",
+      "description": "See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.",
+      "semanticBytes": 1722,
+      "markdownBytes": 553
+    },
+    {
+      "path": "/graphs/mining/block-rewards",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mining/block-rewards",
+      "title": "Bitcoin Cash block rewards - bch.tx.taxi",
+      "description": "See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.",
+      "semanticBytes": 1729,
+      "markdownBytes": 555
+    },
+    {
+      "path": "/graphs/mining/block-sizes-weights",
+      "status": 200,
+      "canonical": "https://bch.tx.taxi/graphs/mining/block-sizes-weights",
+      "title": "Bitcoin Cash block sizes and weights - bch.tx.taxi",
+      "description": "See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.",
+      "semanticBytes": 1681,
+      "markdownBytes": 513
+    }
+  ],
+  "client": {
+    "constructorBaseTitle": "bch.tx.taxi",
+    "constructorBaseDescription": "Explore Bitcoin Cash blocks, transactions, addresses, fees and mining activity.",
+    "allStaticRouteMetadataConsistent": true,
+    "docsToAboutToHomeDefaultsPreserved": true,
+    "genuineScreenshotAfterClientNavigation": true
+  },
+  "staticProviderCalls": 0,
+  "handlerChecks": "passed",
+  "boundaries": [
+    "Actual server callback and metadata functions evaluated with static-file and response mocks",
+    "No providers, listeners, screenshots or images read",
+    "Entity response fixtures are fake and establish behavior only, not live chain data"
+  ]
+}

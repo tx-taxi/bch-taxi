@@ -1,0 +1,45 @@
+{
+  "observedAt": "2026-10-03T19:10:03.818919+00:00",
+  "baseCommit": "2df684efbb3b338d2f54c8b636ec86e17db6d964",
+  "preservedCriticalFiles": [
+    {
+      "path": "adapter/bch-provider.cjs",
+      "sha256": "87093a5fb9e2b940023929568d51e9086e39bfb03111ea27a8163e292df85e66",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "frontend/src/app/app-routing.module.ts",
+      "sha256": "8cc0d06a5ab7541ab3d0a5e28b7d19e4123df4574b91b8de385b27504511cfff",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "frontend/src/app/master-page.module.ts",
+      "sha256": "85d0dc6479a16ae246743a54dde2e39737e28a414cbea099b0ec692f7fdf5b94",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "frontend/src/app/graphs/graphs.routing.module.ts",
+      "sha256": "1579700f465e7916fc57ac08205007156fe2ea9cfab7ba5f481abf433de472b3",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "frontend/src/app/previews.routing.module.ts",
+      "sha256": "b9d0990268d078e54bd3138b6e35752cd03124ac24c02bf2d36f6c477473b457",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "frontend/src/app/docs/docs.routing.module.ts",
+      "sha256": "1e1b10bf4eb2862140f21efb5a940b1c8c76e2507f22d5b67f7789549e8e01e4",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    },
+    {
+      "path": "adapter/frontend-production-config.json",
+      "sha256": "8913f81e0df931b665c419d8fc55256e239f5e365cb3bc314df9b6569cf2034b",
+      "identicalToBase": "2df684efbb3b338d2f54c8b636ec86e17db6d964"
+    }
+  ],
+  "trackedFrontendScssUnchangedExceptRequestedSearchHint": true,
+  "scssException": "frontend/src/app/components/search-form/search-form.component.scss",
+  "trackedScssCount": 192,
+  "dockerRuntimePreserved": "Node 24; same /app/public root, adapter/server.cjs command, runtime env and port. Source generation added before the existing Angular build."
+}
