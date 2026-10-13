@@ -1,4 +1,3 @@
-import { UswapPromotionComponent } from '@app/shared/components/uswap-promotion/uswap-promotion.component';
 import { CrossChainRedirectComponent } from '@components/cross-chain-redirect/cross-chain-redirect.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -187,7 +186,6 @@ export class MasterPageRoutingModule { }
   imports: [
     CommonModule,
     MasterPageRoutingModule,
-    UswapPromotionComponent,
     SharedModule,
   ],
   declarations: [CrossChainRedirectComponent,
