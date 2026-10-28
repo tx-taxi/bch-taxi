@@ -15,6 +15,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.setTitle($localize`:@@bch.about.title:About bch.tx.taxi`);
-    this.seoService.setDescription($localize`:@@bch.meta.about:Learn about bch.tx.taxi, a Bitcoin block and mempool explorer in the tx.taxi multi-chain family.`);
+    this.seoService.setDescription($localize`:@@bch.meta.about:Learn about bch.tx.taxi, a Bitcoin Cash block and mempool explorer in the tx.taxi multi-chain family.`);
   }
 }

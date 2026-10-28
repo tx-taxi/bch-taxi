@@ -14,6 +14,6 @@ export class PrivacyPolicyComponent {
 
   ngOnInit(): void {
     this.seoService.setTitle($localize`:@@bch.meta.privacy-title:Privacy Policy`);
-    this.seoService.setDescription($localize`:@@bch.meta.privacy:Privacy notes for bch.tx.taxi, including public Bitcoin data, browser preferences, server logs, and independent verification.`);
+    this.seoService.setDescription($localize`:@@bch.meta.privacy:Privacy notes for bch.tx.taxi, including public Bitcoin Cash data, browser preferences, server logs, and independent verification.`);
   }
 }
