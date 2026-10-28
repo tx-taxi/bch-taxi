@@ -11570,6 +11570,20 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>Datenschutzbestimmungen</target>
       </trans-unit>
+      <trans-unit id="bch.strip.median-title" datatype="html"><source>Median transaction fee rate</source><target>Medianer Transaktionsgebührensatz</target></trans-unit>
+      <trans-unit id="bch.strip.average-title" datatype="html"><source>Approximate average fee rate</source><target>Ungefährer durchschnittlicher Gebührensatz</target></trans-unit>
+      <trans-unit id="bch.strip.data-unavailable" datatype="html"><source>Fee data unavailable</source><target>Gebührendaten nicht verfügbar</target></trans-unit>
+      <trans-unit id="bch.strip.range-unavailable" datatype="html"><source>Fee range unavailable</source><target>Gebührenspanne nicht verfügbar</target></trans-unit>
+      <trans-unit id="bch.strip.estimate-title" datatype="html"><source>Estimated block interval; transaction inclusion is not guaranteed</source><target>Geschätztes Blockintervall; die Aufnahme der Transaktion ist nicht garantiert</target></trans-unit>
+      <trans-unit id="bch.strip.stale-block" datatype="html"><source>stale block <x id="HASH" equiv-text="shortHash" /></source><target>verwaister Block <x id="HASH" equiv-text="shortHash" /></target></trans-unit>
+      <trans-unit id="bch.strip.details" datatype="html"><source>Total fees: <x id="AMOUNT" equiv-text="exactBlockAmount(total)" /> <x id="SYMBOL" equiv-text="SYMBOL" />. Median fee rate: <x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />. Fee range: <x id="MIN" equiv-text="rate(min)" />–<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />.</source><target>Gesamtgebühren: <x id="AMOUNT" equiv-text="exactBlockAmount(total)" /> <x id="SYMBOL" equiv-text="SYMBOL" />. Medianer Gebührensatz: <x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />. Gebührenspanne: <x id="MIN" equiv-text="rate(min)" />–<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />.</target></trans-unit>
+      <trans-unit id="bch.strip.dashboard" datatype="html"><source>Bitcoin Cash explorer dashboard</source><target>Bitcoin-Cash-Explorerübersicht</target></trans-unit>
+      <trans-unit id="bch.strip.display-size" datatype="html"><source>Switch to displaying block sizes</source><target>Blockgrößen anzeigen</target></trans-unit>
+      <trans-unit id="bch.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Gesamtgebühren pro Block anzeigen</target></trans-unit>
+      <trans-unit id="bch.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Neueste Blöcke rechts anzeigen</target></trans-unit>
+      <trans-unit id="bch.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Neueste Blöcke links anzeigen</target></trans-unit>
+      <trans-unit id="bch.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source><target>Logo des Mining-Pools <x id="NAME" equiv-text="this.name" /></target></trans-unit>
+      <trans-unit id="bch.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logo des Mining-Pools</target></trans-unit>
     </body>
   </file>
 </xliff>
