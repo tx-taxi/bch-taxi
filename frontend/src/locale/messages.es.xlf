@@ -11858,6 +11858,13 @@
       <trans-unit id="taxi.timezone.plus12" datatype="html"><source>New Zealand Standard Time (NZST)</source><target>Hora estándar de Nueva Zelanda (NZST)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Hora de Tonga (TOT)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Hora de las islas de la Línea (LINT)</target></trans-unit>
+      <trans-unit id="bch.asert.blocks" datatype="html"><source>Blocks</source><target>Bloques</target></trans-unit>
+      <trans-unit id="bch.asert.schedule" datatype="html"><source>Δ schedule</source><target>Δ del calendario</target></trans-unit>
+      <trans-unit id="bch.asert.gaining" datatype="html"><source>Gaining on schedule → difficulty increasing</source><target>Adelanto respecto al ritmo previsto → aumenta la dificultad</target></trans-unit>
+      <trans-unit id="bch.asert.falling" datatype="html"><source>Falling behind → difficulty decreasing</source><target>Retraso respecto al ritmo previsto → disminuye la dificultad</target></trans-unit>
+      <trans-unit id="bch.asert.on-schedule" datatype="html"><source>On schedule</source><target>Al ritmo previsto</target></trans-unit>
+      <trans-unit id="bch.asert.block" datatype="html"><source>Block</source><target>Bloque</target></trans-unit>
+      <trans-unit id="bch.asert.deviation" datatype="html"><source>Deviation</source><target>Desviación</target></trans-unit>
     </body>
   </file>
 </xliff>

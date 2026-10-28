@@ -126,7 +126,7 @@ export class AsertDeviationGraphComponent implements OnChanges {
       xAxis: {
         type: 'category',
         data: heights,
-        name: 'Blocks',
+        name: $localize`:@@bch.asert.blocks:Blocks`,
         nameLocation: 'middle',
         nameGap: 4,
         nameTextStyle: {
@@ -144,7 +144,7 @@ export class AsertDeviationGraphComponent implements OnChanges {
         type: 'value',
         min: yAxisMin,
         max: yAxisMax,
-        name: 'Δ schedule',
+        name: $localize`:@@bch.asert.schedule:Δ schedule`,
         nameLocation: 'middle',
         nameGap: 36,
         nameRotate: 90,
@@ -185,14 +185,14 @@ export class AsertDeviationGraphComponent implements OnChanges {
           );
           const state =
             dev > 0
-              ? '<span style="color:var(--red)">Gaining on schedule → difficulty increasing</span>'
+              ? `<span style="color:var(--red)">${$localize`:@@bch.asert.gaining:Gaining on schedule → difficulty increasing`}</span>`
               : dev < 0
-                ? '<span style="color:var(--mainnet-alt)">Falling behind → difficulty decreasing</span>'
-                : 'On schedule';
+                ? `<span style="color:var(--mainnet-alt)">${$localize`:@@bch.asert.falling:Falling behind → difficulty decreasing`}</span>`
+                : $localize`:@@bch.asert.on-schedule:On schedule`;
           return `
-            <strong>Block ${heights[idx]}</strong><br/>
+            <strong>${$localize`:@@bch.asert.block:Block`} ${heights[idx]}</strong><br/>
             ${formattedDate}<br/>
-            Deviation: ${dev >= 0 ? '+' : ''}${dev}s (${this.formatDuration(absDev)})<br/>
+            ${$localize`:@@bch.asert.deviation:Deviation`}: ${dev >= 0 ? '+' : ''}${dev}s (${this.formatDuration(absDev)})<br/>
             ${state}
           `;
         },
@@ -200,7 +200,7 @@ export class AsertDeviationGraphComponent implements OnChanges {
 
       series: [
         {
-          name: 'Deviation',
+          name: $localize`:@@bch.asert.deviation:Deviation`,
           type: 'line',
           data: deviations,
           smooth: true,
