@@ -11818,6 +11818,15 @@
       <trans-unit id="bch.strip.estimate-title" datatype="html"><source>Estimated block interval; transaction inclusion is not guaranteed</source><target>Intervalo estimado entre bloques; no se garantiza la inclusión de la transacción</target></trans-unit>
       <trans-unit id="bch.strip.stale-block" datatype="html"><source>stale block <x id="HASH" equiv-text="shortHash"/></source><target>bloque obsoleto <x id="HASH" equiv-text="shortHash"/></target></trans-unit>
       <trans-unit id="bch.strip.details" datatype="html"><source>Total fees: <x id="AMOUNT" equiv-text="exactBlockAmount(total)"/> <x id="SYMBOL" equiv-text="SYMBOL"/>. Median fee rate: <x id="MEDIAN" equiv-text="rate(median)"/> <x id="UNIT" equiv-text="FEE_UNIT"/>. Fee range: <x id="MIN" equiv-text="rate(min)"/>–<x id="MAX" equiv-text="rate(max)"/> <x id="RANGE_UNIT" equiv-text="FEE_UNIT"/>.</source><target>Comisiones totales: <x id="AMOUNT" equiv-text="exactBlockAmount(total)"/> <x id="SYMBOL" equiv-text="SYMBOL"/>. Tasa mediana de comisión: <x id="MEDIAN" equiv-text="rate(median)"/> <x id="UNIT" equiv-text="FEE_UNIT"/>. Rango de comisiones: <x id="MIN" equiv-text="rate(min)"/>–<x id="MAX" equiv-text="rate(max)"/> <x id="RANGE_UNIT" equiv-text="FEE_UNIT"/>.</target></trans-unit>
+      <trans-unit id="bch.txs.op-return-data" datatype="html"><source>data</source><target>datos</target></trans-unit>
+      <trans-unit id="bch.txs.disabled" datatype="html"><source>disabled</source><target>desactivada</target></trans-unit>
+      <trans-unit id="bch.nav.home-label" datatype="html"><source>bch.tx.taxi dashboard</source><target>Panel principal de bch.tx.taxi</target></trans-unit>
+      <trans-unit id="bch.nav.recent-blocks" datatype="html"><source>Recent blocks</source><target>Bloques recientes</target></trans-unit>
+      <trans-unit id="bch.strip.dashboard" datatype="html"><source>Bitcoin Cash explorer dashboard</source><target>Panel del explorador de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.strip.display-size" datatype="html"><source>Switch to displaying block sizes</source><target>Mostrar el tamaño de los bloques</target></trans-unit>
+      <trans-unit id="bch.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Mostrar las comisiones totales por bloque</target></trans-unit>
+      <trans-unit id="bch.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Mostrar los bloques más recientes a la derecha</target></trans-unit>
+      <trans-unit id="bch.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Mostrar los bloques más recientes a la izquierda</target></trans-unit>
     </body>
   </file>
 </xliff>
