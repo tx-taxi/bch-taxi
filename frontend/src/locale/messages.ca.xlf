@@ -10758,6 +10758,33 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Mida</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source>
+        <target>Condicions del servei</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source>
+        <target>Condicions del servei</target>
+      </trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source>
+        <target>Descripció</target>
+        </trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source>
+        <target>Adreces</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source>
+        <target>Blocs</target>
+        </trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source>
+        <target>Transaccions</target>
+        </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>Sobre</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>Condicions del servei</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

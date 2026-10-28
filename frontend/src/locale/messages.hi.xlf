@@ -11469,6 +11469,87 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source>
+        <target>शुल्क </target>
+      </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>साइज</target>
+      </trans-unit>
+      <trans-unit id="bch.nav.docs" datatype="html"><source>Documentation</source>
+        <target>प्रलेखन</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.506ff3946215" datatype="html"><source>Privacy Policy</source>
+        <target>गोपनीयता नीति</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy-title" datatype="html"><source>Privacy Policy</source>
+        <target>गोपनीयता नीति</target>
+      </trans-unit>
+      <trans-unit id="recent-transactions-title" datatype="html"><source>Recent Transactions</source>
+        <target>हाल ही के लेनदेन</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source>
+        <target>नियम और शर्तें</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source>
+        <target>नियम और शर्तें</target>
+      </trans-unit>
+      <trans-unit id="bch.txs.more" datatype="html"><source>Show more</source>
+        <target>और दिखाओ</target>
+        </trans-unit>
+      <trans-unit id="bch.txs.less" datatype="html"><source>Show less</source>
+        <target>कम दिखाएं</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source>
+        <target>विवरण</target>
+        </trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source>
+        <target>पतों</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source>
+        <target>ब्लॉक</target>
+        </trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source>
+        <target>ट्रांसेक्शन</target>
+        </trans-unit>
+      <trans-unit id="bch.api.331551b0de41" datatype="html"><source>Pending</source>
+        <target>लंबित</target>
+        </trans-unit>
+      <trans-unit id="bch.api.bf94ba9e2d86" datatype="html"><source>Mining</source>
+        <target>खनन </target>
+        </trans-unit>
+      <trans-unit id="bch.api.1a2303ede074" datatype="html"><source>Connect</source>
+        <target>जोड़ना</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.title" datatype="html"><source>Documentation</source>
+        <target>प्रलेखन</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.explore" datatype="html"><source>Explore</source>
+        <target>अन्वेषण करना</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.recent-blocks" datatype="html"><source>Recent Blocks</source>
+        <target>हाल ही के ब्लॉक</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source>
+        <target>कैलकुलेटर</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source>
+        <target>एपीआई दस्तावेज़ीकरण</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>विवरण</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.status" datatype="html"><source>Status</source>
+        <target>स्थिति</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.legal" datatype="html"><source>Legal</source>
+        <target>कानूनी</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>नियम और शर्तें</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
+        <target>गोपनीयता नीति</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

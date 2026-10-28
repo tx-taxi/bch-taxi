@@ -11475,6 +11475,87 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source>
+        <target>Comisioane</target>
+      </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Mărime</target>
+      </trans-unit>
+      <trans-unit id="bch.nav.docs" datatype="html"><source>Documentation</source>
+        <target>Documentație</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.506ff3946215" datatype="html"><source>Privacy Policy</source>
+        <target>Politica de confidențialitate</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy-title" datatype="html"><source>Privacy Policy</source>
+        <target>Politica de confidențialitate</target>
+      </trans-unit>
+      <trans-unit id="recent-transactions-title" datatype="html"><source>Recent Transactions</source>
+        <target>Tranzactii recente</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source>
+        <target>Termenii serviciului</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source>
+        <target>Termenii serviciului</target>
+      </trans-unit>
+      <trans-unit id="bch.txs.more" datatype="html"><source>Show more</source>
+        <target>Arată mai multe</target>
+        </trans-unit>
+      <trans-unit id="bch.txs.less" datatype="html"><source>Show less</source>
+        <target>Arată mai puțin</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source>
+        <target>Descriere</target>
+        </trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source>
+        <target>Adrese</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source>
+        <target>Blocuri</target>
+        </trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source>
+        <target>Tranzacții</target>
+        </trans-unit>
+      <trans-unit id="bch.api.331551b0de41" datatype="html"><source>Pending</source>
+        <target>În așteptare</target>
+        </trans-unit>
+      <trans-unit id="bch.api.bf94ba9e2d86" datatype="html"><source>Mining</source>
+        <target>Minerit</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1a2303ede074" datatype="html"><source>Connect</source>
+        <target>Conectați</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.title" datatype="html"><source>Documentation</source>
+        <target>Documentație</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.explore" datatype="html"><source>Explore</source>
+        <target>Explorați</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.recent-blocks" datatype="html"><source>Recent Blocks</source>
+        <target>Blocuri recente</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source>
+        <target>Calculator</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source>
+        <target>Documentația API</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>Despre</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.status" datatype="html"><source>Status</source>
+        <target>Stare</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.legal" datatype="html"><source>Legal</source>
+        <target>Legal</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>Termenii serviciului</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
+        <target>Politica de confidențialitate</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

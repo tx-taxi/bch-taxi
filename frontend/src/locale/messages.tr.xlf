@@ -11489,6 +11489,87 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source>
+        <target>İşlem Ücretleri</target>
+      </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Boyut</target>
+      </trans-unit>
+      <trans-unit id="bch.nav.docs" datatype="html"><source>Documentation</source>
+        <target>Dökümentasyon</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.506ff3946215" datatype="html"><source>Privacy Policy</source>
+        <target>Gizlilik politikası</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy-title" datatype="html"><source>Privacy Policy</source>
+        <target>Gizlilik politikası</target>
+      </trans-unit>
+      <trans-unit id="recent-transactions-title" datatype="html"><source>Recent Transactions</source>
+        <target>Yakındaki işlemler </target>
+      </trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source>
+        <target>Hizmet Koşulları</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source>
+        <target>Hizmet Koşulları</target>
+      </trans-unit>
+      <trans-unit id="bch.txs.more" datatype="html"><source>Show more</source>
+        <target>Daha fazla göster</target>
+        </trans-unit>
+      <trans-unit id="bch.txs.less" datatype="html"><source>Show less</source>
+        <target>Daha az göster</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source>
+        <target>Tanım</target>
+        </trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source>
+        <target>Adresler</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source>
+        <target>Bloklar</target>
+        </trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source>
+        <target>İşlemler</target>
+        </trans-unit>
+      <trans-unit id="bch.api.331551b0de41" datatype="html"><source>Pending</source>
+        <target>Bekliyor</target>
+        </trans-unit>
+      <trans-unit id="bch.api.bf94ba9e2d86" datatype="html"><source>Mining</source>
+        <target>Madencilik</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1a2303ede074" datatype="html"><source>Connect</source>
+        <target>Bağlan</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.title" datatype="html"><source>Documentation</source>
+        <target>Dökümentasyon</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.explore" datatype="html"><source>Explore</source>
+        <target>Keşfet</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.recent-blocks" datatype="html"><source>Recent Blocks</source>
+        <target>Yakın Zamanlı Bloklar</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source>
+        <target>Hesap Makinası</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source>
+        <target>API Dokümentasyonu</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>Hakkında</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.status" datatype="html"><source>Status</source>
+        <target>Durum</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.legal" datatype="html"><source>Legal</source>
+        <target>Hukuksal</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>Hizmet Koşulları</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
+        <target>Gizlilik politikası</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -11489,6 +11489,87 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source>
+        <target>Siirtomaksut</target>
+      </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Koko</target>
+      </trans-unit>
+      <trans-unit id="bch.nav.docs" datatype="html"><source>Documentation</source>
+        <target>Dokumentaatio</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.506ff3946215" datatype="html"><source>Privacy Policy</source>
+        <target>Tietosuojakäytäntö</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy-title" datatype="html"><source>Privacy Policy</source>
+        <target>Tietosuojakäytäntö</target>
+      </trans-unit>
+      <trans-unit id="recent-transactions-title" datatype="html"><source>Recent Transactions</source>
+        <target>Viimeaikaiset siirtotapahtumat</target>
+      </trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source>
+        <target>Käyttöehdot</target>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source>
+        <target>Käyttöehdot</target>
+      </trans-unit>
+      <trans-unit id="bch.txs.more" datatype="html"><source>Show more</source>
+        <target>Näytä enemmän</target>
+        </trans-unit>
+      <trans-unit id="bch.txs.less" datatype="html"><source>Show less</source>
+        <target>Näytä vähemmän</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source>
+        <target>Kuvaus</target>
+        </trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source>
+        <target>Osoitteet</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source>
+        <target>Lohkot</target>
+        </trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source>
+        <target>Siirtotapahtumat</target>
+        </trans-unit>
+      <trans-unit id="bch.api.331551b0de41" datatype="html"><source>Pending</source>
+        <target>Odottaa</target>
+        </trans-unit>
+      <trans-unit id="bch.api.bf94ba9e2d86" datatype="html"><source>Mining</source>
+        <target>Louhinta</target>
+        </trans-unit>
+      <trans-unit id="bch.api.1a2303ede074" datatype="html"><source>Connect</source>
+        <target>Yhdistä</target>
+        </trans-unit>
+      <trans-unit id="bch.docs.title" datatype="html"><source>Documentation</source>
+        <target>Dokumentaatio</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.explore" datatype="html"><source>Explore</source>
+        <target>Tutki</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.recent-blocks" datatype="html"><source>Recent Blocks</source>
+        <target>Viimeisimmät lohkot</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source>
+        <target>Laskin</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source>
+        <target>API-dokumentaatio</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>Tietoja</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.status" datatype="html"><source>Status</source>
+        <target>Tila</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.legal" datatype="html"><source>Legal</source>
+        <target>Lainsäädäntö</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>Käyttöehdot</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
+        <target>Tietosuojakäytäntö</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
