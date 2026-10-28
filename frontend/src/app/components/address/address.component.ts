@@ -14,6 +14,7 @@ import { seoDescriptionNetwork } from '@app/shared/common.utils';
 import { AddressInformation } from '@interfaces/node-api.interface';
 import { AddressTypeInfo } from '@app/shared/address-utils';
 import { extractTapLeaves, fillTapTree, convertTextToBuffer, PsbtKeyValue } from '@app/shared/transaction.utils';
+import { bchAddressFallbackUrl } from './bch-address-fallback';
 
 class AddressStats implements ChainStats {
   address: string;
@@ -106,6 +107,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   address: Address;
   addressString: string;
+  get addressFallbackUrl(): string | null { return bchAddressFallbackUrl(this.addressString); }
   isLoadingAddress = true;
   transactions: Transaction[];
   utxos: Utxo[];

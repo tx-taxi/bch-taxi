@@ -11829,6 +11829,8 @@
       <trans-unit id="bch.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Mostrar los bloques más recientes a la izquierda</target></trans-unit>
       <trans-unit id="bch.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name"/> mining pool</source><target>Logotipo del grupo de minería <x id="NAME" equiv-text="this.name"/></target></trans-unit>
       <trans-unit id="bch.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logotipo del grupo de minería</target></trans-unit>
+      <trans-unit id="bch.address.too-many" datatype="html"><source>This address has too many transactions to load here.</source><target>Esta dirección tiene demasiadas transacciones para cargarlas aquí.</target></trans-unit>
+      <trans-unit id="bch.address.view-blockchair" datatype="html"><source>View this Bitcoin Cash address on Blockchair</source><target>Ver esta dirección de Bitcoin Cash en Blockchair</target></trans-unit>
     </body>
   </file>
 </xliff>
