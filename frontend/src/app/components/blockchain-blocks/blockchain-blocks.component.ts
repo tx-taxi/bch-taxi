@@ -1,5 +1,5 @@
 import { blockValueDetails } from '@app/shared/block-format';
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, LOCALE_ID, ChangeDetectionStrategy, ChangeDetectorRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Observable, Subscription, delay, filter, tap } from 'rxjs';
 import { StateService } from '@app/services/state.service';
 import { specialBlocks } from '@app/app.constants';
@@ -20,7 +20,7 @@ interface BlockchainBlock extends BlockExtended {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
-  blockValueDetails = blockValueDetails;
+  blockValueDetails = (total: number | string, median: number, min: number, max: number) => blockValueDetails(total, median, min, max, this.locale);
   readonly medianRateTitle = $localize`:@@bch.strip.median-title:Median transaction fee rate`;
   readonly averageRateTitle = $localize`:@@bch.strip.average-title:Approximate average fee rate`;
   staleBlockLabel(hash: string): string {
@@ -85,6 +85,7 @@ export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   };
 
   constructor(
+    @Inject(LOCALE_ID) private locale: string,
     public stateService: StateService,
     public cacheService: CacheService,
     private cd: ChangeDetectorRef,

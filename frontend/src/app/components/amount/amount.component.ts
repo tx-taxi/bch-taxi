@@ -1,5 +1,5 @@
 import { compactBlockAmount } from '@app/shared/block-format';
-import { Component, OnInit, OnDestroy, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID } from '@angular/core';
 import { StateService } from '@app/services/state.service';
 import { Observable, Subscription } from 'rxjs';
 import { Price } from '@app/services/price.service';
@@ -22,7 +22,7 @@ export class AmountComponent implements OnInit, OnDestroy {
 
   @Input() satoshis: number;
   @Input() compactBlock = false;
-  compactBlockAmount = compactBlockAmount;
+  compactBlockAmount = (value: number | string, atomic = false) => compactBlockAmount(value, atomic, this.locale);
 
   @Input() digitsInfo = '1.8-8';
   @Input() noFiat = false;
@@ -34,6 +34,7 @@ export class AmountComponent implements OnInit, OnDestroy {
   @Input() unitStyle: any;
 
   constructor(
+    @Inject(LOCALE_ID) private locale: string,
     private stateService: StateService,
     private cd: ChangeDetectorRef,
   ) {
