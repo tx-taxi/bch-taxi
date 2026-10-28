@@ -11827,6 +11827,8 @@
       <trans-unit id="bch.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Mostrar las comisiones totales por bloque</target></trans-unit>
       <trans-unit id="bch.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Mostrar los bloques más recientes a la derecha</target></trans-unit>
       <trans-unit id="bch.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Mostrar los bloques más recientes a la izquierda</target></trans-unit>
+      <trans-unit id="bch.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name"/> mining pool</source><target>Logotipo del grupo de minería <x id="NAME" equiv-text="this.name"/></target></trans-unit>
+      <trans-unit id="bch.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logotipo del grupo de minería</target></trans-unit>
     </body>
   </file>
 </xliff>
