@@ -79,12 +79,12 @@
     <ul class="navbar-nav {{ network.val }}">
 
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" id="btn-home">
-        <a class="nav-link" [routerLink]="['/' | relativeUrl]" (click)="collapse()" aria-label="Dashboard" title="Dashboard">
+        <a class="nav-link" [routerLink]="['/' | relativeUrl]" (click)="collapse()" aria-label="Dashboard" i18n-aria-label="@@bch.nav.dashboard" title="Dashboard" i18n-title="@@bch.nav.dashboard">
           <div class="svg-wrapper"><app-svg-images name="nav-tachometer" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
       <li class="nav-item mining" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="btn-pools" *ngIf="stateService.env.MINING_DASHBOARD">
-        <a class="nav-link" [routerLink]="['/mining' | relativeUrl]" (click)="collapse()" aria-label="Mining dashboard" title="Mining dashboard">
+        <a class="nav-link" [routerLink]="['/mining' | relativeUrl]" (click)="collapse()" aria-label="Mining dashboard" i18n-aria-label="@@bch.nav.mining" title="Mining dashboard" i18n-title="@@bch.nav.mining">
           <div class="svg-wrapper"><app-svg-images name="nav-pickaxe" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -99,7 +99,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-graphs">
-        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Bitcoin Cash graphs" title="Bitcoin Cash graphs">
+        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Bitcoin Cash graphs" i18n-aria-label="@@bch.nav.graphs" title="Bitcoin Cash graphs" i18n-title="@@bch.nav.graphs">
           <div class="svg-wrapper"><app-svg-images name="nav-chart-area" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -109,7 +109,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-docs">
-        <a class="nav-link" [routerLink]="['/docs']" (click)="collapse()" aria-label="Documentation" title="Documentation">
+        <a class="nav-link" [routerLink]="['/docs']" (click)="collapse()" aria-label="Documentation" i18n-aria-label="@@bch.nav.docs" title="Documentation" i18n-title="@@bch.nav.docs">
           <div class="svg-wrapper"><app-svg-images name="nav-book" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -119,7 +119,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-about">
-        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About bch.tx.taxi" title="About bch.tx.taxi">
+        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About bch.tx.taxi" i18n-aria-label="@@bch.nav.about" title="About bch.tx.taxi" i18n-title="@@bch.nav.about">
           <div class="svg-wrapper"><app-svg-images name="nav-info-circle" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>

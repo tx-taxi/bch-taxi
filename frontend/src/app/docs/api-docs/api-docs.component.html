@@ -4,9 +4,9 @@
   </div>
 
   <div class="doc-content">
-    <p class="doc-welcome-note" *ngIf="whichTab === 'faq'">A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</p>
-    <p class="doc-welcome-note" *ngIf="whichTab === 'rest'">The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</p>
-    <p class="doc-welcome-note" *ngIf="whichTab === 'websocket'">Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</p>
+    <p class="doc-welcome-note" *ngIf="whichTab === 'faq'" i18n="@@bch.docs.faq-intro">A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</p>
+    <p class="doc-welcome-note" *ngIf="whichTab === 'rest'" i18n="@@bch.docs.rest-intro">The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</p>
+    <p class="doc-welcome-note" *ngIf="whichTab === 'websocket'" i18n="@@bch.docs.ws-intro">Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</p>
 
     <div class="doc-item-container" *ngFor="let item of docs">
       <h3 *ngIf="item.type === 'category'">{{ item.title }}</h3>
@@ -19,9 +19,9 @@
             <div class="subtitle">Endpoint</div>
             <code *ngIf="item.method">{{ item.method }} </code><code>{{ item.path }}</code>
           </div>
-          <div class="description"><div class="subtitle">Description</div><p>{{ item.description }}</p></div>
-          <div class="description" *ngIf="item.request"><div class="subtitle">Example</div><pre><code>{{ item.request }}</code></pre></div>
-          <div class="description" *ngIf="item.response"><div class="subtitle">Response shape</div><pre><code>{{ item.response }}</code></pre></div>
+          <div class="description"><div class="subtitle" i18n="@@bch.docs.description">Description</div><p>{{ item.description }}</p></div>
+          <div class="description" *ngIf="item.request"><div class="subtitle" i18n="@@bch.docs.example">Example</div><pre><code>{{ item.request }}</code></pre></div>
+          <div class="description" *ngIf="item.response"><div class="subtitle" i18n="@@bch.docs.response">Response shape</div><pre><code>{{ item.response }}</code></pre></div>
         </div>
       </div>
     </div>

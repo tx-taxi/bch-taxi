@@ -26,7 +26,7 @@
               class="stale-ghost"
               [style.--stale-index]="j"
               [routerLink]="['/block' | relativeUrl, orphan.hash]"
-              [ngbTooltip]="'stale block ' + orphan.hash.slice(0, 4) + '...' + orphan.hash.slice(-4)"
+              [ngbTooltip]="staleBlockLabel(orphan.hash)"
               [placement]="'top'"
               [container]="'body'"
               [autoClose]="'outside'"
@@ -36,11 +36,11 @@
         <div class="block-body">
           <ng-container *ngIf="!minimal">
             <div *ngIf="block?.extras?.avgFeeRate != null; else emptyfees" [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fees">
-              <span [title]="block?.extras?.medianFee != null ? 'Median transaction fee rate' : 'Approximate average fee rate'">~</span><app-fee-rate [compactBlock]="true" [fee]="block?.extras?.medianFee ?? block?.extras?.avgFeeRate" unitClass="" rounding="1.0-0"></app-fee-rate>
+              <span [title]="block?.extras?.medianFee != null ? medianRateTitle : averageRateTitle">~</span><app-fee-rate [compactBlock]="true" [fee]="block?.extras?.medianFee ?? block?.extras?.avgFeeRate" unitClass="" rounding="1.0-0"></app-fee-rate>
             </div>
             <ng-template #emptyfees>
               <div [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fees">
-                <span title="Fee data unavailable">—</span>
+                <span title="Fee data unavailable" i18n-title="@@bch.strip.data-unavailable">—</span>
               </div>
             </ng-template>
             <div [attr.data-cy]="'bitcoin-block-' + offset + '-index-' + i + '-fee-span'" class="fee-span"
@@ -51,7 +51,7 @@
             </div>
             <ng-template #emptyfeespan>
               <div [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fee-span">
-                <span aria-label="Fee range unavailable" title="Fee range unavailable">—</span>
+                <span aria-label="Fee range unavailable" i18n-aria-label="@@bch.strip.range-unavailable" title="Fee range unavailable" i18n-title="@@bch.strip.range-unavailable">—</span>
               </div>
             </ng-template>
             <div [attr.data-cy]="'bitcoin-block-' + offset + '-index-' + i + '-total-fees'" *ngIf="blockDisplayMode === 'fees'; else noMiningInfo"

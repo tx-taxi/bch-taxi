@@ -1,6 +1,6 @@
 <div infiniteScroll [alwaysCallback]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
 
-<p *ngIf="tokenMetadataUnavailable" class="small text-secondary">CashToken details unavailable</p>
+<p *ngIf="tokenMetadataUnavailable" class="small text-secondary" i18n="@@bch.txs.token-details">CashToken details unavailable</p>
 
 <ng-container *ngFor="let tx of transactions; let i = index; trackBy: trackByFn">
   <div *ngIf="!transactionPage" class="header-bg box tx-page-container">
@@ -17,7 +17,7 @@
 
   <div class="header-bg box" [attr.data-cy]="'tx-' + i">
 
-    <p *ngIf="tx.tokenInputDetailsUnavailable" class="small text-secondary">Input token quantities unavailable</p>
+    <p *ngIf="tx.tokenInputDetailsUnavailable" class="small text-secondary" i18n="@@bch.txs.token-input">Input token quantities unavailable</p>
     <div *ngIf="errorUnblinded" class="error-unblinded">{{ errorUnblinded }}</div>
     @if (similarityMatches.get(tx.txid)?.size) {
       <div class="alert alert-mempool" role="alert">
@@ -134,7 +134,7 @@
                   </ng-template>
                   <ng-template #defaultOutput>
                     <span *ngIf="vin.lazy" class="skeleton-loader"></span>
-                    <app-amount [blockConversion]="tx.price" *ngIf="vin.prevout" [satoshis]="vin.prevout.value"></app-amount>
+                    <app-amount [blockConversion]="tx.price" [forceBlockConversion]="!!tx.status?.confirmed" *ngIf="vin.prevout" [satoshis]="vin.prevout.value"></app-amount>
                   </ng-template>
                 </td>
               </tr>
@@ -234,7 +234,7 @@
                                   @if (!showFullWitness[vindex][windex]) {
                                     <span i18n="show-all">Show all</span>
                                   } @else {
-                                    <span i18n="show-less">Show less</span>
+                                    <span i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                                   }
                                 </label>
                               </div>
@@ -263,7 +263,7 @@
                               <span *ngIf="!showFullScript[vindex]">...</span>
                               <label class="btn btn-sm btn-primary mt-2" (click)="toggleShowFullScript(vindex)" style="margin-left: auto;">
                                 <span *ngIf="!showFullScript[vindex]" i18n="show-all">Show all</span>
-                                <span *ngIf="showFullScript[vindex]" i18n="show-less">Show less</span>
+                                <span *ngIf="showFullScript[vindex]" i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                               </label>
                             </div>
                           </td>
@@ -278,7 +278,7 @@
                               <span *ngIf="!showFullScript[vindex]">...</span>
                               <label class="btn btn-sm btn-primary mt-2" (click)="toggleShowFullScript(vindex)" style="margin-left: auto;">
                                 <span *ngIf="!showFullScript[vindex]" i18n="show-all">Show all</span>
-                                <span *ngIf="showFullScript[vindex]" i18n="show-less">Show less</span>
+                                <span *ngIf="showFullScript[vindex]" i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                               </label>
                             </div>
                           </td>
@@ -308,7 +308,7 @@
                 <button class="btn btn-sm btn-primary mt-2" (click)="showMoreInputs(tx)">
                   <span *ngIf="getVinLimit(tx, true) >= tx.vin.length; else showMoreInputsLabel" i18n="show-all">Show all</span>
                   <ng-template #showMoreInputsLabel>
-                    <span i18n="show-more">Show more</span>
+                    <span i18n="show-more" i18n="@@bch.txs.more">Show more</span>
                   </ng-template>
                   (<ng-container *ngTemplateOutlet="xRemaining; context: {$implicit: tx.vin.length - getVinLimit(tx)}"></ng-container>)
                 </button>
@@ -369,9 +369,9 @@
                               <ng-container *ngIf="(showDetails$ | async) === false">
                                 @if ((vout.scriptpubkey_asm | hex2ascii).length > 200) {
                                   @if (!showFullOpReturnPreview[vindex]) {
-                                    <span class="badge bg-primary" (click)="toggleShowFullOpReturnPreview(vindex)">Show more</span>
+                                    <span class="badge bg-primary" (click)="toggleShowFullOpReturnPreview(vindex)" i18n="@@bch.txs.more">Show more</span>
                                   } @else {
-                                    <span class="badge bg-primary" (click)="toggleShowFullOpReturnPreview(vindex)">Show less</span>
+                                    <span class="badge bg-primary" (click)="toggleShowFullOpReturnPreview(vindex)" i18n="@@bch.txs.less">Show less</span>
                                   }
                                 }
                               </ng-container>
@@ -395,7 +395,7 @@
                     </ng-template>
                   </ng-template>
                   <ng-template #defaultOutput>
-                    <app-amount [blockConversion]="tx.price" [satoshis]="vout.value"></app-amount>
+                    <app-amount [blockConversion]="tx.price" [forceBlockConversion]="!!tx.status?.confirmed" [satoshis]="vout.value"></app-amount>
                     <div *ngIf="vout.tokenData as token" class="small text-secondary" style="white-space:normal;overflow-wrap:anywhere">
                       CashToken {{ token.category }}<br>{{ token.amount }} base units <span *ngIf="token.nft">· NFT {{ token.nft.capability }} · {{ token.nft.commitment }}</span>
                     </div>
@@ -453,7 +453,7 @@
                             <span *ngIf="!showFullScriptPubkeyAsm[vindex]">...</span>
                             <label class="btn btn-sm btn-primary mt-2" (click)="toggleShowFullScriptPubkeyAsm(vindex)" style="margin-left: auto;">
                               <span *ngIf="!showFullScriptPubkeyAsm[vindex]" i18n="show-all">Show all</span>
-                              <span *ngIf="showFullScriptPubkeyAsm[vindex]" i18n="show-less">Show less</span>
+                              <span *ngIf="showFullScriptPubkeyAsm[vindex]" i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                             </label>
                           </div>
                         </td>
@@ -470,7 +470,7 @@
                             <span *ngIf="!showFullScriptPubkeyHex[vindex]">...</span>
                             <label class="btn btn-sm btn-primary mt-2" (click)="toggleShowFullScriptPubkeyHex(vindex)" style="margin-left: auto;">
                               <span *ngIf="!showFullScriptPubkeyHex[vindex]" i18n="show-all">Show all</span>
-                              <span *ngIf="showFullScriptPubkeyHex[vindex]" i18n="show-less">Show less</span>
+                              <span *ngIf="showFullScriptPubkeyHex[vindex]" i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                             </label>
                           </div>
                         </td>
@@ -487,7 +487,7 @@
                             <span *ngIf="!showFullOpReturnData[vindex]">...</span>
                             <label class="btn btn-sm btn-primary mt-2" (click)="toggleShowFullOpReturnData(vindex)" style="margin-left: auto;">
                               <span *ngIf="!showFullOpReturnData[vindex]" i18n="show-all">Show all</span>
-                              <span *ngIf="showFullOpReturnData[vindex]" i18n="show-less">Show less</span>
+                              <span *ngIf="showFullOpReturnData[vindex]" i18n="show-less" i18n="@@bch.txs.less">Show less</span>
                             </label>
                           </div>
                         </td>
@@ -506,7 +506,7 @@
                 <button class="btn btn-sm btn-primary mt-2" (click)="showMoreOutputs(tx)">
                   <span *ngIf="getVoutLimit(tx, true) >= tx.vout.length; else showMoreOutputsLabel" i18n="show-all">Show all</span>
                   <ng-template #showMoreOutputsLabel>
-                    <span i18n="show-more">Show more</span>
+                    <span i18n="show-more" i18n="@@bch.txs.more">Show more</span>
                   </ng-template>
                   (<ng-container *ngTemplateOutlet="xRemaining; context: {$implicit: tx.vout.length - getVoutLimit(tx)}"></ng-container>)
                 </button>
@@ -521,7 +521,7 @@
       <div class="float-start mt-2-5" *ngIf="!transactionPage && !tx.vin[0].is_coinbase && tx.fee !== -1">
         <app-fee-rate [fee]="tx.fee" [weight]="tx.weight"></app-fee-rate>
         <span class="d-none d-sm-inline-block">&nbsp;&ndash; {{ tx.fee | number }} <span class="symbol"
-            i18n="shared.sats">sats</span> <span class="fiat"><app-fiat [blockConversion]="tx.price" [value]="tx.fee"></app-fiat></span></span>
+            i18n="shared.sats">sats</span> <span class="fiat"><app-fiat [blockConversion]="tx.price" [forceBlockConversion]="!!tx.status?.confirmed" [value]="tx.fee"></app-fiat></span></span>
       </div>
       <div class="float-start mt-2-5 grey-info-text" *ngIf="tx.fee === -1" i18n="transactions-list.load-to-reveal-fee-info">Show more inputs to reveal fee data</div>
 
@@ -532,12 +532,12 @@
         <button *ngIf="addresses.length === 0; else viewingAddress" type="button" class="btn btn-sm btn-primary mt-2 ms-2" (click)="switchCurrency()">
           <ng-template [ngIf]="(network === 'liquid' || network === 'liquidtestnet') && haveBlindedOutputValues(tx)" [ngIfElse]="defaultAmount" i18n="shared.confidential">Confidential</ng-template>
           <ng-template #defaultAmount>
-            <app-amount [blockConversion]="tx.price" [satoshis]="getTotalTxOutput(tx)"></app-amount>
+            <app-amount [blockConversion]="tx.price" [forceBlockConversion]="!!tx.status?.confirmed" [satoshis]="getTotalTxOutput(tx)"></app-amount>
           </ng-template>
         </button>
         <ng-template #viewingAddress>
           <button type="button" class="btn btn-sm mt-2 ms-2" (click)="switchCurrency()" [ngClass]="{'btn-success': tx['addressValue'] >= 0, 'btn-danger': tx['addressValue'] < 0}">
-            <app-amount [blockConversion]="tx.price" [satoshis]="tx['addressValue']" [addPlus]="true" [unitStyle]="{color: '#ffffffbb'}"></app-amount>
+            <app-amount [blockConversion]="tx.price" [forceBlockConversion]="!!tx.status?.confirmed" [satoshis]="tx['addressValue']" [addPlus]="true" [unitStyle]="{color: '#ffffffbb'}"></app-amount>
           </button>
         </ng-template>
       </div>

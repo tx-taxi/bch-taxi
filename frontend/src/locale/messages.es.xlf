@@ -1403,7 +1403,7 @@
       </trans-unit>
       <trans-unit id="cb1b52c13b95fa29ea4044f2bbe0ac623b890c80" datatype="html">
         <source>Fee</source>
-        <target>Tasa</target>
+        <target>Comisión</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration-timeline/acceleration-timeline-tooltip.component.html</context>
           <context context-type="linenumber">23</context>
@@ -1450,7 +1450,7 @@
       </trans-unit>
       <trans-unit id="3e322ffba6477484e0dd2e65650fdd70322ea6d0" datatype="html">
         <source>Fee rate</source>
-        <target>Tasa de intercambio</target>
+        <target>Tasa de comisión</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration-timeline/acceleration-timeline-tooltip.component.html</context>
           <context context-type="linenumber">36</context>
@@ -1659,7 +1659,7 @@
       </trans-unit>
       <trans-unit id="cf2ec414465d65ab24b354663d94d051a67e26e9" datatype="html">
         <source>Total vSize</source>
-        <target>Total vSize</target>
+        <target>Tamaño virtual total</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration/acceleration-stats/acceleration-stats.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2721,7 +2721,7 @@
       </trans-unit>
       <trans-unit id="d06e27f7453fcf29134f9e61533ea4eb4b890f5f" datatype="html">
         <source>Featured</source>
-        <target>Featured</target>
+        <target>Destacado</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/assets/assets-nav/assets-nav.component.html</context>
           <context context-type="linenumber">9</context>
@@ -2936,8 +2936,8 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
-        <target>Ver las tasas de comisión de Bitcoin visualizadas a lo largo del tiempo, incluidas las tasas de comisión mínimas y máximas por bloque junto con las tasas de comisión en varios percentiles.</target>
+        <source>See Bitcoin Cash feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <target>Ver las tasas de comisión de Bitcoin Cash visualizadas a lo largo del tiempo, incluidas las tasas de comisión mínimas y máximas por bloque junto con las tasas de comisión en varios percentiles.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>Ver las comisiones promedio de minería ganadas por bloque de Bitcoin, visualizadas en BTC y USD a lo largo del tiempo.</target>
+        <source>See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.</source>
+        <target>Ver las comisiones promedio de minería ganadas por bloque de Bitcoin Cash, visualizadas en BCH y USD a lo largo del tiempo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>Ver las tasas de minería ganadas por bloque de Bitcoin comparado al subsidio de Bitcoin por bloque, en BTC y USD a lo largo del tiempo</target>
+        <source>See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.</source>
+        <target>Ver las tasas de minería ganadas por bloque de Bitcoin Cash comparado al subsidio de Bitcoin Cash por bloque, en BCH y USD a lo largo del tiempo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>Ver recompensas por bloque de Bitcoin en BTC y USD a lo largo del tiempo. Las recompensas por bloque son fondos totales que los mineros ganan del subsidio por bloque y tasas.</target>
+        <source>See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target>Ver recompensas por bloque de Bitcoin Cash en BCH y USD a lo largo del tiempo. Las recompensas por bloque son fondos totales que los mineros ganan del subsidio por bloque y tasas.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target>Ver tamaños de bloque de Bitcoin (MB) y pesos de bloque (unidades de peso) a lo largo del tiempo.</target>
+        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <target>Ver tamaños de bloque de Bitcoin Cash (MB) y pesos de bloque (unidades de peso) a lo largo del tiempo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
-        <target>Ver tamaño, peso, rango de tasas, incluyendo transacciones, auditoría (esperada y actual) para el bloque de Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>  <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</target>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
+        <target>Ver tamaño, peso, rango de tasas, incluyendo transacciones, auditoría (esperada y actual) para el bloque de Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>  <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -3690,7 +3690,7 @@
       </trans-unit>
       <trans-unit id="07193288a0312875e18f38c3a2486b927a15520a" datatype="html">
         <source>Timestamp</source>
-        <target>Timestamp</target>
+        <target>Fecha y hora</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block-preview.component.html</context>
           <context context-type="linenumber">26</context>
@@ -4077,7 +4077,7 @@
       </trans-unit>
       <trans-unit id="1da6d9283e3222148d76c10c8e37abeeb66c93cb" datatype="html">
         <source>Actual</source>
-        <target>Actual</target>
+        <target>Real</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">248</context>
@@ -4216,7 +4216,7 @@
       </trans-unit>
       <trans-unit id="cbfb79ff517493268a49acffa81ecc02336d8372" datatype="html">
         <source>Block Header Hex</source>
-        <target>Block Header Hex</target>
+        <target>Cabecera del bloque en hexadecimal</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">357</context>
@@ -4433,7 +4433,7 @@
       </trans-unit>
       <trans-unit id="c20172223f84462032664d717d739297e5a9e2fe" datatype="html">
         <source>Fees</source>
-        <target>Tasas</target>
+        <target>Comisiones</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.html</context>
           <context context-type="linenumber">23</context>
@@ -4593,7 +4593,7 @@
       </trans-unit>
       <trans-unit id="86d26b45470e43b409e589517922276109138e87" datatype="html">
         <source>Transaction Fees</source>
-        <target>Tasa de Transacción</target>
+        <target>Comisiones de transacción</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/custom-dashboard/custom-dashboard.component.html</context>
           <context context-type="linenumber">8</context>
@@ -5710,7 +5710,7 @@
       </trans-unit>
       <trans-unit id="7a080851e25a41e898776a9c90cf8dbe81027f9a" datatype="html">
         <source>Output</source>
-        <target>Output</target>
+        <target>Salida</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/federation-utxos-list/federation-utxos-list.component.html</context>
           <context context-type="linenumber">8</context>
@@ -6099,7 +6099,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <source>Get real-time Bitcoin Cash mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
         <target>Obtén estadísticas de minería en tiempo real como tasa de hash, ajuste de dificultad, recompensa por bloque, dominancia de pool, y más.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
@@ -6699,16 +6699,16 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
-        <target>Precio de Bitcoin</target>
+        <source>Bitcoin Cash Price</source>
+        <target>Precio de Bitcoin Cash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
-        <target>Ver el precio de Bitcoin en USD visualizado a lo largo del tiempo.</target>
+        <source>See the Bitcoin Cash price in USD visualized over time.</source>
+        <target>Ver el precio de Bitcoin Cash en USD visualizado a lo largo del tiempo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">78</context>
@@ -8451,7 +8451,7 @@
       </trans-unit>
       <trans-unit id="3e242f213dd1a0754aad9164aa80887d67708500" datatype="html">
         <source>Input</source>
-        <target>Input</target>
+        <target>Entrada</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/tx-bowtie-graph-tooltip/tx-bowtie-graph-tooltip.component.html</context>
           <context context-type="linenumber">42</context>
@@ -8861,15 +8861,15 @@
       </trans-unit>
       <trans-unit id="meta.title.docs.faq" datatype="html">
         <source>FAQ</source>
-        <target>Preguntas frequentes</target>
+        <target>Preguntas frecuentes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Obtén respuestas a preguntas comunes como: Qué es una mempool? Por qué no se confirma mi transacción? Cómo puedo correr mi instancia del Proyecto Open Source Mempool? Y más.</target>
+        <source>Read about Bitcoin Cash blocks, transactions, CashAddr addresses, CashTokens, fees, pending data, and mining coverage.</source>
+        <target>Lee sobre bloques, transacciones, direcciones CashAddr, CashTokens, comisiones, datos pendientes y minería de Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -8892,8 +8892,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>Documentación para el servicio REST API: obtén información sobre direcciones, transacciones, bloques, tasas, la red Lightning y más.</target>
+        <source>Documentation for the bch.tx.taxi REST API: query Bitcoin Cash addresses, transactions, blocks, fees, mining, and network data.</source>
+        <target>Documentación de la API REST de bch.tx.taxi: consulta direcciones, transacciones, bloques, comisiones, minería y datos de la red Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -8916,8 +8916,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Documentación para el servicio Websocket API de mempool.space: obtén información en tiempo real sobre bloques, mempools, transacciones, direcciones y más.</target>
+        <source>Documentation for the bch.tx.taxi WebSocket API: receive Bitcoin Cash snapshots and track a transaction.</source>
+        <target>Documentación de la API WebSocket de bch.tx.taxi: recibe instantáneas de Bitcoin Cash y sigue una transacción.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -10965,7 +10965,7 @@
       </trans-unit>
       <trans-unit id="2da938f28079d0d1ba372c5290b1bb1c18cf077c" datatype="html">
         <source>fee</source>
-        <target>tasa</target>
+        <target>comisión</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/address-type/address-type.component.html</context>
           <context context-type="linenumber">3</context>
@@ -11356,7 +11356,7 @@
       </trans-unit>
       <trans-unit id="2259944601214794924" datatype="html">
         <source>Sighash Flags</source>
-        <target>Sighash Flags</target>
+        <target>Indicadores Sighash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/filters.utils.ts</context>
           <context context-type="linenumber">125</context>
@@ -11476,7 +11476,7 @@
       </trans-unit>
       <trans-unit id="2799825781368047816" datatype="html">
         <source>Transaction fee</source>
-        <target>Tasa de transacción</target>
+        <target>Comisión de transacción</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/pipes/scriptpubkey-type-pipe/scriptpubkey-type.pipe.ts</context>
           <context context-type="linenumber">12</context>
@@ -11490,6 +11490,334 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
+      <trans-unit id="tx-taxi.unconfirmed" datatype="html"><source>Unconfirmed</source><target>Sin confirmar</target></trans-unit>
+      <trans-unit id="tx-taxi.incoming-transactions" datatype="html"><source>Incoming Transactions</source><target>Transacciones entrantes</target></trans-unit>
+      <trans-unit id="tx-taxi.block-fees" datatype="html"><source>Block Fees</source><target>Comisiones del bloque</target></trans-unit>
+      <trans-unit id="tx-taxi.median-rate" datatype="html"><source>Median rate</source><target>Tasa mediana</target></trans-unit>
+      <trans-unit id="tx-taxi.total-fees" datatype="html"><source>Total fees</source><target>Comisiones totales</target></trans-unit>
+      <trans-unit id="tx-taxi.view-transactions" datatype="html"><source>View transactions</source><target>Ver transacciones</target></trans-unit>
+      <trans-unit id="tx-taxi.no-recent" datatype="html"><source>No recent transactions.</source><target>No hay transacciones recientes.</target></trans-unit>
+      <trans-unit id="tx-taxi.retrying" datatype="html"><source>Unavailable. Retrying…</source><target>No disponible. Reintentando…</target></trans-unit>
+      <trans-unit id="tx-taxi.reconnecting" datatype="html"><source>Reconnecting…</source><target>Reconectando…</target></trans-unit>
+      <trans-unit id="tx-taxi.recent-transactions" datatype="html"><source>Recent Transactions</source><target>Transacciones recientes</target></trans-unit>
+      <trans-unit id="tx-taxi.loading-blocks" datatype="html"><source>Loading blocks…</source><target>Cargando bloques…</target></trans-unit>
+      <trans-unit id="tx-taxi.chart-unavailable" datatype="html"><source>Chart unavailable.</source><target>Gráfico no disponible.</target></trans-unit>
+      <trans-unit id="tx-taxi.view-pending" datatype="html"><source>View pending transactions</source><target>Ver transacciones pendientes</target></trans-unit>
+      <trans-unit id="tx-taxi.not-available" datatype="html"><source>Not available</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.incoming-rate" datatype="html"><source>Incoming rate</source><target>Tasa entrante</target></trans-unit>
+      <trans-unit id="tx-taxi.unavailable" datatype="html"><source>Unavailable</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.feed-cadence" datatype="html"><source>Feed cadence</source><target>Frecuencia de actualización</target></trans-unit>
+      <trans-unit id="tx-taxi.seconds-120" datatype="html"><source>120 seconds</source><target>120 segundos</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.difficulty" datatype="html"><source>difficulty</source><target>dificultad</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.rewards" datatype="html"><source>rewards</source><target>recompensas</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.dash-network" datatype="html"><source>Dash Network</source><target>Red de Dash</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.block-rewards" datatype="html"><source>Block Rewards</source><target>Recompensas por bloque</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.current-difficulty" datatype="html"><source>Current difficulty</source><target>Dificultad actual</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.recent-block-interval" datatype="html"><source>Recent block interval</source><target>Intervalo reciente entre bloques</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.target-interval" datatype="html"><source>Target interval</source><target>Intervalo objetivo</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.coinbase-outputs" datatype="html"><source>Coinbase outputs</source><target>Salidas coinbase</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.annual-subsidy-reduction" datatype="html"><source>Annual subsidy reduction</source><target>Reducción anual del subsidio</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.waiting-blocks" datatype="html"><source>Waiting for block data</source><target>Esperando datos de bloques</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.scrypt-mining" datatype="html"><source>Scrypt Mining</source><target>Minería Scrypt</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.network" datatype="html"><source>network</source><target>red</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.difficulty-title" datatype="html"><source>Difficulty</source><target>Dificultad</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.merged-mining" datatype="html"><source>Merged mining</source><target>Minería fusionada</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.no-halving" datatype="html"><source>No halving</source><target>Sin reducción a la mitad</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.doge-subsidy" datatype="html"><source>DOGE subsidy</source><target>Subsidio en DOGE</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.latest-fees" datatype="html"><source>Latest block fees</source><target>Comisiones del último bloque</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.average-block-time" datatype="html"><source>Average block time</source><target>Tiempo medio entre bloques</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.not-available-difficulty" datatype="html"><source>Not available</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.global.explore" datatype="html"><source>Explore</source><target>Explorar</target></trans-unit>
+      <trans-unit id="tx-taxi.global.dashboard" datatype="html"><source>Dashboard</source><target>Panel principal</target></trans-unit>
+      <trans-unit id="tx-taxi.global.recent-blocks" datatype="html"><source>Recent Blocks</source><target>Bloques recientes</target></trans-unit>
+      <trans-unit id="tx-taxi.global.tools-docs" datatype="html"><source>Tools &amp; Docs</source><target>Herramientas y documentación</target></trans-unit>
+      <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source><target>Calculadora</target></trans-unit>
+      <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source><target>Documentación de la API</target></trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source><target>Acerca de</target></trans-unit>
+      <trans-unit id="tx-taxi.global.source-code" datatype="html"><source>Source code</source><target>Código fuente</target></trans-unit>
+      <trans-unit id="tx-taxi.global.status" datatype="html"><source>Status</source><target>Estado</target></trans-unit>
+      <trans-unit id="tx-taxi.global.contact" datatype="html"><source>Contact Us</source><target>Contáctanos</target></trans-unit>
+      <trans-unit id="tx-taxi.global.legal" datatype="html"><source>Legal</source><target>Legal</target></trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source><target>Términos de servicio</target></trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source><target>Política de privacidad</target></trans-unit>
+      <trans-unit id="tx-taxi.global.trademark" datatype="html"><source>Trademark &amp; Attribution</source><target>Marcas y atribuciones</target></trans-unit>
+      <trans-unit id="tx-taxi.global.selected" datatype="html"><source>SELECTED</source><target>SELECCIONADO</target></trans-unit>
+      <trans-unit id="tx-taxi.global.automatic-routing" datatype="html"><source>Automatic Routing</source><target>Enrutamiento automático</target></trans-unit>
+      <trans-unit id="tx-taxi.global.view-hub" datatype="html"><source>View Hub</source><target>Ver centro</target></trans-unit>
+      <trans-unit id="tx-taxi.global.native" datatype="html"><source>NATIVE EXPLORERS</source><target>EXPLORADORES NATIVOS</target></trans-unit>
+      <trans-unit id="tx-taxi.global.thirdparty" datatype="html"><source>3RD-PARTY EXPLORERS</source><target>EXPLORADORES DE TERCEROS</target></trans-unit>
+      <trans-unit id="tx-taxi.global.opened" datatype="html"><source>Opened</source><target>Abierto</target></trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html"><source>Open</source><target>Abrir</target></trans-unit>
+      <trans-unit id="tx-taxi.global.loading-explorers" datatype="html"><source>Loading explorers</source><target>Cargando exploradores</target></trans-unit>
+      <trans-unit id="tx-taxi.global.search-placeholder" datatype="html"><source>Wave a taxi, paste anything here.</source><target>Pide un taxi, pega lo que quieras aquí.</target></trans-unit>
+      <trans-unit id="tx-taxi.global.tagline" datatype="html"><source>Bitcoin Cash blocks, fees, and mempool activity</source><target>Bloques, comisiones y actividad de la mempool de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="tx-taxi.label.minimum" datatype="html"><source>Minimum</source><target>Mínimo</target></trans-unit>
+      <trans-unit id="tx-taxi.label.median" datatype="html"><source>Median</source><target>Mediana</target></trans-unit>
+      <trans-unit id="tx-taxi.label.percentile75" datatype="html"><source>75th percentile</source><target>Percentil 75</target></trans-unit>
+      <trans-unit id="tx-taxi.label.maximum" datatype="html"><source>Maximum</source><target>Máximo</target></trans-unit>
+      <trans-unit id="tx-taxi.label.difficulty-heading" datatype="html"><source>Difficulty Adjustment</source><target>Ajuste de dificultad</target></trans-unit>
+      <trans-unit id="tx-taxi.label.halving-label" datatype="html"><source>halving</source><target>reducción a la mitad</target></trans-unit>
+      <trans-unit id="tx-taxi.address-unavailable" datatype="html"><source>Unavailable</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.block-serialized-size" datatype="html"><source>Transactions by serialized size</source><target>Transacciones por tamaño serializado</target></trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html"><source>Error loading CPFP data</source><target>Error al cargar los datos de CPFP</target></trans-unit>
+      <trans-unit id="tx-taxi.internal-key" datatype="html"><source>Internal Key</source><target>Clave interna</target></trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html"><source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source><target>No se han cargado las salidas anteriores que faltan. Algunos campos, como la tasa de comisión, no se pueden calcular.</target></trans-unit>
+      <trans-unit id="tx-taxi.no-replacements" datatype="html"><source>No replacements in the current feed.</source><target>No hay reemplazos en la fuente actual.</target></trans-unit>
+      <trans-unit id="tx-taxi.pending-list-link" datatype="html"><source>View pending transactions as a list.</source><target>Ver las transacciones pendientes en una lista.</target></trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html"><source>Error loading missing prevouts</source><target>Error al cargar las salidas anteriores que faltan</target></trans-unit>
+      <trans-unit id="tx-taxi.replacements-reconnecting" datatype="html"><source>Replacement updates unavailable. Reconnecting...</source><target>Las actualizaciones de reemplazos no están disponibles. Reconectando...</target></trans-unit>
+      <trans-unit id="tx-taxi.webgl-unavailable" datatype="html"><source>WebGL is unavailable.</source><target>WebGL no está disponible.</target></trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html"><source>sat/B</source><target>sat/B</target></trans-unit>
+      <trans-unit id="6693ca41dea3f8a2b1747ba08e3f780c52d074bf" datatype="html"><source>Using partner code</source><target>Usando código de colaborador</target></trans-unit>
+      <trans-unit id="756c97c3a9cdcdded762c68fbc7d92c001a8a49f" datatype="html"><source>Total UTXOs</source><target>UTXO totales</target></trans-unit>
+      <trans-unit id="2e3846407bdaeefb0d65f58c568b93e01f5eb4ca" datatype="html"><source>BCH</source><target>BCH</target></trans-unit>
+      <trans-unit id="graphs.blockFees.feesBtc" datatype="html"><source>Fees BCH</source><target>Comisiones en BCH</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidy" datatype="html"><source>Subsidy</source><target>Subsidio</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source><target>Comisiones</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyUsd" datatype="html"><source>Subsidy (USD)</source><target>Subsidio (USD)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesUsd" datatype="html"><source>Fees (USD)</source><target>Comisiones (USD)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyPercent" datatype="html"><source>Subsidy (%)</source><target>Subsidio (%)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesPercent" datatype="html"><source>Fees (%)</source><target>Comisiones (%)</target></trans-unit>
+      <trans-unit id="e0f4283c19259f2bd53940324cb490f797b9aae4" datatype="html"><source>select filter categories to highlight matching pending transactions</source><target>Selecciona categorías de filtros para destacar las transacciones pendientes coincidentes</target></trans-unit>
+      <trans-unit id="f4768466d6207e92279b4f0971349f4e1bf44d86" datatype="html"><source>Fee comparison for a 140-byte serialized BCH transaction</source><target>Comparación de comisiones para una transacción BCH serializada de 140 bytes</target></trans-unit>
+      <trans-unit id="11daad3d9cbd04a35424c70717b919265e8b067e" datatype="html"><source> Values were capped at the max supply of 21M BCH </source><target> Los valores se limitaron a la oferta máxima de 21 millones de BCH </target></trans-unit>
+      <trans-unit id="1cdb643999eb6d66bcd839aeaa381b62b8be8cd4" datatype="html"><source>mempool chunk</source><target>grupo de la mempool</target></trans-unit>
+      <trans-unit id="36028650a60cba9aa7f034ae34643c72f5364f1d" datatype="html"><source>this transaction</source><target>esta transacción</target></trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source><target>Tamaño</target></trans-unit>
+      <trans-unit id="1eb8a98f68c1c98884c6436650f5ad80f4b3d5bf" datatype="html"><source>parents</source><target>antecesoras</target></trans-unit>
+      <trans-unit id="94c4e242e055d9521e1a0bfc7f1d165bbb37b94a" datatype="html"><source>children</source><target>descendientes</target></trans-unit>
+      <trans-unit id="d1ca10f0337c02e631f15b7da5d57dddc1954704" datatype="html"><source>parent</source><target>antecesora</target></trans-unit>
+      <trans-unit id="016d2ff8ad4b04f08717b98b5bc61eb122fb1ac8" datatype="html"><source>child</source><target>descendiente</target></trans-unit>
+      <trans-unit id="dcc1ed3dbf5b3519156543db008e9507266b05a3" datatype="html"><source> Halving Countdown
+</source><target> Cuenta atrás hasta la reducción a la mitad
+</target></trans-unit>
+      <trans-unit id="72a4d409f89fe244682950b6112fe023f603033b" datatype="html"><source> Difficulty drift </source><target> Variación de dificultad </target></trans-unit>
+      <trans-unit id="7b93aee3d7ce363e538d9bf63f6a61b0ac26e227" datatype="html"><source> Difficulty Δ </source><target> Variación de dificultad Δ </target></trans-unit>
+      <trans-unit id="ac0f81713a84217c9bd1d9bb460245d8190b073f" datatype="html"><source>More</source><target>Más</target></trans-unit>
+      <trans-unit id="4ce06818b8fe60a7c040ce7bfecc10b11397401b" datatype="html"><source>24h Volume</source><target>Volumen de 24 h</target></trans-unit>
+      <trans-unit id="7729adad4cbe5f490e393a925fae8a9b90f8ac08" datatype="html"><source>Reserve Deficit</source><target>Déficit de reservas</target></trans-unit>
+      <trans-unit id="489277af67abab02f1de98f4a7930fc611471eda" datatype="html"><source>occurrence</source><target>ocurrencia</target></trans-unit>
+      <trans-unit id="850e39efd95e6090598e13a01b7825f6b71b1017" datatype="html"><source>occurrences</source><target>ocurrencias</target></trans-unit>
+      <trans-unit id="57d63f33e6e6f3d4716fab5381cff30d517d5c4e" datatype="html"><source>usages</source><target>usos</target></trans-unit>
+      <trans-unit id="5983c6a2299b646b3aecc5795ed51573d7cd235a" datatype="html"><source>The overall luck of all mining pools over the past week. A luck bigger than 100% means the average block time for the current epoch is less than 2.5 minutes.</source><target>La suerte total de todos los grupos de minería durante la última semana. Una suerte superior al 100 % significa que el tiempo medio por bloque en la época actual es inferior a 2,5 minutos.</target></trans-unit>
+      <trans-unit id="2d309ecab27ff28f0c965cd9aa8602361dbd7c80" datatype="html"><source>Bitcoin Cash Price</source><target>Precio de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="e8a4613f04749ce822333d2103b1ef508a771091" datatype="html"><source>Maximum fee rate (sat/B)</source><target>Tasa máxima de comisión (sat/B)</target></trans-unit>
+      <trans-unit id="6d1c8856044cc923fc70f32cb4be360d200cfa82" datatype="html"><source>1 new transaction</source><target>1 transacción nueva</target></trans-unit>
+      <trans-unit id="487bebf9352332c5e7f5bd00a78371cacff0fd95" datatype="html"><source>Pause/Resume</source><target>Pausar/Reanudar</target></trans-unit>
+      <trans-unit id="88f27d579752fd40ef53cfff5e936c293ca19221" datatype="html"><source>Pause/Resume</source><target>Pausar/Reanudar</target></trans-unit>
+      <trans-unit id="bba7a55b8bcbfd50a697f8cf0a7b917836f453f0" datatype="html"><source>vSize</source><target>Tamaño virtual</target></trans-unit>
+      <trans-unit id="recent-transactions-title" datatype="html"><source>Recent Transactions</source><target>Transacciones recientes</target></trans-unit>
+      <trans-unit id="3e98f606390aee94769b197289de593f5d09cec7" datatype="html"><source>BCH/block</source><target>BCH/bloque</target></trans-unit>
+      <trans-unit id="f3dac0e65a05dcc98ad1b7d0523a819aa91acc10" datatype="html"><source>Mempool by vBytes (sat/Byte)</source><target>Mempool por bytes virtuales (sat/byte)</target></trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html"><source>In a mempool cluster containing 1 other chunk.</source><target>En un clúster de la mempool que contiene otro grupo.</target></trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source><target>Clúster</target></trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html"><source>LBTC Supply vs. BTC Holdings</source><target>Oferta de LBTC frente a tenencias de BTC</target></trans-unit>
+      <trans-unit id="c3c520c2bccb5da8e432dd5f282a72b05e12b7e0" datatype="html"><source>Your balance is too low.</source><target>Tu saldo es demasiado bajo.</target></trans-unit>
+      <trans-unit id="bch.about.title" datatype="html"><source>About bch.tx.taxi</source><target>Acerca de bch.tx.taxi</target></trans-unit>
+      <trans-unit id="bch.about.family" datatype="html"><source>The Bitcoin Cash explorer in the tx.taxi family.</source><target>El explorador de Bitcoin Cash de la familia tx.taxi.</target></trans-unit>
+      <trans-unit id="bch.about.project-links" datatype="html"><source>Project links</source><target>Enlaces del proyecto</target></trans-unit>
+      <trans-unit id="bch.about.docs" datatype="html"><source>Bitcoin Cash documentation</source><target>Documentación de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.about.contact" datatype="html"><source>Contact the maintainer</source><target>Contactar con el responsable</target></trans-unit>
+      <trans-unit id="bch.about.intro" datatype="html"><source>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</source><target>bch.tx.taxi es el explorador de Bitcoin Cash de la familia multicadena tx.taxi. Explora bloques, transacciones, direcciones, actividad minera y comisiones de Bitcoin Cash.</target></trans-unit>
+      <trans-unit id="bch.about.data" datatype="html"><source>Bitcoin Cash data</source><target>Datos de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.about.details" datatype="html"><source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source><target>1 BCH equivale a 100.000.000 satoshis. Las comisiones se expresan en satoshis por byte serializado: BCH no tiene el descuento de peso de SegWit. Las direcciones CashAddr y heredadas corresponden a Bitcoin Cash. BCH ajusta la dificultad con ASERT en cada bloque, tiene un objetivo de 600 segundos y reduce el subsidio a la mitad cada 210.000 bloques.</target></trans-unit>
+      <trans-unit id="bch.about.opensource" datatype="html"><source>Built on open source</source><target>Basado en código abierto</target></trans-unit>
+      <trans-unit id="bch.docs.one-search" datatype="html"><source>One search across chains.</source><target>Una búsqueda en varias cadenas.</target></trans-unit>
+      <trans-unit id="bch.docs.intro" datatype="html"><source>Paste a transaction, block or address into tx.taxi. Open a confirmed match, choose between possible networks, or head straight to your chain’s explorer.</source><target>Pega una transacción, un bloque o una dirección en tx.taxi. Abre una coincidencia confirmada, elige entre las redes posibles o ve directamente al explorador de tu cadena.</target></trans-unit>
+      <trans-unit id="bch.docs.title" datatype="html"><source>Documentation</source><target>Documentación</target></trans-unit>
+      <trans-unit id="bch.docs.explorer-guide" datatype="html"><source>Explorer guide</source><target>Guía del explorador</target></trans-unit>
+      <trans-unit id="bch.docs.faq-intro" datatype="html"><source>A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</source><target>Una guía práctica de los datos públicos de Bitcoin Cash que muestra bch.tx.taxi.</target></trans-unit>
+      <trans-unit id="bch.docs.rest-intro" datatype="html"><source>The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</source><target>La API REST es de solo lectura y se sirve desde el origen de este explorador. Los ejemplos usan el servidor público; usa tu servidor actual para el desarrollo local.</target></trans-unit>
+      <trans-unit id="bch.docs.ws-intro" datatype="html"><source>Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</source><target>Conéctate al punto de acceso WebSocket para recibir la instantánea actual de BCH y seguir una transacción.</target></trans-unit>
+      <trans-unit id="bch.docs.description" datatype="html"><source>Description</source><target>Descripción</target></trans-unit>
+      <trans-unit id="bch.docs.example" datatype="html"><source>Example</source><target>Ejemplo</target></trans-unit>
+      <trans-unit id="bch.docs.response" datatype="html"><source>Response shape</source><target>Formato de la respuesta</target></trans-unit>
+      <trans-unit id="bch.api.c39d646f1076" datatype="html"><source>Explorer</source><target>Explorador</target></trans-unit>
+      <trans-unit id="bch.api.1eec714f7565" datatype="html"><source>Using the explorer</source><target>Uso del explorador</target></trans-unit>
+      <trans-unit id="bch.api.cdaa99d19f5d" datatype="html"><source>Search blocks, transactions and addresses</source><target>Buscar bloques, transacciones y direcciones</target></trans-unit>
+      <trans-unit id="bch.api.0941c7a7fb57" datatype="html"><source>Search supports BCH block heights, block hashes, transaction IDs, CashAddr and legacy BCH addresses. A 64-character hash can be meaningful on more than one chain, so tx.taxi keeps the chain selector available when resolution is ambiguous.</source><target>La búsqueda admite alturas y hashes de bloques BCH, ID de transacciones y direcciones BCH CashAddr o heredadas. Un hash de 64 caracteres puede ser válido en varias cadenas, por lo que tx.taxi mantiene disponible el selector de cadenas cuando la búsqueda es ambigua.</target></trans-unit>
+      <trans-unit id="bch.api.c10f2ddabaf6" datatype="html"><source>Amounts, fees and pending data</source><target>Importes, comisiones y datos pendientes</target></trans-unit>
+      <trans-unit id="bch.api.56b1e0a35391" datatype="html"><source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source><target>1 BCH equivale a 100.000.000 satoshis. Este explorador muestra las tasas de comisión en satoshis por byte serializado (sat/B). Los datos pendientes son observaciones de un nodo BCHN y pueden diferir de los de otro nodo o minero. Las comisiones observadas sirven como orientación; no garantizan la confirmación.</target></trans-unit>
+      <trans-unit id="bch.api.76179aafc43c" datatype="html"><source>Addresses</source><target>Direcciones</target></trans-unit>
+      <trans-unit id="bch.api.39bb285b7674" datatype="html"><source>Addresses and UTXOs</source><target>Direcciones y UTXO</target></trans-unit>
+      <trans-unit id="bch.api.82807f2596fd" datatype="html"><source>CashAddr and legacy addresses</source><target>Direcciones CashAddr y heredadas</target></trans-unit>
+      <trans-unit id="bch.api.b93805e8f246" datatype="html"><source>CashAddr may include the bitcoincash: prefix. Legacy 1/3 addresses are shared with Bitcoin-derived networks, so they need explicit chain context. Address history is indexed in pages of 25 transactions; the balance endpoint reports source-provided UTXO totals.</source><target>CashAddr puede incluir el prefijo bitcoincash:. Las direcciones heredadas 1/3 se comparten con redes derivadas de Bitcoin, por lo que necesitan un contexto de cadena explícito. El historial se indexa en páginas de 25 transacciones; el punto de balance muestra los totales de UTXO facilitados por la fuente.</target></trans-unit>
+      <trans-unit id="bch.api.5e3c15a2c421" datatype="html"><source>CashTokens</source><target>CashTokens</target></trans-unit>
+      <trans-unit id="bch.api.a337f87ebca0" datatype="html"><source>CashTokens are decoded only when the BCHN source provides token data for an output. The displayed category and raw token units are separate from the BCH value of that output. This explorer does not infer input token quantities, token names, symbols, or decimal scales when the source does not verify them.</source><target>Los CashTokens se decodifican solo cuando la fuente BCHN proporciona datos del token para una salida. La categoría mostrada y las unidades sin procesar del token son independientes del valor BCH de esa salida. El explorador no infiere cantidades de tokens de entrada, nombres, símbolos ni escalas decimales que la fuente no haya verificado.</target></trans-unit>
+      <trans-unit id="bch.api.1744b96470b5" datatype="html"><source>Network</source><target>Red</target></trans-unit>
+      <trans-unit id="bch.api.ca5269163ce4" datatype="html"><source>Blocks, mining and availability</source><target>Bloques, minería y disponibilidad</target></trans-unit>
+      <trans-unit id="bch.api.b9996ce6807d" datatype="html"><source>Mining coverage</source><target>Cobertura de minería</target></trans-unit>
+      <trans-unit id="bch.api.564fceac942f" datatype="html"><source>The mining view derives recent reward, fee, difficulty and elapsed-work hashrate estimates from the latest indexed blocks. It is a recent-window view, not a long-range mining history. Bitcoin Cash targets roughly 600 seconds per block; ASERT adjusts difficulty after each block.</source><target>La vista de minería calcula estimaciones recientes de recompensas, comisiones, dificultad y tasa de hash según el trabajo transcurrido a partir de los últimos bloques indexados. Muestra una ventana reciente, no un historial de minería a largo plazo. Bitcoin Cash apunta a unos 600 segundos por bloque; ASERT ajusta la dificultad después de cada bloque.</target></trans-unit>
+      <trans-unit id="bch.api.188a992e372f" datatype="html"><source>Data availability</source><target>Disponibilidad de datos</target></trans-unit>
+      <trans-unit id="bch.api.e3d5456b1785" datatype="html"><source>The explorer reads indexed BCH data from Haskoin and uses BCHN-derived Selene data for pending transactions and token output details. A provider failure is reported as unavailable rather than a missing entity. Historical fiat conversion is not available; the displayed USD price is current only.</source><target>El explorador obtiene los datos BCH indexados de Haskoin y usa datos de Selene procedentes de BCHN para transacciones pendientes y detalles de salidas de tokens. Un fallo del proveedor se muestra como no disponible, no como una entidad inexistente. La conversión histórica a moneda fiduciaria no está disponible; el precio en USD mostrado es solo el actual.</target></trans-unit>
+      <trans-unit id="bch.api.dae0896cbc2c" datatype="html"><source>Chain</source><target>Cadena</target></trans-unit>
+      <trans-unit id="bch.api.10f165b0b925" datatype="html"><source>Chain data</source><target>Datos de la cadena</target></trans-unit>
+      <trans-unit id="bch.api.ad8a8fcaea17" datatype="html"><source>Get tip height</source><target>Obtener la altura más reciente</target></trans-unit>
+      <trans-unit id="bch.api.5a2f8561253a" datatype="html"><source>Returns the current indexed BCH tip height as plain text.</source><target>Devuelve como texto la altura del último bloque BCH indexado.</target></trans-unit>
+      <trans-unit id="bch.api.e37f9cf4bc1f" datatype="html"><source>Get tip hash</source><target>Obtener el hash más reciente</target></trans-unit>
+      <trans-unit id="bch.api.2dee16e3eaad" datatype="html"><source>Returns the current indexed BCH tip hash as plain text.</source><target>Devuelve como texto el hash del último bloque BCH indexado.</target></trans-unit>
+      <trans-unit id="bch.api.1cd5a6687bb7" datatype="html"><source>Blocks</source><target>Bloques</target></trans-unit>
+      <trans-unit id="bch.api.eb394d9bf41f" datatype="html"><source>Resolve a block height</source><target>Resolver la altura de un bloque</target></trans-unit>
+      <trans-unit id="bch.api.b1cac68961c2" datatype="html"><source>Resolves a block height to its block hash.</source><target>Resuelve una altura de bloque a su hash.</target></trans-unit>
+      <trans-unit id="bch.api.12c2ec9f2443" datatype="html"><source>Get a block</source><target>Obtener un bloque</target></trans-unit>
+      <trans-unit id="bch.api.b9c2d94bbef5" datatype="html"><source>Returns a normalized block with BCH amount fields in satoshis. /api/v1/block/:hash-or-height is also accepted.</source><target>Devuelve un bloque normalizado con importes BCH en satoshis. También acepta /api/v1/block/:hash-or-height.</target></trans-unit>
+      <trans-unit id="bch.api.4f342c01a81c" datatype="html"><source>Get complete block transaction IDs</source><target>Obtener todos los ID de transacción de un bloque</target></trans-unit>
+      <trans-unit id="bch.api.c673fefe3ce5" datatype="html"><source>Returns the complete raw transaction ID list for the block. This is the source for the explorer’s complete block coverage.</source><target>Devuelve la lista completa de ID de transacciones del bloque sin procesar. Esta es la fuente para la cobertura completa del bloque en el explorador.</target></trans-unit>
+      <trans-unit id="bch.api.91af5d23ef46" datatype="html"><source>Get a block transaction page</source><target>Obtener una página de transacciones de un bloque</target></trans-unit>
+      <trans-unit id="bch.api.c668835b64ce" datatype="html"><source>Returns up to 25 normalized transactions beginning at start-index. Omit start-index for the first page.</source><target>Devuelve hasta 25 transacciones normalizadas a partir de start-index. Omite start-index para obtener la primera página.</target></trans-unit>
+      <trans-unit id="bch.api.3e5136fd4b11" datatype="html"><source>Transactions</source><target>Transacciones</target></trans-unit>
+      <trans-unit id="bch.api.936c2e4e05a1" datatype="html"><source>Transactions and outputs</source><target>Transacciones y salidas</target></trans-unit>
+      <trans-unit id="bch.api.5fc0616370b6" datatype="html"><source>Get a transaction</source><target>Obtener una transacción</target></trans-unit>
+      <trans-unit id="bch.api.241c0e362072" datatype="html"><source>Returns inputs, outputs, fee and confirmation status. CashToken output data appears only when it is available from the BCHN source.</source><target>Devuelve las entradas, salidas, comisión y estado de confirmación. Los datos de CashTokens de una salida aparecen solo cuando la fuente BCHN los proporciona.</target></trans-unit>
+      <trans-unit id="bch.api.e3edde8b5d32" datatype="html"><source>Get output spend state</source><target>Obtener el estado de gasto de las salidas</target></trans-unit>
+      <trans-unit id="bch.api.6166231d461b" datatype="html"><source>Returns one spend-state entry per transaction output.</source><target>Devuelve un estado de gasto por cada salida de la transacción.</target></trans-unit>
+      <trans-unit id="bch.api.fad35ce5d9d7" datatype="html"><source>Get an address summary</source><target>Obtener un resumen de una dirección</target></trans-unit>
+      <trans-unit id="bch.api.3211a3c0b4ab" datatype="html"><source>Returns indexed confirmed and pending statistics plus the source-reported UTXO count. Pending UTXO deltas are not separately available.</source><target>Devuelve estadísticas indexadas de transacciones confirmadas y pendientes, además del número de UTXO indicado por la fuente. Las variaciones pendientes de UTXO no están disponibles por separado.</target></trans-unit>
+      <trans-unit id="bch.api.5f4b0ef9e887" datatype="html"><source>Get address history</source><target>Obtener el historial de una dirección</target></trans-unit>
+      <trans-unit id="bch.api.753f63fae763" datatype="html"><source>Returns a 25-transaction history page. Omit /chain/:last-confirmed-txid for the first page.</source><target>Devuelve una página del historial con 25 transacciones. Omite /chain/:last-confirmed-txid para la primera página.</target></trans-unit>
+      <trans-unit id="bch.api.331551b0de41" datatype="html"><source>Pending</source><target>Pendientes</target></trans-unit>
+      <trans-unit id="bch.api.b5d256b652a4" datatype="html"><source>Pending and mining observations</source><target>Observaciones de pendientes y minería</target></trans-unit>
+      <trans-unit id="bch.api.4c743f4fb0d6" datatype="html"><source>Get pending summary</source><target>Obtener resumen de pendientes</target></trans-unit>
+      <trans-unit id="bch.api.df6b40213281" datatype="html"><source>Returns the observed BCHN mempool count, serialized bytes and total fee in satoshis.</source><target>Devuelve el número de transacciones observado en la mempool BCHN, los bytes serializados y la comisión total en satoshis.</target></trans-unit>
+      <trans-unit id="bch.api.4e80eb8e78a4" datatype="html"><source>Get observed fee values</source><target>Obtener las comisiones observadas</target></trans-unit>
+      <trans-unit id="bch.api.716aec795bea" datatype="html"><source>Returns observed fee values in sat/B from the current pending sample.</source><target>Devuelve las comisiones observadas en sat/B de la muestra actual de pendientes.</target></trans-unit>
+      <trans-unit id="bch.api.bf94ba9e2d86" datatype="html"><source>Mining</source><target>Minería</target></trans-unit>
+      <trans-unit id="bch.api.8cdca5dc964c" datatype="html"><source>Get recent mining series</source><target>Obtener series recientes de minería</target></trans-unit>
+      <trans-unit id="bch.api.01a17e61cb7e" datatype="html"><source>Returns the recent indexed block fee series. Related implemented endpoints provide rewards, block sizes and hashrate/difficulty from the same recent window.</source><target>Devuelve la serie reciente de comisiones de bloques indexados. Otros puntos implementados proporcionan recompensas, tamaños de bloque y tasa de hash/dificultad de la misma ventana reciente.</target></trans-unit>
+      <trans-unit id="bch.api.639a40e82b9a" datatype="html"><source>Connection</source><target>Conexión</target></trans-unit>
+      <trans-unit id="bch.api.1a2303ede074" datatype="html"><source>Connect</source><target>Conectar</target></trans-unit>
+      <trans-unit id="bch.api.4b818c315a16" datatype="html"><source>The gateway sends its current live snapshot after a client message. Snapshots contain the latest blocks, pending sample, observed fee values and current USD conversion when available.</source><target>La pasarela envía su instantánea actual tras un mensaje del cliente. Las instantáneas incluyen los últimos bloques, una muestra de pendientes, comisiones observadas y la conversión actual a USD cuando está disponible.</target></trans-unit>
+      <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source><target>Ping</target></trans-unit>
+      <trans-unit id="bch.api.3b383dce0de0" datatype="html"><source>Send an application-level ping to confirm that the gateway is responsive.</source><target>Envía un ping de aplicación para confirmar que la pasarela responde.</target></trans-unit>
+      <trans-unit id="bch.api.36b6ca188619" datatype="html"><source>Tracking</source><target>Seguimiento</target></trans-unit>
+      <trans-unit id="bch.api.cfbb23ef92f0" datatype="html"><source>Transaction tracking</source><target>Seguimiento de transacciones</target></trans-unit>
+      <trans-unit id="bch.api.192d7022c3ca" datatype="html"><source>Track one transaction</source><target>Seguir una transacción</target></trans-unit>
+      <trans-unit id="bch.api.9271537aa35f" datatype="html"><source>Track a single transaction ID. The gateway sends the current transaction and polls it with the live refresh cycle. When it becomes confirmed, a block and txConfirmed notification are sent.</source><target>Sigue un único ID de transacción. La pasarela envía la transacción actual y la consulta en cada ciclo de actualización. Cuando se confirma, se envían un bloque y una notificación txConfirmed.</target></trans-unit>
+      <trans-unit id="bch.api.b18a0b47b219" datatype="html"><source>Stop tracking</source><target>Detener seguimiento</target></trans-unit>
+      <trans-unit id="bch.api.68d96411db72" datatype="html"><source>Stop the currently tracked transaction.</source><target>Deja de seguir la transacción actual.</target></trans-unit>
+      <trans-unit id="bch.docs.context.explorer" datatype="html"><source>explorer</source><target>explorador</target></trans-unit>
+      <trans-unit id="bch.docs.context.documentation" datatype="html"><source>documentation</source><target>documentación</target></trans-unit>
+      <trans-unit id="bch.docs.open-hub" datatype="html"><source>Open tx.taxi</source><target>Abrir tx.taxi</target></trans-unit>
+      <trans-unit id="bch.about.attribution-start" datatype="html"><source>This explorer builds on the</source><target>Este explorador se basa en el</target></trans-unit>
+      <trans-unit id="bch.about.attribution-see" datatype="html"><source>See</source><target>Consulta la</target></trans-unit>
+      <trans-unit id="bch.about.attribution-third" datatype="html"><source>third-party attribution</source><target>atribución de terceros</target></trans-unit>
+      <trans-unit id="bch.about.attribution-end" datatype="html"><source>and contact the maintainer for source and license information.</source><target>y contacta con el responsable para obtener información sobre el código fuente y las licencias.</target></trans-unit>
+      <trans-unit id="bch.docs.explore-chain" datatype="html"><source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></source><target>Explorar <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></target></trans-unit>
+      <trans-unit id="bch.provider.stale" datatype="html"><source>Data may be out of date.</source><target>Los datos podrían estar desactualizados.</target></trans-unit>
+      <trans-unit id="bch.provider.degraded" datatype="html"><source>Some data is temporarily unavailable.</source><target>Algunos datos no están disponibles temporalmente.</target></trans-unit>
+      <trans-unit id="bch.provider.retrying" datatype="html"><source>Data unavailable. Retrying.</source><target>Datos no disponibles. Reintentando.</target></trans-unit>
+      <trans-unit id="bch.footer.mempool-wall" datatype="html"><source>Mempool Wall</source><target>Muro de la mempool</target></trans-unit>
+      <trans-unit id="bch.footer.mining" datatype="html"><source>Mining Dashboard</source><target>Panel de minería</target></trans-unit>
+      <trans-unit id="bch.footer.graphs" datatype="html"><source>Bitcoin Cash Graphs</source><target>Gráficos de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.footer.faq" datatype="html"><source>Bitcoin Cash FAQ</source><target>Preguntas frecuentes de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.footer.upstream" datatype="html"><source>Upstream project</source><target>Proyecto original</target></trans-unit>
+      <trans-unit id="bch.footer.telegram" datatype="html"><source>Join the tx.taxi Telegram channel</source><target>Únete al canal de Telegram de tx.taxi</target></trans-unit>
+      <trans-unit id="bch.legal.506ff3946215" datatype="html"><source>Privacy Policy</source><target>Política de privacidad</target></trans-unit>
+      <trans-unit id="bch.legal.7e2168415765" datatype="html"><source>Updated: September 20, 2026</source><target>Actualizado: 20 de septiembre de 2026</target></trans-unit>
+      <trans-unit id="bch.legal.e2f88447ee0e" datatype="html"><source>Audience measurement</source><target>Medición de audiencia</target></trans-unit>
+      <trans-unit id="bch.legal.3fe100af9401" datatype="html"><source>Use Your Own Node When Privacy Matters</source><target>Usa tu propio nodo cuando la privacidad sea importante</target></trans-unit>
+      <trans-unit id="bch.legal.8e7582f1976e" datatype="html"><source>bch.tx.taxi displays public Bitcoin Cash chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Bitcoin Cash node and explorer.</source><target>bch.tx.taxi muestra datos públicos de la cadena y la mempool de Bitcoin Cash mediante el servidor configurado por el operador del sitio. Para una verificación independiente y la mayor privacidad de red, utiliza tu propio nodo y explorador de Bitcoin Cash.</target></trans-unit>
+      <trans-unit id="bch.legal.7224b23c7ac2" datatype="html"><source>Request Data</source><target>Datos de las solicitudes</target></trans-unit>
+      <trans-unit id="bch.legal.86730566eb88" datatype="html"><source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source><target>Las solicitudes normales al sitio web y a la API pueden revelar al operador metadatos web habituales, incluidos tu dirección IP, agente de usuario, URL solicitada y hora de la solicitud. Los registros del servidor pueden conservarse para garantizar la fiabilidad, prevenir abusos y diagnosticar errores.</target></trans-unit>
+      <trans-unit id="bch.legal.0f3153a68574" datatype="html"><source>Local Preferences</source><target>Preferencias locales</target></trans-unit>
+      <trans-unit id="bch.legal.e800fd2befc2" datatype="html"><source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. bch.tx.taxi does not require an account for ordinary explorer use.</source><target>Las preferencias de visualización, como tema, denominación, moneda fiduciaria, idioma y zona horaria, pueden guardarse en tu navegador. bch.tx.taxi no requiere una cuenta para el uso habitual del explorador.</target></trans-unit>
+      <trans-unit id="bch.legal.4d4a7bd17534" datatype="html"><source>Public Blockchain Data</source><target>Datos públicos de la cadena</target></trans-unit>
+      <trans-unit id="bch.legal.54a76e5281a4" datatype="html"><source>Bitcoin Cash transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source><target>Las transacciones, direcciones, scripts y bloques de Bitcoin Cash son públicos. Consultar una dirección o transacción puede asociar esa consulta a los metadatos de tu red. No consideres un explorador público como una barrera de privacidad.</target></trans-unit>
+      <trans-unit id="bch.legal.005463a6c488" datatype="html"><source>External Links</source><target>Enlaces externos</target></trans-unit>
+      <trans-unit id="bch.legal.c5a77fb8e908" datatype="html"><source>This site links to tx.taxi contact channels, Bitcoin Cash documentation, and upstream source code. Those external services have their own privacy policies.</source><target>Este sitio enlaza a los canales de contacto de tx.taxi, a documentación de Bitcoin Cash y al código fuente original. Esos servicios externos tienen sus propias políticas de privacidad.</target></trans-unit>
+      <trans-unit id="bch.legal.6e9665b9d920" datatype="html"><source>Open Source Attribution</source><target>Atribución del código abierto</target></trans-unit>
+      <trans-unit id="bch.legal.91e93d75c667" datatype="html"><source>Mempool names, logos, and trademarks remain the property of their respective owners; bch.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source><target>Los nombres, logotipos y marcas de Mempool siguen siendo propiedad de sus respectivos titulares; bch.tx.taxi no está asociado a Mempool Holdings S.A. de C.V. ni cuenta con su respaldo.</target></trans-unit>
+      <trans-unit id="bch.legal.4afa55bf7aec" datatype="html"><source>Terms of Service</source><target>Términos de servicio</target></trans-unit>
+      <trans-unit id="bch.legal.a6819f0d1181" datatype="html"><source>Informational Explorer</source><target>Explorador informativo</target></trans-unit>
+      <trans-unit id="bch.legal.be03ea0dc608" datatype="html"><source>bch.tx.taxi provides a view of public Bitcoin Cash blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source><target>bch.tx.taxi ofrece una vista de bloques, transacciones, direcciones, datos de minería, estimaciones de comisiones y estado de la mempool públicos de Bitcoin Cash. Es un servicio informativo, no una cartera, casa de cambio, custodio, procesador de pagos ni servicio de priorización de transacciones.</target></trans-unit>
+      <trans-unit id="bch.legal.83a95d1365c1" datatype="html"><source>No Control Over Bitcoin Cash Transactions</source><target>Sin control sobre las transacciones de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.legal.ccd371e8f1e5" datatype="html"><source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Bitcoin Cash transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source><target>El operador no puede revertir, cancelar, acelerar, recuperar ni redirigir una transacción de Bitcoin Cash. Para problemas con una cartera, casa de cambio o pago, contacta con el servicio que creó o recibió la transacción.</target></trans-unit>
+      <trans-unit id="bch.legal.4103db00a3b3" datatype="html"><source>Data and Availability</source><target>Datos y disponibilidad</target></trans-unit>
+      <trans-unit id="bch.legal.88c241ed52b4" datatype="html"><source>Explorer data may be delayed, incomplete, unavailable, or different from another node&#x27;s view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source><target>Los datos del explorador pueden estar retrasados, incompletos, no disponibles o diferir de la vista de otro nodo. Las estimaciones de comisiones son solo estimaciones y no garantizan la confirmación. El servicio se proporciona tal cual, sin promesa de disponibilidad ininterrumpida ni de idoneidad para un propósito particular.</target></trans-unit>
+      <trans-unit id="bch.legal.997c65f3c315" datatype="html"><source>Acceptable Use</source><target>Uso aceptable</target></trans-unit>
+      <trans-unit id="bch.legal.78e9d2e2ad7d" datatype="html"><source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source><target>No abuses del sitio web ni de la API, interfieras con el funcionamiento del servicio, eludas límites de uso razonables ni uses el servicio de forma ilegal. El acceso puede limitarse cuando sea necesario para proteger la disponibilidad.</target></trans-unit>
+      <trans-unit id="bch.legal.ec1bb9b527e7" datatype="html"><source>External Services</source><target>Servicios externos</target></trans-unit>
+      <trans-unit id="bch.legal.1c2b04a45d11" datatype="html"><source>This site may link to tx.taxi contact channels, Bitcoin Cash references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source><target>Este sitio puede enlazar a los canales de contacto de tx.taxi, referencias de Bitcoin Cash, código fuente original y dependencias de infraestructura. Los sitios externos tienen sus propios términos y políticas.</target></trans-unit>
+      <trans-unit id="bch.legal.fdb627efb86b" datatype="html"><source>Open Source</source><target>Código abierto</target></trans-unit>
+      <trans-unit id="bch.legal.45b6c69f5e42" datatype="html"><source>Trademark &amp; Attribution</source><target>Marcas y atribuciones</target></trans-unit>
+      <trans-unit id="bch.legal.c8fb69ab4502" datatype="html"><source>tx.taxi Identity</source><target>Identidad de tx.taxi</target></trans-unit>
+      <trans-unit id="bch.legal.24cd9f0d49b0" datatype="html"><source>bch.tx.taxi is an independently operated Bitcoin Cash explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source><target>bch.tx.taxi es un explorador de Bitcoin Cash de la familia tx.taxi operado de forma independiente. Su dominio, marca denominativa, paleta de la cadena e identidad de servicio distinguen esta bifurcación del proyecto original.</target></trans-unit>
+      <trans-unit id="bch.legal.2bd9e04e138f" datatype="html"><source>Upstream Attribution</source><target>Atribución del proyecto original</target></trans-unit>
+      <trans-unit id="bch.legal.c7d2295141bd" datatype="html"><source>No Affiliation</source><target>Sin afiliación</target></trans-unit>
+      <trans-unit id="bch.legal.43aad455d42d" datatype="html"><source>bch.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source><target>bch.tx.taxi no está afiliado, patrocinado ni respaldado por Mempool Holdings S.A. de C.V. Las referencias a mempool.space y mempool/mempool atribuyen de forma nominativa el software del que deriva esta bifurcación.</target></trans-unit>
+      <trans-unit id="bch.legal.8a9851255d67" datatype="html"><source>Bitcoin Cash</source><target>Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.legal.df856fd94263" datatype="html"><source>Bitcoin Cash is an open network and protocol. References to Bitcoin Cash, BCH, satoshis, blocks, transactions, addresses, mining, and CashTokens describe the network data presented by this explorer.</source><target>Bitcoin Cash es una red y un protocolo abiertos. Las referencias a Bitcoin Cash, BCH, satoshis, bloques, transacciones, direcciones, minería y CashTokens describen los datos de la red que presenta este explorador.</target></trans-unit>
+      <trans-unit id="bch.legal.1294845333ad" datatype="html"><source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source><target>tx.taxi utiliza Cloudflare Web Analytics para medir las visitas y el rendimiento, y una cookie propia diaria compartida entre sus exploradores para contar navegadores una vez por día UTC. El sistema de medición diario solo almacena un identificador diario, el nombre del explorador y si hubo interacción. No recibe texto de búsqueda, direcciones, ID de transacciones, URL ni direcciones IP. Los registros individuales diarios caducan después de 31 días; los recuentos agregados se conservan durante 400 días. Do Not Track y Global Privacy Control desactivan esta medición propia.</target></trans-unit>
+      <trans-unit id="bch.legal.8ce35f583745" datatype="html"><source>Details and opt-out</source><target>Detalles y opciones de exclusión</target></trans-unit>
+      <trans-unit id="bch.legal.9ee0c596557b" datatype="html"><source>bch.tx.taxi is derived from </source><target>bch.tx.taxi deriva de </target></trans-unit>
+      <trans-unit id="bch.legal.1856e93d37a8" datatype="html"><source>. Contact </source><target>. Contacta con </target></trans-unit>
+      <trans-unit id="bch.legal.fdcee3949fc4" datatype="html"><source> for the current reviewed fork source package.</source><target> para obtener el paquete revisado actual del código fuente de la bifurcación.</target></trans-unit>
+      <trans-unit id="bch.legal.a9ec6faa8495" datatype="html"><source>This software is derived from </source><target>Este software deriva de </target></trans-unit>
+      <trans-unit id="bch.legal.838ab86c1b97" datatype="html"><source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source><target>. El código fuente original, el sistema visual, los nombres, logotipos y marcas del proyecto pertenecen a sus respectivos titulares.</target></trans-unit>
+      <trans-unit id="bch.legal.6ee4eb18aa3a" datatype="html"><source>Bitcoin Cash difficulty and halving components are adapted from </source><target>Los componentes de dificultad y reducción a la mitad de Bitcoin Cash están adaptados de </target></trans-unit>
+      <trans-unit id="bch.legal.4d1e06fb51fa" datatype="html"><source> by Melroy van den Berg, licensed under the GNU Affero General Public License. The BCH Explorer name and branding remain with their respective owners.</source><target> de Melroy van den Berg, bajo la licencia GNU Affero General Public License. El nombre y la marca de BCH Explorer siguen siendo de sus respectivos propietarios.</target></trans-unit>
+      <trans-unit id="b1046d5d7d997498195647aee8059b9109836f1d" datatype="html"><source>Accelerate to ~<x id="INTERPOLATION" equiv-text="{{ x | number : &apos;1.0-0&apos; }}"/> sat/B</source><target>Acelerar a ~<x id="INTERPOLATION" equiv-text="{{ x | number : &apos;1.0-0&apos; }}"/> sat/B</target></trans-unit>
+      <trans-unit id="graphs.blockFees.avgBlock" datatype="html"><source>* On average around block <x id="block" equiv-text="data[0].data[2]"/></source><target>* En promedio, alrededor del bloque <x id="block" equiv-text="data[0].data[2]"/></target></trans-unit>
+      <trans-unit id="a5c3bb57620832141bf6c51d7344e69af366c7e8" datatype="html"><source><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;div [class.container-xl]=&quot;!widget&quot; [cla"/> new transactions</source><target><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;div [class.container-xl]=&quot;!widget&quot; [cla"/> transacciones nuevas</target></trans-unit>
+      <trans-unit id="meta.description.recent-transactions" datatype="html"><source>See the most recent transactions on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source><target>Consulta las transacciones más recientes de la red Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> actualizadas en tiempo real.</target></trans-unit>
+      <trans-unit id="3fc86b5b041cec8a5c2a83d55fa03b9f38d7761c" datatype="html"><source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}"/> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</source><target>Esta transacción pertenece a un grupo de 1 transacción, con una tasa de comisión efectiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}"/> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</target></trans-unit>
+      <trans-unit id="002cdbb1621daaed4946baea12ad99ea6b93f90c" datatype="html"><source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}"/> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}"/> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</source><target>Esta transacción pertenece a un grupo de <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}"/> transacciones, con una tasa de comisión efectiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}"/> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</target></trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html"><source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}"/> other chunks.</source><target>En un clúster de la mempool que contiene <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}"/> otros grupos.</target></trans-unit>
+      <trans-unit id="0061875559541699df95ecc284100821cd3851b8" datatype="html"><source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}"/> sat/B was needed to get into this block</source><target>Solo se necesitaban ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}"/> sat/B para entrar en este bloque</target></trans-unit>
+      <trans-unit id="bch.meta.about" datatype="html"><source>Learn about bch.tx.taxi, a Bitcoin block and mempool explorer in the tx.taxi multi-chain family.</source><target>Conoce bch.tx.taxi, un explorador de bloques y mempool de Bitcoin Cash de la familia multicadena tx.taxi.</target></trans-unit>
+      <trans-unit id="bch.meta.privacy-title" datatype="html"><source>Privacy Policy</source><target>Política de privacidad</target></trans-unit>
+      <trans-unit id="bch.meta.privacy" datatype="html"><source>Privacy notes for bch.tx.taxi, including public Bitcoin data, browser preferences, server logs, and independent verification.</source><target>Información de privacidad de bch.tx.taxi sobre datos públicos de Bitcoin Cash, preferencias del navegador, registros del servidor y verificación independiente.</target></trans-unit>
+      <trans-unit id="bch.meta.terms-title" datatype="html"><source>Terms of Service</source><target>Términos de servicio</target></trans-unit>
+      <trans-unit id="bch.meta.terms" datatype="html"><source>Terms for using bch.tx.taxi as an informational Bitcoin block and mempool explorer.</source><target>Términos de uso de bch.tx.taxi como explorador informativo de bloques y mempool de Bitcoin Cash.</target></trans-unit>
+      <trans-unit id="bch.meta.trademark-title" datatype="html"><source>Trademark &amp; Attribution</source><target>Marcas y atribuciones</target></trans-unit>
+      <trans-unit id="bch.meta.trademark" datatype="html"><source>Trademark and attribution notes for bch.tx.taxi, including upstream mempool/mempool attribution and project independence.</source><target>Información sobre marcas y atribuciones de bch.tx.taxi, incluida la atribución a mempool/mempool y la independencia del proyecto.</target></trans-unit>
+      <trans-unit id="bch.txs.token-details" datatype="html"><source>CashToken details unavailable</source><target>Detalles de CashTokens no disponibles</target></trans-unit>
+      <trans-unit id="bch.txs.token-input" datatype="html"><source>Input token quantities unavailable</source><target>Cantidades de tokens de entrada no disponibles</target></trans-unit>
+      <trans-unit id="bch.txs.more" datatype="html"><source>Show more</source><target>Mostrar más</target></trans-unit>
+      <trans-unit id="bch.txs.less" datatype="html"><source>Show less</source><target>Mostrar menos</target></trans-unit>
+      <trans-unit id="bch.nav.dashboard" datatype="html"><source>Dashboard</source><target>Panel principal</target></trans-unit>
+      <trans-unit id="bch.nav.mining" datatype="html"><source>Mining dashboard</source><target>Panel de minería</target></trans-unit>
+      <trans-unit id="bch.nav.graphs" datatype="html"><source>Bitcoin Cash graphs</source><target>Gráficos de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.nav.docs" datatype="html"><source>Documentation</source><target>Documentación</target></trans-unit>
+      <trans-unit id="bch.nav.about" datatype="html"><source>About bch.tx.taxi</source><target>Acerca de bch.tx.taxi</target></trans-unit>
+      <trans-unit id="bch.nav.choose-chain" datatype="html"><source>Choose search chain</source><target>Elegir cadena de búsqueda</target></trans-unit>
+      <trans-unit id="bch.nav.selected-explorer" datatype="html"><source>Selected explorer</source><target>Explorador seleccionado</target></trans-unit>
+      <trans-unit id="bch.footer.made-with" datatype="html"><source>Made with</source><target>Hecho con</target></trans-unit>
+      <trans-unit id="bch.footer.by" datatype="html"><source>by</source><target>por</target></trans-unit>
+      <trans-unit id="bch.intro.about" datatype="html"><source>About tx.taxi</source><target>Acerca de tx.taxi</target></trans-unit>
+      <trans-unit id="bch.fiat.stale-title" datatype="html"><source>ECB reference rate; update unavailable</source><target>Tipo de referencia del BCE; actualización no disponible</target></trans-unit>
+      <trans-unit id="bch.fiat.reference-title" datatype="html"><source>ECB reference rate</source><target>Tipo de referencia del BCE</target></trans-unit>
+      <trans-unit id="bch.fiat.stale" datatype="html"><source> · stale</source><target> · desactualizado</target></trans-unit>
+      <trans-unit id="bch.search.bch-icon" datatype="html"><source>Bitcoin Cash explorer</source><target>Explorador de Bitcoin Cash</target></trans-unit>
+      <trans-unit id="bch.search.registry-unavailable" datatype="html"><source>Explorer registry unavailable</source><target>Registro de exploradores no disponible</target></trans-unit>
+      <trans-unit id="bch.search.open-hub-tab" datatype="html"><source>Open tx.taxi in a new tab</source><target>Abrir tx.taxi en una pestaña nueva</target></trans-unit>
+      <trans-unit id="bch.search.direct" datatype="html"><source>Or go straight to</source><target>O ve directamente a</target></trans-unit>
+      <trans-unit id="bch.search.your-search" datatype="html"><source>your search</source><target>tu búsqueda</target></trans-unit>
+      <trans-unit id="bch.search.found" datatype="html"><source>Found</source><target>Encontrado</target></trans-unit>
+      <trans-unit id="bch.search.possible" datatype="html"><source>Possible</source><target>Posible</target></trans-unit>
+      <trans-unit id="bch.search.switch" datatype="html"><source>Switch</source><target>Cambiar</target></trans-unit>
+      <trans-unit id="bch.search.open-explorer" datatype="html"><source>Open <x id="NAME" equiv-text="name"/></source><target>Abrir <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.open-explorer-tab" datatype="html"><source>Open <x id="NAME" equiv-text="name"/> in a new tab</source><target>Abrir <x id="NAME" equiv-text="name"/> en una pestaña nueva</target></trans-unit>
+      <trans-unit id="bch.search.switch-to" datatype="html"><source>Switch to <x id="NAME" equiv-text="name"/></source><target>Cambiar a <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.additional-explorers" datatype="html"><source><x id="NAME" equiv-text="name"/> additional explorers</source><target>Exploradores adicionales de <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.hide-one" datatype="html"><source>Hide <x id="COUNT" equiv-text="count"/> additional <x id="NAME" equiv-text="name"/> option</source><target>Ocultar <x id="COUNT" equiv-text="count"/> opción adicional de <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.hide-many" datatype="html"><source>Hide <x id="COUNT" equiv-text="count"/> additional <x id="NAME" equiv-text="name"/> options</source><target>Ocultar <x id="COUNT" equiv-text="count"/> opciones adicionales de <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.show-one" datatype="html"><source>Show <x id="COUNT" equiv-text="count"/> additional <x id="NAME" equiv-text="name"/> option</source><target>Mostrar <x id="COUNT" equiv-text="count"/> opción adicional de <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.search.show-many" datatype="html"><source>Show <x id="COUNT" equiv-text="count"/> additional <x id="NAME" equiv-text="name"/> options</source><target>Mostrar <x id="COUNT" equiv-text="count"/> opciones adicionales de <x id="NAME" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="bch.strip.median-title" datatype="html"><source>Median transaction fee rate</source><target>Tasa mediana de comisión por transacción</target></trans-unit>
+      <trans-unit id="bch.strip.average-title" datatype="html"><source>Approximate average fee rate</source><target>Tasa media aproximada de comisión</target></trans-unit>
+      <trans-unit id="bch.strip.data-unavailable" datatype="html"><source>Fee data unavailable</source><target>Datos de comisiones no disponibles</target></trans-unit>
+      <trans-unit id="bch.strip.range-unavailable" datatype="html"><source>Fee range unavailable</source><target>Rango de comisiones no disponible</target></trans-unit>
+      <trans-unit id="bch.strip.estimate-title" datatype="html"><source>Estimated block interval; transaction inclusion is not guaranteed</source><target>Intervalo estimado entre bloques; no se garantiza la inclusión de la transacción</target></trans-unit>
+      <trans-unit id="bch.strip.stale-block" datatype="html"><source>stale block <x id="HASH" equiv-text="shortHash"/></source><target>bloque obsoleto <x id="HASH" equiv-text="shortHash"/></target></trans-unit>
+      <trans-unit id="bch.strip.details" datatype="html"><source>Total fees: <x id="AMOUNT" equiv-text="exactBlockAmount(total)"/> <x id="SYMBOL" equiv-text="SYMBOL"/>. Median fee rate: <x id="MEDIAN" equiv-text="rate(median)"/> <x id="UNIT" equiv-text="FEE_UNIT"/>. Fee range: <x id="MIN" equiv-text="rate(min)"/>–<x id="MAX" equiv-text="rate(max)"/> <x id="RANGE_UNIT" equiv-text="FEE_UNIT"/>.</source><target>Comisiones totales: <x id="AMOUNT" equiv-text="exactBlockAmount(total)"/> <x id="SYMBOL" equiv-text="SYMBOL"/>. Tasa mediana de comisión: <x id="MEDIAN" equiv-text="rate(median)"/> <x id="UNIT" equiv-text="FEE_UNIT"/>. Rango de comisiones: <x id="MIN" equiv-text="rate(min)"/>–<x id="MAX" equiv-text="rate(max)"/> <x id="RANGE_UNIT" equiv-text="FEE_UNIT"/>.</target></trans-unit>
     </body>
   </file>
 </xliff>

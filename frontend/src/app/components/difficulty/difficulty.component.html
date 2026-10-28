@@ -1,7 +1,7 @@
 <div
   *ngIf="showTitle && mode === 'difficulty'"
   class="main-title"
-  i18n="dashboard.difficulty-adjustment"
+  i18n="@@tx-taxi.label.difficulty-heading"
 >
   Difficulty Adjustment
 </div>
@@ -28,7 +28,7 @@
         (click)="setMode('halving')"
         class="toggler-option"
         [ngClass]="{ inactive: mode === 'halving' }"
-        ><small i18n="statistics.median-small">halving</small></a
+        ><small i18n="@@tx-taxi.label.halving-label">halving</small></a
       >
     </div>
     <div
@@ -57,7 +57,7 @@
                 [fractionDigits]="1"
               ></app-time>
             </div>
-            <div class="symbol">
+            <div class="symbol" i18n="@@tx-taxi.difficulty.average-block-time">
               Average block time
             </div>
           </div>

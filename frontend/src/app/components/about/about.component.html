@@ -3,22 +3,22 @@
   <div class="about-layout">
     <aside class="about-identity">
       <img src="/resources/branding/bch-dark-full.svg" alt="bch.tx.taxi" class="about-logo">
-      <h1>About bch.tx.taxi</h1>
-      <p>The Bitcoin Cash explorer in the tx.taxi family.</p>
-      <nav class="about-links" aria-label="Project links">
-        <a routerLink="/docs">Bitcoin Cash documentation</a>
-        <a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the maintainer</a>
+      <h1 i18n="@@bch.about.title">About bch.tx.taxi</h1>
+      <p i18n="@@bch.about.family">The Bitcoin Cash explorer in the tx.taxi family.</p>
+      <nav class="about-links" aria-label="Project links" i18n-aria-label="@@bch.about.project-links">
+        <a routerLink="/docs" i18n="@@bch.about.docs">Bitcoin Cash documentation</a>
+        <a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer" i18n="@@bch.about.contact">Contact the maintainer</a>
       </nav>
     </aside>
     <main class="about-text">
-      <h2>About bch.tx.taxi</h2>
-    <p>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</p>
+      <h2 i18n="@@bch.about.title">About bch.tx.taxi</h2>
+    <p i18n="@@bch.about.intro">bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</p>
 
-    <h2>Bitcoin Cash data</h2>
-    <p>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</p>
+    <h2 i18n="@@bch.about.data">Bitcoin Cash data</h2>
+    <p i18n="@@bch.about.details">1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</p>
       <div class="about-attribution">
-        <h2>Built on open source</h2>
-        <p>This explorer builds on the <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Mempool Open Source Project</a>. See <a href="/3rdpartylicenses.txt">third-party attribution</a> and contact the maintainer for source and license information.</p>
+        <h2 i18n="@@bch.about.opensource">Built on open source</h2>
+        <p><span i18n="@@bch.about.attribution-start">This explorer builds on the</span> <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Mempool Open Source Project</a>. <span i18n="@@bch.about.attribution-see">See</span> <a href="/3rdpartylicenses.txt" i18n="@@bch.about.attribution-third">third-party attribution</a> <span i18n="@@bch.about.attribution-end">and contact the maintainer for source and license information.</span></p>
       </div>
     </main>
   </div>

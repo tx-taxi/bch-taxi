@@ -21,6 +21,12 @@ interface BlockchainBlock extends BlockExtended {
 })
 export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   blockValueDetails = blockValueDetails;
+  readonly medianRateTitle = $localize`:@@bch.strip.median-title:Median transaction fee rate`;
+  readonly averageRateTitle = $localize`:@@bch.strip.average-title:Approximate average fee rate`;
+  staleBlockLabel(hash: string): string {
+    const shortHash = hash.slice(0, 4) + '...' + hash.slice(-4);
+    return $localize`:@@bch.strip.stale-block:stale block ${shortHash}:HASH:`;
+  }
   @Input() static: boolean = false;
   @Input() offset: number = 0;
   @Input() height: number = 0; // max height of blocks in chunk (dynamic blocks only)
