@@ -2923,7 +2923,7 @@
       </trans-unit>
       <trans-unit id="de9a93ca8a13ccbd6de65782abb6b1432759b654" datatype="html">
         <source>Avg Block Fee (1m)</source>
-        <target>Gns. blokgebyr (1m)</target>
+        <target>Gns. blokgebyr (1 md.)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.html</context>
           <context context-type="linenumber">57</context>
@@ -12934,7 +12934,7 @@
       </trans-unit>
       <trans-unit id="bch.txs.token-input" datatype="html">
         <source>Input token quantities unavailable</source>
-        <target state="needs-review-translation">Antal input-tokens er ikke tilgængeligt</target><context-group purpose="location">
+        <target state="needs-review-translation">Mængder af inputtokens er ikke tilgængelige</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
