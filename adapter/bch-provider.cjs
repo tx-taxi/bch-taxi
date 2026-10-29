@@ -1,4 +1,5 @@
 'use strict';
+const {parseSeleneBlock, completeSeleneBlock}=require('./selene-block.cjs');
 // Bitcoin Cash mappings from Haskoin's documented BCH index and BCHN data.
 const H=process.env.BCH_INDEXER||'https://api.haskoin.com/bch';
 const S=process.env.BCH_NODE||'https://explorer.selene.cash/api/v1';
@@ -17,7 +18,7 @@ function output(o){return {value:o.value,scriptpubkey:o.pkscript,scriptpubkey_as
 const isConfirmed=t=>Number.isInteger(t.block?.height)&&t.block.height>=0;
 function transaction(t,b){return {tokenMetadataUnavailable:true,txid:t.txid,version:t.version,locktime:t.locktime,size:t.size,weight:t.size*4,fee:t.fee,vin:t.inputs.map(i=>({txid:i.txid,vout:i.output,is_coinbase:i.coinbase,scriptsig:i.sigscript,scriptsig_asm:'',sequence:i.sequence,prevout:i.coinbase?null:output(i)})),vout:t.outputs.map(output),status:{confirmed:isConfirmed(t),block_height:t.block?.height,block_hash:b?.hash,block_time:isConfirmed(t)?t.time:undefined},firstSeen:t.block?.mempool??t.time};}
 function difficulty(bits){const exponent=bits>>>24, mantissa=bits&0xffffff;return 0xffff/mantissa*Math.pow(256,0x1d-exponent);}
-function block(b){return {id:b.hash,height:b.height,version:b.version,timestamp:b.time,tx_count:b.tx.length,size:b.size,weight:b.size*4,merkle_root:b.merkle,previousblockhash:b.previous,nonce:b.nonce,bits:b.bits,difficulty:difficulty(b.bits),extras:{reward:b.subsidy+b.fees,totalFees:b.fees,totalTx:b.tx.length,totalSize:b.size,avgFee:b.tx.length>1?b.fees/(b.tx.length-1):0,avgFeeRate:b.fees/b.size,coinbaseRaw:'',pool:{id:0,name:'Unattributed',slug:'unknown',minerNames:[]},matchRate:undefined}};}
+function block(b){const count=b.tx_count??b.tx.length;return {id:b.hash,height:b.height,version:b.version,timestamp:b.time,tx_count:count,size:b.size,weight:b.size*4,merkle_root:b.merkle,previousblockhash:b.previous,nonce:b.nonce,bits:b.bits,difficulty:difficulty(b.bits),extras:{reward:b.subsidy+b.fees,totalFees:b.fees,totalTx:count,totalSize:b.size,avgFee:count>1?b.fees/(count-1):0,avgFeeRate:b.fees/b.size,coinbaseRaw:'',pool:{id:0,name:'Unattributed',slug:'unknown',minerNames:[]},matchRate:undefined}};}
 const feeSummaries=new Map(), feeSummaryRequests=new Map();
 function transactionFeeSummary(raw, transactions) {
  const byId=new Map(transactions.map(t=>[t.txid,t]));
@@ -33,6 +34,7 @@ function transactionFeeSummary(raw, transactions) {
 }
 async function blockWithFees(raw) {
  const mapped=block(raw);
+ if(raw.txComplete===false)return mapped;
  if(!feeSummaries.has(raw.hash)){
   if(!feeSummaryRequests.has(raw.hash)){
    const request=(async()=>{
@@ -51,7 +53,8 @@ async function blockWithFees(raw) {
  if(payoutAddress)mapped.extras.pool.address=payoutAddress;
  return mapped;
 }
-async function rawBlock(id){try {const b=/^\d+$/.test(String(id))?(await h('/block/height/'+id,300000))[0]:await h('/block/'+id,300000);if(!b?.hash)throw Object.assign(Error('Block not found'),{status:404});return b;}catch(e){if(e.status===404)throw e;const b=await read(S+'/block/'+id,300000);const reward=b.tx[0].vout.reduce((s,o)=>s+sat(o.value),0),subsidy=Math.floor(50e8/2**Math.floor(b.height/210000));return {hash:b.hash,height:b.height,time:b.time,size:b.size,version:b.version,bits:parseInt(b.bits,16),nonce:b.nonce,previous:b.previousblockhash,merkle:b.merkleroot,tx:b.tx.map(t=>t.txid),subsidy,fees:reward-subsidy};}}
+async function rawBlock(id){try {const b=/^\d+$/.test(String(id))?(await h('/block/height/'+id,300000))[0]:await h('/block/'+id,300000);if(!b?.hash)throw Object.assign(Error('Block not found'),{status:404});return b;}catch(e){if(e.status===404)throw e;const b=parseSeleneBlock(await read(S+'/block/'+encodeURIComponent(id),300000));if(/^\d+$/.test(String(id))?b.height!==Number(id):b.hash.toLowerCase()!==String(id).toLowerCase())throw Object.assign(Error('Fallback returned a different block'),{status:503});return b;}}
+async function completeBlock(raw){return completeSeleneBlock(raw,page=>read(S+'/block/'+encodeURIComponent(raw.hash)+'?page='+page,300000));}
 async function tx(id){const t=await h('/transaction/'+id,15000);let b;if(isConfirmed(t))b=await rawBlock(t.block.height);const mapped=transaction(t,b);try{const native=await read(S+'/tx/'+id,60000);mapped.tokenMetadataUnavailable=false;for(let i=0;i<mapped.vout.length;i++){const o=native.vout[i];if(o?.scriptPubKey?.address)mapped.vout[i].scriptpubkey_address=o.scriptPubKey.address;if(o?.tokenData){mapped.vout[i].tokenData=o.tokenData;mapped.tokenInputDetailsUnavailable=true;}}}catch{mapped.tokenMetadataUnavailable=true;}return mapped;}
 async function blocks(height){
  const raw=height?await Promise.all(Array.from({length:10},(_,i)=>rawBlock(Math.max(0,Number(height)-i)))):(await h('/block/latest',30000)).sort((a,b)=>b.height-a.height).slice(0,15);
@@ -98,8 +101,8 @@ async function api(path){const u=new URL(path,'http://local'),p=u.pathname;let m
  if(m=p.match(/^\/api\/block-height\/(\d+)$/))return (await rawBlock(m[1])).hash;
  if(m=p.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/))return blocks(m[1]);
  if(m=p.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)$/))return blockWithFees(await rawBlock(m[1]));
- if(m=p.match(/^\/api\/block\/([a-f0-9]{64}|\d+)\/txids$/)){const b=await rawBlock(m[1]);if(!Array.isArray(b.tx)||!b.tx.length||b.tx.some(id=>!/^[a-f0-9]{64}$/.test(id))||new Set(b.tx).size!==b.tx.length)throw Error('Incomplete block transaction IDs');return b.tx;}
- if(m=p.match(/^\/api\/block\/([^/]+)\/txs(?:\/(\d+))?$/)){const b=await rawBlock(m[1]);const ids=b.tx.slice(Number(m[2]||0),Number(m[2]||0)+25);return (await h('/transactions?txids='+ids.join(','),300000)).map(t=>transaction(t,b));}
+ if(m=p.match(/^\/api\/block\/([a-f0-9]{64}|\d+)\/txids$/)){const b=await completeBlock(await rawBlock(m[1]));if(!Array.isArray(b.tx)||!b.tx.length||b.tx.some(id=>!/^[a-f0-9]{64}$/.test(id))||new Set(b.tx).size!==b.tx.length)throw Error('Incomplete block transaction IDs');return b.tx;}
+ if(m=p.match(/^\/api\/block\/([^/]+)\/txs(?:\/(\d+))?$/)){const b=await completeBlock(await rawBlock(m[1]));const ids=b.tx.slice(Number(m[2]||0),Number(m[2]||0)+25);return (await h('/transactions?txids='+ids.join(','),300000)).map(t=>transaction(t,b));}
  if(m=p.match(/^\/api\/v1\/block\/([^/]+)\/summary$/)){const b=await rawBlock(m[1]);const ts=await h('/transactions/block/'+b.hash,300000);return ts.map(t=>({txid:t.txid,vsize:t.size,fee:t.fee,value:t.outputs.reduce((s,o)=>s+o.value,0)}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)\/outspends$/)){const t=await h('/transaction/'+m[1],60000);return t.outputs.map(o=>({spent:o.spent,txid:o.spender?.txid,vin:o.spender?.input,status:undefined}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)$/))return tx(m[1]);
