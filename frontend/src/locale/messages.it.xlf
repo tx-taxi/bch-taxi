@@ -11770,7 +11770,7 @@
       </trans-unit>
       <trans-unit id="bch.about.details" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source>
-        <target state="needs-review-translation">1 BCH equivale a 100,000,000 di satoshi. Le commissioni sono espresse in satoshi per byte serializzato: BCH non applica lo sconto sul peso SegWit. Gli indirizzi CashAddr e legacy sono indirizzi Bitcoin Cash. BCH utilizza l’adeguamento della difficoltà ASERT a ogni blocco, un intervallo obiettivo di 600 secondi e il dimezzamento del sussidio ogni 210,000 blocchi.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH equivale a 100.000.000 di satoshi. Le commissioni sono espresse in satoshi per byte serializzato: BCH non applica lo sconto sul peso SegWit. Gli indirizzi CashAddr e legacy sono indirizzi Bitcoin Cash. BCH utilizza l’adeguamento della difficoltà ASERT a ogni blocco, un intervallo obiettivo di 600 secondi e il dimezzamento del sussidio ogni 210.000 blocchi.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
@@ -11976,7 +11976,7 @@
       </trans-unit>
       <trans-unit id="bch.api.56b1e0a35391" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source>
-        <target state="needs-review-translation">1 BCH equivale a 100,000,000 di satoshi. Questo esploratore mostra i tassi di commissione in satoshi per byte serializzato (sat/B). I dati in attesa sono osservati da un singolo nodo BCHN e possono differire da quelli di un altro nodo o miner. Le commissioni osservate aiutano a formulare aspettative, ma non garantiscono la conferma.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH equivale a 100.000.000 di satoshi. Questo esploratore mostra i tassi di commissione in satoshi per byte serializzato (sat/B). I dati in attesa sono osservati da un singolo nodo BCHN e possono differire da quelli di un altro nodo o miner. Le commissioni osservate aiutano a formulare aspettative, ma non garantiscono la conferma.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
@@ -13616,14 +13616,14 @@
       </trans-unit>
       <trans-unit id="bch.docs.context.chain-documentation" datatype="html">
         <source><x id="CHAIN" equiv-text="this.chainName" /> documentation</source>
-        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> documentazione</target><context-group purpose="location">
+        <target state="needs-review-translation">Documentazione di <x id="CHAIN" equiv-text="this.chainName" /></target><context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bch.docs.context.chain-explorer" datatype="html">
         <source><x id="CHAIN" equiv-text="this.chainName" /> explorer</source>
-        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> esploratore</target><context-group purpose="location">
+        <target state="needs-review-translation">Esploratore di <x id="CHAIN" equiv-text="this.chainName" /></target><context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>

@@ -11727,7 +11727,7 @@
       </trans-unit>
       <trans-unit id="bch.about.details" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source>
-        <target state="needs-review-translation">1 BCH equivale a 100,000,000 satoshis. As taxas são expressas em satoshis por byte serializado: BCH não aplica o desconto de peso SegWit. Os endereços CashAddr e antigos são endereços Bitcoin Cash. BCH utiliza o ajuste de dificuldade ASERT a cada bloco, um intervalo de referência de 600 segundos e reduções para metade do subsídio a cada 210,000 blocos.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH equivale a 100 000 000 satoshis. As taxas são expressas em satoshis por byte serializado: BCH não aplica o desconto de peso SegWit. Os endereços CashAddr e antigos são endereços Bitcoin Cash. BCH utiliza o ajuste de dificuldade ASERT a cada bloco, um intervalo de referência de 600 segundos e reduções para metade do subsídio a cada 210 000 blocos.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
@@ -11933,7 +11933,7 @@
       </trans-unit>
       <trans-unit id="bch.api.56b1e0a35391" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source>
-        <target state="needs-review-translation">1 BCH equivale a 100,000,000 satoshis. Este explorador apresenta taxas em satoshis por byte serializado (sat/B). Os dados pendentes são observados por um nó BCHN e podem diferir dos de outro nó ou minerador. As taxas observadas ajudam a formar expectativas, mas não garantem a confirmação.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH equivale a 100 000 000 satoshis. Este explorador apresenta taxas em satoshis por byte serializado (sat/B). Os dados pendentes são observados por um nó BCHN e podem diferir dos de outro nó ou minerador. As taxas observadas ajudam a formar expectativas, mas não garantem a confirmação.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
@@ -13508,14 +13508,14 @@
       </trans-unit>
       <trans-unit id="bch.docs.context.chain-documentation" datatype="html">
         <source><x id="CHAIN" equiv-text="this.chainName" /> documentation</source>
-        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> documentação</target><context-group purpose="location">
+        <target state="needs-review-translation">Documentação de <x id="CHAIN" equiv-text="this.chainName" /></target><context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bch.docs.context.chain-explorer" datatype="html">
         <source><x id="CHAIN" equiv-text="this.chainName" /> explorer</source>
-        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> explorador</target><context-group purpose="location">
+        <target state="needs-review-translation">Explorador de <x id="CHAIN" equiv-text="this.chainName" /></target><context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>

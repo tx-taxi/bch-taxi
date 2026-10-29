@@ -11783,7 +11783,7 @@
       </trans-unit>
       <trans-unit id="bch.about.details" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source>
-        <target state="needs-review-translation">1 BCH равен 100,000,000 сатоши. Комиссии указываются в сатоши за сериализованный байт: в BCH скидка на вес SegWit не применяется. CashAddr и устаревшие адреса относятся к адресам Bitcoin Cash. В BCH сложность корректируется по ASERT после каждого блока, целевой интервал составляет 600 секунд, а субсидия сокращается вдвое каждые 210,000 блоков.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH равен 100 000 000 сатоши. Комиссии указываются в сатоши за сериализованный байт: в BCH скидка на вес SegWit не применяется. CashAddr и устаревшие адреса относятся к адресам Bitcoin Cash. В BCH сложность корректируется по ASERT после каждого блока, целевой интервал составляет 600 секунд, а субсидия сокращается вдвое каждые 210 000 блоков.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
@@ -12003,7 +12003,7 @@
       </trans-unit>
       <trans-unit id="bch.api.56b1e0a35391" datatype="html">
         <source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source>
-        <target state="needs-review-translation">1 BCH равен 100,000,000 сатоши. Этот обозреватель показывает ставки комиссий в сатоши за сериализованный байт (sat/B). Данные об ожидающих транзакциях получены с одного узла BCHN и могут отличаться от данных другого узла или майнера. Наблюдаемые комиссии помогают оценить ожидание, но не гарантируют подтверждения.</target><context-group purpose="location">
+        <target state="needs-review-translation">1 BCH равен 100 000 000 сатоши. Этот обозреватель показывает ставки комиссий в сатоши за сериализованный байт (sat/B). Данные об ожидающих транзакциях получены с одного узла BCHN и могут отличаться от данных другого узла или майнера. Наблюдаемые комиссии помогают оценить ожидание, но не гарантируют подтверждения.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
