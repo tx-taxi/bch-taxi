@@ -245,7 +245,8 @@
                 "pt",
                 "ru",
                 "nl",
-                "ja"
+                "ja",
+                "zh"
               ],
               "outputPath": "dist/translated"
             }
