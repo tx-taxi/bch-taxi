@@ -6346,8 +6346,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source>
-        <target>Consulta los principales grupos de minería de Bitcoin Cash ordenados por bloques minados durante el periodo elegido.</target>
+        <source>See the top Bitcoin Cash mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target state="needs-review-translation">Consulta los principales grupos de minería de Bitcoin Cash ordenados por el número de bloques minados durante el período elegido.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>

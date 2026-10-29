@@ -2936,8 +2936,8 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
-        <target>Consultez les tarifs Bitcoin visualisés au fil du temps, y compris les tarifs minimum et maximum par bloc ainsi que les tarifs à différents centiles.</target>
+        <source>See Bitcoin Cash feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <target state="needs-review-translation">Visualisez l’évolution des taux de frais Bitcoin Cash, y compris les taux minimum et maximum par bloc et les taux à différents percentiles.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>Consultez les frais de minage moyens gagnés par bloc Bitcoin visualisés en BTC et en USD au fil du temps.</target>
+        <source>See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Visualisez l’évolution des frais moyens de minage par bloc Bitcoin Cash en BCH et en USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>Consultez les frais par bloc Bitcoin par rapport à la subvention du bloc Bitcoin, visualisés en BTC et en USD au fil du temps.</target>
+        <source>See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Visualisez l’évolution des frais de minage par bloc Bitcoin Cash par rapport à la subvention du bloc, en BCH et en USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>Consultez les récompenses des blocs Bitcoin en BTC et en USD visualisées au fil du temps. Les récompenses globales correspondent au total des fonds que les mineurs gagnent grâce à la récompense de bloc et aux frais.</target>
+        <source>See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target state="needs-review-translation">Visualisez l’évolution des récompenses des blocs Bitcoin Cash en BCH et en USD. Les récompenses correspondent au total de la subvention du bloc et des frais.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target>Consultez la taille des blocs Bitcoin (Mo) et le poids des blocs (unités de poids) visualisés au fil du temps.</target>
+        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <target state="needs-review-translation">Visualisez l’évolution de la taille (Mo) et du poids (unités de poids) des blocs Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
-        <target>Consultez la taille, le poids, la fourchette de frais, les transactions incluses, l'audit (attendu et réel) et bien plus encore pour le bloc Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> <x id="BLOCK_HEIGHT" equiv-text="block.height"/> ( <x id="BLOCK_ID" equiv-text="block.id"/>).</target>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
+        <target state="needs-review-translation">Consultez la taille, le poids, la plage de frais, les transactions incluses, l’audit (prévu par rapport au réel) et plus pour le bloc Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -6098,8 +6098,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
-        <target>Obtenez des statistiques minières Bitcoin en temps réel telles que le taux de hachage, l'ajustement de la difficulté, les récompenses de bloc, la domination du pool, etc.</target>
+        <source>Get real-time Bitcoin Cash mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <target state="needs-review-translation">Consultez les statistiques de minage Bitcoin Cash en temps réel : taux de hachage, ajustement de difficulté, récompenses des blocs, domination des pools et plus.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -6345,8 +6345,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source>
-        <target>Consultez les principaux pools de minage Bitcoin Cash classés par nombre de blocs minés sur la période choisie.</target>
+        <source>See the top Bitcoin Cash mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target state="needs-review-translation">Consultez les principaux pools de minage Bitcoin Cash classés par nombre de blocs minés pendant la période choisie.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6698,16 +6698,16 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
-        <target>Prix du Bitcoin</target>
+        <source>Bitcoin Cash Price</source>
+        <target state="needs-review-translation">Prix du Bitcoin Cash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
-        <target>Consultez le prix du Bitcoin en USD visualisé au fil du temps.</target>
+        <source>See the Bitcoin Cash price in USD visualized over time.</source>
+        <target state="needs-review-translation">Visualisez l’évolution du prix du Bitcoin Cash en USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">78</context>
@@ -8867,8 +8867,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Obtenez des réponses aux questions courantes telles que : Qu’est-ce qu’une mempool ? Pourquoi ma transaction n'est-elle pas confirmée ? Comment puis-je utiliser ma propre instance du projet Open Source Mempool ? Et plus.</target>
+        <source>Read about Bitcoin Cash blocks, transactions, CashAddr addresses, CashTokens, fees, pending data, and mining coverage.</source>
+        <target state="needs-review-translation">Découvrez les blocs, transactions, adresses CashAddr, CashTokens, frais, données en attente et couverture du minage Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -8891,8 +8891,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>Documentation pour le service API REST mempool.space : obtenez des informations sur les adresses, les transactions, les blocs, les frais, le minage, le réseau Lightning, etc.</target>
+        <source>Documentation for the bch.tx.taxi REST API: query Bitcoin Cash addresses, transactions, blocks, fees, mining, and network data.</source>
+        <target state="needs-review-translation">Documentation de l’API REST de bch.tx.taxi : consultez les adresses, transactions, blocs, frais, données de minage et réseau Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -8915,8 +8915,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Documentation pour le service API WebSocket mempool.space : obtenez des informations en temps réel sur les blocs, les pools de mémoire, les transactions, les adresses, etc.</target>
+        <source>Documentation for the bch.tx.taxi WebSocket API: receive Bitcoin Cash snapshots and track a transaction.</source>
+        <target state="needs-review-translation">Documentation de l’API WebSocket de bch.tx.taxi : recevez des instantanés Bitcoin Cash et suivez une transaction.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -11911,6 +11911,18 @@
       <trans-unit id="taxi.bch.mining.pool-luck" datatype="html"><source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source><target>La chance globale de tous les pools de minage au cours de la dernière semaine. Une chance supérieure à 100 % signifie que le temps moyen par bloc est inférieur à 10 minutes.</target></trans-unit>
       <trans-unit id="bch.docs.context.chain-explorer" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> explorer</source><target>Explorateur <x id="CHAIN" equiv-text="this.chainName"/></target></trans-unit>
       <trans-unit id="bch.docs.context.chain-documentation" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> documentation</source><target>Documentation <x id="CHAIN" equiv-text="this.chainName"/></target></trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">Offre de LBTC par rapport aux avoirs en BTC</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>
