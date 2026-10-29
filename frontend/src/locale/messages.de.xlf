@@ -11584,6 +11584,13 @@
       <trans-unit id="bch.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Neueste Blöcke links anzeigen</target></trans-unit>
       <trans-unit id="bch.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source><target>Logo des Mining-Pools <x id="NAME" equiv-text="this.name" /></target></trans-unit>
       <trans-unit id="bch.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logo des Mining-Pools</target></trans-unit>
+      <trans-unit id="bch.asert.blocks" datatype="html"><source>Blocks</source><target>Blöcke</target></trans-unit>
+      <trans-unit id="bch.asert.schedule" datatype="html"><source>Δ schedule</source><target>Δ zum Zeitplan</target></trans-unit>
+      <trans-unit id="bch.asert.gaining" datatype="html"><source>Gaining on schedule → difficulty increasing</source><target>Vor dem Zeitplan → Schwierigkeit steigt</target></trans-unit>
+      <trans-unit id="bch.asert.falling" datatype="html"><source>Falling behind → difficulty decreasing</source><target>Hinter dem Zeitplan → Schwierigkeit sinkt</target></trans-unit>
+      <trans-unit id="bch.asert.on-schedule" datatype="html"><source>On schedule</source><target>Im Zeitplan</target></trans-unit>
+      <trans-unit id="bch.asert.block" datatype="html"><source>Block</source><target>Block</target></trans-unit>
+      <trans-unit id="bch.asert.deviation" datatype="html"><source>Deviation</source><target>Abweichung</target></trans-unit>
     </body>
   </file>
 </xliff>
