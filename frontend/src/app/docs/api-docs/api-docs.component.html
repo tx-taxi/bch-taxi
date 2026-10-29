@@ -16,7 +16,7 @@
         </a>
         <div class="endpoint-content">
           <div class="endpoint" *ngIf="item.path">
-            <div class="subtitle">Endpoint</div>
+            <div class="subtitle" i18n="@@tx-taxi.docs.endpoint">Endpoint</div>
             <code *ngIf="item.method">{{ item.method }} </code><code>{{ item.path }}</code>
           </div>
           <div class="description"><div class="subtitle" i18n="@@bch.docs.description">Description</div><p>{{ item.description }}</p></div>

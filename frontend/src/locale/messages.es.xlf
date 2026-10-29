@@ -11865,6 +11865,11 @@
       <trans-unit id="bch.asert.on-schedule" datatype="html"><source>On schedule</source><target>Al ritmo previsto</target></trans-unit>
       <trans-unit id="bch.asert.block" datatype="html"><source>Block</source><target>Bloque</target></trans-unit>
       <trans-unit id="bch.asert.deviation" datatype="html"><source>Deviation</source><target>Desviación</target></trans-unit>
+          <trans-unit id="tx-taxi.eight-blocks.by" datatype="html"><source>by</source><target>por</target></trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Desconocido</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Punto de acceso</target></trans-unit>
+    <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscripción</target></trans-unit>
+<trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
     </body>
   </file>
 </xliff>
