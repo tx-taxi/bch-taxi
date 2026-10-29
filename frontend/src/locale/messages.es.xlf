@@ -11870,6 +11870,7 @@
       <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Punto de acceso</target></trans-unit>
     <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscripción</target></trans-unit>
 <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
+      <trans-unit id="bch.meta.recent-transactions" datatype="html"><source>See the most recent Bitcoin Cash transactions, updated in real time.</source><target>Consulta las transacciones más recientes de Bitcoin Cash, actualizadas en tiempo real.</target></trans-unit>
     </body>
   </file>
 </xliff>
