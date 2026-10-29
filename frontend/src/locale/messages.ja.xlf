@@ -3727,7 +3727,7 @@
       </trans-unit>
       <trans-unit id="0b47a777f024ab4e3cdf0062acb4d86e9ae1f635" datatype="html">
         <source>Median fee</source>
-        <target>料金の中央値</target>
+        <target>手数料の中央値</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block-preview.component.html</context>
           <context context-type="linenumber">36</context>
@@ -6951,7 +6951,7 @@
       </trans-unit>
       <trans-unit id="a0d4ab5b063e7be1c9ea980f5fd6ce1b5384ad0b" datatype="html">
         <source>Average fees per block in the past 144 blocks</source>
-        <target>以前の144つブロックに各ブロックの平均手数料</target>
+        <target>過去144ブロックの1ブロックあたりの平均手数料</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
           <context context-type="linenumber">18</context>
@@ -6987,7 +6987,7 @@
       </trans-unit>
       <trans-unit id="8be96dc461529381c812f64962c62f4228d01470" datatype="html">
         <source>Fee paid on average for each transaction in the past 144 blocks</source>
-        <target>以前の144つブロックで各トランザクションに支払った平均手数料</target>
+        <target>過去144ブロックの1トランザクションあたりの平均手数料</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
           <context context-type="linenumber">31</context>
