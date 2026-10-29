@@ -49,8 +49,13 @@ export class SeoService {
     });
   }
 
+  private activeLocale(): 'es' | 'fr' | 'de' | undefined {
+    const match = window.location.pathname.match(/^\/(es|fr|de)(?:\/|$)/);
+    return match?.[1] as 'es' | 'fr' | 'de' | undefined;
+  }
+
   private documentMetadata() {
-    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return undefined;
+    if (this.activeLocale()) return undefined;
     let path = this.router.url.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     return nativeSeoPages[path.replace(/\/$/, '') || '/'];
@@ -103,14 +108,15 @@ export class SeoService {
   updateCanonical(path) {
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const localized = window.location.pathname === '/es' || window.location.pathname.startsWith('/es/');
-    const canonicalUrl = 'https://' + this.baseDomain + (localized ? '/es' : '') + path;
+    const locale = this.activeLocale();
+    const canonicalUrl = 'https://' + this.baseDomain + (locale ? '/' + locale : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
   getTitle(): string {
-    if ((window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) && !this.network) return this.baseTitle + ' - Explorador de Bitcoin Cash';
+    const locale = this.activeLocale();
+    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Bitcoin Cash', fr: 'Explorateur Bitcoin Cash', de: 'Bitcoin-Cash-Explorer'}[locale]);
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -125,7 +131,8 @@ export class SeoService {
   }
 
   getDescription(): string {
-    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.';
+    const locale = this.activeLocale();
+    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Bitcoin Cash.', de: 'Entdecken Sie Bitcoin-Cash-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.'})[locale];
     return this.documentMetadata()?.description || this.baseDescription;
   }
 
