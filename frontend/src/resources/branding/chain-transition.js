@@ -28,13 +28,13 @@
     hubLocaleLoad = fetch(hubOrigin + '/api/v1/locale-capabilities', { credentials: 'omit', redirect: 'error', signal: controller.signal })
       .then(response => response.ok ? response.json() : null)
       .then(data => {
-        hubAvailableLocales = data?.version === 1 && Array.isArray(data?.hosts?.['tx.taxi']) ? data.hosts['tx.taxi'].filter(locale => ['es', 'fr', 'de', 'it', 'pt', 'ru', 'nl', 'ja', 'zh', 'pl'].includes(locale)) : [];
+        hubAvailableLocales = data?.version === 1 && Array.isArray(data?.hosts?.['tx.taxi']) ? data.hosts['tx.taxi'].filter(locale => ['es', 'fr', 'de', 'it', 'pt', 'ru', 'nl', 'ja', 'zh', 'pl', 'da'].includes(locale)) : [];
         if (hubAvailableLocales.length) window.dispatchEvent(new Event('txTaxiLocaleCapabilities'));
       }).catch(() => {}).finally(() => clearTimeout(timeout));
   } catch {}
   // Keep the explicit locale when the hub advertises it.
   const localizedHubPath = () => {
-    const explicit = location.pathname.match(/^\/(en|es|fr|de|it|pt|ru|nl|ja|zh|pl)(?:\/|$)/i)?.[1]?.toLowerCase();
+    const explicit = location.pathname.match(/^\/(en|es|fr|de|it|pt|ru|nl|ja|zh|pl|da)(?:\/|$)/i)?.[1]?.toLowerCase();
     let saved = '';
     try { saved = decodeURIComponent(document.cookie.split(';').map(item => item.trim()).find(item => item.startsWith('txtaxi_language='))?.slice('txtaxi_language='.length) || ''); } catch {}
     const locale = explicit || saved;
@@ -186,9 +186,9 @@
       const root = dashboardPath();
       document.querySelectorAll('a.navbar-brand, a.chain-divider-mark').forEach(link => {
         link.href = dashboard ? hubOrigin + localizedHubPath() : root;
-        const language = (/^\/(es|fr|de|it|pt|ru|nl|ja|zh|pl)(?:\/|$)/i.exec(location.pathname)?.[1]?.toLowerCase() || document.documentElement.lang.toLowerCase().slice(0, 2));
-        const backLabels = {es:'Volver a tx.taxi',fr:'Retour à tx.taxi',de:'Zurück zu tx.taxi',it:'Torna a tx.taxi',pt:'Voltar a tx.taxi',ru:'Вернуться на tx.taxi',nl:'Terug naar tx.taxi',ja:'tx.taxiに戻る',zh:'返回 tx.taxi',pl:'Wróć do tx.taxi'};
-        const dashboardLabels = {es:'Panel principal de ',fr:'Tableau de bord ',de:'Dashboard von ',it:'Panoramica di ',pt:'Painel de ',ru:'Главная страница ',nl:'Dashboard van ',ja:'ダッシュボード：',zh:'首页：',pl:'Panel '};
+        const language = (/^\/(es|fr|de|it|pt|ru|nl|ja|zh|pl|da)(?:\/|$)/i.exec(location.pathname)?.[1]?.toLowerCase() || document.documentElement.lang.toLowerCase().slice(0, 2));
+        const backLabels = {es:'Volver a tx.taxi',fr:'Retour à tx.taxi',de:'Zurück zu tx.taxi',it:'Torna a tx.taxi',pt:'Voltar a tx.taxi',ru:'Вернуться на tx.taxi',nl:'Terug naar tx.taxi',ja:'tx.taxiに戻る',zh:'返回 tx.taxi',pl:'Wróć do tx.taxi',da:'Tilbage til tx.taxi'};
+        const dashboardLabels = {es:'Panel principal de ',fr:'Tableau de bord ',de:'Dashboard von ',it:'Panoramica di ',pt:'Painel de ',ru:'Главная страница ',nl:'Dashboard van ',ja:'ダッシュボード：',zh:'首页：',pl:'Panel ',da:'Oversigt for '};
         const label = dashboard ? (backLabels[language] || 'Back to tx.taxi') : (dashboardLabels[language] ? dashboardLabels[language] + sourceName : sourceName + ' dashboard');
         link.setAttribute('aria-label', label);
         link.title = label;

@@ -247,7 +247,8 @@
                 "nl",
                 "ja",
                 "zh",
-                "pl"
+                "pl",
+                "da"
               ],
               "outputPath": "dist/translated"
             }
