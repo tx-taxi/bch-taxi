@@ -3488,8 +3488,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="56fa1cd221491b6478998679cba2dc8d55ba330d" datatype="html">
-        <source>Block Sizes and Weights</source>
-        <target>区块大小与权重</target>
+        <source>Block Sizes</source>
+        <target>区块大小</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.html</context>
           <context context-type="linenumber">5</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target state="needs-review-translation">查看 Bitcoin Cash 区块大小（MB）和区块权重（权重单位）随时间的变化。</target>
+        <source>See Bitcoin Cash block sizes (MB) visualized over time.</source>
+        <target state="needs-review-translation">查看 Bitcoin Cash 区块大小（MB）随时间的变化。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
-        <target state="needs-review-translation">查看 Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> 区块 <x id="BLOCK_HEIGHT" equiv-text="block.height" />（<x id="BLOCK_ID" equiv-text="block.id" />）的大小、权重、手续费范围、所含交易、审计（预期与实际）等信息。</target>
+        <source>See size, fees and included transactions for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
+        <target state="needs-review-translation">查看 Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> 区块 <x id="BLOCK_HEIGHT" equiv-text="block.height" />（<x id="BLOCK_ID" equiv-text="block.id" />）的大小、手续费和所包含的交易。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>

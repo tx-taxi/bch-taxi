@@ -62,8 +62,8 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
   ngOnInit(): void {
     let firstRun = true;
 
-    this.seoService.setTitle($localize`:@@56fa1cd221491b6478998679cba2dc8d55ba330d:Block Sizes and Weights`);
-    this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-sizes:See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.`);
+    this.seoService.setTitle($localize`:@@56fa1cd221491b6478998679cba2dc8d55ba330d:Block Sizes`);
+    this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-sizes:See Bitcoin Cash block sizes (MB) visualized over time.`);
     this.miningWindowPreference = this.miningService.getDefaultTimespan('24h');
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
     this.radioGroupForm.controls.dateSpan.setValue(this.miningWindowPreference);
@@ -93,8 +93,6 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
                 const data = response.body;
                 this.prepareChartOptions({
                   sizes: data.sizes.map(val => [val.timestamp * 1000, val.avgSize / 1000000, val.avgHeight]),
-                  weights: data.weights.map(val => [val.timestamp * 1000, val.avgWeight / 1000000, val.avgHeight]),
-                  sizePerWeight: data.weights.map((val, i) => [val.timestamp * 1000, data.sizes[i].avgSize / (val.avgWeight / 4), val.avgHeight]),
                 });
                 this.isLoading = false;
               }),
@@ -156,11 +154,7 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
 
           for (const tick of ticks) {
             if (tick.seriesIndex === 0) { // Size
-              tooltip += `${tick.marker} ${tick.seriesName}: ${formatNumber(tick.data[1], this.locale, '1.2-2')} MB`;
-            } else if (tick.seriesIndex === 1) { // Weight
-              tooltip += `${tick.marker} ${tick.seriesName}: ${formatNumber(tick.data[1], this.locale, '1.2-2')} MWU`;
-            } else if (tick.seriesIndex === 2) { // Size per weight
-              tooltip += `${tick.marker} ${tick.seriesName}: ${formatNumber(tick.data[1], this.locale, '1.2-2')} B/vB`;
+              tooltip += `${tick.marker} ${tick.seriesName}: ${formatNumber(tick.data[1], this.locale, '1.2-6')} MB`;
             }
             tooltip += `<br>`;
           }
@@ -192,28 +186,7 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
             },
             icon: 'roundRect',
           },
-          {
-            name: $localize`:@@919f2fd60a898850c24b1584362bbf18a4628bcb:Weight`,
-            inactiveColor: 'rgb(110, 112, 121)',
-            textStyle: {
-              color: 'var(--fg)',
-            },
-            icon: 'roundRect',
-          },
-          {
-            name: $localize`Size per weight`,
-            inactiveColor: 'rgb(110, 112, 121)',
-            textStyle: {
-              color: 'var(--fg)',
-            },
-            icon: 'roundRect',
-          },
         ],
-        selected: JSON.parse(this.storageService.getValue('sizes_weights_legend'))  ?? {
-          'Size': true,
-          'Weight': true,
-          'Size per weight': true,
-        }
       },
       yAxis: data.sizes.length === 0 ? undefined : [
         {
@@ -225,7 +198,7 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
           axisLabel: {
             color: 'rgb(110, 112, 121)',
             formatter: (val) => {
-              return `${Math.round(val * 100) / 100} MWU`;
+              return `${formatNumber(val, this.locale, '1.0-6')} MB`;
             }
           },
           splitLine: {
@@ -244,49 +217,6 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
           showSymbol: false,
           symbol: 'none',
           data: data.sizes,
-          type: 'line',
-          lineStyle: {
-            width: 2,
-          },
-          markLine: {
-            silent: true,
-            symbol: 'none',
-            lineStyle: {
-              type: 'solid',
-              color: 'var(--transparent-fg)',
-              opacity: 1,
-              width: 1,
-            },
-            data: [{
-              yAxis: 1,
-              label: {
-                position: 'end',
-                show: true,
-                color: 'var(--fg)',
-                formatter: `1 MB`
-              }
-            }],
-          }
-        },
-        {
-          zlevel: 1,
-          yAxisIndex: 0,
-          name: $localize`:@@919f2fd60a898850c24b1584362bbf18a4628bcb:Weight`,
-          showSymbol: false,
-          symbol: 'none',
-          data: data.weights,
-          type: 'line',
-          lineStyle: {
-            width: 2,
-          }
-        },
-        {
-          zlevel: 1,
-          yAxisIndex: 0,
-          name: $localize`Size per weight`,
-          showSymbol: false,
-          symbol: 'none',
-          data: data.sizePerWeight,
           type: 'line',
           lineStyle: {
             width: 2,
@@ -327,10 +257,6 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
     }
 
     this.chartInstance = ec;
-
-    this.chartInstance.on('legendselectchanged', (e) => {
-      this.storageService.setValue('sizes_weights_legend', JSON.stringify(e.selected));
-    });
   }
 
   isMobile() {
@@ -348,7 +274,7 @@ export class BlockSizesWeightsGraphComponent implements OnInit {
     download(this.chartInstance.getDataURL({
       pixelRatio: 2,
       excludeComponents: ['dataZoom'],
-    }), `block-sizes-weights-${this.timespan}-${Math.round(now.getTime() / 1000)}.svg`);
+    }), `block-sizes-${this.timespan}-${Math.round(now.getTime() / 1000)}.svg`);
     // @ts-ignore
     this.chartOptions.grid.bottom = prevBottom;
     this.chartOptions.backgroundColor = 'none';

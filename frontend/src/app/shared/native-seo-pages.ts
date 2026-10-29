@@ -73,8 +73,8 @@ export const nativeSeoPages: Record<string, {title: string; description: string}
     "description": "See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees."
   },
   "/graphs/mining/block-sizes-weights": {
-    "title": "Bitcoin Cash block sizes and weights - bch.tx.taxi",
-    "description": "See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time."
+    "title": "Bitcoin Cash block sizes - bch.tx.taxi",
+    "description": "See Bitcoin Cash block sizes (MB) visualized over time."
   }
 };
 export const nativeSeoScreenshot = {

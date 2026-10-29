@@ -3488,8 +3488,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="56fa1cd221491b6478998679cba2dc8d55ba330d" datatype="html">
-        <source>Block Sizes and Weights</source>
-        <target>Dimensioni e pesi dei blocchi</target>
+        <source>Block Sizes</source>
+        <target>Dimensioni dei blocchi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.html</context>
           <context context-type="linenumber">5</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target state="needs-review-translation">Visualizza nel tempo le dimensioni (MB) e il peso (unità di peso) dei blocchi Bitcoin Cash.</target>
+        <source>See Bitcoin Cash block sizes (MB) visualized over time.</source>
+        <target state="needs-review-translation">Consulta l’andamento delle dimensioni dei blocchi Bitcoin Cash (MB).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
-        <target state="needs-review-translation">Visualizza dimensioni, peso, intervallo delle commissioni, transazioni incluse, verifica (previsto rispetto a effettivo) e altro per il blocco Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</target>
+        <source>See size, fees and included transactions for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
+        <target state="needs-review-translation">Consulta dimensioni, commissioni e transazioni incluse nel blocco Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
