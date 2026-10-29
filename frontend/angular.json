@@ -240,7 +240,9 @@
               "localize": [
                 "es",
                 "fr",
-                "de"
+                "de",
+                "it",
+                "pt"
               ],
               "outputPath": "dist/translated"
             }

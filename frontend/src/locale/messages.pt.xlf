@@ -2936,8 +2936,8 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
-        <target>Veja as taxas de Bitcoin visualizadas ao longo do tempo, incluindo taxas mínimas e máximas por bloco, juntamente com taxas em vários percentis.</target>
+        <source>See Bitcoin Cash feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <target state="needs-review-translation">Veja a evolução das taxas Bitcoin Cash, incluindo as taxas mínimas e máximas por bloco e as taxas em vários percentis.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>Veja as taxas médias de mineração ganhas por bloco Bitcoin visualizadas em BTC e USD ao longo do tempo.</target>
+        <source>See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Veja a evolução das taxas médias de mineração por bloco Bitcoin Cash em BCH e USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>Veja as taxas de mineração ganhas por bloco Bitcoin em comparação com o subsídio do bloco Bitcoin, visualizadas em BTC e USD ao longo do tempo.</target>
+        <source>See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Veja a evolução das taxas de mineração por bloco Bitcoin Cash em comparação com o subsídio do bloco, em BCH e USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>Veja as recompensas do bloco Bitcoin em BTC e USD visualizadas ao longo do tempo. As recompensas do bloco são o total de fundos que os mineradores ganham com os subsídios e taxas do bloco.</target>
+        <source>See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target state="needs-review-translation">Veja a evolução das recompensas dos blocos Bitcoin Cash em BCH e USD. As recompensas são o total do subsídio do bloco e das taxas.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target>Veja os tamanhos dos blocos Bitcoin (MB) e os pesos dos blocos (unidades de peso) visualizados ao longo do tempo.</target>
+        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <target state="needs-review-translation">Veja a evolução do tamanho (MB) e do peso (unidades de peso) dos blocos Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
-        <target>Veja tamanho, peso, faixa de taxas, transações incluídas, auditoria (esperada x real) e muito mais para Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> bloco <x id="BLOCK_HEIGHT" equiv-text="block.height"/> ( <x id="BLOCK_ID" equiv-text="block.id"/>).</target>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
+        <target state="needs-review-translation">Veja o tamanho, peso, intervalo de taxas, transações incluídas, auditoria (previsto face a real) e mais para o bloco Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -6098,8 +6098,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
-        <target>Obtenha estatísticas de mineração de Bitcoin em tempo real, como hashrate, ajuste de dificuldade, recompensas de bloco, domínio de pool e muito mais.</target>
+        <source>Get real-time Bitcoin Cash mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <target state="needs-review-translation">Consulte estatísticas Bitcoin Cash em tempo real, incluindo hashrate, ajuste de dificuldade, recompensas de blocos e domínio dos pools.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -6345,8 +6345,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
-        <target>Veja os principais pools de mineração de Bitcoin classificados por número de blocos minerados, durante o período desejado.</target>
+        <source>See the top Bitcoin Cash mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target state="needs-review-translation">Veja os principais pools de mineração Bitcoin Cash ordenados pelo número de blocos minerados no período escolhido.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6526,7 +6526,7 @@
       </trans-unit>
       <trans-unit id="cc657077942054572b255be033d634cf601c50b6" datatype="html">
         <source>Hashrate (24h)</source>
-        <target>Hashrate (24h)</target>
+        <target state="needs-review-translation">Taxa de hash (24 h)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool.component.html</context>
           <context context-type="linenumber">95</context>
@@ -6698,16 +6698,16 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
-        <target>Preço do Bitcoin</target>
+        <source>Bitcoin Cash Price</source>
+        <target state="needs-review-translation">Preço de Bitcoin Cash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
-        <target>Veja o preço do Bitcoin em USD visualizado ao longo do tempo.</target>
+        <source>See the Bitcoin Cash price in USD visualized over time.</source>
+        <target state="needs-review-translation">Veja a evolução do preço de Bitcoin Cash em USD.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">78</context>
@@ -8867,8 +8867,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Obtenha respostas para perguntas comuns como: O que é um mempool? Por que minha transação não está sendo confirmada? Como posso executar minha própria instância do The Mempool Open Source Project? E mais.</target>
+        <source>Read about Bitcoin Cash blocks, transactions, CashAddr addresses, CashTokens, fees, pending data, and mining coverage.</source>
+        <target state="needs-review-translation">Saiba mais sobre blocos, transações, endereços CashAddr, CashTokens, taxas, dados pendentes e cobertura de mineração Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -8891,8 +8891,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>Documentação para o serviço REST API mempool.space: obtenha informações sobre endereços, transações, blocos, taxas, mineração, rede Lightning e muito mais.</target>
+        <source>Documentation for the bch.tx.taxi REST API: query Bitcoin Cash addresses, transactions, blocks, fees, mining, and network data.</source>
+        <target state="needs-review-translation">Documentação da API REST de bch.tx.taxi: consulte endereços, transações, blocos, taxas, mineração e dados de rede Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -8915,8 +8915,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Documentação para o serviço API WebSocket mempool.space: obtenha informações em tempo real sobre blocos, mempools, transações, endereços e muito mais.</target>
+        <source>Documentation for the bch.tx.taxi WebSocket API: receive Bitcoin Cash snapshots and track a transaction.</source>
+        <target state="needs-review-translation">Documentação da API WebSocket de bch.tx.taxi: receba atualizações de Bitcoin Cash e acompanhe uma transação.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -11570,6 +11570,2365 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>Política de Privacidade</target>
       </trans-unit>
+      <trans-unit id="016d2ff8ad4b04f08717b98b5bc61eb122fb1ac8" datatype="html">
+        <source>child</source>
+        <target state="needs-review-translation">descendente</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <note priority="1" from="description">child</note>
+        <note priority="1" from="meaning">cluster.child</note>
+      </trans-unit>
+      <trans-unit id="36028650a60cba9aa7f034ae34643c72f5364f1d" datatype="html">
+        <source>this transaction</source>
+        <target state="needs-review-translation">esta transação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <note priority="1" from="description">this transaction</note>
+        <note priority="1" from="meaning">cluster.this-transaction</note>
+      </trans-unit>
+      <trans-unit id="489277af67abab02f1de98f4a7930fc611471eda" datatype="html">
+        <source>occurrence</source>
+        <target state="needs-review-translation">ocorrência</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">shared.occurrence</note>
+      </trans-unit>
+      <trans-unit id="4ce06818b8fe60a7c040ce7bfecc10b11397401b" datatype="html">
+        <source>24h Volume</source>
+        <target state="needs-review-translation">Volume em 24 h</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">liquid.24h-volume</note>
+      </trans-unit>
+      <trans-unit id="57d63f33e6e6f3d4716fab5381cff30d517d5c4e" datatype="html">
+        <source>usages</source>
+        <target state="needs-review-translation">utilizações</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">shared.usages</note>
+      </trans-unit>
+      <trans-unit id="6d1c8856044cc923fc70f32cb4be360d200cfa82" datatype="html">
+        <source>1 new transaction</source>
+        <target state="needs-review-translation">1 nova transação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">recent-transactions.new-tx-pill.singular</note>
+      </trans-unit>
+      <trans-unit id="7729adad4cbe5f490e393a925fae8a9b90f8ac08" datatype="html">
+        <source>Reserve Deficit</source>
+        <target state="needs-review-translation">Défice de reservas</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">liquid.reserve-deficit</note>
+      </trans-unit>
+      <trans-unit id="850e39efd95e6090598e13a01b7825f6b71b1017" datatype="html">
+        <source>occurrences</source>
+        <target state="needs-review-translation">ocorrências</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">shared.occurrences</note>
+      </trans-unit>
+      <trans-unit id="94c4e242e055d9521e1a0bfc7f1d165bbb37b94a" datatype="html">
+        <source>children</source>
+        <target state="needs-review-translation">descendentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+        <note priority="1" from="description">children</note>
+        <note priority="1" from="meaning">cluster.children</note>
+      </trans-unit>
+      <trans-unit id="a5c3bb57620832141bf6c51d7344e69af366c7e8" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> new transactions</source>
+        <target state="needs-review-translation"><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> novas transações</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">recent-transactions.new-tx-pill.plural</note>
+      </trans-unit>
+      <trans-unit id="ac0f81713a84217c9bd1d9bb460245d8190b073f" datatype="html">
+        <source>More</source>
+        <target state="needs-review-translation">Mais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/graphs/graphs.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">more</note>
+      </trans-unit>
+      <trans-unit id="b1046d5d7d997498195647aee8059b9109836f1d" datatype="html">
+        <source>Accelerate to ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/B</source>
+        <target state="needs-review-translation">Acelerar para ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/B</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">626</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.accelerate-to-x</note>
+      </trans-unit>
+      <trans-unit id="bba7a55b8bcbfd50a697f8cf0a7b917836f453f0" datatype="html">
+        <source>vSize</source>
+        <target state="needs-review-translation">Tamanho virtual</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Transaction Virtual Size</note>
+        <note priority="1" from="meaning">transaction.vsize</note>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-end" datatype="html">
+        <source>and contact the maintainer for source and license information.</source>
+        <target state="needs-review-translation">e contacte o responsável para informações sobre o código e as licenças.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-see" datatype="html">
+        <source>See</source>
+        <target state="needs-review-translation">Consulte</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-start" datatype="html">
+        <source>This explorer builds on the</source>
+        <target state="needs-review-translation">Este explorador baseia-se no</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-third" datatype="html">
+        <source>third-party attribution</source>
+        <target state="needs-review-translation">atribuição a terceiros</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.contact" datatype="html">
+        <source>Contact the maintainer</source>
+        <target state="needs-review-translation">Contactar o responsável</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.data" datatype="html">
+        <source>Bitcoin Cash data</source>
+        <target state="needs-review-translation">Dados de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.details" datatype="html">
+        <source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source>
+        <target state="needs-review-translation">1 BCH equivale a 100,000,000 satoshis. As taxas são expressas em satoshis por byte serializado: BCH não aplica o desconto de peso SegWit. Os endereços CashAddr e antigos são endereços Bitcoin Cash. BCH utiliza o ajuste de dificuldade ASERT a cada bloco, um intervalo de referência de 600 segundos e reduções para metade do subsídio a cada 210,000 blocos.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.docs" datatype="html">
+        <source>Bitcoin Cash documentation</source>
+        <target state="needs-review-translation">Documentação do Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.family" datatype="html">
+        <source>The Bitcoin Cash explorer in the tx.taxi family.</source>
+        <target state="needs-review-translation">O explorador de Bitcoin Cash da família tx.taxi.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.intro" datatype="html">
+        <source>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</source>
+        <target state="needs-review-translation">bch.tx.taxi é o explorador de Bitcoin Cash da família multichain tx.taxi. Explore blocos, transações, endereços, atividade de mineração e taxas de Bitcoin Cash.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.opensource" datatype="html">
+        <source>Built on open source</source>
+        <target state="needs-review-translation">Construído com código aberto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.project-links" datatype="html">
+        <source>Project links</source>
+        <target state="needs-review-translation">Ligações do projeto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.title" datatype="html">
+        <source>About bch.tx.taxi</source>
+        <target state="needs-review-translation">Sobre bch.tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.01a17e61cb7e" datatype="html">
+        <source>Returns the recent indexed block fee series. Related implemented endpoints provide rewards, block sizes and hashrate/difficulty from the same recent window.</source>
+        <target state="needs-review-translation">Devolve a série recente de taxas dos blocos indexados. Outros endpoints implementados fornecem recompensas, tamanhos de blocos e hashrate/dificuldade para o mesmo período recente.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.0941c7a7fb57" datatype="html">
+        <source>Search supports BCH block heights, block hashes, transaction IDs, CashAddr and legacy BCH addresses. A 64-character hash can be meaningful on more than one chain, so tx.taxi keeps the chain selector available when resolution is ambiguous.</source>
+        <target state="needs-review-translation">A pesquisa suporta alturas e hashes de blocos BCH, identificadores de transação e endereços BCH CashAddr e antigos. Um hash de 64 caracteres pode ser relevante em mais de uma blockchain, pelo que tx.taxi mantém o seletor de blockchain disponível quando a resolução é ambígua.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.10f165b0b925" datatype="html">
+        <source>Chain data</source>
+        <target state="needs-review-translation">Dados da blockchain</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.12c2ec9f2443" datatype="html">
+        <source>Get a block</source>
+        <target state="needs-review-translation">Obter um bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.1744b96470b5" datatype="html">
+        <source>Network</source>
+        <target state="needs-review-translation">Rede</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.188a992e372f" datatype="html">
+        <source>Data availability</source>
+        <target state="needs-review-translation">Disponibilidade dos dados</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.192d7022c3ca" datatype="html">
+        <source>Track one transaction</source>
+        <target state="needs-review-translation">Acompanhar uma transação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.1eec714f7565" datatype="html">
+        <source>Using the explorer</source>
+        <target state="needs-review-translation">Utilizar o explorador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.241c0e362072" datatype="html">
+        <source>Returns inputs, outputs, fee and confirmation status. CashToken output data appears only when it is available from the BCHN source.</source>
+        <target state="needs-review-translation">Devolve entradas, saídas, taxa e estado de confirmação. Os dados CashToken da saída só aparecem quando estão disponíveis na fonte BCHN.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.2dee16e3eaad" datatype="html">
+        <source>Returns the current indexed BCH tip hash as plain text.</source>
+        <target state="needs-review-translation">Devolve o hash da ponta BCH atualmente indexada em texto simples.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.3211a3c0b4ab" datatype="html">
+        <source>Returns indexed confirmed and pending statistics plus the source-reported UTXO count. Pending UTXO deltas are not separately available.</source>
+        <target state="needs-review-translation">Devolve estatísticas indexadas confirmadas e pendentes e o número de UTXOs indicado pela fonte. As alterações de UTXOs pendentes não estão disponíveis separadamente.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.36b6ca188619" datatype="html">
+        <source>Tracking</source>
+        <target state="needs-review-translation">Acompanhamento</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.39bb285b7674" datatype="html">
+        <source>Addresses and UTXOs</source>
+        <target state="needs-review-translation">Endereços e UTXOs</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.3b383dce0de0" datatype="html">
+        <source>Send an application-level ping to confirm that the gateway is responsive.</source>
+        <target state="needs-review-translation">Envie um ping ao nível da aplicação para confirmar que o gateway responde.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4b818c315a16" datatype="html">
+        <source>The gateway sends its current live snapshot after a client message. Snapshots contain the latest blocks, pending sample, observed fee values and current USD conversion when available.</source>
+        <target state="needs-review-translation">O gateway envia o seu estado atual após uma mensagem do cliente. As atualizações contêm os blocos mais recentes, a amostra pendente, as taxas observadas e a conversão USD atual quando disponível.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4c743f4fb0d6" datatype="html">
+        <source>Get pending summary</source>
+        <target state="needs-review-translation">Obter resumo pendente</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4e80eb8e78a4" datatype="html">
+        <source>Get observed fee values</source>
+        <target state="needs-review-translation">Obter valores de taxas observadas</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4f342c01a81c" datatype="html">
+        <source>Get complete block transaction IDs</source>
+        <target state="needs-review-translation">Obter todos os identificadores de transações de um bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.564fceac942f" datatype="html">
+        <source>The mining view derives recent reward, fee, difficulty and elapsed-work hashrate estimates from the latest indexed blocks. It is a recent-window view, not a long-range mining history. Bitcoin Cash targets roughly 600 seconds per block; ASERT adjusts difficulty after each block.</source>
+        <target state="needs-review-translation">A vista de mineração calcula estimativas recentes de recompensa, taxas, dificuldade e hashrate com base no trabalho decorrido dos últimos blocos indexados. É uma vista de um período recente, não um histórico de mineração a longo prazo. Bitcoin Cash tem um objetivo de cerca de 600 segundos por bloco; ASERT ajusta a dificuldade após cada bloco.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.56b1e0a35391" datatype="html">
+        <source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source>
+        <target state="needs-review-translation">1 BCH equivale a 100,000,000 satoshis. Este explorador apresenta taxas em satoshis por byte serializado (sat/B). Os dados pendentes são observados por um nó BCHN e podem diferir dos de outro nó ou minerador. As taxas observadas ajudam a formar expectativas, mas não garantem a confirmação.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5a2f8561253a" datatype="html">
+        <source>Returns the current indexed BCH tip height as plain text.</source>
+        <target state="needs-review-translation">Devolve a altura da ponta BCH atualmente indexada em texto simples.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5f4b0ef9e887" datatype="html">
+        <source>Get address history</source>
+        <target state="needs-review-translation">Obter histórico de endereço</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5fc0616370b6" datatype="html">
+        <source>Get a transaction</source>
+        <target state="needs-review-translation">Obter uma transação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.6166231d461b" datatype="html">
+        <source>Returns one spend-state entry per transaction output.</source>
+        <target state="needs-review-translation">Devolve uma entrada de estado de gasto por cada saída da transação.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.639a40e82b9a" datatype="html">
+        <source>Connection</source>
+        <target state="needs-review-translation">Ligação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.68d96411db72" datatype="html">
+        <source>Stop the currently tracked transaction.</source>
+        <target state="needs-review-translation">Para o acompanhamento da transação atual.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.716aec795bea" datatype="html">
+        <source>Returns observed fee values in sat/B from the current pending sample.</source>
+        <target state="needs-review-translation">Devolve valores de taxas observados em sat/B na amostra pendente atual.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.753f63fae763" datatype="html">
+        <source>Returns a 25-transaction history page. Omit /chain/:last-confirmed-txid for the first page.</source>
+        <target state="needs-review-translation">Devolve uma página de 25 transações do histórico. Omita /chain/:last-confirmed-txid para a primeira página.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.82807f2596fd" datatype="html">
+        <source>CashAddr and legacy addresses</source>
+        <target state="needs-review-translation">Endereços CashAddr e antigos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.8cdca5dc964c" datatype="html">
+        <source>Get recent mining series</source>
+        <target state="needs-review-translation">Obter séries recentes de mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.91af5d23ef46" datatype="html">
+        <source>Get a block transaction page</source>
+        <target state="needs-review-translation">Obter uma página de transações de um bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.9271537aa35f" datatype="html">
+        <source>Track a single transaction ID. The gateway sends the current transaction and polls it with the live refresh cycle. When it becomes confirmed, a block and txConfirmed notification are sent.</source>
+        <target state="needs-review-translation">Acompanhe um único identificador de transação. O gateway envia a transação atual e consulta-a a cada ciclo de atualização. Quando é confirmada, envia as notificações block e txConfirmed.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.936c2e4e05a1" datatype="html">
+        <source>Transactions and outputs</source>
+        <target state="needs-review-translation">Transações e saídas</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.a337f87ebca0" datatype="html">
+        <source>CashTokens are decoded only when the BCHN source provides token data for an output. The displayed category and raw token units are separate from the BCH value of that output. This explorer does not infer input token quantities, token names, symbols, or decimal scales when the source does not verify them.</source>
+        <target state="needs-review-translation">Os CashTokens só são descodificados quando a fonte BCHN fornece dados de tokens para uma saída. A categoria apresentada e as unidades brutas do token são distintas do valor em BCH da saída. Este explorador não deduz quantidades de tokens de entrada, nomes, símbolos ou escalas decimais quando a fonte não os verifica.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.ad8a8fcaea17" datatype="html">
+        <source>Get tip height</source>
+        <target state="needs-review-translation">Obter a altura da ponta</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b18a0b47b219" datatype="html">
+        <source>Stop tracking</source>
+        <target state="needs-review-translation">Parar acompanhamento</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b1cac68961c2" datatype="html">
+        <source>Resolves a block height to its block hash.</source>
+        <target state="needs-review-translation">Resolve a altura de um bloco para o seu hash.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b5d256b652a4" datatype="html">
+        <source>Pending and mining observations</source>
+        <target state="needs-review-translation">Observações pendentes e de mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b93805e8f246" datatype="html">
+        <source>CashAddr may include the bitcoincash: prefix. Legacy 1/3 addresses are shared with Bitcoin-derived networks, so they need explicit chain context. Address history is indexed in pages of 25 transactions; the balance endpoint reports source-provided UTXO totals.</source>
+        <target state="needs-review-translation">CashAddr pode incluir o prefixo bitcoincash:. Os endereços antigos 1/3 são partilhados com redes derivadas de Bitcoin e exigem, por isso, um contexto de blockchain explícito. O histórico de endereços é indexado em páginas de 25 transações; o endpoint de saldo apresenta os totais de UTXOs fornecidos pela fonte.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b9996ce6807d" datatype="html">
+        <source>Mining coverage</source>
+        <target state="needs-review-translation">Cobertura da mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b9c2d94bbef5" datatype="html">
+        <source>Returns a normalized block with BCH amount fields in satoshis. /api/v1/block/:hash-or-height is also accepted.</source>
+        <target state="needs-review-translation">Devolve um bloco normalizado com montantes BCH em satoshis. Também aceita /api/v1/block/:hash-or-height.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c10f2ddabaf6" datatype="html">
+        <source>Amounts, fees and pending data</source>
+        <target state="needs-review-translation">Montantes, taxas e dados pendentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c39d646f1076" datatype="html">
+        <source>Explorer</source>
+        <target state="needs-review-translation">Explorador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c668835b64ce" datatype="html">
+        <source>Returns up to 25 normalized transactions beginning at start-index. Omit start-index for the first page.</source>
+        <target state="needs-review-translation">Devolve até 25 transações normalizadas a partir de start-index. Omita start-index para a primeira página.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c673fefe3ce5" datatype="html">
+        <source>Returns the complete raw transaction ID list for the block. This is the source for the explorer’s complete block coverage.</source>
+        <target state="needs-review-translation">Devolve a lista bruta completa dos identificadores das transações do bloco. Esta é a fonte da cobertura completa do bloco no explorador.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.ca5269163ce4" datatype="html">
+        <source>Blocks, mining and availability</source>
+        <target state="needs-review-translation">Blocos, mineração e disponibilidade</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.cdaa99d19f5d" datatype="html">
+        <source>Search blocks, transactions and addresses</source>
+        <target state="needs-review-translation">Pesquisar blocos, transações e endereços</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.cfbb23ef92f0" datatype="html">
+        <source>Transaction tracking</source>
+        <target state="needs-review-translation">Acompanhamento de transações</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.dae0896cbc2c" datatype="html">
+        <source>Chain</source>
+        <target state="needs-review-translation">Blockchain</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.df6b40213281" datatype="html">
+        <source>Returns the observed BCHN mempool count, serialized bytes and total fee in satoshis.</source>
+        <target state="needs-review-translation">Devolve o número observado no mempool BCHN, os bytes serializados e a taxa total em satoshis.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e37f9cf4bc1f" datatype="html">
+        <source>Get tip hash</source>
+        <target state="needs-review-translation">Obter o hash da ponta</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e3d5456b1785" datatype="html">
+        <source>The explorer reads indexed BCH data from Haskoin and uses BCHN-derived Selene data for pending transactions and token output details. A provider failure is reported as unavailable rather than a missing entity. Historical fiat conversion is not available; the displayed USD price is current only.</source>
+        <target state="needs-review-translation">O explorador lê os dados BCH indexados de Haskoin e utiliza dados Selene derivados de BCHN para transações pendentes e detalhes de tokens de saída. Uma falha do fornecedor é comunicada como indisponibilidade, não como entidade inexistente. A conversão fiduciária histórica não está disponível; o preço USD apresentado é apenas o atual.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e3edde8b5d32" datatype="html">
+        <source>Get output spend state</source>
+        <target state="needs-review-translation">Obter o estado de gasto das saídas</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.eb394d9bf41f" datatype="html">
+        <source>Resolve a block height</source>
+        <target state="needs-review-translation">Resolver a altura de um bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.fad35ce5d9d7" datatype="html">
+        <source>Get an address summary</source>
+        <target state="needs-review-translation">Obter um resumo de endereço</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.example" datatype="html">
+        <source>Example</source>
+        <target state="needs-review-translation">Exemplo</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.explore-chain" datatype="html">
+        <source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}" /></source>
+        <target state="needs-review-translation">Explorar <x id="INTERPOLATION" equiv-text="{{ chainName }}" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.explorer-guide" datatype="html">
+        <source>Explorer guide</source>
+        <target state="needs-review-translation">Guia do explorador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/docs/docs.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.faq-intro" datatype="html">
+        <source>A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</source>
+        <target state="needs-review-translation">Um guia prático dos dados públicos de Bitcoin Cash apresentados por bch.tx.taxi.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.intro" datatype="html">
+        <source>Paste a transaction, block or address into tx.taxi. Open a confirmed match, choose between possible networks, or head straight to your chain’s explorer.</source>
+        <target state="needs-review-translation">Cole uma transação, bloco ou endereço em tx.taxi. Abra uma correspondência confirmada, escolha entre as redes possíveis ou vá diretamente ao explorador da sua blockchain.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.one-search" datatype="html">
+        <source>One search across chains.</source>
+        <target state="needs-review-translation">Uma pesquisa em todas as blockchains.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.open-hub" datatype="html">
+        <source>Open tx.taxi</source>
+        <target state="needs-review-translation">Abrir tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.response" datatype="html">
+        <source>Response shape</source>
+        <target state="needs-review-translation">Formato da resposta</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.rest-intro" datatype="html">
+        <source>The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</source>
+        <target state="needs-review-translation">A API REST é apenas de leitura e é disponibilizada pela origem deste explorador. Os exemplos usam o anfitrião público; use o seu anfitrião atual para desenvolvimento local.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.ws-intro" datatype="html">
+        <source>Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</source>
+        <target state="needs-review-translation">Ligue-se ao endpoint WebSocket para receber o estado atual de BCH e acompanhar uma transação.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.reference-title" datatype="html">
+        <source>ECB reference rate</source>
+        <target state="needs-review-translation">Taxa de referência do BCE</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.stale" datatype="html">
+        <source> · stale</source>
+        <target state="needs-review-translation"> · desatualizado</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.stale-title" datatype="html">
+        <source>ECB reference rate; update unavailable</source>
+        <target state="needs-review-translation">Taxa de referência do BCE; atualização indisponível</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.by" datatype="html">
+        <source>by</source>
+        <target state="needs-review-translation">por</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.faq" datatype="html">
+        <source>Bitcoin Cash FAQ</source>
+        <target state="needs-review-translation">FAQ de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.graphs" datatype="html">
+        <source>Bitcoin Cash Graphs</source>
+        <target state="needs-review-translation">Gráficos de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.made-with" datatype="html">
+        <source>Made with</source>
+        <target state="needs-review-translation">Feito com</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.mining" datatype="html">
+        <source>Mining Dashboard</source>
+        <target state="needs-review-translation">Painel de mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.telegram" datatype="html">
+        <source>Join the tx.taxi Telegram channel</source>
+        <target state="needs-review-translation">Aderir ao canal Telegram de tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.upstream" datatype="html">
+        <source>Upstream project</source>
+        <target state="needs-review-translation">Projeto original</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.intro.about" datatype="html">
+        <source>About tx.taxi</source>
+        <target state="needs-review-translation">Sobre tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.005463a6c488" datatype="html">
+        <source>External Links</source>
+        <target state="needs-review-translation">Ligações externas</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.0f3153a68574" datatype="html">
+        <source>Local Preferences</source>
+        <target state="needs-review-translation">Preferências locais</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1294845333ad" datatype="html">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxi utiliza Cloudflare Web Analytics para visualizações de páginas e desempenho, e um cookie diário próprio partilhado entre os seus exploradores para contar navegadores uma vez por dia UTC. O sistema diário de audiência guarda apenas um identificador diário, o nome do servidor do explorador e se houve interação. Não recebe texto de pesquisa, endereços, identificadores de transação, URLs ou endereços IP. Os registos diários individuais expiram após 31 dias; as contagens agregadas são conservadas durante 400 dias. Do Not Track e Global Privacy Control desativam esta medição própria.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1856e93d37a8" datatype="html">
+        <source>. Contact </source>
+        <target state="needs-review-translation">. Contacte </target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1c2b04a45d11" datatype="html">
+        <source>This site may link to tx.taxi contact channels, Bitcoin Cash references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source>
+        <target state="needs-review-translation">Este site pode conter ligações aos canais de contacto tx.taxi, referências Bitcoin Cash, código-fonte original e dependências de infraestrutura. Os sites externos têm os seus próprios termos e políticas.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.24cd9f0d49b0" datatype="html">
+        <source>bch.tx.taxi is an independently operated Bitcoin Cash explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source>
+        <target state="needs-review-translation">bch.tx.taxi é um explorador Bitcoin Cash operado de forma independente na família tx.taxi. O seu domínio, logótipo, paleta da blockchain e identidade do serviço distinguem esta versão derivada do projeto original.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.2bd9e04e138f" datatype="html">
+        <source>Upstream Attribution</source>
+        <target state="needs-review-translation">Atribuição ao projeto original</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.3fe100af9401" datatype="html">
+        <source>Use Your Own Node When Privacy Matters</source>
+        <target state="needs-review-translation">Use o seu próprio nó quando a privacidade for importante</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4103db00a3b3" datatype="html">
+        <source>Data and Availability</source>
+        <target state="needs-review-translation">Dados e disponibilidade</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.43aad455d42d" datatype="html">
+        <source>bch.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source>
+        <target state="needs-review-translation">bch.tx.taxi não está afiliado, patrocinado ou aprovado pela Mempool Holdings S.A. de C.V. As referências a mempool.space e mempool/mempool são atribuições nominativas ao software do qual esta versão deriva.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.45b6c69f5e42" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">Marcas e atribuição</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4d1e06fb51fa" datatype="html">
+        <source> by Melroy van den Berg, licensed under the GNU Affero General Public License. The BCH Explorer name and branding remain with their respective owners.</source>
+        <target state="needs-review-translation"> de Melroy van den Berg, licenciado sob a GNU Affero General Public License. O nome e a marca BCH Explorer pertencem aos respetivos titulares.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4d4a7bd17534" datatype="html">
+        <source>Public Blockchain Data</source>
+        <target state="needs-review-translation">Dados públicos da blockchain</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.54a76e5281a4" datatype="html">
+        <source>Bitcoin Cash transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source>
+        <target state="needs-review-translation">As transações, endereços, scripts e blocos Bitcoin Cash são públicos. A pesquisa de um endereço ou transação pode associar essa pesquisa aos seus metadados de rede. Não considere um explorador público uma barreira de privacidade.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.6e9665b9d920" datatype="html">
+        <source>Open Source Attribution</source>
+        <target state="needs-review-translation">Atribuição de código aberto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.6ee4eb18aa3a" datatype="html">
+        <source>Bitcoin Cash difficulty and halving components are adapted from </source>
+        <target state="needs-review-translation">Os componentes de dificuldade e halving de Bitcoin Cash são adaptados de </target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.7224b23c7ac2" datatype="html">
+        <source>Request Data</source>
+        <target state="needs-review-translation">Dados das solicitações</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.78e9d2e2ad7d" datatype="html">
+        <source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source>
+        <target state="needs-review-translation">Não abuse do site ou da API, interfira no funcionamento do serviço, contorne limites de taxa razoáveis ou use o serviço ilegalmente. O acesso pode ser limitado quando necessário para proteger a disponibilidade.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.7e2168415765" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">Atualizado: 20 de setembro de 2026</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.838ab86c1b97" datatype="html">
+        <source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source>
+        <target state="needs-review-translation">. O código-fonte, sistema visual, nomes, logótipos e marcas do projeto original pertencem aos respetivos titulares.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.83a95d1365c1" datatype="html">
+        <source>No Control Over Bitcoin Cash Transactions</source>
+        <target state="needs-review-translation">Sem controlo sobre transações Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.86730566eb88" datatype="html">
+        <source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source>
+        <target state="needs-review-translation">As solicitações normais ao site e à API podem revelar ao operador metadados web padrão, incluindo endereço IP, user agent, URL solicitado e hora da solicitação. Os registos do servidor podem ser conservados para fiabilidade, prevenção de abusos e resolução de problemas.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.88c241ed52b4" datatype="html">
+        <source>Explorer data may be delayed, incomplete, unavailable, or different from another node's view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source>
+        <target state="needs-review-translation">Os dados do explorador podem estar atrasados, incompletos, indisponíveis ou diferir da vista de outro nó. As estimativas de taxas são apenas estimativas e não garantem confirmação. O serviço é fornecido tal como está, sem promessa de disponibilidade ininterrupta ou adequação a uma finalidade específica.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.8ce35f583745" datatype="html">
+        <source>Details and opt-out</source>
+        <target state="needs-review-translation">Detalhes e desativação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.8e7582f1976e" datatype="html">
+        <source>bch.tx.taxi displays public Bitcoin Cash chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Bitcoin Cash node and explorer.</source>
+        <target state="needs-review-translation">bch.tx.taxi apresenta dados públicos da blockchain e do mempool Bitcoin Cash através do backend configurado pelo operador do site. Para verificação independente e maior privacidade na rede, use o seu próprio nó Bitcoin Cash e explorador.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.91e93d75c667" datatype="html">
+        <source>Mempool names, logos, and trademarks remain the property of their respective owners; bch.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source>
+        <target state="needs-review-translation">Os nomes, logótipos e marcas Mempool continuam a ser propriedade dos respetivos titulares; bch.tx.taxi não está afiliado nem é aprovado pela Mempool Holdings S.A. de C.V.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.997c65f3c315" datatype="html">
+        <source>Acceptable Use</source>
+        <target state="needs-review-translation">Utilização aceitável</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.9ee0c596557b" datatype="html">
+        <source>bch.tx.taxi is derived from </source>
+        <target state="needs-review-translation">bch.tx.taxi deriva de </target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.a6819f0d1181" datatype="html">
+        <source>Informational Explorer</source>
+        <target state="needs-review-translation">Explorador informativo</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.a9ec6faa8495" datatype="html">
+        <source>This software is derived from </source>
+        <target state="needs-review-translation">Este software deriva de </target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.be03ea0dc608" datatype="html">
+        <source>bch.tx.taxi provides a view of public Bitcoin Cash blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source>
+        <target state="needs-review-translation">bch.tx.taxi oferece uma vista dos blocos, transações, endereços, dados de mineração, estimativas de taxas e estado do mempool públicos de Bitcoin Cash. É um serviço informativo, não uma carteira, exchange, custodiante, processador de pagamentos ou serviço de prioridade de transações.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c5a77fb8e908" datatype="html">
+        <source>This site links to tx.taxi contact channels, Bitcoin Cash documentation, and upstream source code. Those external services have their own privacy policies.</source>
+        <target state="needs-review-translation">Este site contém ligações aos canais de contacto tx.taxi, documentação Bitcoin Cash e código-fonte original. Esses serviços externos têm as suas próprias políticas de privacidade.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c7d2295141bd" datatype="html">
+        <source>No Affiliation</source>
+        <target state="needs-review-translation">Sem afiliação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c8fb69ab4502" datatype="html">
+        <source>tx.taxi Identity</source>
+        <target state="needs-review-translation">Identidade tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.ccd371e8f1e5" datatype="html">
+        <source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Bitcoin Cash transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source>
+        <target state="needs-review-translation">O operador não pode reverter, cancelar, acelerar, recuperar ou redirecionar uma transação Bitcoin Cash. Para problemas com carteira, exchange ou pagamentos, contacte o serviço que criou ou recebeu a transação.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.df856fd94263" datatype="html">
+        <source>Bitcoin Cash is an open network and protocol. References to Bitcoin Cash, BCH, satoshis, blocks, transactions, addresses, mining, and CashTokens describe the network data presented by this explorer.</source>
+        <target state="needs-review-translation">Bitcoin Cash é uma rede e protocolo abertos. As referências a Bitcoin Cash, BCH, satoshis, blocos, transações, endereços, mineração e CashTokens descrevem os dados de rede apresentados por este explorador.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.e2f88447ee0e" datatype="html">
+        <source>Audience measurement</source>
+        <target state="needs-review-translation">Medição de audiência</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.e800fd2befc2" datatype="html">
+        <source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. bch.tx.taxi does not require an account for ordinary explorer use.</source>
+        <target state="needs-review-translation">As preferências de apresentação, como tema, denominação, moeda fiduciária, idioma e fuso horário, podem ser guardadas no navegador. bch.tx.taxi não exige uma conta para a utilização normal do explorador.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.ec1bb9b527e7" datatype="html">
+        <source>External Services</source>
+        <target state="needs-review-translation">Serviços externos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.fdb627efb86b" datatype="html">
+        <source>Open Source</source>
+        <target state="needs-review-translation">Código aberto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.fdcee3949fc4" datatype="html">
+        <source> for the current reviewed fork source package.</source>
+        <target state="needs-review-translation"> para obter o pacote atual e revisto do código-fonte da versão derivada.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.trademark" datatype="html">
+        <source>Trademark and attribution notes for bch.tx.taxi, including upstream mempool/mempool attribution and project independence.</source>
+        <target state="needs-review-translation">Notas sobre marcas e atribuição de bch.tx.taxi, incluindo a atribuição a mempool/mempool e a independência do projeto.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.trademark-title" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">Marcas e atribuição</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.about" datatype="html">
+        <source>About bch.tx.taxi</source>
+        <target state="needs-review-translation">Sobre bch.tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.choose-chain" datatype="html">
+        <source>Choose search chain</source>
+        <target state="needs-review-translation">Escolher blockchain para a pesquisa</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">395</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target state="needs-review-translation">Painel</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.graphs" datatype="html">
+        <source>Bitcoin Cash graphs</source>
+        <target state="needs-review-translation">Gráficos de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.mining" datatype="html">
+        <source>Mining dashboard</source>
+        <target state="needs-review-translation">Painel de mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.selected-explorer" datatype="html">
+        <source>Selected explorer</source>
+        <target state="needs-review-translation">Explorador selecionado</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">396</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.degraded" datatype="html">
+        <source>Some data is temporarily unavailable.</source>
+        <target state="needs-review-translation">Alguns dados estão temporariamente indisponíveis.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.retrying" datatype="html">
+        <source>Data unavailable. Retrying.</source>
+        <target state="needs-review-translation">Dados indisponíveis. A tentar novamente.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.stale" datatype="html">
+        <source>Data may be out of date.</source>
+        <target state="needs-review-translation">Os dados podem estar desatualizados.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.additional-explorers" datatype="html">
+        <source><x id="NAME" equiv-text="name" /> additional explorers</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" /> exploradores adicionais</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.bch-icon" datatype="html">
+        <source>Bitcoin Cash explorer</source>
+        <target state="needs-review-translation">Explorador de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.direct" datatype="html">
+        <source>Or go straight to</source>
+        <target state="needs-review-translation">Ou ir diretamente para</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.found" datatype="html">
+        <source>Found</source>
+        <target state="needs-review-translation">Encontrado</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.hide-many" datatype="html">
+        <source>Hide <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> options</source>
+        <target state="needs-review-translation">Ocultar <x id="COUNT" equiv-text="count" /> opções adicionais de <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.hide-one" datatype="html">
+        <source>Hide <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> option</source>
+        <target state="needs-review-translation">Ocultar <x id="COUNT" equiv-text="count" /> opção adicional de <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-explorer" datatype="html">
+        <source>Open <x id="NAME" equiv-text="name" /></source>
+        <target state="needs-review-translation">Abrir <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-explorer-tab" datatype="html">
+        <source>Open <x id="NAME" equiv-text="name" /> in a new tab</source>
+        <target state="needs-review-translation">Abrir <x id="NAME" equiv-text="name" /> num novo separador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-hub-tab" datatype="html">
+        <source>Open tx.taxi in a new tab</source>
+        <target state="needs-review-translation">Abrir tx.taxi num novo separador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.possible" datatype="html">
+        <source>Possible</source>
+        <target state="needs-review-translation">Possível</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.registry-unavailable" datatype="html">
+        <source>Explorer registry unavailable</source>
+        <target state="needs-review-translation">Lista de exploradores indisponível</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.show-many" datatype="html">
+        <source>Show <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> options</source>
+        <target state="needs-review-translation">Mostrar <x id="COUNT" equiv-text="count" /> opções adicionais de <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.show-one" datatype="html">
+        <source>Show <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> option</source>
+        <target state="needs-review-translation">Mostrar <x id="COUNT" equiv-text="count" /> opção adicional de <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.switch" datatype="html">
+        <source>Switch</source>
+        <target state="needs-review-translation">Mudar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.switch-to" datatype="html">
+        <source>Switch to <x id="NAME" equiv-text="name" /></source>
+        <target state="needs-review-translation">Mudar para <x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.your-search" datatype="html">
+        <source>your search</source>
+        <target state="needs-review-translation">a sua pesquisa</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.average-title" datatype="html">
+        <source>Approximate average fee rate</source>
+        <target state="needs-review-translation">Taxa média aproximada</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.data-unavailable" datatype="html">
+        <source>Fee data unavailable</source>
+        <target state="needs-review-translation">Dados de taxas indisponíveis</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.details" datatype="html">
+        <source>Total fees: <x id="AMOUNT" equiv-text="exactBlockAmount(total, locale)" /> <x id="SYMBOL" equiv-text="SYMBOL" />. Median fee rate: <x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />. Fee range: <x id="MIN" equiv-text="rate(min)" />–<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />.</source>
+        <target state="needs-review-translation">Taxas totais: <x id="AMOUNT" equiv-text="exactBlockAmount(total, locale)" /> <x id="SYMBOL" equiv-text="SYMBOL" />. Taxa mediana: <x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />. Intervalo de taxas: <x id="MIN" equiv-text="rate(min)" />–<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/block-format.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.estimate-title" datatype="html">
+        <source>Estimated block interval; transaction inclusion is not guaranteed</source>
+        <target state="needs-review-translation">Intervalo estimado entre blocos; a inclusão da transação não é garantida</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mempool-blocks/mempool-blocks.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mempool-blocks/mempool-blocks.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.median-title" datatype="html">
+        <source>Median transaction fee rate</source>
+        <target state="needs-review-translation">Taxa mediana das transações</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.range-unavailable" datatype="html">
+        <source>Fee range unavailable</source>
+        <target state="needs-review-translation">Intervalo de taxas indisponível</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.stale-block" datatype="html">
+        <source>stale block <x id="HASH" equiv-text="shortHash" /></source>
+        <target state="needs-review-translation">bloco não válido <x id="HASH" equiv-text="shortHash" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.token-details" datatype="html">
+        <source>CashToken details unavailable</source>
+        <target state="needs-review-translation">Detalhes de CashToken indisponíveis</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.token-input" datatype="html">
+        <source>Input token quantities unavailable</source>
+        <target state="needs-review-translation">Quantidades de tokens de entrada indisponíveis</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c3c520c2bccb5da8e432dd5f282a72b05e12b7e0" datatype="html">
+        <source>Your balance is too low.</source>
+        <target state="needs-review-translation">O seu saldo é insuficiente.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mempool-error/mempool-error.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.low-balance</note>
+      </trans-unit>
+      <trans-unit id="graphs.blockFees.avgBlock" datatype="html">
+        <source>* On average around block <x id="block" equiv-text="data[0].data[2]" /></source>
+        <target state="needs-review-translation">* Em média por volta do bloco <x id="block" equiv-text="data[0].data[2]" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesPercent" datatype="html">
+        <source>Fees (%)</source>
+        <target state="needs-review-translation">Taxas (%)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesUsd" datatype="html">
+        <source>Fees (USD)</source>
+        <target state="needs-review-translation">Taxas (USD)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.filter.inscription" datatype="html">
+        <source>Inscription</source>
+        <target state="needs-review-translation">Inscrição</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/filters.utils.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus1" datatype="html">
+        <source>Azores Time (AZOT)</source>
+        <target state="needs-review-translation">Hora dos Açores (AZOT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus10" datatype="html">
+        <source>Hawaii Standard Time (HST)</source>
+        <target state="needs-review-translation">Hora padrão do Havai (HST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus11" datatype="html">
+        <source>Samoa Standard Time (SST)</source>
+        <target state="needs-review-translation">Hora padrão de Samoa (SST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus2" datatype="html">
+        <source>Fernando de Noronha Time (FNT)</source>
+        <target state="needs-review-translation">Hora de Fernando de Noronha (FNT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus3" datatype="html">
+        <source>Argentina Time (ART)</source>
+        <target state="needs-review-translation">Hora da Argentina (ART)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus4" datatype="html">
+        <source>Atlantic Standard Time (AST)</source>
+        <target state="needs-review-translation">Hora padrão do Atlântico (AST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus7" datatype="html">
+        <source>Mountain Standard Time (MST)</source>
+        <target state="needs-review-translation">Hora padrão das Montanhas (MST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus8" datatype="html">
+        <source>Pacific Standard Time (PST)</source>
+        <target state="needs-review-translation">Hora padrão do Pacífico (PST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus9" datatype="html">
+        <source>Alaska Standard Time (AKST)</source>
+        <target state="needs-review-translation">Hora padrão do Alasca (AKST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus1" datatype="html">
+        <source>Central European Time (CET)</source>
+        <target state="needs-review-translation">Hora da Europa Central (CET)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus11" datatype="html">
+        <source>Norfolk Time (NFT)</source>
+        <target state="needs-review-translation">Hora de Norfolk (NFT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus12" datatype="html">
+        <source>New Zealand Standard Time (NZST)</source>
+        <target state="needs-review-translation">Hora padrão da Nova Zelândia (NZST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus13" datatype="html">
+        <source>Tonga Time (TOT)</source>
+        <target state="needs-review-translation">Hora de Tonga (TOT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus14" datatype="html">
+        <source>Line Islands Time (LINT)</source>
+        <target state="needs-review-translation">Hora das Ilhas da Linha (LINT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus2" datatype="html">
+        <source>Eastern European Time (EET)</source>
+        <target state="needs-review-translation">Hora da Europa Oriental (EET)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus3" datatype="html">
+        <source>Moscow Standard Time (MSK)</source>
+        <target state="needs-review-translation">Hora padrão de Moscovo (MSK)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus4" datatype="html">
+        <source>Armenia Time (AMT)</source>
+        <target state="needs-review-translation">Hora da Arménia (AMT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus5" datatype="html">
+        <source>Pakistan Standard Time (PKT)</source>
+        <target state="needs-review-translation">Hora padrão do Paquistão (PKT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus6" datatype="html">
+        <source>Xinjiang Time (XJT)</source>
+        <target state="needs-review-translation">Hora de Xinjiang (XJT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus7" datatype="html">
+        <source>Indochina Time (ICT)</source>
+        <target state="needs-review-translation">Hora da Indochina (ICT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus8" datatype="html">
+        <source>Hong Kong Time (HKT)</source>
+        <target state="needs-review-translation">Hora de Hong Kong (HKT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus9" datatype="html">
+        <source>Japan Standard Time (JST)</source>
+        <target state="needs-review-translation">Hora padrão do Japão (JST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html">
+        <source>Error loading CPFP data</source>
+        <target state="needs-review-translation">Erro ao carregar dados CPFP</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">Transações pendentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/custom-dashboard/custom-dashboard.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.by" datatype="html">
+        <source>by</source>
+        <target state="needs-review-translation">por</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/eight-blocks/eight-blocks.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html">
+        <source>Unknown</source>
+        <target state="needs-review-translation">Desconhecido</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/eight-blocks/eight-blocks.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.automatic-routing" datatype="html">
+        <source>Automatic Routing</source>
+        <target state="needs-review-translation">Encaminhamento automático</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">398</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.contact" datatype="html">
+        <source>Contact Us</source>
+        <target state="needs-review-translation">Contacte-nos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target state="needs-review-translation">Painel</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.loading-explorers" datatype="html">
+        <source>Loading explorers</source>
+        <target state="needs-review-translation">A carregar exploradores</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.native" datatype="html">
+        <source>NATIVE EXPLORERS</source>
+        <target state="needs-review-translation">EXPLORADORES NATIVOS</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html">
+        <source>Open</source>
+        <target state="needs-review-translation">Aberto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.opened" datatype="html">
+        <source>Opened</source>
+        <target state="needs-review-translation">Aberto</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.search-placeholder" datatype="html">
+        <source>Wave a taxi, paste anything here.</source>
+        <target state="needs-review-translation">Chame um táxi, cole algo aqui.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.selected" datatype="html">
+        <source>SELECTED</source>
+        <target state="needs-review-translation">SELECIONADO</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.source-code" datatype="html">
+        <source>Source code</source>
+        <target state="needs-review-translation">Código-fonte</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.thirdparty" datatype="html">
+        <source>3RD-PARTY EXPLORERS</source>
+        <target state="needs-review-translation">EXPLORADORES DE TERCEIROS</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.tools-docs" datatype="html">
+        <source>Tools &amp; Docs</source>
+        <target state="needs-review-translation">Ferramentas e documentação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.trademark" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">Marcas e atribuições</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.view-hub" datatype="html">
+        <source>View Hub</source>
+        <target state="needs-review-translation">Ver hub</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.internal-key" datatype="html">
+        <source>Internal Key</source>
+        <target state="needs-review-translation">Chave interna</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html">
+        <source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source>
+        <target state="needs-review-translation">As saídas anteriores em falta não foram carregadas. Alguns campos, como a taxa por byte, não podem ser calculados.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">Transações pendentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html">
+        <source>Error loading missing prevouts</source>
+        <target state="needs-review-translation">Erro ao carregar as saídas anteriores em falta</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="002cdbb1621daaed4946baea12ad99ea6b93f90c" datatype="html">
+        <source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Esta transação pertence a um segmento de <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transações, com taxa efetiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-many</note>
+      </trans-unit>
+      <trans-unit id="0061875559541699df95ecc284100821cd3851b8" datatype="html">
+        <source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B was needed to get into this block</source>
+        <target state="needs-review-translation">Bastavam cerca de ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B para entrar neste bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">tx-fee-rating.warning-tooltip</note>
+      </trans-unit>
+      <trans-unit id="11daad3d9cbd04a35424c70717b919265e8b067e" datatype="html">
+        <source> Values were capped at the max supply of 21M BCH </source>
+        <target state="needs-review-translation">Os valores foram limitados à oferta máxima de 21M BCH</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+        <note priority="1" from="description">Max supply warning message</note>
+        <note priority="1" from="meaning">calculator.max-supply-warning</note>
+      </trans-unit>
+      <trans-unit id="1cdb643999eb6d66bcd839aeaa381b62b8be8cd4" datatype="html">
+        <source>mempool chunk</source>
+        <target state="needs-review-translation">segmento do mempool</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <note priority="1" from="description">Mempool chunk tooltip</note>
+        <note priority="1" from="meaning">cluster.mempool-chunk</note>
+      </trans-unit>
+      <trans-unit id="1eb8a98f68c1c98884c6436650f5ad80f4b3d5bf" datatype="html">
+        <source>parents</source>
+        <target state="needs-review-translation">antecessores</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+        <note priority="1" from="description">parents</note>
+        <note priority="1" from="meaning">cluster.parents</note>
+      </trans-unit>
+      <trans-unit id="2d309ecab27ff28f0c965cd9aa8602361dbd7c80" datatype="html">
+        <source>Bitcoin Cash Price</source>
+        <target state="needs-review-translation">Preço de Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">price-chart.bitcoin-price</note>
+      </trans-unit>
+      <trans-unit id="3e98f606390aee94769b197289de593f5d09cec7" datatype="html">
+        <source>BCH/block</source>
+        <target state="needs-review-translation">BCH/bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">BCH/block</note>
+        <note priority="1" from="meaning">shared.btc-block</note>
+      </trans-unit>
+      <trans-unit id="3fc86b5b041cec8a5c2a83d55fa03b9f38d7761c" datatype="html">
+        <source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Esta transação pertence a um segmento de 1 transação, com taxa efetiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-one</note>
+      </trans-unit>
+      <trans-unit id="487bebf9352332c5e7f5bd00a78371cacff0fd95" datatype="html">
+        <source>Pause/Resume</source>
+        <target state="needs-review-translation">Pausar/Retomar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Tooltip for the pause/resume updates button</note>
+        <note priority="1" from="meaning">recent-transactions.pause-toggle.title</note>
+      </trans-unit>
+      <trans-unit id="6693ca41dea3f8a2b1747ba08e3f780c52d074bf" datatype="html">
+        <source>Using partner code</source>
+        <target state="needs-review-translation">A usar código de parceiro</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">658</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.using-partner-code</note>
+      </trans-unit>
+      <trans-unit id="72a4d409f89fe244682950b6112fe023f603033b" datatype="html">
+        <source> Difficulty drift </source>
+        <target state="needs-review-translation">Desvio da dificuldade</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+        <note priority="1" from="description">difficulty-box.difficulty-drift</note>
+      </trans-unit>
+      <trans-unit id="756c97c3a9cdcdded762c68fbc7d92c001a8a49f" datatype="html">
+        <source>Total UTXOs</source>
+        <target state="needs-review-translation">Total de UTXOs</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+        <note priority="1" from="description">address.confirmed-utxos</note>
+      </trans-unit>
+      <trans-unit id="7b93aee3d7ce363e538d9bf63f6a61b0ac26e227" datatype="html">
+        <source> Difficulty Δ </source>
+        <target state="needs-review-translation">Δ dificuldade</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">122,124</context>
+        </context-group>
+        <note priority="1" from="description">difficulty-box.difficulty-change</note>
+      </trans-unit>
+      <trans-unit id="88f27d579752fd40ef53cfff5e936c293ca19221" datatype="html">
+        <source>Pause/Resume</source>
+        <target state="needs-review-translation">Pausar/Retomar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label for the pause/resume updates button</note>
+        <note priority="1" from="meaning">recent-transactions.pause-toggle.aria-label</note>
+      </trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html">
+        <source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target state="needs-review-translation">Num cluster do mempool com <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> outros segmentos.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-many</note>
+      </trans-unit>
+      <trans-unit id="bch.address.too-many" datatype="html">
+        <source>This address has too many transactions to load here.</source>
+        <target state="needs-review-translation">Este endereço tem demasiadas transações para serem carregadas aqui.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.address.view-blockchair" datatype="html">
+        <source>View this Bitcoin Cash address on Blockchair</source>
+        <target state="needs-review-translation">Ver este endereço Bitcoin Cash no Blockchair</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.block" datatype="html">
+        <source>Block</source>
+        <target state="needs-review-translation">Bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.blocks" datatype="html">
+        <source>Blocks</source>
+        <target state="needs-review-translation">Blocos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.deviation" datatype="html">
+        <source>Deviation</source>
+        <target state="needs-review-translation">Desvio</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.falling" datatype="html">
+        <source>Falling behind → difficulty decreasing</source>
+        <target state="needs-review-translation">Atrasado face à previsão → dificuldade a diminuir</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.gaining" datatype="html">
+        <source>Gaining on schedule → difficulty increasing</source>
+        <target state="needs-review-translation">Adiantado face à previsão → dificuldade a aumentar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.on-schedule" datatype="html">
+        <source>On schedule</source>
+        <target state="needs-review-translation">Dentro da previsão</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.schedule" datatype="html">
+        <source>Δ schedule</source>
+        <target state="needs-review-translation">Δ previsão</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.context.chain-documentation" datatype="html">
+        <source><x id="CHAIN" equiv-text="this.chainName" /> documentation</source>
+        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> documentação</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.context.chain-explorer" datatype="html">
+        <source><x id="CHAIN" equiv-text="this.chainName" /> explorer</source>
+        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" /> explorador</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.mempool-wall" datatype="html">
+        <source>Mempool Wall</source>
+        <target state="needs-review-translation">Mural do mempool</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.about" datatype="html">
+        <source>Learn about bch.tx.taxi, a Bitcoin Cash block and mempool explorer in the tx.taxi multi-chain family.</source>
+        <target state="needs-review-translation">Conheça bch.tx.taxi, o explorador de blocos e mempool Bitcoin Cash da família multichain tx.taxi.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy" datatype="html">
+        <source>Privacy notes for bch.tx.taxi, including public Bitcoin Cash data, browser preferences, server logs, and independent verification.</source>
+        <target state="needs-review-translation">Notas de privacidade de bch.tx.taxi, incluindo dados públicos Bitcoin Cash, preferências do navegador, registos do servidor e verificação independente.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.recent-transactions" datatype="html">
+        <source>See the most recent Bitcoin Cash transactions, updated in real time.</source>
+        <target state="needs-review-translation">Veja as transações Bitcoin Cash mais recentes, atualizadas em tempo real.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms" datatype="html">
+        <source>Terms for using bch.tx.taxi as an informational Bitcoin Cash block and mempool explorer.</source>
+        <target state="needs-review-translation">Termos de utilização de bch.tx.taxi como explorador informativo de blocos e mempool Bitcoin Cash.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.miner.logo" datatype="html">
+        <source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source>
+        <target state="needs-review-translation">Logótipo do pool de mineração <x id="NAME" equiv-text="this.name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mining-pool/mining-pool.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.miner.unknown-logo" datatype="html">
+        <source>Mining pool logo</source>
+        <target state="needs-review-translation">Logótipo do pool de mineração</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mining-pool/mining-pool.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.home-label" datatype="html">
+        <source>bch.tx.taxi dashboard</source>
+        <target state="needs-review-translation">Painel de bch.tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.recent-blocks" datatype="html">
+        <source>Recent blocks</source>
+        <target state="needs-review-translation">Blocos recentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.dashboard" datatype="html">
+        <source>Bitcoin Cash explorer dashboard</source>
+        <target state="needs-review-translation">Painel do explorador Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.display-fees" datatype="html">
+        <source>Switch to displaying total fees per block</source>
+        <target state="needs-review-translation">Mudar para a apresentação das taxas totais por bloco</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.display-size" datatype="html">
+        <source>Switch to displaying block sizes</source>
+        <target state="needs-review-translation">Mudar para a apresentação dos tamanhos dos blocos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.newest-left" datatype="html">
+        <source>Switch to displaying newest blocks on the left</source>
+        <target state="needs-review-translation">Mostrar os blocos mais recentes à esquerda</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.newest-right" datatype="html">
+        <source>Switch to displaying newest blocks on the right</source>
+        <target state="needs-review-translation">Mostrar os blocos mais recentes à direita</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.disabled" datatype="html">
+        <source>disabled</source>
+        <target state="needs-review-translation">desativado</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">589</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.op-return-data" datatype="html">
+        <source>data</source>
+        <target state="needs-review-translation">dados</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">479</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">Oferta de LBTC face às reservas BTC</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html">
+        <source>In a mempool cluster containing 1 other chunk.</source>
+        <target state="needs-review-translation">Num cluster do mempool com 1 outro segmento.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-one</note>
+      </trans-unit>
+      <trans-unit id="d1ca10f0337c02e631f15b7da5d57dddc1954704" datatype="html">
+        <source>parent</source>
+        <target state="needs-review-translation">antecessor</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+        <note priority="1" from="description">parent</note>
+        <note priority="1" from="meaning">cluster.parent</note>
+      </trans-unit>
+      <trans-unit id="dcc1ed3dbf5b3519156543db008e9507266b05a3" datatype="html">
+        <source> Halving Countdown
+</source>
+        <target state="needs-review-translation">Contagem decrescente para o halving</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.halving-countdown</note>
+      </trans-unit>
+      <trans-unit id="e0f4283c19259f2bd53940324cb490f797b9aae4" datatype="html">
+        <source>select filter categories to highlight matching pending transactions</source>
+        <target state="needs-review-translation">selecione categorias de filtro para destacar transações pendentes correspondentes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-filters/block-filters.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Transaction filters tooltip</note>
+      </trans-unit>
+      <trans-unit id="e8a4613f04749ce822333d2103b1ef508a771091" datatype="html">
+        <source>Maximum fee rate (sat/B)</source>
+        <target state="needs-review-translation">Taxa máxima (sat/B)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/test-transactions/test-transactions.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">test.tx.max-fee-rate</note>
+      </trans-unit>
+      <trans-unit id="f3dac0e65a05dcc98ad1b7d0523a819aa91acc10" datatype="html">
+        <source>Mempool by vBytes (sat/Byte)</source>
+        <target state="needs-review-translation">Mempool por vBytes (sat/Byte)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">statistics.memory-by-vBytes</note>
+      </trans-unit>
+      <trans-unit id="f4768466d6207e92279b4f0971349f4e1bf44d86" datatype="html">
+        <source>Fee comparison for a 140-byte serialized BCH transaction</source>
+        <target state="needs-review-translation">Comparação de taxas para uma transação BCH serializada de 140 bytes</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block/block.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <note priority="1" from="description">Transaction fee tooltip</note>
+      </trans-unit>
+      <trans-unit id="graphs.blockFees.feesBtc" datatype="html">
+        <source>Fees BCH</source>
+        <target state="needs-review-translation">Taxas BCH</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidy" datatype="html">
+        <source>Subsidy</source>
+        <target state="needs-review-translation">Subsídio</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyPercent" datatype="html">
+        <source>Subsidy (%)</source>
+        <target state="needs-review-translation">Subsídio (%)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyUsd" datatype="html">
+        <source>Subsidy (USD)</source>
+        <target state="needs-review-translation">Subsídio (USD)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.bch.mining.pool-luck" datatype="html">
+        <source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source>
+        <target state="needs-review-translation">A sorte global de todos os pools de mineração na última semana. Uma sorte superior a 100% significa que o tempo médio entre blocos é inferior a 10 minutos.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus12" datatype="html">
+        <source>Anywhere on Earth (AoE)</source>
+        <target state="needs-review-translation">Qualquer ponto da Terra (AoE)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus5" datatype="html">
+        <source>Eastern Standard Time (EST)</source>
+        <target state="needs-review-translation">Hora padrão oriental (EST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus6" datatype="html">
+        <source>Central Standard Time (CST)</source>
+        <target state="needs-review-translation">Hora padrão central (CST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus0" datatype="html">
+        <source>Greenwich Mean Time (GMT)</source>
+        <target state="needs-review-translation">Hora média de Greenwich (GMT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus10" datatype="html">
+        <source>Australian Eastern Standard Time (AEST)</source>
+        <target state="needs-review-translation">Hora padrão do leste australiano (AEST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.address-unavailable" datatype="html">
+        <source>Unavailable</source>
+        <target state="needs-review-translation">Indisponível</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.block-fees" datatype="html">
+        <source>Block Fees</source>
+        <target state="needs-review-translation">Taxas dos blocos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.block-serialized-size" datatype="html">
+        <source>Transactions by serialized size</source>
+        <target state="needs-review-translation">Transações por tamanho serializado</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block/block.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.difficulty.average-block-time" datatype="html">
+        <source> Average block time </source>
+        <target state="needs-review-translation">Tempo médio entre blocos</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html">
+        <source>Endpoint</source>
+        <target state="needs-review-translation">Ponto de acesso</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.tagline" datatype="html">
+        <source>Bitcoin Cash blocks, fees, and mempool activity</source>
+        <target state="needs-review-translation">Blocos, taxas e atividade do mempool Bitcoin Cash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.difficulty-heading" datatype="html">
+        <source> Difficulty Adjustment
+</source>
+        <target state="needs-review-translation">Ajuste de dificuldade</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.maximum" datatype="html">
+        <source>Maximum</source>
+        <target state="needs-review-translation">Máximo</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.median" datatype="html">
+        <source>Median</source>
+        <target state="needs-review-translation">Mediana</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.minimum" datatype="html">
+        <source>Minimum</source>
+        <target state="needs-review-translation">Mínimo</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.percentile75" datatype="html">
+        <source>75th percentile</source>
+        <target state="needs-review-translation">Percentil 75</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.no-replacements" datatype="html">
+        <source>No replacements in the current feed.</source>
+        <target state="needs-review-translation">Sem substituições na lista atual.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-list-link" datatype="html">
+        <source>View pending transactions as a list.</source>
+        <target state="needs-review-translation">Ver transações pendentes como lista.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.replacements-reconnecting" datatype="html">
+        <source>Replacement updates unavailable. Reconnecting...</source>
+        <target state="needs-review-translation">Atualizações de substituições indisponíveis. A restabelecer ligação...</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.webgl-unavailable" datatype="html">
+        <source>WebGL is unavailable.</source>
+        <target state="needs-review-translation">WebGL indisponível.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html"><source>sat/B</source><target>sat/B</target></trans-unit>
+      <trans-unit id="2e3846407bdaeefb0d65f58c568b93e01f5eb4ca" datatype="html"><source>BCH</source><target>BCH</target></trans-unit>
+      <trans-unit id="tx-taxi.label.halving-label" datatype="html"><source>halving</source><target>halving</target></trans-unit>
+      <trans-unit id="bch.legal.8a9851255d67" datatype="html"><source>Bitcoin Cash</source><target>Bitcoin Cash</target></trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source><target>Cluster</target></trans-unit>
+      <trans-unit id="bch.api.5e3c15a2c421" datatype="html"><source>CashTokens</source><target>CashTokens</target></trans-unit>
+      <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source><target>Ping</target></trans-unit>
     </body>
   </file>
 </xliff>

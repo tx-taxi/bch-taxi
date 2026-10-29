@@ -2275,7 +2275,7 @@
       </trans-unit>
       <trans-unit id="fb5b5aec9a6add4912de64b7bbc55884cc7f8e3a" datatype="html">
         <source>Unspent TXOs</source>
-        <target>Unspent TXOs</target>
+        <target state="needs-review-translation">Nicht ausgegebene Transaktionsausgänge</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/address/address-preview.component.html</context>
           <context context-type="linenumber">39</context>
@@ -2396,7 +2396,7 @@
       </trans-unit>
       <trans-unit id="6efcd0841523798437b60a3c0c27d305e4db33ac" datatype="html">
         <source>Unspent Outputs</source>
-        <target>Unspent Outputs</target>
+        <target state="needs-review-translation">Nicht ausgegebene Ausgänge</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/address/address.component.html</context>
           <context context-type="linenumber">127</context>
@@ -2577,7 +2577,7 @@
       </trans-unit>
       <trans-unit id="c5b2c0d65b8fd12ebf8c0d79f562703776fc954e" datatype="html">
         <source>Pegged in</source>
-        <target>Pegged in</target>
+        <target state="needs-review-translation">Eingebucht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/asset/asset.component.html</context>
           <context context-type="linenumber">37</context>
@@ -2587,7 +2587,7 @@
       </trans-unit>
       <trans-unit id="8f5d6ce525a24b049fee47f9b2d8447cca97ccc8" datatype="html">
         <source>Pegged out</source>
-        <target>Pegged out</target>
+        <target state="needs-review-translation">Ausgebucht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/asset/asset.component.html</context>
           <context context-type="linenumber">41</context>
@@ -3876,7 +3876,7 @@
       </trans-unit>
       <trans-unit id="1c3e02c3cb8731ce0b6ff66dc6b60e54386f4230" datatype="html">
         <source>Stale Block</source>
-        <target>Stale Block</target>
+        <target state="needs-review-translation">Veralteter Block</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">13</context>
@@ -4046,7 +4046,7 @@
       </trans-unit>
       <trans-unit id="2862af5284f66d4b06bdcf77a5519141723b6989" datatype="html">
         <source>Stale</source>
-        <target>Stale</target>
+        <target state="needs-review-translation">Veraltet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">239</context>
@@ -5153,7 +5153,7 @@
       </trans-unit>
       <trans-unit id="f563861ed63d1c6ceffeaf29e8823bb47ed3a0eb" datatype="html">
         <source>Testnet4 Faucet</source>
-        <target>Testnet4 Faucet</target>
+        <target state="needs-review-translation">Testnet4-Faucet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/faucet/faucet.component.html</context>
           <context context-type="linenumber">4</context>
@@ -5680,7 +5680,7 @@
       </trans-unit>
       <trans-unit id="993e5bc509c26db81d93018e24a6afe6e50cae52" datatype="html">
         <source>Liquid Federation Wallet</source>
-        <target>Liquid Federation Wallet</target>
+        <target state="needs-review-translation">Wallet der Liquid-Föderation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/federation-addresses-stats/federation-addresses-stats.component.html</context>
           <context context-type="linenumber">5</context>
@@ -5844,7 +5844,7 @@
       </trans-unit>
       <trans-unit id="3669efae1ff592688b4df067abf0a272e90af226" datatype="html">
         <source>Fund / Redemption Tx</source>
-        <target>Fund / Redemption Tx</target>
+        <target state="needs-review-translation">Finanzierungs- / Rückzahlungstransaktion</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-list/recent-pegs-list.component.html</context>
           <context context-type="linenumber">15</context>
@@ -6595,7 +6595,7 @@
       </trans-unit>
       <trans-unit id="d7bb114523b22ee8330164224b11d75e62966539" datatype="html">
         <source>Coinbase tag</source>
-        <target>Coinbase tag</target>
+        <target state="needs-review-translation">Coinbase-Kennung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool.component.html</context>
           <context context-type="linenumber">223</context>
@@ -7081,7 +7081,7 @@
       </trans-unit>
       <trans-unit id="67f25165b857428d046fe5eb67fc44c5c3d94e87" datatype="html">
         <source>Lightning Nodes</source>
-        <target>Lightning Nodes</target>
+        <target state="needs-review-translation">Lightning-Knoten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search-form/search-results/search-results.component.html</context>
           <context context-type="linenumber">56</context>
@@ -7108,7 +7108,7 @@
       </trans-unit>
       <trans-unit id="f091ae234382282726f5a93bb7b3802ed468e8b9" datatype="html">
         <source>Liquid Asset</source>
-        <target>Liquid Asset</target>
+        <target state="needs-review-translation">Liquid-Vermögenswert</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search-form/search-results/search-results.component.html</context>
           <context context-type="linenumber">86</context>
@@ -7219,7 +7219,7 @@
       </trans-unit>
       <trans-unit id="1dfa086c48a00c275983ca44f687965008219f9d" datatype="html">
         <source>Headers Only</source>
-        <target>Headers Only</target>
+        <target state="needs-review-translation">Nur Header</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.html</context>
           <context context-type="linenumber">14</context>
@@ -7291,7 +7291,7 @@
       </trans-unit>
       <trans-unit id="page.stale-chain-tips" datatype="html">
         <source>Stale Chain Tips</source>
-        <target>Stale Chain Tips</target>
+        <target state="needs-review-translation">Veraltete Chain Tips</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">62</context>
@@ -7381,7 +7381,7 @@
       </trans-unit>
       <trans-unit id="69a200e30802920bc6d619bd543cc2a332a8c390" datatype="html">
         <source>Stratum Jobs</source>
-        <target>Stratum Jobs</target>
+        <target state="needs-review-translation">Stratum-Aufgaben</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stratum/stratum-list/stratum-list.component.html</context>
           <context context-type="linenumber">2</context>
@@ -7426,7 +7426,7 @@
       </trans-unit>
       <trans-unit id="fec63564786cefc0ca1c650527fdfd859aff4b76" datatype="html">
         <source>Raw hex</source>
-        <target>Raw hex</target>
+        <target state="needs-review-translation">Rohes Hex</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/test-transactions/test-transactions.component.html</context>
           <context context-type="linenumber">8</context>
@@ -8140,7 +8140,7 @@
       </trans-unit>
       <trans-unit id="81f138da4f955badade9fb60e0e2248627fc647f" datatype="html">
         <source>Inscription</source>
-        <target>Inscription</target>
+        <target state="needs-review-translation">Inschrift</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">123</context>
@@ -8178,7 +8178,7 @@
       </trans-unit>
       <trans-unit id="a8bc418b73c6bfcefc1b07c84d7f1126ab2a3237" datatype="html">
         <source>P2SH redeem script</source>
-        <target>P2SH redeem script</target>
+        <target state="needs-review-translation">P2SH-Redeem-Skript</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">243</context>
@@ -8196,7 +8196,7 @@
       </trans-unit>
       <trans-unit id="7d94a59c779ba549751c9f36eb40fd339725fec6" datatype="html">
         <source>P2TR Simplicity script</source>
-        <target>P2TR Simplicity script</target>
+        <target state="needs-review-translation">P2TR-Simplicity-Skript</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">256</context>
@@ -8205,7 +8205,7 @@
       </trans-unit>
       <trans-unit id="d4b97cae5fffc21333bed5d04a95e103650ebfb2" datatype="html">
         <source>P2TR tapscript</source>
-        <target>P2TR tapscript</target>
+        <target state="needs-review-translation">P2TR-Tapscript</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">268</context>
@@ -8214,7 +8214,7 @@
       </trans-unit>
       <trans-unit id="e1d63108bdf06fa14ec13f038e23eebd4d391b16" datatype="html">
         <source>P2WSH witness script</source>
-        <target>P2WSH witness script</target>
+        <target state="needs-review-translation">P2WSH-Witness-Skript</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">270</context>
@@ -9588,7 +9588,7 @@
       </trans-unit>
       <trans-unit id="6e2329529b1953198c7dfa0edb260554310bc636" datatype="html">
         <source>Nodes</source>
-        <target>Nodes</target>
+        <target state="needs-review-translation">Knoten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/group/group-preview.component.html</context>
           <context context-type="linenumber">25</context>
@@ -10715,7 +10715,7 @@
       </trans-unit>
       <trans-unit id="time-until" datatype="html">
         <source>In ~<x id="DATE" equiv-text="dateStrings.i18nYear"/></source>
-        <target>In ~<x id="DATE" equiv-text="dateStrings.i18nYear"/></target>
+        <target state="needs-review-translation">In ca. <x id="DATE" equiv-text="dateStrings.i18nYear" /></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/services/time.service.ts</context>
           <context context-type="linenumber">152</context>
