@@ -12380,8 +12380,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="bch.legal.1294845333ad" datatype="html">
-        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
-        <target state="needs-review-translation">tx.taxi 使用 Cloudflare Web Analytics 统计页面浏览和性能，并在各浏览器之间共享每日第一方 Cookie，以便按 UTC 日期每天只计算一次浏览器。每日受众收集器只保存每日标识、浏览器主机名以及是否发生互动。它不会接收搜索内容、地址、交易 ID、URL 或 IP 地址。单条每日记录在 31 天后过期；汇总计数保留 400 天。Do Not Track 和 Global Privacy Control 会禁用此第一方统计。</target><context-group purpose="location">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not store search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxi 使用 Cloudflare Web Analytics 统计页面浏览和性能，并在各浏览器之间共享每日第一方 Cookie，以便按 UTC 日期每天只计算一次浏览器。每日受众收集器只保存每日标识、浏览器主机名以及是否发生互动。它不会存储搜索内容、地址、交易 ID、URL 或 IP 地址。单条每日记录在 31 天后过期；汇总计数保留 400 天。Do Not Track 和 Global Privacy Control 会禁用此第一方统计。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
