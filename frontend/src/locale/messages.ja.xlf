@@ -11865,7 +11865,7 @@
       </trans-unit>
       <trans-unit id="bch.api.564fceac942f" datatype="html">
         <source>The mining view derives recent reward, fee, difficulty and elapsed-work hashrate estimates from the latest indexed blocks. It is a recent-window view, not a long-range mining history. Bitcoin Cash targets roughly 600 seconds per block; ASERT adjusts difficulty after each block.</source>
-        <target state="needs-review-translation">マイニング画面では、最新の索引済みブロックから報酬、手数料、難易度、経過作業量に基づくハッシュレートを推定します。直近の期間を対象としており、長期のマイニング履歴ではありません。Bitcoin Cashの目標は約600秒ごとにブロックで、ASERTはブロックごとに難易度を調整します。</target><context-group purpose="location">
+        <target state="needs-review-translation">マイニング画面では、最新の索引済みブロックから報酬、手数料、難易度、経過作業量に基づくハッシュレートを推定します。直近の期間を対象としており、長期のマイニング履歴ではありません。Bitcoin Cashの目標は約600秒ごとに1ブロックで、ASERTはブロックごとに難易度を調整します。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
@@ -13618,7 +13618,7 @@
       </trans-unit>
       <trans-unit id="bch.miner.logo" datatype="html">
         <source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source>
-        <target state="needs-review-translation"><x id="NAME" equiv-text="this.name" />マイニングプールのロゴ</target><context-group purpose="location">
+        <target state="needs-review-translation"><x id="NAME" equiv-text="this.name" />のマイニングプールのロゴ</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/mining-pool/mining-pool.component.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
