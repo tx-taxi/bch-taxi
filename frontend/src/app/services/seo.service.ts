@@ -106,9 +106,11 @@ export class SeoService {
   }
 
   updateCanonical(path) {
+    const locale = this.activeLocale();
+    // Localized canonical URLs identify the page, not tracking parameters or anchors.
+    if (locale) path = path.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const locale = this.activeLocale();
     const canonicalUrl = 'https://' + this.baseDomain + (locale ? '/' + locale : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
