@@ -5502,8 +5502,8 @@
         <note priority="1" from="description">mining.hashrate</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.hashrate" datatype="html">
-        <source>See hashrate and difficulty for the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
-        <target>Veja o hashrate e a dificuldade da rede Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> visualizados ao longo do tempo.</target>
+        <source>See hashrate and difficulty for the Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
+        <target>Veja o hashrate e a dificuldade da rede Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> visualizados ao longo do tempo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrate-chart/hashrate-chart.component.ts</context>
           <context context-type="linenumber">79</context>
@@ -5530,8 +5530,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
-        <target>Veja o domínio do pool de mineração de Bitcoin visualizado ao longo do tempo: veja como a participação dos principais pools de mineração no hashrate total flutuou ao longo do tempo.</target>
+        <source>See Bitcoin Cash mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <target>Veja o domínio do pool de mineração de Bitcoin Cash visualizado ao longo do tempo: veja como a participação dos principais pools de mineração no hashrate total flutuou ao longo do tempo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -5990,8 +5990,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>Veja estatísticas de transações <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> no mempool: faixa de taxas, tamanho agregado e muito mais. Os blocos no mempool são atualizados em tempo real à medida que a rede recebe novas transações.</target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>Veja estatísticas de transações <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> no mempool: faixa de taxas, tamanho agregado e muito mais. Os blocos no mempool são atualizados em tempo real à medida que a rede recebe novas transações.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6828,8 +6828,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
-        <target>Transmita uma transação para a rede <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> usando o hash da transação.</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
+        <target>Transmita uma transação para a rede <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> usando o hash da transação.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6858,8 +6858,8 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
-        <target>Veja as substituições de RBF mais recentes na rede Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>, atualizadas em tempo real.</target>
+        <source>See the most recent RBF replacements on the Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
+        <target>Veja as substituições de RBF mais recentes na rede Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>, atualizadas em tempo real.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -7298,8 +7298,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
-        <target>Veja as pontas de cadeia obsoletas mais recentes na rede Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>.</target>
+        <source>See the most recent stale chain tips on the Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
+        <target>Veja as pontas de cadeia obsoletas mais recentes na rede Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -8037,8 +8037,8 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
-        <target>Pré-visualize uma transação para a rede Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> usando os dados hexadecimais brutos da transação.</target>
+        <source>Preview a transaction to the Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
+        <target>Pré-visualize uma transação para a rede Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> usando os dados hexadecimais brutos da transação.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
           <context context-type="linenumber">91</context>
@@ -8700,8 +8700,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
-        <target>Veja transações no mempool, transações confirmadas, saldo e mais para a carteira <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> <x id="INTERPOLATION" equiv-text="walletName"/>.</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
+        <target>Veja transações no mempool, transações confirmadas, saldo e mais para a carteira <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin Cash'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> <x id="INTERPOLATION" equiv-text="walletName"/>.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>
