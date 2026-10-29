@@ -7347,7 +7347,7 @@
       </trans-unit>
       <trans-unit id="dc15ec15e6206b40133f2c1b06095ce75aaee1ef" datatype="html">
         <source>Transaction vBytes per second (vB/s)</source>
-        <target>vBytes transkacji na sekundę (vB/s)</target>
+        <target>vBytes transakcji na sekundę (vB/s)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">110</context>
