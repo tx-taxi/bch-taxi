@@ -243,7 +243,8 @@
                 "de",
                 "it",
                 "pt",
-                "ru"
+                "ru",
+                "nl"
               ],
               "outputPath": "dist/translated"
             }
