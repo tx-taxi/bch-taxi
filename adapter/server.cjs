@@ -90,8 +90,9 @@ async function card(path) {
 }
 const server=http.createServer(async(req,res)=>{
  const u=new URL(req.url,'http://localhost');
- const spanish = /^\/es(?:\/|$)/.test(u.pathname);
- const routePath = spanish ? u.pathname.slice(3) || '/' : u.pathname;
+ const locale = u.pathname.match(/^\/(es|fr|de)(?:\/|$)/)?.[1];
+ const localized = Boolean(locale);
+ const routePath = localized ? u.pathname.slice(3) || '/' : u.pathname;
  try {
   if(req.method!=='GET' && req.method!=='HEAD')return send(res,405,{error:'Read-only local explorer'});
   const crawl = staticSeo.endpoint(u.pathname);
@@ -100,7 +101,7 @@ const server=http.createServer(async(req,res)=>{
    return res.end(req.method === 'HEAD' ? undefined : crawl.body);
   }
   const canonicalRedirect = staticSeo.redirect(routePath);
-  if (canonicalRedirect) {res.writeHead(308,{Location:'https://bch.tx.taxi'+(spanish ? '/es' : '')+canonicalRedirect+(spanish ? u.search : '')});return res.end();}
+  if (canonicalRedirect) {res.writeHead(308,{Location:'https://bch.tx.taxi'+(localized ? '/'+locale : '')+canonicalRedirect+(localized ? u.search : '')});return res.end();}
   if(u.pathname.startsWith('/local-router/')) {
    const path=u.pathname.slice('/local-router'.length)+u.search;
    if(!/^\/(api|assets)\//.test(path)) {res.writeHead(302,{location:ROUTER_ORIGIN+path});return res.end();}
@@ -132,7 +133,7 @@ const server=http.createServer(async(req,res)=>{
    const relative=decodeURIComponent(u.pathname).replace(/^\/+/, '');
    let file=path.resolve(STATIC_ROOT,relative);
    if(file!==STATIC_ROOT&&!file.startsWith(STATIC_ROOT+path.sep))return send(res,404,{error:'Not found'});
-   if(!path.extname(relative))file=path.join(STATIC_ROOT,spanish ? 'es/index.html' : 'index.html');
+   if(!path.extname(relative))file=path.join(STATIC_ROOT,localized ? locale+'/index.html' : 'index.html');
    let bytes;try{bytes=await fs.promises.readFile(file);}catch{return send(res,404,{error:'Not found'});}
    const types={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.webmanifest':'application/manifest+json','.txt':'text/plain','.wasm':'application/wasm'};
    r=new Response(bytes,{headers:{'content-type':types[path.extname(file)]||'application/octet-stream'}});
@@ -140,15 +141,15 @@ const server=http.createServer(async(req,res)=>{
   const type=r.headers.get('content-type')||'text/plain';
   if(type.includes('text/html')) {
    let html=await r.text();const m=await metadata(routePath),origin=SITE_ORIGIN;
-   if(spanish) {m.title=`Explorador de Bitcoin Cash - bch.tx.taxi`;m.description='Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.';m.path='/es'+(m.path==='/' ? '/' : m.path);}
+   if(localized) {const descriptions={es:['Explorador de Bitcoin Cash - bch.tx.taxi','Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.'],fr:['Explorateur Bitcoin Cash - bch.tx.taxi','Explorez les blocs, transactions, adresses, frais et activités de minage Bitcoin Cash.'],de:['Bitcoin-Cash-Explorer - bch.tx.taxi','Entdecken Sie Bitcoin-Cash-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.']};[m.title,m.description]=descriptions[locale];m.path='/'+locale+(m.path==='/' ? '/' : m.path);}
    const preview = staticSeo.data.socialScreenshot;
    html=html.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<meta[^>]+(?:name|property)=["'](?:description|og:[^"']+|twitter:[^"']+)["'][^>]*>/g,'').replace(/<link[^>]+rel=["']canonical["'][^>]*>/g,'');
-   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://bch.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="bch.tx.taxi"><meta property="og:locale" content="${spanish ? 'es_ES' : 'en_US'}"><meta property="og:image" content="${escape(preview.url)}"><meta property="og:url" content="https://bch.tx.taxi${escape(m.path)}"><meta property="og:image:type" content="${preview.mime}"><meta property="og:image:alt" content="${escape(preview.alt)}"><meta property="og:image:width" content="${preview.width}"><meta property="og:image:height" content="${preview.height}"><meta name="twitter:domain" content="bch.tx.taxi"><meta name="twitter:image:alt" content="${escape(preview.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${escape(preview.url)}"></head>`);
-   const documentPage = spanish ? null : staticSeo.page(routePath);
-   const semanticPage = documentPage || (!spanish && staticSeo.entity(routePath) ? {...m,label:m.title,html:`<p>${escape(m.description)}</p>`} : null);
+   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://bch.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="bch.tx.taxi"><meta property="og:locale" content="${({es:'es_ES',fr:'fr_FR',de:'de_DE'})[locale] || 'en_US'}"><meta property="og:image" content="${escape(preview.url)}"><meta property="og:url" content="https://bch.tx.taxi${escape(m.path)}"><meta property="og:image:type" content="${preview.mime}"><meta property="og:image:alt" content="${escape(preview.alt)}"><meta property="og:image:width" content="${preview.width}"><meta property="og:image:height" content="${preview.height}"><meta name="twitter:domain" content="bch.tx.taxi"><meta name="twitter:image:alt" content="${escape(preview.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${escape(preview.url)}"></head>`);
+   const documentPage = localized ? null : staticSeo.page(routePath);
+   const semanticPage = documentPage || (!localized && staticSeo.entity(routePath) ? {...m,label:m.title,html:`<p>${escape(m.description)}</p>`} : null);
    html = staticSeo.render(html, semanticPage).replace('</head>',staticSeo.headLinks(documentPage)+'</head>');
    const routeNoindex = staticSeo.nonIndexable(routePath);
-   const noindex = spanish || m.entityStatus === 404 || routeNoindex;
+   const noindex = localized || m.entityStatus === 404 || routeNoindex;
    if (noindex) html = html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi, '').replace('</head>', '<meta name="robots" content="noindex, follow"></head>');
    return send(res,m.entityStatus || (routeNoindex && !staticSeo.existingNonIndexable(routePath) ? 404 : r.status),req.method === 'HEAD' ? undefined : html,type,{...(noindex ? {'X-Robots-Tag':'noindex, follow'} : {}), ...(m.entityStatus === 503 ? {'Retry-After':'60'} : {})});
   }

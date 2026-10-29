@@ -235,6 +235,14 @@
                 "es"
               ],
               "outputPath": "dist/spanish"
+            },
+            "translated": {
+              "localize": [
+                "es",
+                "fr",
+                "de"
+              ],
+              "outputPath": "dist/translated"
             }
           },
           "defaultConfiguration": ""
