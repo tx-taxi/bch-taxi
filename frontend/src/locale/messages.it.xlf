@@ -3154,8 +3154,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>Vedere la salute del blocco Bitcoin visualizzata nel tempo. La salute del blocco è una misura di quante transazioni previste sono state incluse in un blocco effettivamente estratto. Le transazioni previste vengono determinate utilizzando l'algoritmo di selezione delle transazioni di Mempool, una reimplementazione di Bitcoin Core.</target>
+        <source>See Bitcoin Cash block health visualized over time.</source>
+        <target>Consulta l’andamento dello stato dei blocchi Bitcoin Cash.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>

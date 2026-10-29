@@ -3154,8 +3154,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>查看随时间变化的比特币区块健康状况。区块健康度是衡量实际开采的区块中包含多少预期交易的指标。预期交易量是使用 Mempool 重新实现的 Bitcoin Core 交易选择算法确定的。</target>
+        <source>See Bitcoin Cash block health visualized over time.</source>
+        <target>查看 Bitcoin Cash 区块健康状况随时间的变化。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>
