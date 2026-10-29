@@ -1,4 +1,4 @@
 <div *ngFor="let item of tabData">
   <p *ngIf="item.type === 'category'">{{ item.title }}</p>
-  <a *ngIf="item.type === 'endpoint'" [href]="'#' + item.fragment" (click)="navLinkClick($event, item.fragment)">{{ item.title }}</a>
+  <a *ngIf="item.type === 'endpoint'" [href]="anchorHref(item.fragment)" (click)="navLinkClick($event, item.fragment)">{{ item.title }}</a>
 </div>

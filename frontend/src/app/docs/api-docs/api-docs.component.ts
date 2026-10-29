@@ -35,7 +35,13 @@ export class ApiDocsComponent implements OnInit, OnChanges, AfterViewInit, OnDes
     });
   }
 
+  anchorHref(fragment: string): string {
+    return `${document.location.pathname}${document.location.search}#${fragment}`;
+  }
+
   anchorLinkClick(event: { event: Event | null; fragment: string }): void {
+    const mouse = event.event as MouseEvent | null;
+    if (mouse && (mouse.button !== 0 || mouse.ctrlKey || mouse.metaKey || mouse.shiftKey || mouse.altKey)) return;
     event.event?.preventDefault();
     const element = document.getElementById(event.fragment);
     if (!element) return;
@@ -45,7 +51,7 @@ export class ApiDocsComponent implements OnInit, OnChanges, AfterViewInit, OnDes
     }
     this.expandedFragments.add(event.fragment);
     window.scrollTo({ top: element.offsetTop - (window.innerWidth <= 992 ? 100 : 72), behavior: 'smooth' });
-    window.history.pushState({}, '', `${document.location.pathname}#${event.fragment}`);
+    window.history.pushState({}, '', `${document.location.pathname}${document.location.search}#${event.fragment}`);
   }
 
   ngOnDestroy(): void { }

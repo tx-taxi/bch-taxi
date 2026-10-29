@@ -24,7 +24,12 @@ export class ApiDocsNavComponent implements OnInit, OnChanges {
     this.tabData = this.whichTab === 'rest' ? bchRestDocs : this.whichTab === 'websocket' ? bchWebsocketDocs : bchFaqDocs;
   }
 
-  navLinkClick(event: Event, fragment: string): void {
+  anchorHref(fragment: string): string {
+    return `${document.location.pathname}${document.location.search}#${fragment}`;
+  }
+
+  navLinkClick(event: MouseEvent, fragment: string): void {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     this.navLinkClickEvent.emit({ event, fragment });
   }
