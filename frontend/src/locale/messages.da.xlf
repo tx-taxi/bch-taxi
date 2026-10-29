@@ -1660,8 +1660,7 @@
       </trans-unit>
       <trans-unit id="cf2ec414465d65ab24b354663d94d051a67e26e9" datatype="html">
         <source>Total vSize</source>
-        <target>Total vSize</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Samlet virtuel størrelse</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration/acceleration-stats/acceleration-stats.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
@@ -2852,8 +2851,7 @@
       </trans-unit>
       <trans-unit id="0ae529953ee15ef7af41fe3a3c30a10de5347f34" datatype="html">
         <source>BTC Holdings</source>
-        <target>BTC Holdings</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">BTC-beholdninger</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
@@ -4768,8 +4766,7 @@
       </trans-unit>
       <trans-unit id="6728a64d6346c29f1b87f19160f6d1c70ca7e894" datatype="html">
         <source>Treasury</source>
-        <target>Treasury</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Reservekasse</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/custom-dashboard/custom-dashboard.component.html</context>
           <context context-type="linenumber">228</context>
         </context-group>
@@ -5146,8 +5143,7 @@
       </trans-unit>
       <trans-unit id="f563861ed63d1c6ceffeaf29e8823bb47ed3a0eb" datatype="html">
         <source>Testnet4 Faucet</source>
-        <target>Testnet4 Faucet</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Testnet4-faucet</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/faucet/faucet.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
@@ -6078,8 +6074,7 @@
       </trans-unit>
       <trans-unit id="a681a4e2011bb28157689dbaa387de0dd0aa0c11" datatype="html">
         <source>Mining Dashboard</source>
-        <target>Mining Dashboard</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Miningoversigt</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
@@ -6324,8 +6319,7 @@
       </trans-unit>
       <trans-unit id="fe5317c6c60dd7e0e86f04d22f566f67cf04d404" datatype="html">
         <source>Mining Pools</source>
-        <target>Mining Pools</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Miningpuljer</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
@@ -6399,8 +6393,7 @@
       </trans-unit>
       <trans-unit id="2158ea60725d3a97aed6f0f00aa7df48d7bb42ff" datatype="html">
         <source>mining pool</source>
-        <target>mining pool</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">miningpulje</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool-preview.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
@@ -7411,8 +7404,7 @@
       </trans-unit>
       <trans-unit id="fec63564786cefc0ca1c650527fdfd859aff4b76" datatype="html">
         <source>Raw hex</source>
-        <target>Raw hex</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Rå hex</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/test-transactions/test-transactions.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
@@ -8059,8 +8051,7 @@
       </trans-unit>
       <trans-unit id="25fb8afb8c76ae5e793717751d9463001c1e9c01" datatype="html">
         <source>RBF Timeline</source>
-        <target>RBF Timeline</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">RBF-tidslinje</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">118</context>
         </context-group>
@@ -8646,8 +8637,7 @@
       </trans-unit>
       <trans-unit id="c0d4baf68f21ee9c4246d66f0ac828c5b73ae745" datatype="html">
         <source>Wallet</source>
-        <target>Wallet</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Tegnebog</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
@@ -8673,8 +8663,7 @@
       </trans-unit>
       <trans-unit id="wallet.component.browser-title" datatype="html">
         <source>Wallet: <x id="INTERPOLATION" equiv-text="walletName" /></source>
-        <target>Wallet: <x id="INTERPOLATION" equiv-text="walletName" /></target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Tegnebog: <x id="INTERPOLATION" equiv-text="walletName" /></target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">150</context>
         </context-group>
@@ -8710,8 +8699,7 @@
       </trans-unit>
       <trans-unit id="2d70cb7985eaebe99c35bcdfa7dc49b2662c345b" datatype="html">
         <source>Liquid Federation Holdings</source>
-        <target>Liquid Federation Holdings</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Liquid Federation-beholdninger</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">165</context>
         </context-group>
@@ -9858,8 +9846,7 @@
       </trans-unit>
       <trans-unit id="142e923d3b04186ac6ba23387265d22a2fa404e0" datatype="html">
         <source>Lightning Explorer</source>
-        <target>Lightning Explorer</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Lightning-udforsker</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/lightning-dashboard/lightning-dashboard.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
@@ -10456,8 +10443,7 @@
       </trans-unit>
       <trans-unit id="c18497e4f0db0d0ad0c71ba294295f42b3d312c9" datatype="html">
         <source>Lightning ISP</source>
-        <target>Lightning ISP</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Lightning-internetudbyder</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp/nodes-per-isp-preview.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
@@ -10478,8 +10464,7 @@
       </trans-unit>
       <trans-unit id="5fad6872a652d922ad8822f4016e104b9a8cc113" datatype="html">
         <source>Top node</source>
-        <target>Top node</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Førende node</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp/nodes-per-isp-preview.component.html</context>
           <context context-type="linenumber">45</context>
         </context-group>
@@ -12013,8 +11998,7 @@
       </trans-unit>
       <trans-unit id="taxi.timezone.plus0" datatype="html">
         <source>Greenwich Mean Time (GMT)</source>
-        <target state="needs-review-translation">Greenwich Mean Time (GMT)</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Greenwich middeltid (GMT)</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
