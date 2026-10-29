@@ -11923,6 +11923,8 @@
         </context-group>
         <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
       </trans-unit>
+      <trans-unit id="bch.graph.block-fees-nav" datatype="html"><source>Block fees</source><target state="needs-review-translation">Frais de bloc</target></trans-unit>
+      <trans-unit id="bch.graph.all" datatype="html"><source>ALL</source><target state="needs-review-translation">TOUT</target></trans-unit>
     </body>
   </file>
 </xliff>

@@ -13924,6 +13924,8 @@
       <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source>
         <target>Ping</target>
         </trans-unit>
+      <trans-unit id="bch.graph.block-fees-nav" datatype="html"><source>Block fees</source><target state="needs-review-translation">Opłaty blokowe</target></trans-unit>
+      <trans-unit id="bch.graph.all" datatype="html"><source>ALL</source><target state="needs-review-translation">WSZYSTKO</target></trans-unit>
     </body>
   </file>
 </xliff>

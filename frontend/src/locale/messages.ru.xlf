@@ -13940,6 +13940,8 @@
       <trans-unit id="bch.legal.8a9851255d67" datatype="html"><source>Bitcoin Cash</source><target>Bitcoin Cash</target></trans-unit>
       <trans-unit id="bch.api.5e3c15a2c421" datatype="html"><source>CashTokens</source><target>CashTokens</target></trans-unit>
       <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source><target>Пинг</target></trans-unit>
+      <trans-unit id="bch.graph.block-fees-nav" datatype="html"><source>Block fees</source><target state="needs-review-translation">Комиссии блоков</target></trans-unit>
+      <trans-unit id="bch.graph.all" datatype="html"><source>ALL</source><target state="needs-review-translation">ВСЁ</target></trans-unit>
     </body>
   </file>
 </xliff>

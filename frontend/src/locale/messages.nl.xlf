@@ -13888,6 +13888,8 @@
       <trans-unit id="bch.docs.open-hub" datatype="html"><source>Open tx.taxi</source>
         <target>Open tx.taxi</target>
         </trans-unit>
+      <trans-unit id="bch.graph.block-fees-nav" datatype="html"><source>Block fees</source><target state="needs-review-translation">Blokkosten</target></trans-unit>
+      <trans-unit id="bch.graph.all" datatype="html"><source>ALL</source><target state="needs-review-translation">ALLES</target></trans-unit>
     </body>
   </file>
 </xliff>

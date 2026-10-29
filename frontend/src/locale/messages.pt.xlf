@@ -13929,6 +13929,8 @@
       <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source><target>Cluster</target></trans-unit>
       <trans-unit id="bch.api.5e3c15a2c421" datatype="html"><source>CashTokens</source><target>CashTokens</target></trans-unit>
       <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source><target>Ping</target></trans-unit>
+      <trans-unit id="bch.graph.block-fees-nav" datatype="html"><source>Block fees</source><target state="needs-review-translation">Taxas dos blocos</target></trans-unit>
+      <trans-unit id="bch.graph.all" datatype="html"><source>ALL</source><target state="needs-review-translation">TUDO</target></trans-unit>
     </body>
   </file>
 </xliff>

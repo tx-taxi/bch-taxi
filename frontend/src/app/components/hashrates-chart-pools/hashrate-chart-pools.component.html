@@ -29,7 +29,7 @@
           <label class="btn btn-primary btn-sm" for="dominance-3y">3Y</label>
         </ng-container>
         <input type="radio" class="btn-check" id="dominance-all" [value]="'all'" fragment="all" [routerLink]="['/graphs/mining/pools-dominance' | relativeUrl]" [attr.data-cy]="'all'" formControlName="dateSpan">
-        <label class="btn btn-primary btn-sm" for="dominance-all">ALL</label>
+        <label class="btn btn-primary btn-sm" for="dominance-all" i18n="@@bch.graph.all">ALL</label>
       </div>
     </form>
   </div>
