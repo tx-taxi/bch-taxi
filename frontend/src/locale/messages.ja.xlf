@@ -2936,8 +2936,8 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
-        <target>ブロックあたりの最小手数料と最大手数料、さまざまなパーセンタイルの手数料など、時間の経過に伴うビットコインの手数料を視覚化して表示します。</target>
+        <source>See Bitcoin Cash feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <target state="needs-review-translation">ブロックごとの最小・最大手数料率や各パーセンタイルを含む、Bitcoin Cash手数料率の推移を確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>時間の経過に伴う、BTC と USD で視覚化された、ビットコイン ブロックごとに獲得された平均マイニング手数料を確認します。</target>
+        <source>See the average mining fees earned per Bitcoin Cash block visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロックごとの平均マイニング手数料の推移をBCHとUSDで確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>時間の経過に伴う、BTC と USD で視覚化された、ビットコイン ブロックごとに獲得されたマイニング手数料と新規発行枚数を確認します。</target>
+        <source>See the mining fees earned per Bitcoin Cash block compared to the Bitcoin Cash block subsidy, visualized in BCH and USD over time.</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロックごとのマイニング手数料とブロック補助金をBCHとUSDで比較できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>ビットコインのブロック報酬を BTC と USD で時系列で視覚化して表示します。ブロック報酬は、マイナーがブロック補助金と手数料から得る合計資金です。</target>
+        <source>See Bitcoin Cash block rewards in BCH and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロック報酬の推移をBCHとUSDで確認できます。ブロック報酬は補助金と手数料の合計です。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target>ビットコインのブロック サイズ (MB) とブロックのウェイト (WU) を時間の経過に沿って視覚化して表示します。</target>
+        <source>See Bitcoin Cash block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロックサイズ（MB）と重量（重量単位）の推移を確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
-        <target>ビットコイン<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ブロック <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>) のサイズ、ウェイト、手数料範囲、含まれる取引、監査 (予想と実際) などを確認します。</target>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> block <x id="BLOCK_HEIGHT" equiv-text="block.height" /> (<x id="BLOCK_ID" equiv-text="block.id" />).</source>
+        <target state="needs-review-translation">Bitcoin Cash<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />のブロック<x id="BLOCK_HEIGHT" equiv-text="block.height" />（<x id="BLOCK_ID" equiv-text="block.id" />）のサイズ、重量、手数料範囲、含まれるトランザクション、監査（予想と実際）などを確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -4450,7 +4450,7 @@
       </trans-unit>
       <trans-unit id="e6213c3f05146287cf121868d9f3d3c3ff5f9714" datatype="html">
         <source>TXs</source>
-        <target>TXs</target>
+        <target state="needs-review-translation">TX</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.html</context>
           <context context-type="linenumber">26</context>
@@ -6098,8 +6098,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
-        <target>ハッシュレート、難易度調整、ブロック報酬、プールの優位性などのリアルタイムのビットコインマイニング統計を取得します。</target>
+        <source>Get real-time Bitcoin Cash mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <target state="needs-review-translation">ハッシュレート、難易度調整、ブロック報酬、プールのシェアなど、Bitcoin Cashマイニングのリアルタイム統計を確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -6345,8 +6345,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
-        <target>希望の期間にわたってマイニングされたブロック数でランク付けされた上位のビットコイン マイニング プールを表示します。</target>
+        <source>See the top Bitcoin Cash mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target state="needs-review-translation">選択した期間に採掘されたブロック数でBitcoin Cashの主要マイニングプールを比較できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6698,16 +6698,16 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
-        <target>ビットコイン価格</target>
+        <source>Bitcoin Cash Price</source>
+        <target state="needs-review-translation">Bitcoin Cashの価格</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
-        <target>USD建てのビットコイン価格を時系列で視覚化します。</target>
+        <source>See the Bitcoin Cash price in USD visualized over time.</source>
+        <target state="needs-review-translation">Bitcoin CashのUSD価格の推移を確認できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">78</context>
@@ -7467,7 +7467,7 @@
       </trans-unit>
       <trans-unit id="4e738ef3d2b4878f17f43002204f7b31aabb8e87" datatype="html">
         <source>ETA</source>
-        <target>ETA</target>
+        <target state="needs-review-translation">到着予定時刻</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/tracker/tracker.component.html</context>
           <context context-type="linenumber">68</context>
@@ -8867,8 +8867,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>「mempool とは何ですか?」「取引が承認されないのはなぜですか?」 「Mempool オープンソース プロジェクトの独自のインスタンスを実行するにはどうすればよいですか?」などの一般的な質問に対する回答が得られます。</target>
+        <source>Read about Bitcoin Cash blocks, transactions, CashAddr addresses, CashTokens, fees, pending data, and mining coverage.</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロック、トランザクション、CashAddrアドレス、CashTokens、手数料、保留中データ、マイニングのデータ範囲について説明します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -8891,8 +8891,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>mempool.space REST API サービスのドキュメント: アドレス、トランザクション、ブロック、手数料、マイニング、Lightning ネットワークなどに関する情報を入手します。</target>
+        <source>Documentation for the bch.tx.taxi REST API: query Bitcoin Cash addresses, transactions, blocks, fees, mining, and network data.</source>
+        <target state="needs-review-translation">bch.tx.taxi REST APIのドキュメントです。Bitcoin Cashのアドレス、トランザクション、ブロック、手数料、マイニング、ネットワークデータを照会できます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -8915,8 +8915,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>mempool.space WebSocket API サービスのドキュメント: ブロック、メモリプール、トランザクション、アドレスなどに関するリアルタイム情報を取得します。</target>
+        <source>Documentation for the bch.tx.taxi WebSocket API: receive Bitcoin Cash snapshots and track a transaction.</source>
+        <target state="needs-review-translation">bch.tx.taxi WebSocket APIのドキュメントです。Bitcoin Cashのスナップショットの受信とトランザクションの追跡ができます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -11570,6 +11570,2397 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>プライバシー・ポリシー</target>
       </trans-unit>
+      <trans-unit id="487bebf9352332c5e7f5bd00a78371cacff0fd95" datatype="html">
+        <source>Pause/Resume</source>
+        <target state="needs-review-translation">一時停止/再開</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Tooltip for the pause/resume updates button</note>
+        <note priority="1" from="meaning">recent-transactions.pause-toggle.title</note>
+      </trans-unit>
+      <trans-unit id="6d1c8856044cc923fc70f32cb4be360d200cfa82" datatype="html">
+        <source>1 new transaction</source>
+        <target state="needs-review-translation">1 件の新しいトランザクション</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">recent-transactions.new-tx-pill.singular</note>
+      </trans-unit>
+      <trans-unit id="88f27d579752fd40ef53cfff5e936c293ca19221" datatype="html">
+        <source>Pause/Resume</source>
+        <target state="needs-review-translation">一時停止/再開</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label for the pause/resume updates button</note>
+        <note priority="1" from="meaning">recent-transactions.pause-toggle.aria-label</note>
+      </trans-unit>
+      <trans-unit id="a5c3bb57620832141bf6c51d7344e69af366c7e8" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> new transactions</source>
+        <target state="needs-review-translation"><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> 新しいトランザクション</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">recent-transactions.new-tx-pill.plural</note>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-end" datatype="html">
+        <source>and contact the maintainer for source and license information.</source>
+        <target state="needs-review-translation">ソースコードとライセンスの情報についてはメンテナーにお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-see" datatype="html">
+        <source>See</source>
+        <target state="needs-review-translation">参照：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-start" datatype="html">
+        <source>This explorer builds on the</source>
+        <target state="needs-review-translation">このエクスプローラーは以下を基盤としています：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.attribution-third" datatype="html">
+        <source>third-party attribution</source>
+        <target state="needs-review-translation">サードパーティの帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.contact" datatype="html">
+        <source>Contact the maintainer</source>
+        <target state="needs-review-translation">メンテナーに連絡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.data" datatype="html">
+        <source>Bitcoin Cash data</source>
+        <target state="needs-review-translation">Bitcoin Cashのデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.details" datatype="html">
+        <source>1 BCH equals 100,000,000 satoshis. Fees use satoshis per serialized byte: BCH has no SegWit weight discount. CashAddr and legacy addresses refer to Bitcoin Cash addresses. BCH uses ASERT difficulty adjustment each block, a 600-second target and 210,000-block subsidy halvings.</source>
+        <target state="needs-review-translation">1 BCHは100,000,000 satoshiです。手数料はシリアライズされたバイトあたりのsatoshiで表示します。BCHにはSegWitの重量割引はありません。CashAddrと従来形式はBitcoin Cashのアドレス形式です。BCHではブロックごとにASERTで難易度を調整し、目標間隔は600秒、ブロック補助金の半減期は210,000ブロックです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.docs" datatype="html">
+        <source>Bitcoin Cash documentation</source>
+        <target state="needs-review-translation">Bitcoin Cashのドキュメント</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.family" datatype="html">
+        <source>The Bitcoin Cash explorer in the tx.taxi family.</source>
+        <target state="needs-review-translation">tx.taxiファミリーのBitcoin Cashエクスプローラーです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.intro" datatype="html">
+        <source>bch.tx.taxi is the Bitcoin Cash explorer in the tx.taxi multi-chain family. Explore Bitcoin Cash blocks, transactions, addresses, mining activity and transaction fees.</source>
+        <target state="needs-review-translation">bch.tx.taxiは、マルチチェーンのtx.taxiファミリーに属するBitcoin Cashエクスプローラーです。Bitcoin Cashのブロック、トランザクション、アドレス、マイニング状況、手数料を確認できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.opensource" datatype="html">
+        <source>Built on open source</source>
+        <target state="needs-review-translation">オープンソースを基盤に構築</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.project-links" datatype="html">
+        <source>Project links</source>
+        <target state="needs-review-translation">プロジェクトのリンク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.about.title" datatype="html">
+        <source>About bch.tx.taxi</source>
+        <target state="needs-review-translation">bch.tx.taxiについて</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.address.too-many" datatype="html">
+        <source>This address has too many transactions to load here.</source>
+        <target state="needs-review-translation">このアドレスにはトランザクションが多すぎるため、ここでは読み込めません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.address.view-blockchair" datatype="html">
+        <source>View this Bitcoin Cash address on Blockchair</source>
+        <target state="needs-review-translation">このBitcoin CashアドレスをBlockchairで表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.01a17e61cb7e" datatype="html">
+        <source>Returns the recent indexed block fee series. Related implemented endpoints provide rewards, block sizes and hashrate/difficulty from the same recent window.</source>
+        <target state="needs-review-translation">最近索引化されたブロックの手数料系列を返します。関連する実装済みエンドポイントは、同じ期間の報酬、ブロックサイズ、ハッシュレートと難易度を返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.0941c7a7fb57" datatype="html">
+        <source>Search supports BCH block heights, block hashes, transaction IDs, CashAddr and legacy BCH addresses. A 64-character hash can be meaningful on more than one chain, so tx.taxi keeps the chain selector available when resolution is ambiguous.</source>
+        <target state="needs-review-translation">BCHのブロック高、ブロックハッシュ、トランザクションID、CashAddr、従来形式のBCHアドレスを検索できます。64文字のハッシュは複数のチェーンで意味を持つ場合があるため、判定が曖昧な場合もtx.taxiではチェーンを選択できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.10f165b0b925" datatype="html">
+        <source>Chain data</source>
+        <target state="needs-review-translation">チェーンデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.12c2ec9f2443" datatype="html">
+        <source>Get a block</source>
+        <target state="needs-review-translation">ブロックを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.1744b96470b5" datatype="html">
+        <source>Network</source>
+        <target state="needs-review-translation">ネットワーク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.188a992e372f" datatype="html">
+        <source>Data availability</source>
+        <target state="needs-review-translation">データの可用性</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.192d7022c3ca" datatype="html">
+        <source>Track one transaction</source>
+        <target state="needs-review-translation">トランザクションを追跡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.1eec714f7565" datatype="html">
+        <source>Using the explorer</source>
+        <target state="needs-review-translation">エクスプローラーの使い方</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.241c0e362072" datatype="html">
+        <source>Returns inputs, outputs, fee and confirmation status. CashToken output data appears only when it is available from the BCHN source.</source>
+        <target state="needs-review-translation">入力、出力、手数料、承認状態を返します。CashToken出力データはBCHNソースで利用可能な場合にのみ表示されます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.2dee16e3eaad" datatype="html">
+        <source>Returns the current indexed BCH tip hash as plain text.</source>
+        <target state="needs-review-translation">現在索引化されているBCHの最新ブロックハッシュをプレーンテキストで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.3211a3c0b4ab" datatype="html">
+        <source>Returns indexed confirmed and pending statistics plus the source-reported UTXO count. Pending UTXO deltas are not separately available.</source>
+        <target state="needs-review-translation">索引済みの承認済み・保留中の統計と、ソースが報告したUTXO数を返します。保留中のUTXO増減は個別には利用できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.36b6ca188619" datatype="html">
+        <source>Tracking</source>
+        <target state="needs-review-translation">追跡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.39bb285b7674" datatype="html">
+        <source>Addresses and UTXOs</source>
+        <target state="needs-review-translation">アドレスとUTXO</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.3b383dce0de0" datatype="html">
+        <source>Send an application-level ping to confirm that the gateway is responsive.</source>
+        <target state="needs-review-translation">ゲートウェイが応答するか確認するため、アプリケーションレベルのpingを送信します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4b818c315a16" datatype="html">
+        <source>The gateway sends its current live snapshot after a client message. Snapshots contain the latest blocks, pending sample, observed fee values and current USD conversion when available.</source>
+        <target state="needs-review-translation">クライアントメッセージの後、ゲートウェイは現在のスナップショットを送信します。スナップショットには最新ブロック、保留中サンプル、観測された手数料値、利用可能な場合は現在のUSD換算が含まれます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4c743f4fb0d6" datatype="html">
+        <source>Get pending summary</source>
+        <target state="needs-review-translation">保留中の概要を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4e80eb8e78a4" datatype="html">
+        <source>Get observed fee values</source>
+        <target state="needs-review-translation">観測された手数料値を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.4f342c01a81c" datatype="html">
+        <source>Get complete block transaction IDs</source>
+        <target state="needs-review-translation">ブロックの全トランザクションIDを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.564fceac942f" datatype="html">
+        <source>The mining view derives recent reward, fee, difficulty and elapsed-work hashrate estimates from the latest indexed blocks. It is a recent-window view, not a long-range mining history. Bitcoin Cash targets roughly 600 seconds per block; ASERT adjusts difficulty after each block.</source>
+        <target state="needs-review-translation">マイニング画面では、最新の索引済みブロックから報酬、手数料、難易度、経過作業量に基づくハッシュレートを推定します。直近の期間を対象としており、長期のマイニング履歴ではありません。Bitcoin Cashの目標は約600秒ごとにブロックで、ASERTはブロックごとに難易度を調整します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.56b1e0a35391" datatype="html">
+        <source>1 BCH equals 100,000,000 satoshis. This explorer displays fee rates in satoshis per serialized byte (sat/B). Pending data is one BCHN node observation and can differ from another node or miner. Fee observations guide expectations; they do not guarantee confirmation.</source>
+        <target state="needs-review-translation">1 BCHは100,000,000 satoshiです。このエクスプローラーは手数料率をシリアライズされたバイトあたりのsatoshi（sat/B）で表示します。保留中のデータは単一のBCHNノードの観測値で、他のノードやマイナーとは異なる場合があります。観測された手数料は目安であり、承認を保証するものではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5a2f8561253a" datatype="html">
+        <source>Returns the current indexed BCH tip height as plain text.</source>
+        <target state="needs-review-translation">現在索引化されているBCHの最新ブロック高をプレーンテキストで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5f4b0ef9e887" datatype="html">
+        <source>Get address history</source>
+        <target state="needs-review-translation">アドレス履歴を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.5fc0616370b6" datatype="html">
+        <source>Get a transaction</source>
+        <target state="needs-review-translation">トランザクションを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.6166231d461b" datatype="html">
+        <source>Returns one spend-state entry per transaction output.</source>
+        <target state="needs-review-translation">トランザクションの各出力について使用状態をそれぞれ返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.639a40e82b9a" datatype="html">
+        <source>Connection</source>
+        <target state="needs-review-translation">接続</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.68d96411db72" datatype="html">
+        <source>Stop the currently tracked transaction.</source>
+        <target state="needs-review-translation">現在追跡中のトランザクションを停止します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.716aec795bea" datatype="html">
+        <source>Returns observed fee values in sat/B from the current pending sample.</source>
+        <target state="needs-review-translation">現在の保留中サンプルから、観測された手数料値をsat/Bで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.753f63fae763" datatype="html">
+        <source>Returns a 25-transaction history page. Omit /chain/:last-confirmed-txid for the first page.</source>
+        <target state="needs-review-translation">25件のトランザクションを含む履歴ページを返します。最初のページでは/chain/:last-confirmed-txidを省略してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.82807f2596fd" datatype="html">
+        <source>CashAddr and legacy addresses</source>
+        <target state="needs-review-translation">CashAddrと従来形式のアドレス</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.8cdca5dc964c" datatype="html">
+        <source>Get recent mining series</source>
+        <target state="needs-review-translation">最新のマイニング系列を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.91af5d23ef46" datatype="html">
+        <source>Get a block transaction page</source>
+        <target state="needs-review-translation">ブロックのトランザクションページを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.9271537aa35f" datatype="html">
+        <source>Track a single transaction ID. The gateway sends the current transaction and polls it with the live refresh cycle. When it becomes confirmed, a block and txConfirmed notification are sent.</source>
+        <target state="needs-review-translation">単一のトランザクションIDを追跡します。ゲートウェイは現在のトランザクションを送信し、ライブ更新のたびに照会します。承認されるとblockとtxConfirmedの通知を送信します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.936c2e4e05a1" datatype="html">
+        <source>Transactions and outputs</source>
+        <target state="needs-review-translation">トランザクションと出力</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.a337f87ebca0" datatype="html">
+        <source>CashTokens are decoded only when the BCHN source provides token data for an output. The displayed category and raw token units are separate from the BCH value of that output. This explorer does not infer input token quantities, token names, symbols, or decimal scales when the source does not verify them.</source>
+        <target state="needs-review-translation">CashTokenは、BCHNソースが出力のトークンデータを提供した場合にのみデコードされます。表示されるカテゴリーと生のトークン単位は、その出力のBCH額とは別です。このエクスプローラーは、ソースが検証できない入力トークン数量、名前、シンボル、小数桁数を推測しません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.ad8a8fcaea17" datatype="html">
+        <source>Get tip height</source>
+        <target state="needs-review-translation">最新のブロック高を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b18a0b47b219" datatype="html">
+        <source>Stop tracking</source>
+        <target state="needs-review-translation">追跡を停止</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b1cac68961c2" datatype="html">
+        <source>Resolves a block height to its block hash.</source>
+        <target state="needs-review-translation">ブロック高からブロックハッシュを取得します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b5d256b652a4" datatype="html">
+        <source>Pending and mining observations</source>
+        <target state="needs-review-translation">保留中データとマイニング観測</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b93805e8f246" datatype="html">
+        <source>CashAddr may include the bitcoincash: prefix. Legacy 1/3 addresses are shared with Bitcoin-derived networks, so they need explicit chain context. Address history is indexed in pages of 25 transactions; the balance endpoint reports source-provided UTXO totals.</source>
+        <target state="needs-review-translation">CashAddrにはbitcoincash:という接頭辞が含まれる場合があります。従来形式の1/3アドレスはBitcoin派生ネットワークでも使用されるため、チェーンの明示的な指定が必要です。アドレス履歴は25件のトランザクションごとに索引化され、残高エンドポイントはソースが報告したUTXOの合計を返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b9996ce6807d" datatype="html">
+        <source>Mining coverage</source>
+        <target state="needs-review-translation">マイニングのデータ範囲</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.b9c2d94bbef5" datatype="html">
+        <source>Returns a normalized block with BCH amount fields in satoshis. /api/v1/block/:hash-or-height is also accepted.</source>
+        <target state="needs-review-translation">BCHの金額をsatoshiで表した正規化済みブロックを返します。/api/v1/block/:hash-or-heightも使用できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c10f2ddabaf6" datatype="html">
+        <source>Amounts, fees and pending data</source>
+        <target state="needs-review-translation">金額、手数料、保留中のデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c39d646f1076" datatype="html">
+        <source>Explorer</source>
+        <target state="needs-review-translation">エクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c668835b64ce" datatype="html">
+        <source>Returns up to 25 normalized transactions beginning at start-index. Omit start-index for the first page.</source>
+        <target state="needs-review-translation">start-indexから最大25件の正規化済みトランザクションを返します。最初のページではstart-indexを省略してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.c673fefe3ce5" datatype="html">
+        <source>Returns the complete raw transaction ID list for the block. This is the source for the explorer’s complete block coverage.</source>
+        <target state="needs-review-translation">ブロックのトランザクションIDの完全な生リストを返します。エクスプローラーでブロック全体を表示するためのソースです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.ca5269163ce4" datatype="html">
+        <source>Blocks, mining and availability</source>
+        <target state="needs-review-translation">ブロック、マイニング、可用性</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.cdaa99d19f5d" datatype="html">
+        <source>Search blocks, transactions and addresses</source>
+        <target state="needs-review-translation">ブロック、トランザクション、アドレスの検索</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.cfbb23ef92f0" datatype="html">
+        <source>Transaction tracking</source>
+        <target state="needs-review-translation">トランザクション追跡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.dae0896cbc2c" datatype="html">
+        <source>Chain</source>
+        <target state="needs-review-translation">チェーン</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.df6b40213281" datatype="html">
+        <source>Returns the observed BCHN mempool count, serialized bytes and total fee in satoshis.</source>
+        <target state="needs-review-translation">観測されたBCHNメンプールの件数、シリアライズ後のバイト数、手数料合計をsatoshiで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e37f9cf4bc1f" datatype="html">
+        <source>Get tip hash</source>
+        <target state="needs-review-translation">最新ブロックのハッシュを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e3d5456b1785" datatype="html">
+        <source>The explorer reads indexed BCH data from Haskoin and uses BCHN-derived Selene data for pending transactions and token output details. A provider failure is reported as unavailable rather than a missing entity. Historical fiat conversion is not available; the displayed USD price is current only.</source>
+        <target state="needs-review-translation">エクスプローラーはHaskoinの索引済みBCHデータを読み取り、保留中のトランザクションと出力トークンの詳細にはBCHN由来のSeleneデータを使用します。プロバイダーの障害は、対象が存在しないのではなく、データを利用できない状態として表示されます。過去の法定通貨換算は利用できず、表示されるUSD価格は現在値のみです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.e3edde8b5d32" datatype="html">
+        <source>Get output spend state</source>
+        <target state="needs-review-translation">出力の使用状態を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.eb394d9bf41f" datatype="html">
+        <source>Resolve a block height</source>
+        <target state="needs-review-translation">ブロック高を解決</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.api.fad35ce5d9d7" datatype="html">
+        <source>Get an address summary</source>
+        <target state="needs-review-translation">アドレスの概要を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/bch-api-docs-data.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.block" datatype="html">
+        <source>Block</source>
+        <target state="needs-review-translation">ブロック</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.blocks" datatype="html">
+        <source>Blocks</source>
+        <target state="needs-review-translation">ブロック</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.deviation" datatype="html">
+        <source>Deviation</source>
+        <target state="needs-review-translation">差</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.falling" datatype="html">
+        <source>Falling behind → difficulty decreasing</source>
+        <target state="needs-review-translation">予定より遅い → 難易度低下</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.gaining" datatype="html">
+        <source>Gaining on schedule → difficulty increasing</source>
+        <target state="needs-review-translation">予定より速い → 難易度上昇</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.on-schedule" datatype="html">
+        <source>On schedule</source>
+        <target state="needs-review-translation">予定どおり</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.asert.schedule" datatype="html">
+        <source>Δ schedule</source>
+        <target state="needs-review-translation">予定との差</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/asert-deviation-graph/asert-deviation-graph.component.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.context.chain-documentation" datatype="html">
+        <source><x id="CHAIN" equiv-text="this.chainName" /> documentation</source>
+        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" />ドキュメント</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.context.chain-explorer" datatype="html">
+        <source><x id="CHAIN" equiv-text="this.chainName" /> explorer</source>
+        <target state="needs-review-translation"><x id="CHAIN" equiv-text="this.chainName" />エクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.example" datatype="html">
+        <source>Example</source>
+        <target state="needs-review-translation">例</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.explore-chain" datatype="html">
+        <source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}" /></source>
+        <target state="needs-review-translation"><x id="INTERPOLATION" equiv-text="{{ chainName }}" />を調べる</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.explorer-guide" datatype="html">
+        <source>Explorer guide</source>
+        <target state="needs-review-translation">エクスプローラーガイド</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/docs/docs.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.faq-intro" datatype="html">
+        <source>A practical guide to the public Bitcoin Cash data shown by bch.tx.taxi.</source>
+        <target state="needs-review-translation">bch.tx.taxiが表示する公開Bitcoin Cashデータの実用ガイドです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.intro" datatype="html">
+        <source>Paste a transaction, block or address into tx.taxi. Open a confirmed match, choose between possible networks, or head straight to your chain’s explorer.</source>
+        <target state="needs-review-translation">トランザクション、ブロック、アドレスをtx.taxiに貼り付けてください。確認済みの一致を開くか、候補ネットワークを選ぶか、対象チェーンのエクスプローラーに直接移動できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.one-search" datatype="html">
+        <source>One search across chains.</source>
+        <target state="needs-review-translation">すべてのチェーンを一度に検索。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.open-hub" datatype="html">
+        <source>Open tx.taxi</source>
+        <target state="needs-review-translation">tx.taxiを開く</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.response" datatype="html">
+        <source>Response shape</source>
+        <target state="needs-review-translation">レスポンスの形式</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.rest-intro" datatype="html">
+        <source>The REST API is read-only and served from this explorer’s origin. Examples use the public host; use your current host for local development.</source>
+        <target state="needs-review-translation">REST APIは読み取り専用で、このエクスプローラーのオリジンから提供されます。例では公開ホストを使用します。ローカル開発では現在のホストを使用してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.docs.ws-intro" datatype="html">
+        <source>Connect to the WebSocket endpoint for the explorer’s current BCH snapshot and one-transaction tracking.</source>
+        <target state="needs-review-translation">WebSocketエンドポイントに接続すると、現在のBCHスナップショットを取得し、単一のトランザクションを追跡できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.reference-title" datatype="html">
+        <source>ECB reference rate</source>
+        <target state="needs-review-translation">ECB参考レート</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.stale" datatype="html">
+        <source> · stale</source>
+        <target state="needs-review-translation"> · 更新遅延</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.fiat.stale-title" datatype="html">
+        <source>ECB reference rate; update unavailable</source>
+        <target state="needs-review-translation">ECB参考レート。更新できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fiat-selector/fiat-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.by" datatype="html">
+        <source>by</source>
+        <target state="needs-review-translation">作成者：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.faq" datatype="html">
+        <source>Bitcoin Cash FAQ</source>
+        <target state="needs-review-translation">Bitcoin Cashのよくある質問</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.graphs" datatype="html">
+        <source>Bitcoin Cash Graphs</source>
+        <target state="needs-review-translation">Bitcoin Cashグラフ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.made-with" datatype="html">
+        <source>Made with</source>
+        <target state="needs-review-translation">制作：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.mining" datatype="html">
+        <source>Mining Dashboard</source>
+        <target state="needs-review-translation">マイニングダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.telegram" datatype="html">
+        <source>Join the tx.taxi Telegram channel</source>
+        <target state="needs-review-translation">tx.taxiのTelegramチャンネルに参加</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.footer.upstream" datatype="html">
+        <source>Upstream project</source>
+        <target state="needs-review-translation">元のプロジェクト</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.intro.about" datatype="html">
+        <source>About tx.taxi</source>
+        <target state="needs-review-translation">tx.taxiについて</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.005463a6c488" datatype="html">
+        <source>External Links</source>
+        <target state="needs-review-translation">外部リンク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.0f3153a68574" datatype="html">
+        <source>Local Preferences</source>
+        <target state="needs-review-translation">ローカル設定</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1294845333ad" datatype="html">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxiはページ表示とパフォーマンスのためにCloudflare Web Analyticsを使用し、UTCの日ごとにブラウザーを一回だけ数えるため、各エクスプローラーで共有する独自の日次Cookieを使用します。日次利用状況の収集では、日次識別子、エクスプローラーのホスト名、操作の有無のみを保存します。検索文字列、アドレス、トランザクションID、URL、IPアドレスは受け取りません。個々の日次記録は31日後に期限切れとなり、集計件数は400日間保持されます。Do Not TrackとGlobal Privacy Controlは、この独自の測定を無効にします。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1856e93d37a8" datatype="html">
+        <source>. Contact </source>
+        <target state="needs-review-translation">。連絡先：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.1c2b04a45d11" datatype="html">
+        <source>This site may link to tx.taxi contact channels, Bitcoin Cash references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source>
+        <target state="needs-review-translation">このサイトは、tx.taxiの連絡先、Bitcoin Cashの参考資料、元のソースコード、インフラ依存先にリンクすることがあります。外部ウェブサイトには独自の利用条件とポリシーがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.24cd9f0d49b0" datatype="html">
+        <source>bch.tx.taxi is an independently operated Bitcoin Cash explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source>
+        <target state="needs-review-translation">bch.tx.taxiはtx.taxiファミリーの独立運営されたBitcoin Cashエクスプローラーです。ドメイン、ロゴ、チェーンの配色、サービスのアイデンティティにより、このフォークは元のプロジェクトと区別されます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.2bd9e04e138f" datatype="html">
+        <source>Upstream Attribution</source>
+        <target state="needs-review-translation">元のプロジェクトの帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.3fe100af9401" datatype="html">
+        <source>Use Your Own Node When Privacy Matters</source>
+        <target state="needs-review-translation">プライバシーが重要な場合は自分のノードを使用</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4103db00a3b3" datatype="html">
+        <source>Data and Availability</source>
+        <target state="needs-review-translation">データと可用性</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.43aad455d42d" datatype="html">
+        <source>bch.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source>
+        <target state="needs-review-translation">bch.tx.taxiはMempool Holdings S.A. de C.V.と提携しておらず、同社によるスポンサー提供や承認を受けていません。mempool.spaceとmempool/mempoolへの言及は、このフォークの派生元ソフトウェアを示す名称上の帰属表示です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.45b6c69f5e42" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">商標と帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4d1e06fb51fa" datatype="html">
+        <source> by Melroy van den Berg, licensed under the GNU Affero General Public License. The BCH Explorer name and branding remain with their respective owners.</source>
+        <target state="needs-review-translation">。作者はMelroy van den Bergで、GNU Affero General Public Licenseの下でライセンスされています。BCH Explorerの名称とブランドはそれぞれの所有者に帰属します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.4d4a7bd17534" datatype="html">
+        <source>Public Blockchain Data</source>
+        <target state="needs-review-translation">公開ブロックチェーンデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.54a76e5281a4" datatype="html">
+        <source>Bitcoin Cash transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source>
+        <target state="needs-review-translation">Bitcoin Cashのトランザクション、アドレス、スクリプト、ブロックは公開されています。アドレスやトランザクションを検索すると、その検索がネットワークメタデータと関連付けられる場合があります。公開エクスプローラーをプライバシーの境界と見なさないでください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.6e9665b9d920" datatype="html">
+        <source>Open Source Attribution</source>
+        <target state="needs-review-translation">オープンソースの帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.6ee4eb18aa3a" datatype="html">
+        <source>Bitcoin Cash difficulty and halving components are adapted from </source>
+        <target state="needs-review-translation">Bitcoin Cashの難易度と半減期のコンポーネントは、以下を元に変更したものです：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.7224b23c7ac2" datatype="html">
+        <source>Request Data</source>
+        <target state="needs-review-translation">リクエストデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.78e9d2e2ad7d" datatype="html">
+        <source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source>
+        <target state="needs-review-translation">ウェブサイトやAPIの不正利用、サービス運営への妨害、合理的なレート制限の回避、違法な利用を行わないでください。可用性の保護に必要な場合、アクセスを制限することがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.838ab86c1b97" datatype="html">
+        <source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source>
+        <target state="needs-review-translation">。元のソースコード、ビジュアルシステム、プロジェクト名、ロゴ、商標はそれぞれの所有者に帰属します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.83a95d1365c1" datatype="html">
+        <source>No Control Over Bitcoin Cash Transactions</source>
+        <target state="needs-review-translation">Bitcoin Cashトランザクションを制御できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.86730566eb88" datatype="html">
+        <source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source>
+        <target state="needs-review-translation">通常のウェブサイトおよびAPIリクエストでは、IPアドレス、ユーザーエージェント、要求したURL、リクエスト時刻などの標準的なウェブメタデータが運営者に見える場合があります。サーバーログは、信頼性の確保、不正利用の防止、問題の調査のために保持されることがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.88c241ed52b4" datatype="html">
+        <source>Explorer data may be delayed, incomplete, unavailable, or different from another node's view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source>
+        <target state="needs-review-translation">エクスプローラーのデータは、遅延、不完全、利用不可、または他のノードの表示と異なる場合があります。手数料の推定値はあくまで推定であり、承認を保証しません。サービスは現状のまま提供され、継続的な可用性や特定目的への適合性は保証されません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.8ce35f583745" datatype="html">
+        <source>Details and opt-out</source>
+        <target state="needs-review-translation">詳細と無効化</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.8e7582f1976e" datatype="html">
+        <source>bch.tx.taxi displays public Bitcoin Cash chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Bitcoin Cash node and explorer.</source>
+        <target state="needs-review-translation">bch.tx.taxiは、サイト運営者が設定したバックエンドを通じてBitcoin Cashの公開チェーンおよびメンプールデータを表示します。独立した検証と高いネットワークプライバシーのためには、自分のBitcoin Cashノードとエクスプローラーを使用してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.91e93d75c667" datatype="html">
+        <source>Mempool names, logos, and trademarks remain the property of their respective owners; bch.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source>
+        <target state="needs-review-translation">Mempoolの名称、ロゴ、商標はそれぞれの所有者に帰属します。bch.tx.taxiはMempool Holdings S.A. de C.V.と提携しておらず、同社の承認を受けていません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.997c65f3c315" datatype="html">
+        <source>Acceptable Use</source>
+        <target state="needs-review-translation">許容される利用</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.9ee0c596557b" datatype="html">
+        <source>bch.tx.taxi is derived from </source>
+        <target state="needs-review-translation">bch.tx.taxiの派生元：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.a6819f0d1181" datatype="html">
+        <source>Informational Explorer</source>
+        <target state="needs-review-translation">情報提供を目的としたエクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.a9ec6faa8495" datatype="html">
+        <source>This software is derived from </source>
+        <target state="needs-review-translation">このソフトウェアの派生元：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.be03ea0dc608" datatype="html">
+        <source>bch.tx.taxi provides a view of public Bitcoin Cash blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source>
+        <target state="needs-review-translation">bch.tx.taxiは、公開されているBitcoin Cashのブロック、トランザクション、アドレス、マイニングデータ、手数料の推定値、メンプールの状態を表示します。これは情報提供サービスであり、ウォレット、取引所、カストディアン、決済処理業者、トランザクション優先サービスではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c5a77fb8e908" datatype="html">
+        <source>This site links to tx.taxi contact channels, Bitcoin Cash documentation, and upstream source code. Those external services have their own privacy policies.</source>
+        <target state="needs-review-translation">このサイトはtx.taxiの連絡先、Bitcoin Cashのドキュメント、元のソースコードにリンクしています。外部サービスにはそれぞれ独自のプライバシーポリシーがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c7d2295141bd" datatype="html">
+        <source>No Affiliation</source>
+        <target state="needs-review-translation">提携関係なし</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.c8fb69ab4502" datatype="html">
+        <source>tx.taxi Identity</source>
+        <target state="needs-review-translation">tx.taxiのアイデンティティ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.ccd371e8f1e5" datatype="html">
+        <source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Bitcoin Cash transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source>
+        <target state="needs-review-translation">運営者はBitcoin Cashトランザクションを取り消し、キャンセル、加速、復元、転送できません。ウォレット、取引所、決済の問題については、そのトランザクションを作成または受信したサービスにお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.df856fd94263" datatype="html">
+        <source>Bitcoin Cash is an open network and protocol. References to Bitcoin Cash, BCH, satoshis, blocks, transactions, addresses, mining, and CashTokens describe the network data presented by this explorer.</source>
+        <target state="needs-review-translation">Bitcoin Cashはオープンなネットワークおよびプロトコルです。Bitcoin Cash、BCH、satoshi、ブロック、トランザクション、アドレス、マイニング、CashTokensへの言及は、このエクスプローラーが表示するネットワークデータを説明するものです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.e2f88447ee0e" datatype="html">
+        <source>Audience measurement</source>
+        <target state="needs-review-translation">利用状況の測定</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.e800fd2befc2" datatype="html">
+        <source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. bch.tx.taxi does not require an account for ordinary explorer use.</source>
+        <target state="needs-review-translation">テーマ、表示単位、法定通貨、言語、タイムゾーンなどの表示設定がブラウザーに保存される場合があります。bch.tx.taxiの通常利用にアカウントは必要ありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.ec1bb9b527e7" datatype="html">
+        <source>External Services</source>
+        <target state="needs-review-translation">外部サービス</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.fdb627efb86b" datatype="html">
+        <source>Open Source</source>
+        <target state="needs-review-translation">オープンソース</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.legal.fdcee3949fc4" datatype="html">
+        <source> for the current reviewed fork source package.</source>
+        <target state="needs-review-translation">現在のレビュー済みフォークのソースコードパッケージについてはお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.about" datatype="html">
+        <source>Learn about bch.tx.taxi, a Bitcoin Cash block and mempool explorer in the tx.taxi multi-chain family.</source>
+        <target state="needs-review-translation">tx.taxiファミリーのBitcoin Cashブロック・メンプールエクスプローラー、bch.tx.taxiについてご紹介します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.trademark" datatype="html">
+        <source>Trademark and attribution notes for bch.tx.taxi, including upstream mempool/mempool attribution and project independence.</source>
+        <target state="needs-review-translation">mempool/mempoolへの帰属表示とプロジェクトの独立性を含む、bch.tx.taxiの商標および帰属表示に関する情報です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.trademark-title" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">商標と帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.about" datatype="html">
+        <source>About bch.tx.taxi</source>
+        <target state="needs-review-translation">bch.tx.taxiについて</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.choose-chain" datatype="html">
+        <source>Choose search chain</source>
+        <target state="needs-review-translation">検索するチェーンを選択</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">395</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target state="needs-review-translation">ダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.graphs" datatype="html">
+        <source>Bitcoin Cash graphs</source>
+        <target state="needs-review-translation">Bitcoin Cashグラフ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.home-label" datatype="html">
+        <source>bch.tx.taxi dashboard</source>
+        <target state="needs-review-translation">bch.tx.taxiダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.mining" datatype="html">
+        <source>Mining dashboard</source>
+        <target state="needs-review-translation">マイニングダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.recent-blocks" datatype="html">
+        <source>Recent blocks</source>
+        <target state="needs-review-translation">最新のブロック</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.nav.selected-explorer" datatype="html">
+        <source>Selected explorer</source>
+        <target state="needs-review-translation">選択中のエクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">396</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.degraded" datatype="html">
+        <source>Some data is temporarily unavailable.</source>
+        <target state="needs-review-translation">一部のデータは一時的に利用できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.retrying" datatype="html">
+        <source>Data unavailable. Retrying.</source>
+        <target state="needs-review-translation">データを取得できません。再試行しています。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.provider.stale" datatype="html">
+        <source>Data may be out of date.</source>
+        <target state="needs-review-translation">データが古い可能性があります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/master-page/master-page.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.additional-explorers" datatype="html">
+        <source><x id="NAME" equiv-text="name" /> additional explorers</source>
+        <target state="needs-review-translation">追加エクスプローラー：<x id="NAME" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.bch-icon" datatype="html">
+        <source>Bitcoin Cash explorer</source>
+        <target state="needs-review-translation">Bitcoin Cashエクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.direct" datatype="html">
+        <source>Or go straight to</source>
+        <target state="needs-review-translation">または直接移動</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.found" datatype="html">
+        <source>Found</source>
+        <target state="needs-review-translation">検出済み</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.hide-many" datatype="html">
+        <source>Hide <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> options</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />の追加オプション<x id="COUNT" equiv-text="count" />件を隠す</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.hide-one" datatype="html">
+        <source>Hide <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> option</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />の追加オプション<x id="COUNT" equiv-text="count" />件を隠す</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-explorer" datatype="html">
+        <source>Open <x id="NAME" equiv-text="name" /></source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />を開く</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-explorer-tab" datatype="html">
+        <source>Open <x id="NAME" equiv-text="name" /> in a new tab</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />を新しいタブで開く</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.open-hub-tab" datatype="html">
+        <source>Open tx.taxi in a new tab</source>
+        <target state="needs-review-translation">tx.taxiを新しいタブで開く</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.possible" datatype="html">
+        <source>Possible</source>
+        <target state="needs-review-translation">候補</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.registry-unavailable" datatype="html">
+        <source>Explorer registry unavailable</source>
+        <target state="needs-review-translation">エクスプローラー一覧を取得できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.show-many" datatype="html">
+        <source>Show <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> options</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />の追加オプション<x id="COUNT" equiv-text="count" />件を表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.show-one" datatype="html">
+        <source>Show <x id="COUNT" equiv-text="count" /> additional <x id="NAME" equiv-text="name" /> option</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />の追加オプション<x id="COUNT" equiv-text="count" />件を表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.switch" datatype="html">
+        <source>Switch</source>
+        <target state="needs-review-translation">切り替え</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.switch-to" datatype="html">
+        <source>Switch to <x id="NAME" equiv-text="name" /></source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="name" />に切り替える</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.search.your-search" datatype="html">
+        <source>your search</source>
+        <target state="needs-review-translation">検索結果</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.average-title" datatype="html">
+        <source>Approximate average fee rate</source>
+        <target state="needs-review-translation">概算の平均手数料率</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.dashboard" datatype="html">
+        <source>Bitcoin Cash explorer dashboard</source>
+        <target state="needs-review-translation">Bitcoin Cashエクスプローラーのダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.data-unavailable" datatype="html">
+        <source>Fee data unavailable</source>
+        <target state="needs-review-translation">手数料データを取得できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.details" datatype="html">
+        <source>Total fees: <x id="AMOUNT" equiv-text="exactBlockAmount(total, locale)" /> <x id="SYMBOL" equiv-text="SYMBOL" />. Median fee rate: <x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />. Fee range: <x id="MIN" equiv-text="rate(min)" />–<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />.</source>
+        <target state="needs-review-translation">手数料合計：<x id="AMOUNT" equiv-text="exactBlockAmount(total, locale)" /> <x id="SYMBOL" equiv-text="SYMBOL" />。手数料率の中央値：<x id="MEDIAN" equiv-text="rate(median)" /> <x id="UNIT" equiv-text="FEE_UNIT" />。手数料率の範囲：<x id="MIN" equiv-text="rate(min)" />〜<x id="MAX" equiv-text="rate(max)" /> <x id="RANGE_UNIT" equiv-text="FEE_UNIT" />。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/block-format.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.display-fees" datatype="html">
+        <source>Switch to displaying total fees per block</source>
+        <target state="needs-review-translation">ブロックごとの合計手数料を表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.display-size" datatype="html">
+        <source>Switch to displaying block sizes</source>
+        <target state="needs-review-translation">ブロックサイズを表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.estimate-title" datatype="html">
+        <source>Estimated block interval; transaction inclusion is not guaranteed</source>
+        <target state="needs-review-translation">推定ブロック間隔です。トランザクションの取り込みは保証されません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mempool-blocks/mempool-blocks.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mempool-blocks/mempool-blocks.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.median-title" datatype="html">
+        <source>Median transaction fee rate</source>
+        <target state="needs-review-translation">トランザクションの手数料率の中央値</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.newest-left" datatype="html">
+        <source>Switch to displaying newest blocks on the left</source>
+        <target state="needs-review-translation">新しいブロックを左側に表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.newest-right" datatype="html">
+        <source>Switch to displaying newest blocks on the right</source>
+        <target state="needs-review-translation">新しいブロックを右側に表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain/blockchain.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.range-unavailable" datatype="html">
+        <source>Fee range unavailable</source>
+        <target state="needs-review-translation">手数料範囲を取得できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.strip.stale-block" datatype="html">
+        <source>stale block <x id="HASH" equiv-text="shortHash" /></source>
+        <target state="needs-review-translation">古いブロック <x id="HASH" equiv-text="shortHash" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blockchain-blocks/blockchain-blocks.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.token-details" datatype="html">
+        <source>CashToken details unavailable</source>
+        <target state="needs-review-translation">CashTokenの詳細を取得できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.token-input" datatype="html">
+        <source>Input token quantities unavailable</source>
+        <target state="needs-review-translation">入力トークン数量を取得できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFees.avgBlock" datatype="html">
+        <source>* On average around block <x id="block" equiv-text="data[0].data[2]" /></source>
+        <target state="needs-review-translation">* ブロック <x id="block" equiv-text="data[0].data[2]" /> 付近の平均</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesPercent" datatype="html">
+        <source>Fees (%)</source>
+        <target state="needs-review-translation">手数料(%)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesUsd" datatype="html">
+        <source>Fees (USD)</source>
+        <target state="needs-review-translation">手数料（米ドル）</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidy" datatype="html">
+        <source>Subsidy</source>
+        <target state="needs-review-translation">補助金</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyPercent" datatype="html">
+        <source>Subsidy (%)</source>
+        <target state="needs-review-translation">補助金(%)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyUsd" datatype="html">
+        <source>Subsidy (USD)</source>
+        <target state="needs-review-translation">補助金（米ドル）</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.filter.inscription" datatype="html">
+        <source>Inscription</source>
+        <target state="needs-review-translation">インスクリプション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/filters.utils.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus1" datatype="html">
+        <source>Azores Time (AZOT)</source>
+        <target state="needs-review-translation">アゾレス時間 (AZOT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus10" datatype="html">
+        <source>Hawaii Standard Time (HST)</source>
+        <target state="needs-review-translation">ハワイ標準時 (HST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus11" datatype="html">
+        <source>Samoa Standard Time (SST)</source>
+        <target state="needs-review-translation">サモア標準時 (SST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus12" datatype="html">
+        <source>Anywhere on Earth (AoE)</source>
+        <target state="needs-review-translation">地球上のどこでも (AoE)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus2" datatype="html">
+        <source>Fernando de Noronha Time (FNT)</source>
+        <target state="needs-review-translation">フェルナンド デ ノローニャ時間 (FNT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus3" datatype="html">
+        <source>Argentina Time (ART)</source>
+        <target state="needs-review-translation">アルゼンチン時間 (ART)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus4" datatype="html">
+        <source>Atlantic Standard Time (AST)</source>
+        <target state="needs-review-translation">大西洋標準時 (AST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus5" datatype="html">
+        <source>Eastern Standard Time (EST)</source>
+        <target state="needs-review-translation">東部標準時 (EST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus6" datatype="html">
+        <source>Central Standard Time (CST)</source>
+        <target state="needs-review-translation">中部標準時 (CST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus7" datatype="html">
+        <source>Mountain Standard Time (MST)</source>
+        <target state="needs-review-translation">山岳標準時 (MST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus8" datatype="html">
+        <source>Pacific Standard Time (PST)</source>
+        <target state="needs-review-translation">太平洋標準時 (PST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus9" datatype="html">
+        <source>Alaska Standard Time (AKST)</source>
+        <target state="needs-review-translation">アラスカ標準時 (AKST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus0" datatype="html">
+        <source>Greenwich Mean Time (GMT)</source>
+        <target state="needs-review-translation">グリニッジ標準時 (GMT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus1" datatype="html">
+        <source>Central European Time (CET)</source>
+        <target state="needs-review-translation">中央ヨーロッパ時間 (CET)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus10" datatype="html">
+        <source>Australian Eastern Standard Time (AEST)</source>
+        <target state="needs-review-translation">オーストラリア東部標準時 (AEST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus11" datatype="html">
+        <source>Norfolk Time (NFT)</source>
+        <target state="needs-review-translation">ノーフォーク時間 (NFT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus12" datatype="html">
+        <source>New Zealand Standard Time (NZST)</source>
+        <target state="needs-review-translation">ニュージーランド標準時 (NZST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus13" datatype="html">
+        <source>Tonga Time (TOT)</source>
+        <target state="needs-review-translation">トンガ時間 (TOT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus14" datatype="html">
+        <source>Line Islands Time (LINT)</source>
+        <target state="needs-review-translation">ライン諸島時間 (LINT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus2" datatype="html">
+        <source>Eastern European Time (EET)</source>
+        <target state="needs-review-translation">東ヨーロッパ時間 (EET)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus3" datatype="html">
+        <source>Moscow Standard Time (MSK)</source>
+        <target state="needs-review-translation">モスクワ標準時 (MSK)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus4" datatype="html">
+        <source>Armenia Time (AMT)</source>
+        <target state="needs-review-translation">アルメニア時間 (AMT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus5" datatype="html">
+        <source>Pakistan Standard Time (PKT)</source>
+        <target state="needs-review-translation">パキスタン標準時 (PKT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus6" datatype="html">
+        <source>Xinjiang Time (XJT)</source>
+        <target state="needs-review-translation">新疆時間 (XJT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus7" datatype="html">
+        <source>Indochina Time (ICT)</source>
+        <target state="needs-review-translation">インドシナ時間 (ICT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus8" datatype="html">
+        <source>Hong Kong Time (HKT)</source>
+        <target state="needs-review-translation">香港時間 (HKT)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus9" datatype="html">
+        <source>Japan Standard Time (JST)</source>
+        <target state="needs-review-translation">日本標準時 (JST)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.address-unavailable" datatype="html">
+        <source>Unavailable</source>
+        <target state="needs-review-translation">利用できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.block-serialized-size" datatype="html">
+        <source>Transactions by serialized size</source>
+        <target state="needs-review-translation">シリアライズ後のサイズ別トランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block/block.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.difficulty.average-block-time" datatype="html">
+        <source> Average block time </source>
+        <target state="needs-review-translation">平均ブロック間隔</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html">
+        <source>Endpoint</source>
+        <target state="needs-review-translation">エンドポイント</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html">
+        <source>Unknown</source>
+        <target state="needs-review-translation">未知</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/eight-blocks/eight-blocks.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html">
+        <source>Open</source>
+        <target state="needs-review-translation">開く</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.difficulty-heading" datatype="html">
+        <source> Difficulty Adjustment
+</source>
+        <target state="needs-review-translation">難易度調整</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.maximum" datatype="html">
+        <source>Maximum</source>
+        <target state="needs-review-translation">最大</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.median" datatype="html">
+        <source>Median</source>
+        <target state="needs-review-translation">中央値</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.minimum" datatype="html">
+        <source>Minimum</source>
+        <target state="needs-review-translation">最小</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.percentile75" datatype="html">
+        <source>75th percentile</source>
+        <target state="needs-review-translation">75パーセンタイル</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fees-box/fees-box.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="002cdbb1621daaed4946baea12ad99ea6b93f90c" datatype="html">
+        <source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">このトランザクションは<x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" />件のトランザクションからなるチャンクに属し、合算された実効手数料率は<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-many</note>
+      </trans-unit>
+      <trans-unit id="0061875559541699df95ecc284100821cd3851b8" datatype="html">
+        <source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B was needed to get into this block</source>
+        <target state="needs-review-translation">このブロックへの取り込みには約<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/Bで十分でした</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">tx-fee-rating.warning-tooltip</note>
+      </trans-unit>
+      <trans-unit id="016d2ff8ad4b04f08717b98b5bc61eb122fb1ac8" datatype="html">
+        <source>child</source>
+        <target state="needs-review-translation">子トランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <note priority="1" from="description">child</note>
+        <note priority="1" from="meaning">cluster.child</note>
+      </trans-unit>
+      <trans-unit id="11daad3d9cbd04a35424c70717b919265e8b067e" datatype="html">
+        <source> Values were capped at the max supply of 21M BCH </source>
+        <target state="needs-review-translation">値は最大供給量の21M BCHを上限としています</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+        <note priority="1" from="description">Max supply warning message</note>
+        <note priority="1" from="meaning">calculator.max-supply-warning</note>
+      </trans-unit>
+      <trans-unit id="1cdb643999eb6d66bcd839aeaa381b62b8be8cd4" datatype="html">
+        <source>mempool chunk</source>
+        <target state="needs-review-translation">メンプールのチャンク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <note priority="1" from="description">Mempool chunk tooltip</note>
+        <note priority="1" from="meaning">cluster.mempool-chunk</note>
+      </trans-unit>
+      <trans-unit id="1eb8a98f68c1c98884c6436650f5ad80f4b3d5bf" datatype="html">
+        <source>parents</source>
+        <target state="needs-review-translation">親トランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+        <note priority="1" from="description">parents</note>
+        <note priority="1" from="meaning">cluster.parents</note>
+      </trans-unit>
+      <trans-unit id="2d309ecab27ff28f0c965cd9aa8602361dbd7c80" datatype="html">
+        <source>Bitcoin Cash Price</source>
+        <target state="needs-review-translation">Bitcoin Cashの価格</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">price-chart.bitcoin-price</note>
+      </trans-unit>
+      <trans-unit id="36028650a60cba9aa7f034ae34643c72f5364f1d" datatype="html">
+        <source>this transaction</source>
+        <target state="needs-review-translation">このトランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <note priority="1" from="description">this transaction</note>
+        <note priority="1" from="meaning">cluster.this-transaction</note>
+      </trans-unit>
+      <trans-unit id="3e98f606390aee94769b197289de593f5d09cec7" datatype="html">
+        <source>BCH/block</source>
+        <target state="needs-review-translation">BCH/ブロック</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">BCH/block</note>
+        <note priority="1" from="meaning">shared.btc-block</note>
+      </trans-unit>
+      <trans-unit id="3fc86b5b041cec8a5c2a83d55fa03b9f38d7761c" datatype="html">
+        <source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">このトランザクションは1件のトランザクションからなるチャンクに属し、合算された実効手数料率は<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> sat/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-one</note>
+      </trans-unit>
+      <trans-unit id="489277af67abab02f1de98f4a7930fc611471eda" datatype="html">
+        <source>occurrence</source>
+        <target state="needs-review-translation">出現回数</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">shared.occurrence</note>
+      </trans-unit>
+      <trans-unit id="4ce06818b8fe60a7c040ce7bfecc10b11397401b" datatype="html">
+        <source>24h Volume</source>
+        <target state="needs-review-translation">24時間の取引量</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">liquid.24h-volume</note>
+      </trans-unit>
+      <trans-unit id="57d63f33e6e6f3d4716fab5381cff30d517d5c4e" datatype="html">
+        <source>usages</source>
+        <target state="needs-review-translation">使用回数</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">shared.usages</note>
+      </trans-unit>
+      <trans-unit id="6693ca41dea3f8a2b1747ba08e3f780c52d074bf" datatype="html">
+        <source>Using partner code</source>
+        <target state="needs-review-translation">パートナーコードを使用中</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">658</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.using-partner-code</note>
+      </trans-unit>
+      <trans-unit id="72a4d409f89fe244682950b6112fe023f603033b" datatype="html">
+        <source> Difficulty drift </source>
+        <target state="needs-review-translation">難易度のずれ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+        <note priority="1" from="description">difficulty-box.difficulty-drift</note>
+      </trans-unit>
+      <trans-unit id="756c97c3a9cdcdded762c68fbc7d92c001a8a49f" datatype="html">
+        <source>Total UTXOs</source>
+        <target state="needs-review-translation">UTXO合計</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+        <note priority="1" from="description">address.confirmed-utxos</note>
+      </trans-unit>
+      <trans-unit id="7729adad4cbe5f490e393a925fae8a9b90f8ac08" datatype="html">
+        <source>Reserve Deficit</source>
+        <target state="needs-review-translation">準備金の不足</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">liquid.reserve-deficit</note>
+      </trans-unit>
+      <trans-unit id="7b93aee3d7ce363e538d9bf63f6a61b0ac26e227" datatype="html">
+        <source> Difficulty Δ </source>
+        <target state="needs-review-translation">難易度の変化</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">122,124</context>
+        </context-group>
+        <note priority="1" from="description">difficulty-box.difficulty-change</note>
+      </trans-unit>
+      <trans-unit id="850e39efd95e6090598e13a01b7825f6b71b1017" datatype="html">
+        <source>occurrences</source>
+        <target state="needs-review-translation">出現回数</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">shared.occurrences</note>
+      </trans-unit>
+      <trans-unit id="94c4e242e055d9521e1a0bfc7f1d165bbb37b94a" datatype="html">
+        <source>children</source>
+        <target state="needs-review-translation">子トランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+        <note priority="1" from="description">children</note>
+        <note priority="1" from="meaning">cluster.children</note>
+      </trans-unit>
+      <trans-unit id="ac0f81713a84217c9bd1d9bb460245d8190b073f" datatype="html">
+        <source>More</source>
+        <target state="needs-review-translation">詳細</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/graphs/graphs.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">more</note>
+      </trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html">
+        <source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target state="needs-review-translation">他に<x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" />個のチャンクを含むメンプールクラスター内です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-many</note>
+      </trans-unit>
+      <trans-unit id="b1046d5d7d997498195647aee8059b9109836f1d" datatype="html">
+        <source>Accelerate to ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/B</source>
+        <target state="needs-review-translation">約<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/Bに加速</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">626</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.accelerate-to-x</note>
+      </trans-unit>
+      <trans-unit id="bch.footer.mempool-wall" datatype="html">
+        <source>Mempool Wall</source>
+        <target state="needs-review-translation">メンプールウォール</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.privacy" datatype="html">
+        <source>Privacy notes for bch.tx.taxi, including public Bitcoin Cash data, browser preferences, server logs, and independent verification.</source>
+        <target state="needs-review-translation">Bitcoin Cashの公開データ、ブラウザー設定、サーバーログ、独立した検証を含むbch.tx.taxiのプライバシー情報です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.recent-transactions" datatype="html">
+        <source>See the most recent Bitcoin Cash transactions, updated in real time.</source>
+        <target state="needs-review-translation">Bitcoin Cashの最新トランザクションをリアルタイムで確認できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recent-transactions-list/recent-transactions-list.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.meta.terms" datatype="html">
+        <source>Terms for using bch.tx.taxi as an informational Bitcoin Cash block and mempool explorer.</source>
+        <target state="needs-review-translation">Bitcoin Cashブロック・メンプールの情報提供エクスプローラーとしてのbch.tx.taxiの利用条件です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.miner.logo" datatype="html">
+        <source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source>
+        <target state="needs-review-translation"><x id="NAME" equiv-text="this.name" />マイニングプールのロゴ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mining-pool/mining-pool.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.miner.unknown-logo" datatype="html">
+        <source>Mining pool logo</source>
+        <target state="needs-review-translation">マイニングプールのロゴ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mining-pool/mining-pool.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.disabled" datatype="html">
+        <source>disabled</source>
+        <target state="needs-review-translation">無効</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">589</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bch.txs.op-return-data" datatype="html">
+        <source>data</source>
+        <target state="needs-review-translation">データ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">479</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">LBTC供給量とBTC保有量</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
+      <trans-unit id="c3c520c2bccb5da8e432dd5f282a72b05e12b7e0" datatype="html">
+        <source>Your balance is too low.</source>
+        <target state="needs-review-translation">残高が不足しています。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/mempool-error/mempool-error.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">accelerator.low-balance</note>
+      </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html">
+        <source>In a mempool cluster containing 1 other chunk.</source>
+        <target state="needs-review-translation">他に1つのチャンクを含むメンプールクラスター内です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-one</note>
+      </trans-unit>
+      <trans-unit id="d1ca10f0337c02e631f15b7da5d57dddc1954704" datatype="html">
+        <source>parent</source>
+        <target state="needs-review-translation">親トランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+        <note priority="1" from="description">parent</note>
+        <note priority="1" from="meaning">cluster.parent</note>
+      </trans-unit>
+      <trans-unit id="dcc1ed3dbf5b3519156543db008e9507266b05a3" datatype="html">
+        <source> Halving Countdown
+</source>
+        <target state="needs-review-translation">半減期までのカウントダウン</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.halving-countdown</note>
+      </trans-unit>
+      <trans-unit id="e0f4283c19259f2bd53940324cb490f797b9aae4" datatype="html">
+        <source>select filter categories to highlight matching pending transactions</source>
+        <target state="needs-review-translation">フィルターカテゴリーを選択すると、該当する保留中のトランザクションを強調表示します</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-filters/block-filters.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Transaction filters tooltip</note>
+      </trans-unit>
+      <trans-unit id="e8a4613f04749ce822333d2103b1ef508a771091" datatype="html">
+        <source>Maximum fee rate (sat/B)</source>
+        <target state="needs-review-translation">最大手数料率（sat/B）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/test-transactions/test-transactions.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">test.tx.max-fee-rate</note>
+      </trans-unit>
+      <trans-unit id="f3dac0e65a05dcc98ad1b7d0523a819aa91acc10" datatype="html">
+        <source>Mempool by vBytes (sat/Byte)</source>
+        <target state="needs-review-translation">vBytes別メンプール（sat/Byte）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">statistics.memory-by-vBytes</note>
+      </trans-unit>
+      <trans-unit id="f4768466d6207e92279b4f0971349f4e1bf44d86" datatype="html">
+        <source>Fee comparison for a 140-byte serialized BCH transaction</source>
+        <target state="needs-review-translation">140バイトにシリアライズされたBCHトランザクションの手数料比較</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block/block.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <note priority="1" from="description">Transaction fee tooltip</note>
+      </trans-unit>
+      <trans-unit id="graphs.blockFees.feesBtc" datatype="html">
+        <source>Fees BCH</source>
+        <target state="needs-review-translation">手数料 BCH</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.bch.mining.pool-luck" datatype="html">
+        <source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source>
+        <target state="needs-review-translation">過去一週間の全マイニングプールの総合的な幸運度です。100%を超える場合、平均ブロック間隔は10分未満です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.block-fees" datatype="html">
+        <source>Block Fees</source>
+        <target state="needs-review-translation">ブロック手数料</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html">
+        <source>Error loading CPFP data</source>
+        <target state="needs-review-translation">CPFPデータの読み込みに失敗しました</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">保留中のトランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/custom-dashboard/custom-dashboard.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.by" datatype="html">
+        <source>by</source>
+        <target state="needs-review-translation">マイナー：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/eight-blocks/eight-blocks.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.automatic-routing" datatype="html">
+        <source>Automatic Routing</source>
+        <target state="needs-review-translation">自動ルーティング</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">398</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.contact" datatype="html">
+        <source>Contact Us</source>
+        <target state="needs-review-translation">お問い合わせ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target state="needs-review-translation">ダッシュボード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.loading-explorers" datatype="html">
+        <source>Loading explorers</source>
+        <target state="needs-review-translation">エクスプローラーを読み込み中</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.native" datatype="html">
+        <source>NATIVE EXPLORERS</source>
+        <target state="needs-review-translation">公式エクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.opened" datatype="html">
+        <source>Opened</source>
+        <target state="needs-review-translation">表示中</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.search-placeholder" datatype="html">
+        <source>Wave a taxi, paste anything here.</source>
+        <target state="needs-review-translation">タクシーを呼ぶように、ここに何でも貼り付けてください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.selected" datatype="html">
+        <source>SELECTED</source>
+        <target state="needs-review-translation">選択中</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.source-code" datatype="html">
+        <source>Source code</source>
+        <target state="needs-review-translation">ソースコード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.tagline" datatype="html">
+        <source>Bitcoin Cash blocks, fees, and mempool activity</source>
+        <target state="needs-review-translation">Bitcoin Cashのブロック、手数料、メンプールの状況</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.tools-docs" datatype="html">
+        <source>Tools &amp; Docs</source>
+        <target state="needs-review-translation">ツールとドキュメント</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.trademark" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">商標と帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.view-hub" datatype="html">
+        <source>View Hub</source>
+        <target state="needs-review-translation">ハブを表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.internal-key" datatype="html">
+        <source>Internal Key</source>
+        <target state="needs-review-translation">内部キー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/address/address.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.label.halving-label" datatype="html">
+        <source>halving</source>
+        <target state="needs-review-translation">半減期</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/difficulty/difficulty.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html">
+        <source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source>
+        <target state="needs-review-translation">不足している以前の出力が読み込まれていません。手数料率などの一部の項目は計算できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.no-replacements" datatype="html">
+        <source>No replacements in the current feed.</source>
+        <target state="needs-review-translation">現在のフィードには置換がありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-list-link" datatype="html">
+        <source>View pending transactions as a list.</source>
+        <target state="needs-review-translation">保留中のトランザクションを一覧表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">保留中のトランザクション</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html">
+        <source>Error loading missing prevouts</source>
+        <target state="needs-review-translation">不足している以前の出力の読み込みに失敗しました</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.replacements-reconnecting" datatype="html">
+        <source>Replacement updates unavailable. Reconnecting...</source>
+        <target state="needs-review-translation">置換の更新を取得できません。再接続しています...</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.webgl-unavailable" datatype="html">
+        <source>WebGL is unavailable.</source>
+        <target state="needs-review-translation">WebGLを利用できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html"><source>sat/B</source>
+        <target>sat/B</target>
+        </trans-unit>
+      <trans-unit id="2e3846407bdaeefb0d65f58c568b93e01f5eb4ca" datatype="html"><source>BCH</source>
+        <target>BCH</target>
+        </trans-unit>
+      <trans-unit id="bch.legal.7e2168415765" datatype="html"><source>Updated: September 20, 2026</source>
+        <target>更新日：2026年9月20日</target>
+        </trans-unit>
+      <trans-unit id="bba7a55b8bcbfd50a697f8cf0a7b917836f453f0" datatype="html"><source>vSize</source>
+        <target>仮想サイズ</target>
+        </trans-unit>
+      <trans-unit id="tx-taxi.global.thirdparty" datatype="html"><source>3RD-PARTY EXPLORERS</source>
+        <target>サードパーティのエクスプローラー</target>
+        </trans-unit>
+      <trans-unit id="bch.legal.8a9851255d67" datatype="html"><source>Bitcoin Cash</source>
+        <target>Bitcoin Cash</target>
+        </trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source>
+        <target>クラスター</target>
+        </trans-unit>
+      <trans-unit id="bch.api.5e3c15a2c421" datatype="html"><source>CashTokens</source>
+        <target>CashTokens</target>
+        </trans-unit>
+      <trans-unit id="bch.api.6a4c3a4483b0" datatype="html"><source>Ping</source>
+        <target>ピング</target>
+        </trans-unit>
     </body>
   </file>
 </xliff>
