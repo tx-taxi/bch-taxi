@@ -49,9 +49,9 @@ export class SeoService {
     });
   }
 
-  private activeLocale(): 'es' | 'fr' | 'de' | 'it' | 'pt' | undefined {
-    const match = window.location.pathname.match(/^\/(es|fr|de|it|pt)(?:\/|$)/);
-    return match?.[1] as 'es' | 'fr' | 'de' | 'it' | 'pt' | undefined;
+  private activeLocale(): 'es' | 'fr' | 'de' | 'it' | 'pt' | 'ru' | undefined {
+    const match = window.location.pathname.match(/^\/(es|fr|de|it|pt|ru)(?:\/|$)/);
+    return match?.[1] as 'es' | 'fr' | 'de' | 'it' | 'pt' | 'ru' | undefined;
   }
 
   private documentMetadata() {
@@ -116,7 +116,7 @@ export class SeoService {
 
   getTitle(): string {
     const locale = this.activeLocale();
-    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Bitcoin Cash', fr: 'Explorateur Bitcoin Cash', de: 'Bitcoin-Cash-Explorer', it: 'Esploratore Bitcoin Cash', pt: 'Explorador Bitcoin Cash'}[locale]);
+    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Bitcoin Cash', fr: 'Explorateur Bitcoin Cash', de: 'Bitcoin-Cash-Explorer', it: 'Esploratore Bitcoin Cash', pt: 'Explorador Bitcoin Cash', ru: 'Обозреватель Bitcoin Cash'}[locale]);
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -132,7 +132,7 @@ export class SeoService {
 
   getDescription(): string {
     const locale = this.activeLocale();
-    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Bitcoin Cash.', de: 'Entdecken Sie Bitcoin-Cash-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Bitcoin Cash.', pt: 'Explore blocos, transações, endereços, taxas e atividade de mineração Bitcoin Cash.'})[locale];
+    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Bitcoin Cash.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Bitcoin Cash.', de: 'Entdecken Sie Bitcoin-Cash-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Bitcoin Cash.', pt: 'Explore blocos, transações, endereços, taxas e atividade de mineração Bitcoin Cash.', ru: 'Изучайте блоки, транзакции, адреса, комиссии и майнинг Bitcoin Cash.'})[locale];
     return this.documentMetadata()?.description || this.baseDescription;
   }
 
