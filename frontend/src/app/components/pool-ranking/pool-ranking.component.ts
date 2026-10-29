@@ -58,7 +58,7 @@ export class PoolRankingComponent implements OnInit {
       this.miningWindowPreference = '1w';
     } else {
       this.seoService.setTitle($localize`:@@fe5317c6c60dd7e0e86f04d22f566f67cf04d404:Mining Pools`);
-      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.pool-ranking:See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.`);
+      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.pool-ranking:See the top Bitcoin Cash mining pools ranked by number of blocks mined, over your desired timeframe.`);
       this.miningWindowPreference = this.miningService.getDefaultTimespan('24h');
     }
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
@@ -101,7 +101,7 @@ export class PoolRankingComponent implements OnInit {
       )
       .pipe(
         map(data => {
-          data['minersLuck'] = (100 * (data.blockCount / 4032)).toFixed(2); // luck 1w
+          data['minersLuck'] = (100 * (data.blockCount / 1008)).toFixed(2); // 7 days at Bitcoin Cash's 10-minute target
           return data;
         }),
         tap(data => {

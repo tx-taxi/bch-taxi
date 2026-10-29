@@ -6345,8 +6345,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
-        <target>Zeige die Top-Bitcoin-Mining-Pools an, sortiert nach der Anzahl der im gewünschten Zeitraum geschürften Blöcke.</target>
+        <source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source>
+        <target>Sehen Sie die führenden Bitcoin-Cash-Mining-Pools nach der Zahl der im gewählten Zeitraum gefundenen Blöcke.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -11908,6 +11908,7 @@
       <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html"><source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source><target>In einem Mempool-Cluster mit <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> weiteren Chunks.</target></trans-unit>
       <trans-unit id="0061875559541699df95ecc284100821cd3851b8" datatype="html"><source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B was needed to get into this block</source><target>Nur etwa <x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B waren für die Aufnahme in diesen Block nötig</target></trans-unit>
       <trans-unit id="bch.meta.recent-transactions" datatype="html"><source>See the most recent Bitcoin Cash transactions, updated in real time.</source><target>Sehen Sie die neuesten Bitcoin-Cash-Transaktionen, die in Echtzeit aktualisiert werden.</target></trans-unit>
+      <trans-unit id="taxi.bch.mining.pool-luck" datatype="html"><source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source><target>Das Gesamtglück aller Mining-Pools in der letzten Woche. Ein Wert über 100 % bedeutet, dass die durchschnittliche Blockzeit unter 10 Minuten liegt.</target></trans-unit>
     </body>
   </file>
 </xliff>
