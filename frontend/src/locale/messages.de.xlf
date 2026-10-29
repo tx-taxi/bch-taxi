@@ -11909,6 +11909,8 @@
       <trans-unit id="0061875559541699df95ecc284100821cd3851b8" datatype="html"><source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B was needed to get into this block</source><target>Nur etwa <x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> sat/B waren für die Aufnahme in diesen Block nötig</target></trans-unit>
       <trans-unit id="bch.meta.recent-transactions" datatype="html"><source>See the most recent Bitcoin Cash transactions, updated in real time.</source><target>Sehen Sie die neuesten Bitcoin-Cash-Transaktionen, die in Echtzeit aktualisiert werden.</target></trans-unit>
       <trans-unit id="taxi.bch.mining.pool-luck" datatype="html"><source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source><target>Das Gesamtglück aller Mining-Pools in der letzten Woche. Ein Wert über 100 % bedeutet, dass die durchschnittliche Blockzeit unter 10 Minuten liegt.</target></trans-unit>
+      <trans-unit id="bch.docs.context.chain-explorer" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> explorer</source><target><x id="CHAIN" equiv-text="this.chainName"/>-Explorer</target></trans-unit>
+      <trans-unit id="bch.docs.context.chain-documentation" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> documentation</source><target><x id="CHAIN" equiv-text="this.chainName"/>-Dokumentation</target></trans-unit>
     </body>
   </file>
 </xliff>

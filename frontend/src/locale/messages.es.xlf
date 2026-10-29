@@ -11872,6 +11872,8 @@
 <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
       <trans-unit id="bch.meta.recent-transactions" datatype="html"><source>See the most recent Bitcoin Cash transactions, updated in real time.</source><target>Consulta las transacciones más recientes de Bitcoin Cash, actualizadas en tiempo real.</target></trans-unit>
       <trans-unit id="taxi.bch.mining.pool-luck" datatype="html"><source>The overall luck of all mining pools over the past week. Luck above 100% means the average block time is less than 10 minutes.</source><target>La suerte global de todos los grupos de minería durante la última semana. Una suerte superior al 100 % significa que el tiempo medio por bloque es inferior a 10 minutos.</target></trans-unit>
+      <trans-unit id="bch.docs.context.chain-explorer" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> explorer</source><target>Explorador de <x id="CHAIN" equiv-text="this.chainName"/></target></trans-unit>
+      <trans-unit id="bch.docs.context.chain-documentation" datatype="html"><source><x id="CHAIN" equiv-text="this.chainName"/> documentation</source><target>Documentación de <x id="CHAIN" equiv-text="this.chainName"/></target></trans-unit>
     </body>
   </file>
 </xliff>

@@ -13,6 +13,11 @@ export class TxTaxiDocsIntroComponent {
   @Input() context = 'documentation';
   @Input() chainName = '';
   @Input() chainHost = '';
-  readonly explorerLabel = $localize`:@@bch.docs.context.explorer:explorer`;
-  readonly documentationLabel = $localize`:@@bch.docs.context.documentation:documentation`;
+  get contextLabel(): string {
+    return this.context === 'explorer'
+      ? $localize`:@@bch.docs.context.chain-explorer:${this.chainName}:CHAIN: explorer`
+      : this.context === 'documentation'
+        ? $localize`:@@bch.docs.context.chain-documentation:${this.chainName}:CHAIN: documentation`
+        : `${this.chainName} ${this.context}`;
+  }
 }

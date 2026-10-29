@@ -13,7 +13,7 @@ function read(file) {sources.add(file); return fs.readFileSync(path.join(fronten
 const introSource = read('src/app/shared/components/tx-taxi-docs-intro/tx-taxi-docs-intro.component.html');
 function sanitize(source) {
   return source
-    .replace(/<app-tx-taxi-docs-intro\b[^>]*>[\s\S]*?<\/app-tx-taxi-docs-intro>/g, introSource.replace(/\{\{\s*chainName\s*\}\}/g, config.chain).replace(/\{\{\s*chainHost\s*\}\}/g, config.host).replace(/\{\{\s*context\s*\}\}/g, 'documentation').replace(/\{\{\s*context\s*===\s*'explorer'\s*\?\s*explorerLabel\s*:\s*documentationLabel\s*\}\}/g, 'documentation'))
+    .replace(/<app-tx-taxi-docs-intro\b[^>]*>[\s\S]*?<\/app-tx-taxi-docs-intro>/g, introSource.replace(/\{\{\s*chainName\s*\}\}/g, config.chain).replace(/\{\{\s*chainHost\s*\}\}/g, config.host).replace(/\{\{\s*contextLabel\s*\}\}/g, config.chain + ' documentation').replace(/\{\{\s*context\s*\}\}/g, 'documentation').replace(/\{\{\s*context\s*===\s*'explorer'\s*\?\s*explorerLabel\s*:\s*documentationLabel\s*\}\}/g, 'documentation'))
     .replace(/\s+routerLink="([^"]+)"/g, ' href="$1"')
     .replace(/\s+(?:\*[^\s=]+|\[[^\]]+\]|\([^\)]+\)|#[^\s=]+)(?:=(?:"[^"]*"|'[^']*'))?/g, '')
     .replace(/\s+(?:i18n(?:-[\w-]+)?|ngb\w+|routerLinkActive)(?:="[^"]*")?/g, '')
