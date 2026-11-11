@@ -167,7 +167,26 @@ server.on('upgrade',(req,socket,head)=>{
   upstream.on('upgrade',(r,s,h)=>{s.on('error',()=>{s.destroy();socket.destroy();});socket.on('close',()=>s.destroy());socket.write('HTTP/1.1 101 Switching Protocols\r\n'+Object.entries(r.headers).map(([k,v])=>`${k}: ${v}`).join('\r\n')+'\r\n\r\n');if(h.length)socket.write(h);if(head.length)s.write(head);s.pipe(socket).pipe(s);});upstream.on('error',()=>socket.destroy());upstream.end();
  }
 });
-let latestSnapshot, refreshInFlight;
+let latestSnapshot, refreshInFlight, trackingInFlight;
+async function updateTracked(client){
+ const id=client.trackedTx,generation=client.generation;
+ if(!id||client.detailInFlight||client.readyState!==1)return;
+ client.detailInFlight=true;
+ const current=()=>client.readyState===1&&client.trackedTx===id&&client.generation===generation;
+ try{
+  const t=await provider.api('/api/tx/'+id);
+  const confirmedBlock=t.status.confirmed&&!client.trackedConfirmed?(latestSnapshot?.blocks.find(b=>b.height===t.status.block_height)||await provider.api('/api/block/'+t.status.block_hash)):null;
+  if(!current())return;
+  if(confirmedBlock){client.send(JSON.stringify({block:confirmedBlock,txConfirmed:id}));client.trackedConfirmed=true;}
+  client.send(JSON.stringify({tx:t}));
+ }catch{if(current())client.send(JSON.stringify({trackedTransactionUnavailable:true}));}
+ finally{client.detailInFlight=false;}
+}
+function refreshTracked(){
+ if(trackingInFlight)return trackingInFlight;
+ trackingInFlight=(async()=>{const clients=[...wss.clients];for(let i=0;i<clients.length;i+=3)await Promise.allSettled(clients.slice(i,i+3).map(updateTracked));})().finally(()=>{trackingInFlight=null;});
+ return trackingInFlight;
+}
 function refresh() {
  if(refreshInFlight)return refreshInFlight;
  refreshInFlight=collectSnapshot().finally(()=>{refreshInFlight=null;});
@@ -177,15 +196,15 @@ async function collectSnapshot() {try {
  const previous=latestSnapshot?.blocks.at(-1);latestSnapshot=await provider.snapshot();provider.record(latestSnapshot);failedPaths.delete('live-snapshot');health.lastSuccess=Date.now();health.websocket='live';
  const tip=latestSnapshot.blocks.at(-1);
  for(const client of wss.clients)if(client.readyState===1){
-   if(client.trackedTx){try {const t=await provider.api('/api/tx/'+client.trackedTx);if(t.status.confirmed&&!client.trackedConfirmed){const confirmedBlock=latestSnapshot.blocks.find(b=>b.height===t.status.block_height)||await provider.api('/api/block/'+t.status.block_hash);client.send(JSON.stringify({block:confirmedBlock,txConfirmed:t.txid}));client.trackedConfirmed=true;}client.send(JSON.stringify({tx:t}));}catch(e){client.send(JSON.stringify({trackedTransactionUnavailable:true}));}}
    if(previous&&tip.height>previous.height)client.send(JSON.stringify({block:tip}));
    client.send(JSON.stringify(latestSnapshot));
  }
 }catch(e){failedPaths.set('live-snapshot',Date.now());health.lastFailure={at:Date.now(),message:e.message};health.websocket='unavailable';for(const client of wss.clients)client.close(1013,'Provider unavailable');}}
-wss.on('connection',client=>{client.on('message',raw=>{(async()=>{let m;try{m=JSON.parse(raw)}catch{return;}if(m['track-tx']==='stop')client.trackedTx=null;if(m['track-tx']&&m['track-tx']!=='stop'){client.trackedTx=m['track-tx'];client.trackedConfirmed=false;const t=await api('/api/tx/'+m['track-tx']);if(t.status===200){client.trackedConfirmed=t.data.status.confirmed;client.send(JSON.stringify({tx:t.data}));}}
+wss.on('connection',client=>{client.generation=0;client.on('message',raw=>{(async()=>{let m;try{m=JSON.parse(raw)}catch{return;}if(m['track-tx']!==undefined){client.generation++;client.trackedTx=/^[a-f0-9]{64}$/.test(m['track-tx'])?m['track-tx']:null;client.trackedConfirmed=false;void updateTracked(client);}
 
 if(m.action==='ping')return client.send(JSON.stringify({pong:true}));if(latestSnapshot)client.send(JSON.stringify(latestSnapshot));else await refresh();})().catch(()=>client.close(1013,'Provider unavailable'));});client.on('error',()=>{});});
 setInterval(()=>{for(const client of wss.clients)if(client.readyState===1&&health.websocket==='live')client.send(JSON.stringify({heartbeat:Date.now()}));},20000).unref();
+setInterval(refreshTracked,15000).unref();
 setInterval(refresh,15000);refresh();
 
 server.listen(Number(process.env.PORT||4361),process.env.BCH_HOST||'127.0.0.1',()=>console.log('BCH adapter on 127.0.0.1:'+ (process.env.PORT||4361)));
