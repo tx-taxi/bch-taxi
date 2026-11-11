@@ -185,6 +185,7 @@ async function collectSnapshot() {try {
 wss.on('connection',client=>{client.on('message',raw=>{(async()=>{let m;try{m=JSON.parse(raw)}catch{return;}if(m['track-tx']==='stop')client.trackedTx=null;if(m['track-tx']&&m['track-tx']!=='stop'){client.trackedTx=m['track-tx'];client.trackedConfirmed=false;const t=await api('/api/tx/'+m['track-tx']);if(t.status===200){client.trackedConfirmed=t.data.status.confirmed;client.send(JSON.stringify({tx:t.data}));}}
 
 if(m.action==='ping')return client.send(JSON.stringify({pong:true}));if(latestSnapshot)client.send(JSON.stringify(latestSnapshot));else await refresh();})().catch(()=>client.close(1013,'Provider unavailable'));});client.on('error',()=>{});});
+setInterval(()=>{for(const client of wss.clients)if(client.readyState===1&&health.websocket==='live')client.send(JSON.stringify({heartbeat:Date.now()}));},20000).unref();
 setInterval(refresh,15000);refresh();
 
 server.listen(Number(process.env.PORT||4361),process.env.BCH_HOST||'127.0.0.1',()=>console.log('BCH adapter on 127.0.0.1:'+ (process.env.PORT||4361)));

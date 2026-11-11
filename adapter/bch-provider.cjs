@@ -11,7 +11,11 @@ async function read(url,ttl=15000,body) {
  if(pending.has(key))return pending.get(key);
  const req=(async()=>{try{let r=await fetch(url,{signal:AbortSignal.timeout(10000),...(body?{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}:{})});if(r.status===503){await new Promise(resolve=>setTimeout(resolve,350));r=await fetch(url,{signal:AbortSignal.timeout(10000)});}if(!r.ok)throw Object.assign(Error(`Provider HTTP ${r.status}`),{status:r.status});const data=await r.json();if(data.error||data.success===false)throw Error(data.error||'Provider request failed');cache.set(key,{data,at:Date.now()});if(url.startsWith(H)&&Array.isArray(data)){for(const t of data){if(t.txid&&Array.isArray(t.outputs))cache.set(H+'/transaction/'+t.txid+JSON.stringify(''),{data:t,at:Date.now()});}}while(cache.size>800)cache.delete(cache.keys().next().value);status.lastSuccess=Date.now();return data;}catch(e){status.lastFailure={at:Date.now(),message:e.message};throw e;}finally{pending.delete(key);}})();pending.set(key,req);return req;
 }
-const h=(p,ttl)=>read(H+p,ttl);
+let indexRetryAt=0;
+const h=async(p,ttl)=>{if(Date.now()<indexRetryAt)throw Error('Primary index temporarily unavailable');try{return await read(H+p,ttl);}catch(e){if(!e.status||e.status>=500)indexRetryAt=Date.now()+30000;throw e;}};
+const nodeRead=(p,ttl)=>read(S+p,ttl);
+async function tip(){try{const b=await h('/block/best',15000);return {height:b.height,hash:b.hash};}catch{const s=await nodeRead('/status',15000);if(s.chain?.chain!=='main'||s.chain.initialblockdownload||!Number.isSafeInteger(s.chain.blocks)||!/^[a-f0-9]{64}$/.test(s.chain.bestblockhash||''))throw Error('BCH node is not synchronized');return {height:s.chain.blocks,hash:s.chain.bestblockhash};}}
+const fallbackTx=id=>require('./selene-transaction.cjs').seleneTransaction(id,nodeRead);
 const sat=n=>Math.round(Number(n)*1e8);
 const scriptType=s=>s?.startsWith('76a914')?'p2pkh':(s?.startsWith('a914')||s?.startsWith('aa20'))?'p2sh':s?.startsWith('6a')?'op_return':'unknown';
 function output(o){return {value:o.value,scriptpubkey:o.pkscript,scriptpubkey_asm:'',scriptpubkey_type:scriptType(o.pkscript),scriptpubkey_address:o.address,...(o.token?{token:o.token}:{})};}
@@ -55,9 +59,14 @@ async function blockWithFees(raw) {
 }
 async function rawBlock(id){try {const b=/^\d+$/.test(String(id))?(await h('/block/height/'+id,300000))[0]:await h('/block/'+id,300000);if(!b?.hash)throw Object.assign(Error('Block not found'),{status:404});return b;}catch(e){if(e.status===404)throw e;const b=parseSeleneBlock(await read(S+'/block/'+encodeURIComponent(id),300000));if(/^\d+$/.test(String(id))?b.height!==Number(id):b.hash.toLowerCase()!==String(id).toLowerCase())throw Object.assign(Error('Fallback returned a different block'),{status:503});return b;}}
 async function completeBlock(raw){return completeSeleneBlock(raw,page=>read(S+'/block/'+encodeURIComponent(raw.hash)+'?page='+page,300000));}
-async function tx(id){const t=await h('/transaction/'+id,15000);let b;if(isConfirmed(t))b=await rawBlock(t.block.height);const mapped=transaction(t,b);try{const native=await read(S+'/tx/'+id,60000);mapped.tokenMetadataUnavailable=false;for(let i=0;i<mapped.vout.length;i++){const o=native.vout[i];if(o?.scriptPubKey?.address)mapped.vout[i].scriptpubkey_address=o.scriptPubKey.address;if(o?.tokenData){mapped.vout[i].tokenData=o.tokenData;mapped.tokenInputDetailsUnavailable=true;}}}catch{mapped.tokenMetadataUnavailable=true;}return mapped;}
+async function tx(id){let t;try{t=await h('/transaction/'+id,15000);}catch(e){if(e.status===404)throw e;return fallbackTx(id);}let b;if(isConfirmed(t))b=await rawBlock(t.block.height);const mapped=transaction(t,b);try{const native=await read(S+'/tx/'+id,60000);mapped.tokenMetadataUnavailable=false;for(let i=0;i<mapped.vout.length;i++){const o=native.vout[i];if(o?.scriptPubKey?.address)mapped.vout[i].scriptpubkey_address=o.scriptPubKey.address;if(o?.tokenData){mapped.vout[i].tokenData=o.tokenData;mapped.tokenInputDetailsUnavailable=true;}}}catch{mapped.tokenMetadataUnavailable=true;}return mapped;}
 async function blocks(height){
- const raw=height?await Promise.all(Array.from({length:10},(_,i)=>rawBlock(Math.max(0,Number(height)-i)))):(await h('/block/latest',30000)).sort((a,b)=>b.height-a.height).slice(0,15);
+ let raw;
+ if(height)raw=await Promise.all(Array.from({length:Math.min(10,Number(height)+1)},(_,i)=>rawBlock(Number(height)-i)));
+ else {try{raw=(await h('/block/latest',30000)).sort((a,b)=>b.height-a.height).slice(0,15);}catch{
+  const head=await tip();raw=[];let id=head.hash;
+  for(let i=0;i<Math.min(8,head.height+1);i++){const b=await rawBlock(id);if(b.height!==head.height-i||b.hash!==id)throw Error('Noncontiguous BCH fallback blocks');raw.push(b);id=b.previous;}
+ }}
  const out=[];
  // Bound cold-start enrichment; repeated visitors share cached requests/summaries.
  for(let i=0;i<raw.length;i+=3)out.push(...await Promise.all(raw.slice(i,i+3).map(blockWithFees)));
@@ -89,20 +98,23 @@ async function history(a,after){const ts=await h('/address/'+encodeURIComponent(
 async function pendingTiles(ids){
  const bounded=[...new Set(ids)].slice(0,100);
  const missing=bounded.filter(id=>{const saved=cache.get(H+'/transaction/'+id+JSON.stringify(''));return !saved||Date.now()-saved.at>=15000;});
- for(let start=0;start<missing.length;start+=20)await h('/transactions?txids='+missing.slice(start,start+20).join(','),15000);
+ try{for(let start=0;start<missing.length;start+=20)await h('/transactions?txids='+missing.slice(start,start+20).join(','),15000);}catch{
+  const tiles=[];for(let start=0;start<bounded.length;start+=2){const chunk=await Promise.allSettled(bounded.slice(start,start+2).map(fallbackTx));for(const item of chunk)if(item.status==='fulfilled'&&!item.value.status.confirmed){const t=item.value;tiles.push([t.txid,t.fee,t.size,t.vout.reduce((sum,o)=>sum+o.value,0),t.fee/t.size,0,t.firstSeen]);}}
+  return tiles;
+ }
  return bounded.map(id=>cache.get(H+'/transaction/'+id+JSON.stringify(''))?.data).filter(t=>t&&!isConfirmed(t)).map(t=>[t.txid,t.fee,t.size,t.outputs.reduce((a,o)=>a+o.value,0),t.fee/t.size,0,t.time]);
 }
 async function api(path){const u=new URL(path,'http://local'),p=u.pathname;let m;
  if(p.startsWith('/api/v1/statistics/'))return [...stats].reverse();
  if(p==='/api/v1/init-data')return snapshot();
  if(p==='/api/v1/prices')return prices();
- if(p==='/api/blocks/tip/height')return String((await h('/block/best',15000)).height);
- if(p==='/api/blocks/tip/hash')return (await h('/block/best',15000)).hash;
+ if(p==='/api/blocks/tip/height')return String((await tip()).height);
+ if(p==='/api/blocks/tip/hash')return (await tip()).hash;
  if(m=p.match(/^\/api\/block-height\/(\d+)$/))return (await rawBlock(m[1])).hash;
  if(m=p.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/))return blocks(m[1]);
  if(m=p.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)$/))return blockWithFees(await rawBlock(m[1]));
  if(m=p.match(/^\/api\/block\/([a-f0-9]{64}|\d+)\/txids$/)){const b=await completeBlock(await rawBlock(m[1]));if(!Array.isArray(b.tx)||!b.tx.length||b.tx.some(id=>!/^[a-f0-9]{64}$/.test(id))||new Set(b.tx).size!==b.tx.length)throw Error('Incomplete block transaction IDs');return b.tx;}
- if(m=p.match(/^\/api\/block\/([^/]+)\/txs(?:\/(\d+))?$/)){const b=await completeBlock(await rawBlock(m[1]));const ids=b.tx.slice(Number(m[2]||0),Number(m[2]||0)+25);return (await h('/transactions?txids='+ids.join(','),300000)).map(t=>transaction(t,b));}
+ if(m=p.match(/^\/api\/block\/([^/]+)\/txs(?:\/(\d+))?$/)){const b=await completeBlock(await rawBlock(m[1]));const ids=b.tx.slice(Number(m[2]||0),Number(m[2]||0)+25);try{return (await h('/transactions?txids='+ids.join(','),300000)).map(t=>transaction(t,b));}catch{return Promise.all(ids.map(fallbackTx));}}
  if(m=p.match(/^\/api\/v1\/block\/([^/]+)\/summary$/)){const b=await rawBlock(m[1]);const ts=await h('/transactions/block/'+b.hash,300000);return ts.map(t=>({txid:t.txid,vsize:t.size,fee:t.fee,value:t.outputs.reduce((s,o)=>s+o.value,0)}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)\/outspends$/)){const t=await h('/transaction/'+m[1],60000);return t.outputs.map(o=>({spent:o.spent,txid:o.spender?.txid,vin:o.spender?.input,status:undefined}));}
  if(m=p.match(/^\/api\/tx\/([^/]+)$/))return tx(m[1]);
